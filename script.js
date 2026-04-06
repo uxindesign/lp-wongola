@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Scale: >= 1280px zoom proportionally, < 1280px responsive layout
+  // Scale: >= 1280px use CSS transform scale to shrink/grow content
+  // while keeping it centered and filling the viewport width.
   const page = document.querySelector('.page');
   function updateScale() {
     const vw = window.innerWidth;
     if (vw >= 1280) {
-      page.style.zoom = vw / 1600;
-      page.style.width = '1440px';
-      page.style.overflow = 'hidden';
+      const scale = vw / 1600;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top center';
+      page.style.width = (100 / scale) + '%';
+      page.style.marginLeft = 'auto';
+      page.style.marginRight = 'auto';
     } else {
-      page.style.zoom = '';
+      page.style.transform = '';
+      page.style.transformOrigin = '';
       page.style.width = '';
-      page.style.overflow = '';
+      page.style.marginLeft = '';
+      page.style.marginRight = '';
     }
   }
   updateScale();
