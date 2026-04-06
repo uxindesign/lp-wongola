@@ -81,9 +81,13 @@ ul{list-style:none}
   position:absolute;z-index:2;
   top:280px;left:0;right:0;
   display:flex;flex-direction:column;align-items:center;
-  gap:48px;max-width:620px;
+  gap:64px;max-width:620px;
   margin:0 auto;
   padding:0 20px;
+}
+.hero-inner{
+  display:flex;flex-direction:column;align-items:center;
+  gap:48px;width:100%;
 }
 
 /* Logo — preserve aspect ratio */
@@ -105,7 +109,7 @@ ul{list-style:none}
 .hero-deadline{font-family:var(--f-head);font-weight:900;font-size:48px;color:var(--yellow);text-align:center;line-height:1.1}
 .hero-desc{font-size:24px;color:var(--white);text-align:center;line-height:1.4;max-width:620px}
 .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;padding-top:16px}
-.hero-stats{display:flex;gap:48px;align-items:center;margin-top:108px}
+.hero-stats{display:flex;gap:48px;align-items:center;padding-top:32px}
 
 /* Arrow bounce inside hero */
 .hero-arrow{
