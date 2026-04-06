@@ -9,25 +9,6 @@ ul{list-style:none}
 .anim{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .anim.visible{opacity:1;transform:translateY(0)}
 
-/* ================================================
-   PAGE SCALE — maintains Figma proportions at any viewport.
-   Sections are built at 1440px. Below that, the whole page
-   scales down proportionally via CSS zoom.
-   ================================================ */
-.page{
-  width:1440px;
-  margin:0 auto;
-  overflow:hidden;
-}
-@media(max-width:1440px){
-  .page{
-    width:100vw;
-    zoom:calc(100 / 1440);
-    /* zoom value is unitless: viewport pixels / design pixels.
-       The JS below sets this dynamically for better compat. */
-  }
-}
-
 /* Shared */
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}
@@ -47,7 +28,7 @@ ul{list-style:none}
 .btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
-/* NAV — stays outside .page, scales independently */
+/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 32px 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid rgba(21,92,244,.2);transition:box-shadow .3s}
 .nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
 .nav-logo{display:flex;align-items:center;gap:8px}
@@ -59,47 +40,33 @@ ul{list-style:none}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .nav-hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:transform .3s,opacity .3s}
 
-/* ================================================
-   HERO
-   ================================================ */
+/* HERO */
 .hero{
   position:relative;
-  width:1440px;
-  min-height:920px;
+  min-height:100vh;
   padding:130px 0 80px;
   background:var(--navy);
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:flex;align-items:center;justify-content:center;
 }
 .hero-bg{
-  position:absolute;
-  top:0;left:50%;
+  position:absolute;top:0;left:50%;
   transform:translateX(-50%);
-  width:157%;
-  max-width:none;
-  height:auto;
-  min-height:100%;
+  width:157%;max-width:none;height:auto;min-height:100%;
   pointer-events:none;z-index:0;
 }
 .hero-content{
   position:relative;z-index:2;
   display:flex;flex-direction:column;align-items:center;
-  gap:48px;width:620px;padding:0 20px;
+  gap:48px;max-width:620px;padding:0 20px;
 }
 .hero-logo{display:flex;flex-direction:column;align-items:center;gap:24px}
-.hero-logo-img{
-  position:relative;
-  width:507px;
-  aspect-ratio:507/200;
-}
+.hero-logo-img{position:relative;width:507px;aspect-ratio:507/200}
 .hero-logo-img img{position:absolute;height:auto}
 .hero-logo-img .hack-text{left:9.1%;top:9.5%;width:83.4%}
 .hero-logo-img .bit-text{left:28.9%;top:68%;width:43.4%}
 .hero-logo-img .arrow-r{right:0;top:0;width:14.2%}
 .hero-logo-img .arrow-l{left:0;top:21%;width:14.2%;transform:rotate(180deg)}
-
 .hero-tagline{font-family:var(--f-body);font-weight:600;font-size:28px;color:#337eff;text-align:center}
 .hero-text{display:flex;flex-direction:column;align-items:center;gap:20px;width:100%}
 .hero-deadline{font-family:var(--f-head);font-weight:900;font-size:48px;color:var(--yellow);text-align:center;line-height:1.1}
@@ -110,50 +77,27 @@ ul{list-style:none}
 .stat-val{font-family:var(--f-pixel);font-size:28.8px;color:var(--yellow)}
 .stat-lbl{font-family:var(--f-head);font-size:14px;color:var(--white);text-transform:uppercase;letter-spacing:1px}
 
-/* ================================================
-   SOBRE
-   ================================================ */
-.sobre{position:relative;padding:100px 0;overflow:hidden;width:1440px}
+/* SOBRE */
+.sobre{position:relative;padding:100px 0;overflow:hidden}
 .sobre-wrap{display:flex;align-items:center;gap:60px;max-width:1280px;margin:0 auto;padding:0 32px}
-.sobre-img{flex-shrink:0;width:684px}
+.sobre-img{flex-shrink:0;width:684px;max-width:50%}
 .sobre-img img{width:100%;height:auto}
-.sobre-content{width:486px}
+.sobre-content{max-width:486px}
 
-/* ================================================
-   POR QUE PARTICIPAR
-   SVG 2011x1437. Figma x=-439 → left=-30.5%, width=139.6%
-   ================================================ */
-.porque{
-  position:relative;
-  padding:0;
-  overflow:hidden;
-  width:1440px;
-}
-.porque-bg{
-  display:block;
-  width:139.6%;
-  height:auto;
-  margin-left:-30.5%;
-  pointer-events:none;
-}
+/* POR QUE PARTICIPAR */
+.porque{position:relative;padding:0;overflow:hidden}
+.porque-bg{display:block;width:139.6%;height:auto;margin-left:-30.5%;pointer-events:none}
 .porque-wrap{
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
+  position:absolute;top:0;left:0;right:0;bottom:0;
   display:flex;gap:60px;align-items:flex-start;
-  max-width:1280px;margin:0 auto;
-  padding:12% 5% 25%;
+  max-width:1280px;margin:0 auto;padding:12% 5% 25%;
 }
-.porque-text{width:555px}
+.porque-text{max-width:555px}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* Porque logos: 500x210 container, absolute positioned items */
-.porque-logos{
-  position:relative;
-  width:500px;
-  height:210px;
-  flex-shrink:0;
-}
+/* Porque logos — exact Figma sizes, absolute in 500x210 container */
+.porque-logos{position:relative;width:500px;height:210px;flex-shrink:0}
 .porque-logos img{position:absolute;object-fit:contain}
 .pl-one{left:43px;top:0;width:149px;height:80px}
 .pl-anima{left:272px;top:5px;width:164px;height:70px}
@@ -161,47 +105,20 @@ ul{list-style:none}
 .pl-alura{left:140px;top:145px;width:108px;height:50px}
 .pl-nocountry{left:300px;top:153px;width:200px;height:34px}
 
-/* ================================================
-   EMPREGABILIDADE
-   Section w=1365, h=810 at x=30.
-   Yellow at x=344 (25.2%), w=1021 (74.8%)
-   Photo at x=0, y=70 (8.7%), w=605 (44.3%)
-   Text at x=724 (53%), y=203 (25%)
-   ================================================ */
+/* EMPREGABILIDADE */
 .empreg{
   position:relative;
-  margin-top:-56vw;
-  z-index:2;
+  margin-top:-56vw;z-index:2;
   aspect-ratio:1365/810;
-  width:1365px;
-  margin-left:30px;
+  width:94.8%;margin-left:2%;
 }
-.empreg-yellow{
-  position:absolute;
-  top:0;left:25.2%;
-  width:74.8%;
-  height:auto;
-  z-index:0;
-}
-.empreg-photo{
-  position:absolute;
-  top:8.7%;left:0;
-  width:44.3%;
-  height:auto;
-  z-index:1;
-}
-.empreg-card{
-  position:absolute;
-  top:25%;left:53%;
-  width:465px;
-  z-index:2;
-}
+.empreg-yellow{position:absolute;top:0;left:25.2%;width:74.8%;height:auto;z-index:0}
+.empreg-photo{position:absolute;top:8.7%;left:0;width:44.3%;height:auto;z-index:1}
+.empreg-card{position:absolute;top:25%;left:53%;width:34%;max-width:465px;z-index:2}
 
-/* ================================================
-   CRONOGRAMA
-   ================================================ */
-.crono{padding:120px 80px;text-align:center;width:1440px}
-.crono-wrap{width:957px;margin:0 auto}
+/* CRONOGRAMA */
+.crono{padding:120px 80px;text-align:center}
+.crono-wrap{max-width:957px;margin:0 auto}
 .timeline{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;background:var(--white);border:1px solid rgba(0,0,0,.2);border-radius:16px;padding:32px 40px 48px}
 .tl-row{display:flex;align-items:center;gap:48px}
 .tl-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -213,30 +130,13 @@ ul{list-style:none}
 .tl-pill{display:inline-flex;align-items:center;background:var(--blue);color:var(--white);font-family:var(--f-head);font-weight:700;font-size:20px;padding:8px 20px;border-radius:999px;margin-top:8px}
 .crono-cta{margin-top:48px;display:flex;justify-content:center}
 
-/* ================================================
-   PREMIACOES
-   SVG 1649x939. Figma x=-84 → left=-5.8%, width=114.5%
-   ================================================ */
-.premiacoes{
-  position:relative;
-  padding:0;
-  overflow:hidden;
-  width:1440px;
-}
-.premiacoes-bg{
-  display:block;
-  width:114.5%;
-  height:auto;
-  margin-left:-5.8%;
-  pointer-events:none;
-}
+/* PREMIACOES */
+.premiacoes{position:relative;padding:0;overflow:hidden}
+.premiacoes-bg{display:block;width:114.5%;height:auto;margin-left:-5.8%;pointer-events:none}
 .premiacoes-wrap{
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
+  position:absolute;top:0;left:0;right:0;bottom:0;
   display:flex;flex-direction:column;justify-content:center;
-  width:750px;
-  margin:0 auto;
-  padding:15% 0;
+  max-width:750px;margin:0 auto;padding:15% 0;
 }
 .accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
@@ -245,14 +145,12 @@ ul{list-style:none}
 .acc-icon{width:32px;height:32px;flex-shrink:0;transition:transform .3s}
 .acc-item.open .acc-icon{transform:rotate(45deg)}
 
-/* ================================================
-   PARCEIROS — exact Figma sizes, flex centered
-   ================================================ */
-.parceiros{padding:0 0 96px;background:var(--white);width:1440px}
+/* PARCEIROS — exact Figma sizes */
+.parceiros{padding:0 0 96px;background:var(--white)}
 .parceiros-bar{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;background:var(--yellow)}
 .bar-line{width:30px;height:2px;background:var(--navy)}
 .bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
-.parceiros-logos{display:flex;align-items:center;justify-content:center;gap:48px 96px;padding:80px}
+.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 96px;padding:80px}
 .parceiros-logos img{object-fit:contain}
 .parc-pmi{width:92px;height:92px}
 .parc-anima{width:164px;height:70px}
@@ -260,18 +158,14 @@ ul{list-style:none}
 .parc-nocountry{width:200px;height:34px}
 .parc-alura{width:108px;height:50px}
 
-/* ================================================
-   WONGOLA
-   ================================================ */
-.wongola{background:var(--navy);padding:200px 80px 180px;width:1440px}
-.wongola-wrap{width:465px;margin:0;padding-left:66px}
+/* WONGOLA */
+.wongola{background:var(--navy);padding:200px 80px 180px}
+.wongola-wrap{max-width:465px;padding-left:66px}
 .wongola-logo{width:160px;height:160px;margin-bottom:48px}
 .wongola-logo img{width:100%;height:100%;object-fit:contain}
 .wongola-cta{margin-top:48px}
 
-/* ================================================
-   MOBILE NAV — only the nav changes structurally
-   ================================================ */
+/* MOBILE NAV */
 @media(max-width:768px){
   .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
   .nav-menu.open{display:flex}

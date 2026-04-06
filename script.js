@@ -1,24 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Page scale — zoom the .page container to fit viewport
-  const page = document.querySelector('.page');
-  function updateScale() {
-    const vw = window.innerWidth;
-    if (vw < 1440) {
-      page.style.zoom = vw / 1440;
-    } else {
-      page.style.zoom = '';
-    }
-  }
-  updateScale();
-  window.addEventListener('resize', updateScale);
-
-  // Nav scroll
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // Hamburger
   const hamburger = document.querySelector('.nav-hamburger');
   const menu = document.querySelector('.nav-menu');
   hamburger.addEventListener('click', () => {
@@ -32,12 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Accordion
   document.querySelectorAll('.acc-item').forEach(item => {
     item.addEventListener('click', () => item.classList.toggle('open'));
   });
 
-  // Scroll animations
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
