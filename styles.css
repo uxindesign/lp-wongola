@@ -214,7 +214,7 @@ ul{list-style:none}
 .tl-dash{width:10px;height:4px;background:var(--blue);border-radius:2px}
 .tl-chev{width:15px;height:21px;flex-shrink:0}
 .tl-pill{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;background:var(--blue);color:var(--white);font-family:var(--f-head);font-weight:700;font-size:20px;padding:8px 20px;border-radius:999px;white-space:nowrap}
-.crono-cta{margin-top:48px;display:flex;justify-content:center}
+.crono-cta{margin-top:48px;padding-top:16px;display:flex;justify-content:center}
 
 /* ================================================
    PREMIACOES — organic light shape background
