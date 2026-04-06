@@ -103,8 +103,9 @@ ul{list-style:none}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
-   The SVG is 2010x1437. In Figma it's positioned at x=-439 in 1440 viewport.
-   That means left offset = -439/1440 = -30.5%, and width = 2010/1440 = 139.6%
+   SVG 2010x1437. Figma: x=-439, y=2068 in 1440 viewport.
+   Content at x=157, y=2250 (182px from section top)
+   Logos at x=796, y=2350 (282px from section top)
    ================================================ */
 .porque{
   position:relative;
@@ -113,9 +114,9 @@ ul{list-style:none}
 }
 .porque-bg{
   display:block;
-  width:139.6%;
+  width:2011px;
   height:auto;
-  margin-left:-30.5%;
+  margin-left:-439px;
   pointer-events:none;
 }
 .porque-wrap{
@@ -123,9 +124,9 @@ ul{list-style:none}
   top:0;left:0;right:0;bottom:0;
   display:flex;gap:60px;align-items:flex-start;
   max-width:1280px;margin:0 auto;
-  padding:12% 5% 25%;
+  padding:182px 80px 200px;
 }
-.porque-text{max-width:500px}
+.porque-text{max-width:555px}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 /* Porque logos: 500x210 in Figma, percentage-based so it scales with parent */
@@ -210,9 +211,9 @@ ul{list-style:none}
 }
 .premiacoes-bg{
   display:block;
-  width:114.5%;
+  width:1649px;
   height:auto;
-  margin-left:-5.8%;
+  margin-left:-84px;
   pointer-events:none;
 }
 .premiacoes-wrap{
@@ -221,7 +222,7 @@ ul{list-style:none}
   display:flex;flex-direction:column;justify-content:center;
   max-width:750px;
   margin:0 auto;
-  padding:15% 5%;
+  padding:200px 0;
 }
 .accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
