@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Outfit:wght@400;500;700;900&family=Poppins:wght@600&family=Press+Start+2P&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,13 +19,9 @@
       <img src="assets/logo-wongola.png" alt="Wongola">
       <span class="nav-logo-text">WONGOLA</span>
     </a>
-
     <button class="nav-hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
-
     <div class="nav-menu">
       <a href="#sobre" class="nav-link">Sobre</a>
       <a href="#porque" class="nav-link">Benefícios</a>
@@ -43,22 +38,18 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero-decorations">
-      <!-- Blue triangle top-right -->
-      <img class="deco deco-hero-triangle" src="assets/deco-bg-hero.png" alt="">
-      <!-- Yellow border square -->
-      <div class="deco deco-border-1"></div>
-      <!-- Yellow small bg -->
-      <div class="deco deco-bg-1"></div>
-    </div>
+    <!-- Decorative shapes -->
+    <img class="hero-deco-triangle" src="assets/deco-bg-hero.svg" alt="" aria-hidden="true">
+    <div class="hero-deco-border"></div>
+    <div class="hero-deco-square"></div>
 
     <div class="hero-content">
       <div class="hero-logo">
         <div class="hero-logo-img">
-          <img class="arrow-left" src="assets/arrow-left.png" alt="">
-          <img class="hackathon-text" src="assets/hackathon-text.png" alt="Hackathon">
-          <img class="appbit-text" src="assets/appbit-text.png" alt="App BiT">
-          <img class="arrow-right" src="assets/arrow-right.png" alt="">
+          <img class="arrow-left" src="assets/arrow-left.svg" alt="" aria-hidden="true">
+          <img class="hackathon-text" src="assets/hackathon-text.svg" alt="Hackathon">
+          <img class="appbit-text" src="assets/appbit-text.svg" alt="App BiT">
+          <img class="arrow-right" src="assets/arrow-right.svg" alt="" aria-hidden="true">
         </div>
         <p class="hero-tagline">Inove, Impacte, Transforme!</p>
       </div>
@@ -102,9 +93,9 @@
 
   <!-- ===== SOBRE ===== -->
   <section class="sobre" id="sobre">
-    <!-- Decorations -->
-    <div class="deco deco-border-sobre"></div>
-    <div class="deco deco-bg-sobre"></div>
+    <div class="sobre-deco-border"></div>
+    <div class="sobre-deco-bg"></div>
+    <img class="sobre-deco-blob" src="assets/deco-bg-small2.svg" alt="" aria-hidden="true">
 
     <div class="sobre-inner">
       <div class="sobre-image animate-on-scroll">
@@ -118,50 +109,44 @@
     </div>
   </section>
 
-  <!-- ===== POR QUE PARTICIPAR + EMPREGABILIDADE ===== -->
-  <section class="porque-empregabilidade" id="porque">
-    <!-- Large blue organic shape -->
-    <div class="deco-blue-blob">
-      <img src="assets/deco-rect12.png" alt="">
-    </div>
-    <!-- Blue vector shape -->
-    <div class="deco-vector-blue-mid">
-      <img src="assets/deco-vector-blue.png" alt="">
-    </div>
-    <!-- Yellow organic shape -->
-    <div class="deco-yellow-blob">
-      <img src="assets/deco-rect14.png" alt="">
-    </div>
-    <!-- Decorative elements -->
-    <div class="deco deco-yellow-square-rot"></div>
+  <!-- ===== POR QUE PARTICIPAR ===== -->
+  <section class="porque" id="porque">
+    <img class="porque-blob" src="assets/deco-rect12.svg" alt="" aria-hidden="true">
+    <img class="porque-blob-small" src="assets/deco-rect13.svg" alt="" aria-hidden="true">
+    <div class="porque-deco-border"></div>
+    <div class="porque-deco-square"></div>
 
-    <div class="porque-content-wrap">
-      <!-- Por que participar -->
-      <div class="porque-row animate-on-scroll">
-        <div class="porque-text">
-          <h2 class="heading-2">Por que participar?</h2>
-          <ul class="porque-list">
-            <li>Colaboração com mentores de grandes empresas (Oracle, Ânima Educação, PMI-SP).</li>
-            <li>Networking com outros inovadores e startups.</li>
-            <li>Oportunidade de criar um aplicativo com impacto global real.</li>
-            <li>Visibilidade e acesso a oportunidades de carreira.</li>
-          </ul>
-          <a href="#" class="btn btn-primary">
-            <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
-            <span>Inscreva-se Agora</span>
-          </a>
-        </div>
-        <div class="porque-logos-side">
-          <img src="assets/logo-one.png" alt="Oracle Next Education" style="height:80px;">
-          <img src="assets/logo-anima.png" alt="Ânima Educação" style="height:70px;">
-          <img src="assets/logo-pmi-small.png" alt="PMI-SP" style="height:80px;">
-          <img src="assets/logo-alura-2.png" alt="Alura" style="height:50px;">
-          <img src="assets/logo-alura-small.png" alt="Alura" style="height:50px;">
-          <img src="assets/logo-nocountry-small.png" alt="NoCountry" style="height:34px;">
-        </div>
+    <div class="porque-inner">
+      <div class="porque-text animate-on-scroll">
+        <h2 class="heading-2 heading-white">Por que participar?</h2>
+        <ul class="porque-list">
+          <li>Colaboração com mentores de grandes empresas (Oracle, Ânima Educação, PMI-SP).</li>
+          <li>Networking com outros inovadores e startups.</li>
+          <li>Oportunidade de criar um aplicativo com impacto global real.</li>
+          <li>Visibilidade e acesso a oportunidades de carreira.</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="margin-top:16px;">
+          <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
+          <span>Inscreva-se Agora</span>
+        </a>
       </div>
+      <div class="porque-logos animate-on-scroll">
+        <img src="assets/logo-one.png" alt="Oracle Next Education">
+        <img src="assets/logo-anima.png" alt="Ânima Educação">
+        <img src="assets/logo-pmi-small.png" alt="PMI-SP">
+        <img src="assets/logo-alura-2.svg" alt="Alura">
+        <img src="assets/logo-alura-small.svg" alt="Alura">
+        <img src="assets/logo-nocountry-small.png" alt="NoCountry">
+      </div>
+    </div>
+  </section>
 
-      <!-- Empregabilidade -->
+  <!-- ===== EMPREGABILIDADE ===== -->
+  <section class="empregabilidade">
+    <img class="empregabilidade-blob" src="assets/deco-rect14.svg" alt="" aria-hidden="true">
+    <div class="empregabilidade-deco-square"></div>
+
+    <div class="empregabilidade-inner">
       <div class="empregabilidade-card animate-on-scroll">
         <p class="subtitle">Hackathon + Empregabilidade:</p>
         <h2 class="heading-2">Transforme ideias em oportunidades!</h2>
@@ -172,57 +157,36 @@
 
   <!-- ===== CRONOGRAMA ===== -->
   <section class="cronograma" id="cronograma">
-    <!-- Decorations -->
-    <div class="deco deco-border-crono">
-      <img src="assets/deco-border2.png" alt="" style="width:100%;height:100%;object-fit:contain;">
-    </div>
-    <div class="deco deco-bg-crono">
-      <img src="assets/deco-bg-small1.png" alt="" style="width:100%;height:100%;object-fit:contain;opacity:0.5;">
-    </div>
-
     <div class="cronograma-inner">
-      <p class="subtitle">Cronograma — APP BIT</p>
-      <h2 class="heading-2">Sua jornada no Hackathon</h2>
+      <p class="subtitle" style="text-align:center;">Cronograma — APP BIT</p>
+      <h2 class="heading-2" style="text-align:center;">Sua jornada no Hackathon</h2>
 
       <div class="timeline animate-on-scroll">
         <div class="timeline-row">
           <div class="timeline-item">
-            <span class="timeline-item-label">Inscrições</span>
-            <div class="timeline-item-dates">
-              <span class="timeline-item-date">20/04</span>
+            <span class="timeline-label">Inscrições</span>
+            <div class="timeline-dates">
+              <span class="timeline-date">20/04</span>
               <span class="timeline-dash"></span>
-              <span class="timeline-item-date">28/05</span>
+              <span class="timeline-date">28/05</span>
             </div>
           </div>
-
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none">
-            <path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/>
-          </svg>
-
+          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="timeline-item">
-            <span class="timeline-item-label">Onboarding</span>
-            <span class="timeline-item-date">01/06</span>
+            <span class="timeline-label">Onboarding</span>
+            <span class="timeline-date">01/06</span>
           </div>
-
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none">
-            <path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/>
-          </svg>
-
+          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="timeline-item">
-            <span class="timeline-item-label">Início</span>
-            <span class="timeline-item-date">08/06</span>
+            <span class="timeline-label">Início</span>
+            <span class="timeline-date">08/06</span>
           </div>
-
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none">
-            <path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/>
-          </svg>
-
+          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="timeline-item">
-            <span class="timeline-item-label">Demo Day</span>
-            <span class="timeline-item-date">10/07</span>
+            <span class="timeline-label">Demo Day</span>
+            <span class="timeline-date">10/07</span>
           </div>
         </div>
-
         <div class="timeline-mentoria">Mentorias durante o evento (5 semanas)</div>
       </div>
 
@@ -240,28 +204,18 @@
     <div class="premiacoes-inner">
       <p class="subtitle">Premiações e reconhecimento</p>
       <h2 class="heading-2">Inovação e talento reconhecidos</h2>
-
       <div class="accordion animate-on-scroll">
         <div class="accordion-item">
-          <span class="accordion-item-text">Bolsas de estudo (Alura e Ânima)</span>
-          <svg class="accordion-item-icon" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="16" fill="#FFBB00"/>
-            <path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/>
-          </svg>
+          <span class="accordion-text">Bolsas de estudo (Alura e Ânima)</span>
+          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
         <div class="accordion-item">
-          <span class="accordion-item-text">Visita técnica à Oracle</span>
-          <svg class="accordion-item-icon" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="16" fill="#FFBB00"/>
-            <path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/>
-          </svg>
+          <span class="accordion-text">Visita técnica à Oracle</span>
+          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
         <div class="accordion-item">
-          <span class="accordion-item-text">Possibilidade de contratação por empresas parceiras</span>
-          <svg class="accordion-item-icon" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="16" fill="#FFBB00"/>
-            <path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/>
-          </svg>
+          <span class="accordion-text">Possibilidade de contratação por empresas parceiras</span>
+          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
       </div>
     </div>
@@ -275,21 +229,16 @@
       <span class="parceiros-divider"></span>
     </div>
     <div class="parceiros-logos animate-on-scroll">
-      <img src="assets/logo-pmi.png" alt="PMI-SP" style="height:92px;">
-      <img src="assets/logo-anima.png" alt="Ânima Educação" style="height:70px;">
-      <img src="assets/logo-one.png" alt="Oracle Next Education" style="height:80px;">
-      <img src="assets/logo-nocountry.png" alt="NoCountry" style="height:34px;">
-      <img src="assets/logo-alura.png" alt="Alura" style="height:50px;">
+      <img src="assets/logo-pmi.png" alt="PMI-SP">
+      <img src="assets/logo-anima.png" alt="Ânima Educação">
+      <img src="assets/logo-one.png" alt="Oracle Next Education">
+      <img src="assets/logo-nocountry.png" alt="NoCountry">
+      <img src="assets/logo-alura.svg" alt="Alura">
     </div>
   </section>
 
   <!-- ===== WONGOLA ===== -->
   <section class="wongola" id="wongola">
-    <!-- Yellow organic shape -->
-    <div class="deco-yellow-wongola">
-      <img src="assets/deco-rect14.png" alt="">
-    </div>
-
     <div class="wongola-inner">
       <div class="wongola-logo animate-on-scroll">
         <img src="assets/logo-wongola-white.png" alt="Wongola">
