@@ -9,6 +9,26 @@ ul{list-style:none}
 .anim{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .anim.visible{opacity:1;transform:translateY(0)}
 
+/* ================================================
+   PAGE SCALE — maintains Figma proportions at any viewport.
+   Sections are built at 1440px. Below that, the whole page
+   scales down proportionally via CSS zoom.
+   ================================================ */
+.page{
+  width:1440px;
+  margin:0 auto;
+  overflow:hidden;
+}
+@media(max-width:1440px){
+  .page{
+    width:100vw;
+    zoom:calc(100 / 1440);
+    /* zoom value is unitless: viewport pixels / design pixels.
+       The JS below sets this dynamically for better compat. */
+  }
+}
+
+/* Shared */
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}
 .h2{font-family:var(--f-head);font-weight:900;font-size:48px;color:var(--navy);line-height:1.1;margin-bottom:16px}
@@ -27,7 +47,7 @@ ul{list-style:none}
 .btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
-/* NAV */
+/* NAV — stays outside .page, scales independently */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 32px 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid rgba(21,92,244,.2);transition:box-shadow .3s}
 .nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
 .nav-logo{display:flex;align-items:center;gap:8px}
@@ -40,11 +60,12 @@ ul{list-style:none}
 .nav-hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:transform .3s,opacity .3s}
 
 /* ================================================
-   HERO — photo bg with navy overlay, organic edge
+   HERO
    ================================================ */
 .hero{
   position:relative;
-  min-height:100vh;
+  width:1440px;
+  min-height:920px;
   padding:130px 0 80px;
   background:var(--navy);
   overflow:hidden;
@@ -65,15 +86,12 @@ ul{list-style:none}
 .hero-content{
   position:relative;z-index:2;
   display:flex;flex-direction:column;align-items:center;
-  gap:48px;max-width:620px;padding:0 20px;
+  gap:48px;width:620px;padding:0 20px;
 }
-
-/* Logo — preserve aspect ratio */
 .hero-logo{display:flex;flex-direction:column;align-items:center;gap:24px}
 .hero-logo-img{
   position:relative;
   width:507px;
-  /* aspect ratio from Figma: 507x200 */
   aspect-ratio:507/200;
 }
 .hero-logo-img img{position:absolute;height:auto}
@@ -93,23 +111,23 @@ ul{list-style:none}
 .stat-lbl{font-family:var(--f-head);font-size:14px;color:var(--white);text-transform:uppercase;letter-spacing:1px}
 
 /* ================================================
-   SOBRE — organic photo left, text right
+   SOBRE
    ================================================ */
-.sobre{position:relative;padding:100px 0;overflow:hidden}
+.sobre{position:relative;padding:100px 0;overflow:hidden;width:1440px}
 .sobre-wrap{display:flex;align-items:center;gap:60px;max-width:1280px;margin:0 auto;padding:0 32px}
-.sobre-img{flex-shrink:0;width:50%}
+.sobre-img{flex-shrink:0;width:684px}
 .sobre-img img{width:100%;height:auto}
-.sobre-content{max-width:486px}
+.sobre-content{width:486px}
 
 /* ================================================
-   POR QUE PARTICIPAR — blue organic blob background
-   The SVG is 2010x1437. In Figma it's positioned at x=-439 in 1440 viewport.
-   That means left offset = -439/1440 = -30.5%, and width = 2010/1440 = 139.6%
+   POR QUE PARTICIPAR
+   SVG 2011x1437. Figma x=-439 → left=-30.5%, width=139.6%
    ================================================ */
 .porque{
   position:relative;
   padding:0;
   overflow:hidden;
+  width:1440px;
 }
 .porque-bg{
   display:block;
@@ -125,9 +143,11 @@ ul{list-style:none}
   max-width:1280px;margin:0 auto;
   padding:12% 5% 25%;
 }
-.porque-text{max-width:500px}
+.porque-text{width:555px}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
+
+/* Porque logos: 500x210 container, absolute positioned items */
 .porque-logos{
   position:relative;
   width:500px;
@@ -143,20 +163,18 @@ ul{list-style:none}
 
 /* ================================================
    EMPREGABILIDADE
-   Yellow shape BEHIND, photo IN FRONT overlapping it.
-   Section overlaps the bottom of the blue porque blob above.
-   Figma: section w=1365, h=810 at x=30 in 1440 viewport
-   - Yellow at x=344 (25.2% from left), w=1021 (74.8%)
-   - Photo at x=0, y=70, w=605 (44.3%), h=599
-   - Text at x=724 (53% from left), y=203 (25%)
+   Section w=1365, h=810 at x=30.
+   Yellow at x=344 (25.2%), w=1021 (74.8%)
+   Photo at x=0, y=70 (8.7%), w=605 (44.3%)
+   Text at x=724 (53%), y=203 (25%)
    ================================================ */
 .empreg{
   position:relative;
   margin-top:-56vw;
   z-index:2;
   aspect-ratio:1365/810;
-  width:94.8%;
-  margin-left:2%;
+  width:1365px;
+  margin-left:30px;
 }
 .empreg-yellow{
   position:absolute;
@@ -175,16 +193,15 @@ ul{list-style:none}
 .empreg-card{
   position:absolute;
   top:25%;left:53%;
-  width:34%;
-  max-width:465px;
+  width:465px;
   z-index:2;
 }
 
 /* ================================================
-   CRONOGRAMA — clean white
+   CRONOGRAMA
    ================================================ */
-.crono{padding:120px 80px;text-align:center}
-.crono-wrap{max-width:960px;margin:0 auto}
+.crono{padding:120px 80px;text-align:center;width:1440px}
+.crono-wrap{width:957px;margin:0 auto}
 .timeline{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;background:var(--white);border:1px solid rgba(0,0,0,.2);border-radius:16px;padding:32px 40px 48px}
 .tl-row{display:flex;align-items:center;gap:48px}
 .tl-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -197,14 +214,14 @@ ul{list-style:none}
 .crono-cta{margin-top:48px;display:flex;justify-content:center}
 
 /* ================================================
-   PREMIACOES — organic light shape background
-   SVG is 1649x939. In Figma at x=-84 in 1440 viewport.
-   left offset = -84/1440 = -5.8%, width = 1649/1440 = 114.5%
+   PREMIACOES
+   SVG 1649x939. Figma x=-84 → left=-5.8%, width=114.5%
    ================================================ */
 .premiacoes{
   position:relative;
   padding:0;
   overflow:hidden;
+  width:1440px;
 }
 .premiacoes-bg{
   display:block;
@@ -217,9 +234,9 @@ ul{list-style:none}
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;flex-direction:column;justify-content:center;
-  max-width:750px;
+  width:750px;
   margin:0 auto;
-  padding:15% 5%;
+  padding:15% 0;
 }
 .accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
@@ -229,13 +246,13 @@ ul{list-style:none}
 .acc-item.open .acc-icon{transform:rotate(45deg)}
 
 /* ================================================
-   PARCEIROS
+   PARCEIROS — exact Figma sizes, flex centered
    ================================================ */
-.parceiros{padding:0 0 96px;background:var(--white)}
+.parceiros{padding:0 0 96px;background:var(--white);width:1440px}
 .parceiros-bar{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;background:var(--yellow)}
 .bar-line{width:30px;height:2px;background:var(--navy)}
 .bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
-.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 96px;padding:80px}
+.parceiros-logos{display:flex;align-items:center;justify-content:center;gap:48px 96px;padding:80px}
 .parceiros-logos img{object-fit:contain}
 .parc-pmi{width:92px;height:92px}
 .parc-anima{width:164px;height:70px}
@@ -244,31 +261,17 @@ ul{list-style:none}
 .parc-alura{width:108px;height:50px}
 
 /* ================================================
-   WONGOLA — plain navy, no blobs
+   WONGOLA
    ================================================ */
-.wongola{background:var(--navy);padding:200px 80px 180px}
-.wongola-wrap{max-width:600px;margin:0;padding-left:80px}
+.wongola{background:var(--navy);padding:200px 80px 180px;width:1440px}
+.wongola-wrap{width:465px;margin:0;padding-left:66px}
 .wongola-logo{width:160px;height:160px;margin-bottom:48px}
 .wongola-logo img{width:100%;height:100%;object-fit:contain}
 .wongola-cta{margin-top:48px}
 
 /* ================================================
-   RESPONSIVE
+   MOBILE NAV — only the nav changes structurally
    ================================================ */
-@media(max-width:1024px){
-  .hero-logo-img{width:380px}
-  .hero-stats{gap:32px}
-  .sobre-wrap{flex-direction:column;gap:40px}
-  .sobre-img{width:100%}
-  .porque-wrap{flex-direction:column;padding:10% 5% 20%}
-  .empreg{margin-top:-40vw;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
-  .empreg-yellow{position:relative;top:auto;left:auto;width:90%;margin-left:5%}
-  .empreg-photo{position:relative;top:auto;left:auto;width:70%;margin:-20% auto 20px}
-  .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto}
-  .tl-row{gap:24px}
-  .tl-date{font-size:24px}
-  .wongola-wrap{padding-left:40px}
-}
 @media(max-width:768px){
   .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
   .nav-menu.open{display:flex}
@@ -276,32 +279,4 @@ ul{list-style:none}
   .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-hamburger.open span:nth-child(2){opacity:0}
   .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .hero{min-height:auto;padding:120px 0 60px}
-  .hero-bg{width:220%;left:40%}
-  .hero-logo-img{width:280px}
-  .hero-tagline{font-size:22px}
-  .hero-deadline{font-size:32px}
-  .hero-desc{font-size:18px}
-  .hero-stats{flex-wrap:wrap;gap:24px;justify-content:center}
-  .stat-val{font-size:22px}
-  .h2{font-size:36px}
-  .body{font-size:18px}
-  .sobre{padding:60px 0}
-  .sobre-wrap{padding:0 24px}
-  .porque-wrap{padding:8% 5% 18%}
-  .porque-list li{font-size:16px}
-  .porque-logos{width:300px;height:130px;transform:scale(.6);transform-origin:top left}
-  .empreg{margin-top:-30vw}
-  .empreg-photo{width:85%;margin:-15% auto 10px}
-  .crono{padding:80px 24px}
-  .timeline{padding:24px 16px 40px}
-  .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
-  .tl-chev{display:none}
-  .tl-date{font-size:28px}
-  .premiacoes-wrap{padding:10% 5%}
-  .acc-text{font-size:18px}
-  .parceiros-logos{gap:32px;padding:48px 24px}
-  .parceiros-logos img{height:45px}
-  .wongola{padding:100px 24px 140px}
-  .wongola-wrap{padding-left:0}
 }
