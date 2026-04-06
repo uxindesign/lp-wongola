@@ -60,28 +60,26 @@ ul{list-style:none}
    ================================================ */
 .hero{
   position:relative;
-  min-height:100vh;
-  padding:130px 0 80px;
-  background:var(--navy);
+  padding:0;
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 .hero-bg{
-  position:absolute;
-  top:0;left:50%;
-  transform:translateX(-50%);
-  width:157%;
+  display:block;
+  width:2260px;
   max-width:none;
   height:auto;
-  min-height:100%;
-  pointer-events:none;z-index:0;
+  margin:0 auto;
+  position:relative;
+  left:-150px;
+  pointer-events:none;
 }
 .hero-content{
-  position:relative;z-index:2;
-  display:flex;flex-direction:column;align-items:center;
-  gap:48px;max-width:620px;padding:0 20px;
+  position:absolute;z-index:2;
+  top:0;left:0;right:0;bottom:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:48px;max-width:620px;
+  margin:0 auto;
+  padding:90px 20px 80px;
 }
 
 /* Logo — preserve aspect ratio */
