@@ -13,30 +13,22 @@ ul{list-style:none}
 
 /* Floating decorations — absolute within .page */
 .deco{position:absolute;top:0;left:0;right:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}
-.d{position:absolute;pointer-events:auto;cursor:default;transition:transform .6s cubic-bezier(.25,.46,.45,.94),opacity .4s}
+.d{position:absolute;pointer-events:auto;cursor:default;will-change:transform}
 
-/* Float animation — autonomous, each element unique timing */
-@keyframes float{
-  0%,100%{transform:var(--base-rot,rotate(0)) translate(0,0)}
-  25%{transform:var(--base-rot,rotate(0)) translate(calc(var(--fx,6px)*1.2),calc(var(--fy,-10px)*1.2)) rotate(calc(var(--fr,2deg)*1.2))}
-  50%{transform:var(--base-rot,rotate(0)) translate(calc(var(--fx,6px)*-0.84),calc(var(--fy,-10px)*0.72)) rotate(calc(var(--fr,2deg)*-0.6))}
-  75%{transform:var(--base-rot,rotate(0)) translate(calc(var(--fx,6px)*1.56),calc(var(--fy,-10px)*-0.48)) rotate(calc(var(--fr,2deg)*1.2))}
-}
-.d{animation:float var(--float-dur,6s) var(--float-delay,0s) ease-in-out infinite}
+/* Float is handled entirely by JS for true random trajectories */
 
 /* Positions from Figma LP frame (1440px). Right-side elements use
    right:0 or negative values to hug/bleed the viewport edge. */
-/* Bigger float radius: --fx/--fy doubled. Positions randomized on load via JS. */
-.d-hero-big{top:41px;right:-93px;width:533px;height:520px;--float-dur:8s;--float-delay:0s;--fx:16px;--fy:-20px;--fr:2.5deg}
-.d-hero-diamond{top:240px;left:40px;width:153px;height:152px;--float-dur:7s;--float-delay:.5s;--fx:12px;--fy:-16px;--fr:4deg}
-.d-blob-left{top:888px;left:-227px;width:617px;height:623px;--float-dur:10s;--float-delay:1s;--fx:18px;--fy:-12px;--fr:1.5deg}
-.d-diamond-mid{top:1872px;right:40px;width:153px;height:152px;--float-dur:7s;--float-delay:1.5s;--fx:-14px;--fy:-18px;--fr:4deg}
-.d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6s;--float-delay:.3s;--fx:10px;--fy:-14px;--fr:3deg}
-.d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6.5s;--float-delay:.8s;--fx:-12px;--fy:-10px;--fr:3.5deg}
-.d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:9s;--float-delay:.2s;--fx:14px;--fy:-16px;--fr:2.5deg}
-.d-arrow{top:1017px;left:50%;margin-left:-12px;width:24px;height:24px;--float-dur:4s;--float-delay:0s;--fx:0px;--fy:10px;--fr:0deg}
-.d-sq-4{top:4073px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:8.5s;--float-delay:.6s;--fx:14px;--fy:-18px;--fr:3deg}
-.d-sq-5{top:4230px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg);--float-dur:7.5s;--float-delay:1.2s;--fx:-10px;--fy:-12px;--fr:4deg}
+.d-hero-big{top:41px;right:-93px;width:533px;height:520px}
+.d-hero-diamond{top:240px;left:40px;width:153px;height:152px}
+.d-blob-left{top:888px;left:-227px;width:617px;height:623px}
+.d-diamond-mid{top:1872px;right:40px;width:153px;height:152px}
+.d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
+.d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
+.d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg)}
+.d-arrow{top:1017px;left:50%;margin-left:-12px;width:24px;height:24px}
+.d-sq-4{top:4073px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
+.d-sq-5{top:4230px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
 
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}

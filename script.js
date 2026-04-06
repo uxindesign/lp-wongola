@@ -50,79 +50,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
-  // Randomize decorative positions slightly on each page load
-  // Keeps them near the edges but with organic variation
-  document.querySelectorAll('.d:not(.d-arrow)').forEach(el => {
-    const offsetY = (Math.random() - 0.5) * 80;  // ±40px vertical
-    const offsetX = (Math.random() - 0.5) * 60;  // ±30px horizontal
-    const extraRot = (Math.random() - 0.5) * 10;  // ±5deg rotation
-    el.style.top = (parseFloat(getComputedStyle(el).top) || 0) + offsetY + 'px';
-    if (el.style.left && el.style.left !== '50%') {
-      el.style.left = (parseFloat(getComputedStyle(el).left) || 0) + offsetX + 'px';
-    } else if (getComputedStyle(el).right !== 'auto') {
-      el.style.right = (parseFloat(getComputedStyle(el).right) || 0) - offsetX + 'px';
-    }
-    const dur = 5 + Math.random() * 6; // 5-11s
-    const delay = Math.random() * -10;  // stagger start
-    el.style.animationDuration = dur + 's';
-    el.style.animationDelay = delay + 's';
-  });
-
-  // Floating decorations — cursor as soft collider
-  // Force depends on cursor VELOCITY, not just proximity
+  // ============================================
+  // FLOATING RECTANGLES — continuous random drift
+  // Uses layered sine waves at different frequencies
+  // to create organic, never-repeating trajectories.
+  // Cursor acts as soft collider on top of the drift.
+  // ============================================
   const decos = document.querySelectorAll('.d');
-  let mx = -9999, my = -9999, pmx = -9999, pmy = -9999;
-  let mVel = 0;
+  let mx = -9999, my = -9999, pmx = -9999, pmy = -9999, mVel = 0;
 
   document.addEventListener('mousemove', (e) => {
     pmx = mx; pmy = my;
     mx = e.pageX; my = e.pageY;
-    const ddx = mx - pmx, ddy = my - pmy;
-    mVel = Math.sqrt(ddx * ddx + ddy * ddy);
+    mVel = Math.sqrt((mx - pmx) ** 2 + (my - pmy) ** 2);
   });
 
-  decos.forEach(el => { el._px = 0; el._py = 0; el._vx = 0; el._vy = 0; });
+  // Each element gets unique random wave parameters
+  decos.forEach(el => {
+    const isArrow = el.classList.contains('d-arrow');
+    const range = isArrow ? 6 : 25; // px drift radius
+    const rotRange = isArrow ? 0 : 4; // deg
 
-  function tick() {
+    // 3 layered sine waves per axis for complex paths
+    el._waves = {
+      x1: { freq: 0.0003 + Math.random() * 0.0004, amp: range * (0.6 + Math.random() * 0.4), phase: Math.random() * Math.PI * 2 },
+      x2: { freq: 0.0007 + Math.random() * 0.0005, amp: range * (0.3 + Math.random() * 0.3), phase: Math.random() * Math.PI * 2 },
+      x3: { freq: 0.00015 + Math.random() * 0.0002, amp: range * (0.2 + Math.random() * 0.2), phase: Math.random() * Math.PI * 2 },
+      y1: { freq: 0.00025 + Math.random() * 0.0004, amp: range * (0.6 + Math.random() * 0.4), phase: Math.random() * Math.PI * 2 },
+      y2: { freq: 0.0006 + Math.random() * 0.0005, amp: range * (0.3 + Math.random() * 0.3), phase: Math.random() * Math.PI * 2 },
+      y3: { freq: 0.00012 + Math.random() * 0.00015, amp: range * (0.2 + Math.random() * 0.2), phase: Math.random() * Math.PI * 2 },
+      r1: { freq: 0.0002 + Math.random() * 0.0003, amp: rotRange, phase: Math.random() * Math.PI * 2 },
+    };
+
+    el._pushX = 0; el._pushY = 0;
+    el._pvx = 0; el._pvy = 0;
+    el._baseRot = getComputedStyle(el).getPropertyValue('--base-rot').trim() || 'rotate(0)';
+  });
+
+  function tick(t) {
     const zoom = parseFloat(page.style.zoom) || 1;
-    const velFactor = Math.min(mVel / 30, 1); // 0-1 based on speed
+    const velFactor = Math.min(mVel / 30, 1);
 
     decos.forEach(el => {
+      const w = el._waves;
+
+      // Layered sine drift
+      const driftX = Math.sin(t * w.x1.freq + w.x1.phase) * w.x1.amp
+                    + Math.sin(t * w.x2.freq + w.x2.phase) * w.x2.amp
+                    + Math.sin(t * w.x3.freq + w.x3.phase) * w.x3.amp;
+      const driftY = Math.sin(t * w.y1.freq + w.y1.phase) * w.y1.amp
+                    + Math.sin(t * w.y2.freq + w.y2.phase) * w.y2.amp
+                    + Math.sin(t * w.y3.freq + w.y3.phase) * w.y3.amp;
+      const driftR = Math.sin(t * w.r1.freq + w.r1.phase) * w.r1.amp;
+
+      // Cursor collision
       const rect = el.getBoundingClientRect();
       const cx = (rect.left + rect.width / 2) + window.scrollX * zoom;
       const cy = (rect.top + rect.height / 2) + window.scrollY * zoom;
       const dx = cx - mx * zoom;
       const dy = cy - my * zoom;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      const radius = 200;
 
-      if (dist < radius && dist > 1) {
-        const proximity = 1 - dist / radius;
+      if (dist < 200 && dist > 1) {
+        const proximity = 1 - dist / 200;
         const force = proximity * velFactor * 3.6;
         const angle = Math.atan2(dy, dx);
-        el._vx += Math.cos(angle) * force * 0.0144;
-        el._vy += Math.sin(angle) * force * 0.0144;
+        el._pvx += Math.cos(angle) * force * 0.014;
+        el._pvy += Math.sin(angle) * force * 0.014;
       }
 
-      // Very gentle spring back + heavy damping
-      el._vx += -el._px * 0.003;
-      el._vy += -el._py * 0.003;
-      el._vx *= 0.985;
-      el._vy *= 0.985;
-      el._px += el._vx;
-      el._py += el._vy;
+      el._pvx += -el._pushX * 0.003;
+      el._pvy += -el._pushY * 0.003;
+      el._pvx *= 0.985;
+      el._pvy *= 0.985;
+      el._pushX += el._pvx;
+      el._pushY += el._pvy;
 
-      if (Math.abs(el._px) > 0.05 || Math.abs(el._py) > 0.05) {
-        el.style.marginLeft = el._px + 'px';
-        el.style.marginTop = el._py + 'px';
-      } else {
-        el.style.marginLeft = '';
-        el.style.marginTop = '';
-      }
+      const totalX = driftX + el._pushX;
+      const totalY = driftY + el._pushY;
+
+      el.style.transform = el._baseRot + ' translate(' + totalX.toFixed(1) + 'px,' + totalY.toFixed(1) + 'px) rotate(' + driftR.toFixed(2) + 'deg)';
     });
 
-    mVel *= 0.85; // decay velocity when mouse stops
+    mVel *= 0.85;
     requestAnimationFrame(tick);
   }
-  tick();
+  requestAnimationFrame(tick);
 });
