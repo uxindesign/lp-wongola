@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<rect width="32" height="32" rx="16" fill="var(--fill-0, #FFBB00)"/>
+<path id="Vector" d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="var(--fill-0, #181057)"/>
+</g>
+</svg>

@@ -56,7 +56,6 @@ ul {
   justify-content: center;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
@@ -73,6 +72,7 @@ ul {
 .btn-primary {
   width: 254px;
   height: 56px;
+  font-size: 16px;
   color: var(--navy);
 }
 
@@ -90,6 +90,7 @@ ul {
 .btn-outline {
   width: 186px;
   height: 56px;
+  font-size: 16px;
   color: var(--white);
 }
 
@@ -107,8 +108,8 @@ ul {
 .btn-nav {
   width: 142px;
   height: 40px;
-  color: var(--navy);
   font-size: 14px;
+  color: var(--navy);
 }
 
 .btn-nav .btn-bg {
@@ -133,7 +134,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 12px 32px 14px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 2px solid rgba(21, 92, 244, 0.2);
@@ -206,85 +207,93 @@ ul {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  padding: 120px 40px 60px;
-  background: var(--navy);
+  padding: 120px 0 60px;
   overflow: hidden;
+}
+
+/* Large navy background shape */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 170%;
+  height: 130%;
+  background: var(--navy);
+  transform: rotate(-50deg);
+  transform-origin: center;
+  z-index: 0;
+  border-radius: 80px;
 }
 
 .hero-decorations {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
 }
 
-.hero-deco {
+.deco {
   position: absolute;
-  opacity: 0.15;
+  pointer-events: none;
 }
 
-.hero-deco-1 {
+/* Blue triangle top-right */
+.deco-hero-triangle {
   top: 5%;
-  right: 10%;
-  width: 200px;
-  height: 200px;
-  background: var(--blue);
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  right: 0;
+  width: 480px;
+  height: 470px;
+  opacity: 0.5;
+  transform: rotate(-30deg);
 }
 
-.hero-deco-2 {
-  top: 15%;
-  left: 5%;
+/* Yellow border square */
+.deco-border-1 {
+  top: 232px;
+  left: 86px;
   width: 120px;
   height: 120px;
-  background: var(--yellow);
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-  transform: rotate(180deg);
-}
-
-.hero-deco-3 {
-  bottom: 20%;
-  left: 0;
-  width: 180px;
-  height: 180px;
-  background: var(--blue);
-  border-radius: 50%;
-  opacity: 0.08;
-}
-
-.hero-deco-4 {
-  top: 10%;
-  left: 12%;
-  width: 100px;
-  height: 100px;
   border: 3px solid var(--yellow);
-  border-radius: 12px;
-  opacity: 0.2;
-  transform: rotate(15deg);
+  border-radius: 20px;
+  opacity: 0.3;
+  transform: rotate(45deg);
+  z-index: 2;
 }
 
-.hero-deco-5 {
-  bottom: 30%;
-  right: 5%;
+/* Yellow filled small square */
+.deco-bg-1 {
+  top: 921px;
+  right: 130px;
   width: 80px;
   height: 80px;
-  border: 3px solid var(--blue);
-  border-radius: 50%;
+  background: var(--yellow);
+  border-radius: 20px;
+  opacity: 0.2;
+  transform: rotate(-18deg);
+  z-index: 2;
+}
+
+/* Large blue blob left */
+.deco-blob-blue {
+  top: 850px;
+  left: -167px;
+  width: 540px;
+  height: 500px;
   opacity: 0.15;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
   max-width: 620px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero-logo {
@@ -337,7 +346,7 @@ ul {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 28px;
-  color: var(--blue);
+  color: #337eff;
   text-align: center;
 }
 
@@ -378,7 +387,7 @@ ul {
   display: flex;
   gap: 48px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .hero-stat {
@@ -396,7 +405,7 @@ ul {
 }
 
 .hero-stat-label {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-heading);
   font-size: 14px;
   color: var(--white);
   text-transform: uppercase;
@@ -404,39 +413,7 @@ ul {
   text-align: center;
 }
 
-/* ===== SECTION: SOBRE ===== */
-.sobre {
-  position: relative;
-  padding: 120px 80px;
-  overflow: hidden;
-}
-
-.sobre-inner {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.sobre-image {
-  flex-shrink: 0;
-  width: 500px;
-  height: 500px;
-  border-radius: 50% 50% 50% 0;
-  overflow: hidden;
-}
-
-.sobre-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sobre-content {
-  max-width: 486px;
-}
-
+/* ===== SHARED ===== */
 .subtitle {
   font-family: var(--font-pixel);
   font-size: 14px;
@@ -467,39 +444,121 @@ ul {
   padding-top: 16px;
 }
 
-/* ===== SECTION: POR QUE PARTICIPAR ===== */
-.porque {
+/* ===== SECTION: SOBRE ===== */
+.sobre {
   position: relative;
-  padding: 120px 0;
+  padding: 100px 0;
   overflow: hidden;
 }
 
-.porque-bg {
-  position: absolute;
-  top: 0;
-  left: -5%;
-  width: 75%;
-  height: 100%;
+.sobre-inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.sobre-image {
+  flex-shrink: 0;
+  width: 710px;
+  max-width: 50%;
+}
+
+.sobre-image img {
+  width: 100%;
+  height: auto;
+}
+
+.sobre-content {
+  max-width: 486px;
+}
+
+/* Decorative elements around sobre */
+.deco-border-sobre {
+  top: -60px;
+  right: 150px;
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--yellow);
+  border-radius: 20px;
+  opacity: 0.3;
+  transform: rotate(45deg);
+}
+
+.deco-bg-sobre {
+  bottom: -30px;
+  left: 76px;
+  width: 80px;
+  height: 80px;
   background: var(--blue);
-  border-radius: 0 60px 60px 0;
+  border-radius: 20px;
+  opacity: 0.2;
+  transform: rotate(-18deg);
+}
+
+/* ===== SECTION: POR QUE PARTICIPAR + EMPREGABILIDADE ===== */
+.porque-empregabilidade {
+  position: relative;
+  padding: 100px 0 120px;
+  overflow: hidden;
+}
+
+/* Large blue organic shape - left side */
+.porque-empregabilidade .deco-blue-blob {
+  position: absolute;
+  top: -10%;
+  left: -30%;
+  width: 120%;
+  height: 80%;
   z-index: 0;
 }
 
-.porque-inner {
+.porque-empregabilidade .deco-blue-blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+
+/* Yellow organic shape - right side bottom */
+.porque-empregabilidade .deco-yellow-blob {
+  position: absolute;
+  bottom: -15%;
+  left: -10%;
+  width: 100%;
+  height: 60%;
+  z-index: 0;
+}
+
+.porque-empregabilidade .deco-yellow-blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.porque-content-wrap {
   position: relative;
   z-index: 1;
-  display: flex;
-  gap: 80px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 80px;
 }
 
-.porque-content {
+.porque-row {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  margin-bottom: 120px;
+}
+
+.porque-text {
   max-width: 555px;
 }
 
-.porque-content .heading-2 {
+.porque-text .heading-2 {
   color: var(--white);
 }
 
@@ -517,63 +576,87 @@ ul {
   margin-bottom: 8px;
 }
 
-.porque-logos {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.porque-logos-side {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 24px 48px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  padding-top: 40px;
 }
 
-.porque-logos img {
+.porque-logos-side img {
   max-height: 80px;
   width: auto;
   object-fit: contain;
 }
 
-/* ===== SECTION: EMPREGABILIDADE ===== */
-.empregabilidade {
-  position: relative;
-  padding: 120px 80px;
-  overflow: hidden;
-}
-
-.empregabilidade-bg {
-  position: absolute;
-  top: 0;
-  right: -5%;
-  width: 60%;
-  height: 100%;
-  background: var(--yellow);
-  border-radius: 60px 0 0 60px;
-  z-index: 0;
-}
-
-.empregabilidade-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-}
-
+/* Empregabilidade - right-aligned card */
 .empregabilidade-card {
+  position: relative;
+  z-index: 2;
   background: var(--white);
   border-radius: 24px;
   padding: 48px;
   max-width: 520px;
+  margin-left: auto;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative elements */
+.deco-yellow-square-rot {
+  top: 50%;
+  right: 50px;
+  width: 220px;
+  height: 220px;
+  background: var(--yellow);
+  border-radius: 60px;
+  opacity: 0.2;
+  transform: rotate(-43deg);
+}
+
+.deco-border-empregabilidade {
+  bottom: 30%;
+  left: 60px;
+  width: 100px;
+  height: 90px;
+  opacity: 0.3;
+}
+
+.deco-border-empregabilidade img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Blue vector shape between porque and empregabilidade */
+.deco-vector-blue-mid {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 640px;
+  height: 620px;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+.deco-vector-blue-mid img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* ===== SECTION: CRONOGRAMA ===== */
 .cronograma {
+  position: relative;
   padding: 120px 80px;
   text-align: center;
+  overflow: hidden;
 }
 
 .cronograma-inner {
-  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -667,13 +750,38 @@ ul {
   justify-content: center;
 }
 
+/* Deco for cronograma */
+.deco-border-crono {
+  position: absolute;
+  bottom: 10%;
+  left: 60px;
+  width: 90px;
+  height: 90px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.deco-bg-crono {
+  position: absolute;
+  top: 15%;
+  right: 40px;
+  width: 250px;
+  height: 250px;
+  opacity: 0.15;
+  z-index: 0;
+}
+
 /* ===== SECTION: PREMIACOES ===== */
 .premiacoes {
+  position: relative;
   padding: 120px 80px;
   background: #f5f5f8;
+  overflow: hidden;
 }
 
 .premiacoes-inner {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -760,18 +868,21 @@ ul {
 }
 
 .parceiros-logos img {
-  max-height: 92px;
-  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
 /* ===== SECTION: WONGOLA ===== */
 .wongola {
+  position: relative;
   background: var(--navy);
-  padding: 120px 80px;
+  padding: 250px 80px 200px;
+  overflow: hidden;
 }
 
 .wongola-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -801,34 +912,54 @@ ul {
   margin-top: 48px;
 }
 
+/* Yellow organic shape in wongola section */
+.wongola .deco-yellow-wongola {
+  position: absolute;
+  bottom: -20%;
+  right: -20%;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
+}
+
+.wongola .deco-yellow-wongola img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .sobre-inner {
     flex-direction: column;
+    gap: 40px;
   }
 
   .sobre-image {
-    width: 350px;
-    height: 350px;
+    max-width: 100%;
+    width: 100%;
   }
 
-  .porque-inner {
+  .porque-row {
     flex-direction: column;
-    padding: 0 40px;
+    gap: 40px;
   }
 
-  .porque-bg {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  .empregabilidade-inner {
-    justify-content: center;
-  }
-
-  .empregabilidade-bg {
-    width: 100%;
-    border-radius: 0;
+  .porque-logos-side {
+    justify-content: flex-start;
   }
 
   .timeline-row {
@@ -907,7 +1038,7 @@ ul {
   }
 
   .hero {
-    padding: 120px 24px 60px;
+    padding: 120px 0 60px;
   }
 
   .hero-logo-img {
@@ -967,19 +1098,18 @@ ul {
   }
 
   .sobre {
-    padding: 80px 24px;
+    padding: 60px 0;
   }
 
-  .sobre-image {
-    width: 280px;
-    height: 280px;
+  .sobre-inner {
+    padding: 0 24px;
   }
 
-  .porque {
-    padding: 80px 0;
+  .porque-empregabilidade {
+    padding: 60px 0;
   }
 
-  .porque-inner {
+  .porque-content-wrap {
     padding: 0 24px;
   }
 
@@ -987,12 +1117,9 @@ ul {
     font-size: 18px;
   }
 
-  .empregabilidade {
-    padding: 80px 24px;
-  }
-
   .empregabilidade-card {
     padding: 32px 24px;
+    max-width: 100%;
   }
 
   .cronograma {
@@ -1030,11 +1157,15 @@ ul {
     padding: 60px 24px;
   }
 
-  .parceiros-logos img {
-    max-height: 60px;
+  .wongola {
+    padding: 120px 24px 160px;
   }
 
-  .wongola {
-    padding: 80px 24px;
+  .deco-hero-triangle,
+  .deco-blob-blue,
+  .deco-vector-blue-mid,
+  .deco-bg-crono,
+  .deco-yellow-wongola {
+    display: none;
   }
 }
