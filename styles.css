@@ -156,25 +156,26 @@ ul{list-style:none}
   margin-top:-813px;
   z-index:2;
   height:810px;
-  width:100%;
+  width:1365px;
+  margin-left:30px;
 }
 .empreg-yellow{
   position:absolute;
-  top:0;left:26%;
-  width:70.9%;
+  top:0;left:344px;
+  width:1021px;
   height:auto;
   z-index:0;
 }
 .empreg-photo{
   position:absolute;
-  top:70px;left:2.1%;
-  width:42%;
+  top:70px;left:0;
+  width:605px;
   height:auto;
   z-index:1;
 }
 .empreg-card{
   position:absolute;
-  top:203px;left:52.4%;
+  top:203px;left:724px;
   width:465px;
   z-index:2;
 }
