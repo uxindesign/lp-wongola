@@ -50,29 +50,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
-  // Floating decorations — gentle parallax on mouse move
+  // Floating decorations — cursor acts as a soft collider
+  // Elements get gently pushed away when cursor is near
   const decos = document.querySelectorAll('.d');
-  let mouseX = 0, mouseY = 0;
+  let mouseX = -9999, mouseY = -9999;
+
   document.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 to 1
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    mouseX = e.pageX;
+    mouseY = e.pageY;
   });
 
-  // Each deco gets a random parallax intensity
   decos.forEach(el => {
-    el._parallax = 0.5 + Math.random() * 1.5; // 0.5 to 2
-    el._side = el.getBoundingClientRect().left > window.innerWidth / 2 ? 1 : -1;
+    el._pushX = 0;
+    el._pushY = 0;
+    el._pushRot = 0;
   });
 
-  function animateDecos() {
+  function tick() {
     decos.forEach(el => {
-      const p = el._parallax;
-      const offsetX = mouseX * 8 * p;
-      const offsetY = mouseY * 6 * p;
-      el.style.marginLeft = offsetX + 'px';
-      el.style.marginTop = offsetY + 'px';
+      const rect = el.getBoundingClientRect();
+      const zoom = parseFloat(page.style.zoom) || 1;
+      const cx = (rect.left + rect.width / 2) / zoom + window.scrollX;
+      const cy = (rect.top + rect.height / 2) / zoom + window.scrollY;
+      const dx = cx - mouseX / zoom;
+      const dy = cy - mouseY / zoom;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      const radius = 150;
+
+      if (dist < radius && dist > 0) {
+        const force = (1 - dist / radius) * 25;
+        const angle = Math.atan2(dy, dx);
+        el._pushX += (Math.cos(angle) * force - el._pushX) * 0.15;
+        el._pushY += (Math.sin(angle) * force - el._pushY) * 0.15;
+        el._pushRot += (force * 0.3 - el._pushRot) * 0.1;
+      } else {
+        el._pushX *= 0.92;
+        el._pushY *= 0.92;
+        el._pushRot *= 0.92;
+      }
+
+      if (Math.abs(el._pushX) > 0.1 || Math.abs(el._pushY) > 0.1) {
+        el.style.marginLeft = el._pushX + 'px';
+        el.style.marginTop = el._pushY + 'px';
+      } else {
+        el.style.marginLeft = '';
+        el.style.marginTop = '';
+      }
     });
-    requestAnimationFrame(animateDecos);
+    requestAnimationFrame(tick);
   }
-  animateDecos();
+  tick();
 });
