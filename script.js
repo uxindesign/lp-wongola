@@ -49,4 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+
+  // Floating decorations — gentle parallax on mouse move
+  const decos = document.querySelectorAll('.d');
+  let mouseX = 0, mouseY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 to 1
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  // Each deco gets a random parallax intensity
+  decos.forEach(el => {
+    el._parallax = 0.5 + Math.random() * 1.5; // 0.5 to 2
+    el._side = el.getBoundingClientRect().left > window.innerWidth / 2 ? 1 : -1;
+  });
+
+  function animateDecos() {
+    decos.forEach(el => {
+      const p = el._parallax;
+      const offsetX = mouseX * 8 * p;
+      const offsetY = mouseY * 6 * p;
+      el.style.marginLeft = offsetX + 'px';
+      el.style.marginTop = offsetY + 'px';
+    });
+    requestAnimationFrame(animateDecos);
+  }
+  animateDecos();
 });
