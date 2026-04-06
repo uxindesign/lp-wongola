@@ -139,40 +139,43 @@ ul{list-style:none}
 
 /* ================================================
    EMPREGABILIDADE
-   Yellow shape BEHIND, photo IN FRONT overlapping it.
-   Section overlaps the bottom of the blue porque blob above.
-   Figma: section w=1365, h=810 at x=30 in 1440 viewport
-   - Yellow at x=344 (25.2% from left), w=1021 (74.8%)
-   - Photo at x=0, y=70, w=605 (44.3%), h=599
-   - Text at x=724 (53% from left), y=203 (25%)
+   Figma LP frame (1440 wide):
+   - Section frame at x=30, y=2691, w=1365, h=810
+   - Yellow container at x=30+344=374, w=1021
+   - Photo at x=30, y=2691+70=2761, w=605, h=599
+   - Text at x=30+344+380=754, y=2691+203=2894, w=465
+
+   As percentages of 1440:
+   - Section: left=2.1%, width=94.8%
+   - Yellow: left=26%, width=70.9%
+   - Photo: left=2.1%, width=42%
+   - Text: left=52.4%, width=32.3%
    ================================================ */
 .empreg{
   position:relative;
   margin-top:-813px;
   z-index:2;
-  aspect-ratio:1365/810;
-  width:94.8%;
-  margin-left:2%;
+  height:810px;
+  width:100%;
 }
 .empreg-yellow{
   position:absolute;
-  top:0;left:25.2%;
-  width:74.8%;
+  top:0;left:26%;
+  width:70.9%;
   height:auto;
   z-index:0;
 }
 .empreg-photo{
   position:absolute;
-  top:8.7%;left:0;
-  width:44.3%;
+  top:70px;left:2.1%;
+  width:42%;
   height:auto;
   z-index:1;
 }
 .empreg-card{
   position:absolute;
-  top:25%;left:53%;
-  width:34%;
-  max-width:465px;
+  top:203px;left:52.4%;
+  width:465px;
   z-index:2;
 }
 
