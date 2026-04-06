@@ -26,7 +26,6 @@ ul{list-style:none}
 .d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg)}
-.d-arrow{top:1150px;left:50%;margin-left:-12px;width:24px;height:24px}
 .d-sq-4{top:4073px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
 .d-sq-5{top:4230px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
 
@@ -80,11 +79,11 @@ ul{list-style:none}
 }
 .hero-content{
   position:absolute;z-index:2;
-  top:0;left:0;right:0;bottom:0;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  top:280px;left:0;right:0;
+  display:flex;flex-direction:column;align-items:center;
   gap:48px;max-width:620px;
   margin:0 auto;
-  padding:90px 20px 80px;
+  padding:0 20px;
 }
 
 /* Logo — preserve aspect ratio */
@@ -106,7 +105,18 @@ ul{list-style:none}
 .hero-deadline{font-family:var(--f-head);font-weight:900;font-size:48px;color:var(--yellow);text-align:center;line-height:1.1}
 .hero-desc{font-size:24px;color:var(--white);text-align:center;line-height:1.4;max-width:620px}
 .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;padding-top:16px}
-.hero-stats{display:flex;gap:48px;align-items:center;margin-top:60px}
+.hero-stats{display:flex;gap:48px;align-items:center;margin-top:108px}
+
+/* Arrow bounce inside hero */
+.hero-arrow{
+  margin-top:48px;
+  width:24px;height:24px;
+  animation:bounce 2s ease-in-out infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+}
 .stat{display:flex;flex-direction:column;align-items:center;gap:8px}
 .stat-val{font-family:var(--f-pixel);font-size:28.8px;color:var(--yellow)}
 .stat-lbl{font-family:var(--f-head);font-size:14px;color:var(--white);text-transform:uppercase;letter-spacing:1px}
