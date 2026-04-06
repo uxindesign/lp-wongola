@@ -61,7 +61,7 @@ ul{list-style:none}
   gap:48px;max-width:620px;padding:0 20px;
 }
 .hero-logo{display:flex;flex-direction:column;align-items:center;gap:24px}
-.hero-logo-img{position:relative;width:507px;aspect-ratio:507/200}
+.hero-logo-img{position:relative;width:100%;max-width:507px;aspect-ratio:507/200}
 .hero-logo-img img{position:absolute;height:auto}
 .hero-logo-img .hack-text{left:9.1%;top:9.5%;width:83.4%}
 .hero-logo-img .bit-text{left:28.9%;top:68%;width:43.4%}
@@ -80,7 +80,7 @@ ul{list-style:none}
 /* SOBRE */
 .sobre{position:relative;padding:100px 0;overflow:hidden}
 .sobre-wrap{display:flex;align-items:center;gap:60px;max-width:1280px;margin:0 auto;padding:0 32px}
-.sobre-img{flex-shrink:0;width:684px;max-width:50%}
+.sobre-img{flex-shrink:0;width:50%;max-width:684px}
 .sobre-img img{width:100%;height:auto}
 .sobre-content{max-width:486px}
 
@@ -96,14 +96,14 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* Porque logos — exact Figma sizes, absolute in 500x210 container */
-.porque-logos{position:relative;width:500px;height:210px;flex-shrink:0}
+/* Porque logos — Figma sizes as max, scale down with container */
+.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1}
 .porque-logos img{position:absolute;object-fit:contain}
-.pl-one{left:43px;top:0;width:149px;height:80px}
-.pl-anima{left:272px;top:5px;width:164px;height:70px}
-.pl-pmi{left:0;top:130px;width:80px;height:80px}
-.pl-alura{left:140px;top:145px;width:108px;height:50px}
-.pl-nocountry{left:300px;top:153px;width:200px;height:34px}
+.pl-one{left:8.6%;top:0;width:29.8%;height:38.1%}
+.pl-anima{left:54.4%;top:2.4%;width:32.8%;height:33.3%}
+.pl-pmi{left:0;top:61.9%;width:16%;height:38.1%}
+.pl-alura{left:28%;top:69%;width:21.6%;height:23.8%}
+.pl-nocountry{left:60%;top:72.9%;width:40%;height:16.2%}
 
 /* EMPREGABILIDADE */
 .empreg{
@@ -114,7 +114,7 @@ ul{list-style:none}
 }
 .empreg-yellow{position:absolute;top:0;left:25.2%;width:74.8%;height:auto;z-index:0}
 .empreg-photo{position:absolute;top:8.7%;left:0;width:44.3%;height:auto;z-index:1}
-.empreg-card{position:absolute;top:25%;left:53%;width:34%;max-width:465px;z-index:2}
+.empreg-card{position:absolute;top:25%;left:53%;width:34%;z-index:2}
 
 /* CRONOGRAMA */
 .crono{padding:120px 80px;text-align:center}
@@ -151,16 +151,16 @@ ul{list-style:none}
 .bar-line{width:30px;height:2px;background:var(--navy)}
 .bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
 .parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 96px;padding:80px}
-.parceiros-logos img{object-fit:contain}
-.parc-pmi{width:92px;height:92px}
-.parc-anima{width:164px;height:70px}
-.parc-one{width:149px;height:80px}
-.parc-nocountry{width:200px;height:34px}
-.parc-alura{width:108px;height:50px}
+.parceiros-logos img{object-fit:contain;height:auto}
+.parc-pmi{max-width:92px;max-height:92px;width:8%}
+.parc-anima{max-width:164px;max-height:70px;width:14%}
+.parc-one{max-width:149px;max-height:80px;width:13%}
+.parc-nocountry{max-width:200px;max-height:34px;width:17%}
+.parc-alura{max-width:108px;max-height:50px;width:9%}
 
 /* WONGOLA */
 .wongola{background:var(--navy);padding:200px 80px 180px}
-.wongola-wrap{max-width:465px;padding-left:66px}
+.wongola-wrap{max-width:465px;padding-left:66px;width:100%}
 .wongola-logo{width:160px;height:160px;margin-bottom:48px}
 .wongola-logo img{width:100%;height:100%;object-fit:contain}
 .wongola-cta{margin-top:48px}
