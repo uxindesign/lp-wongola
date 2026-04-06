@@ -5,18 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateScale() {
     const vw = window.innerWidth;
     if (vw >= 1280) {
-      const scale = vw / 1920;
-      page.style.transform = 'scale(' + scale + ')';
-      page.style.transformOrigin = 'top center';
-      page.style.width = (100 / scale) + '%';
-      page.style.marginLeft = 'auto';
-      page.style.marginRight = 'auto';
+      page.style.zoom = vw / 1920;
     } else {
-      page.style.transform = '';
-      page.style.transformOrigin = '';
-      page.style.width = '';
-      page.style.marginLeft = '';
-      page.style.marginRight = '';
+      page.style.zoom = '';
     }
   }
   updateScale();
