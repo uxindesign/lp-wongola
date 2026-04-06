@@ -270,11 +270,11 @@ ul{list-style:none}
 /* ================================================
    PARCEIROS
    ================================================ */
-.parceiros{padding:0 0 96px;background:var(--white)}
+.parceiros{display:flex;flex-direction:column;gap:96px;padding-bottom:96px;background:var(--white)}
 .parceiros-bar{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;background:var(--yellow)}
 .bar-line{width:30px;height:2px;background:var(--navy)}
 .bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
-.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 96px;padding:80px}
+.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:64px 96px}
 .parceiros-logos img{object-fit:contain}
 .parc-pmi{width:92px;height:92px}
 .parc-anima{width:164px;height:70px}
