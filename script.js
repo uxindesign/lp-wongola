@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Scale .page proportionally
-  // Base reference = 1600px (slightly zoomed out at 1280-1440,
-  // 1:1 at 1600, scales up above that)
+  // Scale: >= 1280px zoom proportionally, < 1280px responsive layout
   const page = document.querySelector('.page');
   function updateScale() {
-    page.style.zoom = window.innerWidth / 1600;
+    const vw = window.innerWidth;
+    if (vw >= 1280) {
+      page.style.zoom = vw / 1600;
+      page.style.width = '1440px';
+      page.style.overflow = 'hidden';
+    } else {
+      page.style.zoom = '';
+      page.style.width = '';
+      page.style.overflow = '';
+    }
   }
   updateScale();
   window.addEventListener('resize', updateScale);
