@@ -159,13 +159,13 @@ ul{list-style:none}
   top:0;left:0;right:0;bottom:0;
   display:flex;gap:60px;align-items:flex-start;
   max-width:1280px;margin:0 auto;
-  padding:280px 80px 200px;
+  padding:200px 80px 200px;
 }
 .porque-text{max-width:555px}
-.porque-list{list-style:disc;padding-left:20px;margin:24px 0}
+.porque-list{list-style:disc;padding-left:20px;margin:24px 0;width:500px}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 /* Porque logos: 500x210 in Figma, percentage-based so it scales with parent */
-.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1}
+.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1;margin-top:40px}
 .porque-logos img{position:absolute;object-fit:contain}
 .pl-one{left:8.6%;top:0;width:29.8%;height:38.1%}
 .pl-anima{left:54.4%;top:2.4%;width:32.8%;height:33.3%}
