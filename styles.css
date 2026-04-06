@@ -138,39 +138,42 @@ ul{list-style:none}
 .porque-logos img{height:auto;width:100%;max-width:160px;object-fit:contain}
 
 /* ================================================
-   EMPREGABILIDADE — photo blob left, yellow blob right with text ON it
-   empreg-blue.png is the photo at x=0 in frame (x=29 in viewport)
-   empreg-bg.svg (yellow) at x=343 in frame (x=373 in viewport)
-   Frame width=1365, so yellow starts at 373/1440=25.9% from left
+   EMPREGABILIDADE
+   Yellow shape BEHIND, photo IN FRONT overlapping it.
+   Section overlaps the bottom of the blue porque blob above.
+   Figma: section w=1365, h=810 at x=30 in 1440 viewport
+   - Yellow at x=344 (25.2% from left), w=1021 (74.8%)
+   - Photo at x=0, y=70, w=605 (44.3%), h=599
+   - Text at x=724 (53% from left), y=203 (25%)
    ================================================ */
 .empreg{
   position:relative;
-  padding:0;
-  overflow:hidden;
-  display:flex;
-}
-.empreg-photo{
-  width:44%;
-  height:auto;
-  flex-shrink:0;
-  margin-top:5%;
+  margin-top:-28vw;
+  z-index:2;
+  aspect-ratio:1365/810;
+  width:94.8%;
   margin-left:2%;
 }
-.empreg-shape{
-  position:relative;
-  flex:1;
-  margin-left:-5%;
-}
-.empreg-shape-bg{
-  display:block;
-  width:100%;
+.empreg-yellow{
+  position:absolute;
+  top:0;left:25.2%;
+  width:74.8%;
   height:auto;
+  z-index:0;
+}
+.empreg-photo{
+  position:absolute;
+  top:8.7%;left:0;
+  width:44.3%;
+  height:auto;
+  z-index:1;
 }
 .empreg-card{
   position:absolute;
-  top:25%;left:37%;
-  width:55%;
+  top:25%;left:53%;
+  width:34%;
   max-width:465px;
+  z-index:2;
 }
 
 /* ================================================
@@ -249,10 +252,10 @@ ul{list-style:none}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
   .porque-wrap{flex-direction:column;padding:10% 5% 20%}
-  .empreg{flex-direction:column}
-  .empreg-photo{width:70%;margin:0 auto}
-  .empreg-shape{margin-left:0;width:100%}
-  .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto;padding:40px 20px}
+  .empreg{margin-top:-20vw;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
+  .empreg-yellow{position:relative;top:auto;left:auto;width:90%;margin-left:5%}
+  .empreg-photo{position:relative;top:auto;left:auto;width:70%;margin:-20% auto 20px}
+  .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto}
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
   .wongola-wrap{padding-left:40px}
@@ -279,7 +282,8 @@ ul{list-style:none}
   .porque-wrap{padding:8% 5% 18%}
   .porque-list li{font-size:16px}
   .porque-logos{grid-template-columns:repeat(2,1fr);gap:20px}
-  .empreg-photo{width:90%}
+  .empreg{margin-top:-15vw}
+  .empreg-photo{width:85%;margin:-15% auto 10px}
   .crono{padding:80px 24px}
   .timeline{padding:24px 16px 40px}
   .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
