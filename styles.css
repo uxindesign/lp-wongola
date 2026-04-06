@@ -213,8 +213,9 @@ ul{list-style:none}
 .premiacoes-bg{
   display:block;
   width:1649px;
+  max-width:none;
   height:auto;
-  margin-left:-84px;
+  margin:0 auto;
   pointer-events:none;
 }
 .premiacoes-wrap{
