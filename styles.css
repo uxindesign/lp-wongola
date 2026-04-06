@@ -165,7 +165,7 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0;width:500px}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 /* Porque logos: 500x210 in Figma, percentage-based so it scales with parent */
-.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1;margin-top:40px}
+.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1;margin-top:60px}
 .porque-logos img{position:absolute;object-fit:contain}
 .pl-one{left:8.6%;top:0;width:29.8%;height:38.1%}
 .pl-anima{left:54.4%;top:2.4%;width:32.8%;height:33.3%}
