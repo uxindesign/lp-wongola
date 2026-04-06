@@ -148,7 +148,7 @@ ul{list-style:none}
    ================================================ */
 .empreg{
   position:relative;
-  margin-top:-28vw;
+  margin-top:-56vw;
   z-index:2;
   aspect-ratio:1365/810;
   width:94.8%;
@@ -252,7 +252,7 @@ ul{list-style:none}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
   .porque-wrap{flex-direction:column;padding:10% 5% 20%}
-  .empreg{margin-top:-20vw;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
+  .empreg{margin-top:-40vw;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
   .empreg-yellow{position:relative;top:auto;left:auto;width:90%;margin-left:5%}
   .empreg-photo{position:relative;top:auto;left:auto;width:70%;margin:-20% auto 20px}
   .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto}
@@ -282,7 +282,7 @@ ul{list-style:none}
   .porque-wrap{padding:8% 5% 18%}
   .porque-list li{font-size:16px}
   .porque-logos{grid-template-columns:repeat(2,1fr);gap:20px}
-  .empreg{margin-top:-15vw}
+  .empreg{margin-top:-30vw}
   .empreg-photo{width:85%;margin:-15% auto 10px}
   .crono{padding:80px 24px}
   .timeline{padding:24px 16px 40px}
