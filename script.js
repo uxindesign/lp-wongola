@@ -80,18 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (dist < radius && dist > 1) {
         const proximity = 1 - dist / radius;
-        // Force = proximity * velocity — slow cursor barely pushes
-        const force = proximity * velFactor * 18;
+        const force = proximity * velFactor * 3;
         const angle = Math.atan2(dy, dx);
-        el._vx += Math.cos(angle) * force * 0.08;
-        el._vy += Math.sin(angle) * force * 0.08;
+        el._vx += Math.cos(angle) * force * 0.012;
+        el._vy += Math.sin(angle) * force * 0.012;
       }
 
-      // Spring back + damping (very soft)
-      el._vx += -el._px * 0.008;
-      el._vy += -el._py * 0.008;
-      el._vx *= 0.96;
-      el._vy *= 0.96;
+      // Very gentle spring back + heavy damping
+      el._vx += -el._px * 0.003;
+      el._vy += -el._py * 0.003;
+      el._vx *= 0.985;
+      el._vy *= 0.985;
       el._px += el._vx;
       el._py += el._vy;
 
