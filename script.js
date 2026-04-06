@@ -50,53 +50,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
-  // Floating decorations — cursor acts as a soft collider
-  // Elements get gently pushed away when cursor is near
+  // Floating decorations — cursor as soft collider
+  // Force depends on cursor VELOCITY, not just proximity
   const decos = document.querySelectorAll('.d');
-  let mouseX = -9999, mouseY = -9999;
+  let mx = -9999, my = -9999, pmx = -9999, pmy = -9999;
+  let mVel = 0;
 
   document.addEventListener('mousemove', (e) => {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
+    pmx = mx; pmy = my;
+    mx = e.pageX; my = e.pageY;
+    const ddx = mx - pmx, ddy = my - pmy;
+    mVel = Math.sqrt(ddx * ddx + ddy * ddy);
   });
 
-  decos.forEach(el => {
-    el._pushX = 0;
-    el._pushY = 0;
-    el._pushRot = 0;
-  });
+  decos.forEach(el => { el._px = 0; el._py = 0; el._vx = 0; el._vy = 0; });
 
   function tick() {
+    const zoom = parseFloat(page.style.zoom) || 1;
+    const velFactor = Math.min(mVel / 30, 1); // 0-1 based on speed
+
     decos.forEach(el => {
       const rect = el.getBoundingClientRect();
-      const zoom = parseFloat(page.style.zoom) || 1;
-      const cx = (rect.left + rect.width / 2) / zoom + window.scrollX;
-      const cy = (rect.top + rect.height / 2) / zoom + window.scrollY;
-      const dx = cx - mouseX / zoom;
-      const dy = cy - mouseY / zoom;
+      const cx = (rect.left + rect.width / 2) + window.scrollX * zoom;
+      const cy = (rect.top + rect.height / 2) + window.scrollY * zoom;
+      const dx = cx - mx * zoom;
+      const dy = cy - my * zoom;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      const radius = 150;
+      const radius = 200;
 
-      if (dist < radius && dist > 0) {
-        const force = (1 - dist / radius) * 25;
+      if (dist < radius && dist > 1) {
+        const proximity = 1 - dist / radius;
+        // Force = proximity * velocity — slow cursor barely pushes
+        const force = proximity * velFactor * 18;
         const angle = Math.atan2(dy, dx);
-        el._pushX += (Math.cos(angle) * force - el._pushX) * 0.15;
-        el._pushY += (Math.sin(angle) * force - el._pushY) * 0.15;
-        el._pushRot += (force * 0.3 - el._pushRot) * 0.1;
-      } else {
-        el._pushX *= 0.92;
-        el._pushY *= 0.92;
-        el._pushRot *= 0.92;
+        el._vx += Math.cos(angle) * force * 0.08;
+        el._vy += Math.sin(angle) * force * 0.08;
       }
 
-      if (Math.abs(el._pushX) > 0.1 || Math.abs(el._pushY) > 0.1) {
-        el.style.marginLeft = el._pushX + 'px';
-        el.style.marginTop = el._pushY + 'px';
+      // Spring back + damping (very soft)
+      el._vx += -el._px * 0.008;
+      el._vy += -el._py * 0.008;
+      el._vx *= 0.96;
+      el._vy *= 0.96;
+      el._px += el._vx;
+      el._py += el._vy;
+
+      if (Math.abs(el._px) > 0.05 || Math.abs(el._py) > 0.05) {
+        el.style.marginLeft = el._px + 'px';
+        el.style.marginTop = el._py + 'px';
       } else {
         el.style.marginLeft = '';
         el.style.marginTop = '';
       }
     });
+
+    mVel *= 0.85; // decay velocity when mouse stops
     requestAnimationFrame(tick);
   }
   tick();
