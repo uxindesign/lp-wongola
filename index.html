@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hackathon App BiT — Wongola</title>
   <meta name="description" content="Participe do maior desafio de 2026: desenvolva o App BiT e crie soluções tecnológicas que transformam vidas.">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Outfit:wght@400;500;700;900&family=Poppins:wght@600&family=Press+Start+2P&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
@@ -13,15 +12,13 @@
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav">
+  <!-- NAV -->
+  <nav class="nav" id="nav">
     <a href="#" class="nav-logo">
       <img src="assets/logo-wongola.png" alt="Wongola">
       <span class="nav-logo-text">WONGOLA</span>
     </a>
-    <button class="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-menu">
       <a href="#sobre" class="nav-link">Sobre</a>
       <a href="#porque" class="nav-link">Benefícios</a>
@@ -36,29 +33,26 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <!-- Decorative shapes -->
-    <img class="hero-deco-triangle" src="assets/deco-bg-hero.svg" alt="" aria-hidden="true">
+    <img class="hero-bg" src="assets/hero-bg.png" alt="" aria-hidden="true">
     <div class="hero-deco-border"></div>
     <div class="hero-deco-square"></div>
 
     <div class="hero-content">
       <div class="hero-logo">
         <div class="hero-logo-img">
-          <img class="arrow-left" src="assets/arrow-left.svg" alt="" aria-hidden="true">
-          <img class="hackathon-text" src="assets/hackathon-text.svg" alt="Hackathon">
-          <img class="appbit-text" src="assets/appbit-text.svg" alt="App BiT">
-          <img class="arrow-right" src="assets/arrow-right.svg" alt="" aria-hidden="true">
+          <img class="arrow-l" src="assets/arrow-left-v2.svg" alt="">
+          <img class="hack-text" src="assets/hackathon-v2.svg" alt="Hackathon">
+          <img class="bit-text" src="assets/appbit-v2.svg" alt="App BiT">
+          <img class="arrow-r" src="assets/arrow-right-v2.svg" alt="">
         </div>
         <p class="hero-tagline">Inove, Impacte, Transforme!</p>
       </div>
-
       <div class="hero-text">
-        <p class="hero-deadline">Inscreva-se até 28/05</p>
-        <p class="hero-description">Participe do maior desafio de 2026: desenvolva o App BiT e crie soluções tecnológicas que transformam vidas.</p>
+        <h1 class="hero-deadline">Inscreva-se até 28/05</h1>
+        <p class="hero-desc">Participe do maior desafio de 2026: desenvolva o App BiT e crie soluções tecnológicas que transformam vidas.</p>
       </div>
-
       <div class="hero-buttons">
         <a href="#" class="btn btn-primary">
           <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
@@ -69,128 +63,88 @@
           <span>Saiba Mais</span>
         </a>
       </div>
-
       <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat-value">100%</span>
-          <span class="hero-stat-label">ON-LINE</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-value">08/06</span>
-          <span class="hero-stat-label">INÍCIO</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-value">32</span>
-          <span class="hero-stat-label">DIAS</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-value">1000</span>
-          <span class="hero-stat-label">VAGAS</span>
-        </div>
+        <div class="stat"><span class="stat-val">100%</span><span class="stat-lbl">ON-LINE</span></div>
+        <div class="stat"><span class="stat-val">08/06</span><span class="stat-lbl">INÍCIO</span></div>
+        <div class="stat"><span class="stat-val">32</span><span class="stat-lbl">DIAS</span></div>
+        <div class="stat"><span class="stat-val">1000</span><span class="stat-lbl">VAGAS</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOBRE ===== -->
+  <!-- SOBRE -->
   <section class="sobre" id="sobre">
-    <div class="sobre-deco-border"></div>
-    <div class="sobre-deco-bg"></div>
-    <img class="sobre-deco-blob" src="assets/deco-bg-small2.svg" alt="" aria-hidden="true">
-
-    <div class="sobre-inner">
-      <div class="sobre-image animate-on-scroll">
-        <img src="assets/about-photo.png" alt="Participantes do hackathon">
-      </div>
-      <div class="sobre-content animate-on-scroll">
-        <p class="subtitle">Sobre a Iniciativa</p>
-        <h2 class="heading-2">Crie soluções que <span class="highlight">transformam vidas</span></h2>
-        <p class="body-text">O Hackathon App BiT é uma jornada de 32 dias para mentes inovadoras, onde vamos desenvolver o App BiT, uma plataforma digital revolucionária para reduzir desigualdades sociais, conectar comunidades e empoderar indivíduos.</p>
+    <div class="sobre-wrap">
+      <div class="sobre-img anim"><img src="assets/about-photo.png" alt="Participantes"></div>
+      <div class="sobre-content anim">
+        <p class="label">Sobre a Iniciativa</p>
+        <h2 class="h2">Crie soluções que <span class="hl">transformam vidas</span></h2>
+        <p class="body">O Hackathon App BiT é uma jornada de 32 dias para mentes inovadoras, onde vamos desenvolver o App BiT, uma plataforma digital revolucionária para reduzir desigualdades sociais, conectar comunidades e empoderar indivíduos.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== POR QUE PARTICIPAR ===== -->
+  <!-- POR QUE PARTICIPAR -->
   <section class="porque" id="porque">
-    <img class="porque-blob" src="assets/deco-rect12.svg" alt="" aria-hidden="true">
-    <img class="porque-blob-small" src="assets/deco-rect13.svg" alt="" aria-hidden="true">
-    <div class="porque-deco-border"></div>
-    <div class="porque-deco-square"></div>
-
-    <div class="porque-inner">
-      <div class="porque-text animate-on-scroll">
-        <h2 class="heading-2 heading-white">Por que participar?</h2>
+    <img class="porque-bg" src="assets/porque-bg.svg" alt="" aria-hidden="true">
+    <div class="porque-wrap">
+      <div class="porque-text anim">
+        <h2 class="h2 white">Por que participar?</h2>
         <ul class="porque-list">
           <li>Colaboração com mentores de grandes empresas (Oracle, Ânima Educação, PMI-SP).</li>
           <li>Networking com outros inovadores e startups.</li>
           <li>Oportunidade de criar um aplicativo com impacto global real.</li>
           <li>Visibilidade e acesso a oportunidades de carreira.</li>
         </ul>
-        <a href="#" class="btn btn-primary" style="margin-top:16px;">
+        <a href="#" class="btn btn-primary" style="margin-top:16px">
           <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
           <span>Inscreva-se Agora</span>
         </a>
       </div>
-      <div class="porque-logos animate-on-scroll">
-        <img src="assets/logo-one.png" alt="Oracle Next Education">
-        <img src="assets/logo-anima.png" alt="Ânima Educação">
-        <img src="assets/logo-pmi-small.png" alt="PMI-SP">
-        <img src="assets/logo-alura-2.svg" alt="Alura">
-        <img src="assets/logo-alura-small.svg" alt="Alura">
-        <img src="assets/logo-nocountry-small.png" alt="NoCountry">
+      <div class="porque-logos anim">
+        <img src="assets/logo-one-v2.png" alt="ONE">
+        <img src="assets/logo-anima-v2.png" alt="Ânima">
+        <img src="assets/logo-pmi-v2.png" alt="PMI-SP">
+        <img src="assets/logo-alura-v2.png" alt="Alura">
+        <img src="assets/logo-nocountry-v2.png" alt="NoCountry">
       </div>
     </div>
   </section>
 
-  <!-- ===== EMPREGABILIDADE ===== -->
-  <section class="empregabilidade">
-    <img class="empregabilidade-blob" src="assets/deco-rect14.svg" alt="" aria-hidden="true">
-    <div class="empregabilidade-deco-square"></div>
-
-    <div class="empregabilidade-inner">
-      <div class="empregabilidade-card animate-on-scroll">
-        <p class="subtitle">Hackathon + Empregabilidade:</p>
-        <h2 class="heading-2">Transforme ideias em oportunidades!</h2>
-        <p class="body-text">Além de inovar no Hackathon App BiT, você tem a oportunidade de alavancar sua carreira! Com o apoio das nossas empresas parceiras, seus dados podem ser compartilhados para análise e contato direto, abrindo portas para oportunidades reais de trabalho.</p>
+  <!-- EMPREGABILIDADE -->
+  <section class="empreg">
+    <img class="empreg-blue" src="assets/empreg-blue.png" alt="" aria-hidden="true">
+    <img class="empreg-bg" src="assets/empreg-bg.svg" alt="" aria-hidden="true">
+    <div class="empreg-wrap">
+      <div class="empreg-card anim">
+        <p class="label">Hackathon + Empregabilidade:</p>
+        <h2 class="h2">Transforme ideias em oportunidades!</h2>
+        <p class="body">Além de inovar no Hackathon App BiT, você tem a oportunidade de alavancar sua carreira! Com o apoio das nossas empresas parceiras, seus dados podem ser compartilhados para análise e contato direto, abrindo portas para oportunidades reais de trabalho.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CRONOGRAMA ===== -->
-  <section class="cronograma" id="cronograma">
-    <div class="cronograma-inner">
-      <p class="subtitle" style="text-align:center;">Cronograma — APP BIT</p>
-      <h2 class="heading-2" style="text-align:center;">Sua jornada no Hackathon</h2>
-
-      <div class="timeline animate-on-scroll">
-        <div class="timeline-row">
-          <div class="timeline-item">
-            <span class="timeline-label">Inscrições</span>
-            <div class="timeline-dates">
-              <span class="timeline-date">20/04</span>
-              <span class="timeline-dash"></span>
-              <span class="timeline-date">28/05</span>
-            </div>
+  <!-- CRONOGRAMA -->
+  <section class="crono" id="cronograma">
+    <div class="crono-wrap">
+      <p class="label center">Cronograma — APP BIT</p>
+      <h2 class="h2 center">Sua jornada no Hackathon</h2>
+      <div class="timeline anim">
+        <div class="tl-row">
+          <div class="tl-item">
+            <span class="tl-lbl">Inscrições</span>
+            <div class="tl-dates"><span class="tl-date">20/04</span><span class="tl-dash"></span><span class="tl-date">28/05</span></div>
           </div>
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
-          <div class="timeline-item">
-            <span class="timeline-label">Onboarding</span>
-            <span class="timeline-date">01/06</span>
-          </div>
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
-          <div class="timeline-item">
-            <span class="timeline-label">Início</span>
-            <span class="timeline-date">08/06</span>
-          </div>
-          <svg class="timeline-chevron" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
-          <div class="timeline-item">
-            <span class="timeline-label">Demo Day</span>
-            <span class="timeline-date">10/07</span>
-          </div>
+          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <div class="tl-item"><span class="tl-lbl">Onboarding</span><span class="tl-date">01/06</span></div>
+          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <div class="tl-item"><span class="tl-lbl">Início</span><span class="tl-date">08/06</span></div>
+          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <div class="tl-item"><span class="tl-lbl">Demo Day</span><span class="tl-date">10/07</span></div>
         </div>
-        <div class="timeline-mentoria">Mentorias durante o evento (5 semanas)</div>
+        <div class="tl-pill">Mentorias durante o evento (5 semanas)</div>
       </div>
-
-      <div class="cronograma-cta">
+      <div class="crono-cta">
         <a href="#" class="btn btn-primary">
           <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
           <span>Inscreva-se Agora</span>
@@ -199,55 +153,52 @@
     </div>
   </section>
 
-  <!-- ===== PREMIACOES ===== -->
+  <!-- PREMIACOES -->
   <section class="premiacoes" id="premiacoes">
-    <div class="premiacoes-inner">
-      <p class="subtitle">Premiações e reconhecimento</p>
-      <h2 class="heading-2">Inovação e talento reconhecidos</h2>
-      <div class="accordion animate-on-scroll">
-        <div class="accordion-item">
-          <span class="accordion-text">Bolsas de estudo (Alura e Ânima)</span>
-          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+    <img class="premiacoes-bg" src="assets/premiacoes-bg.svg" alt="" aria-hidden="true">
+    <div class="premiacoes-wrap">
+      <p class="label">Premiações e reconhecimento</p>
+      <h2 class="h2">Inovação e talento reconhecidos</h2>
+      <div class="accordion anim">
+        <div class="acc-item">
+          <span class="acc-text">Bolsas de estudo (Alura e Ânima)</span>
+          <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
-        <div class="accordion-item">
-          <span class="accordion-text">Visita técnica à Oracle</span>
-          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+        <div class="acc-item">
+          <span class="acc-text">Visita técnica à Oracle</span>
+          <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
-        <div class="accordion-item">
-          <span class="accordion-text">Possibilidade de contratação por empresas parceiras</span>
-          <svg class="accordion-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+        <div class="acc-item">
+          <span class="acc-text">Possibilidade de contratação por empresas parceiras</span>
+          <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PARCEIROS ===== -->
+  <!-- PARCEIROS -->
   <section class="parceiros" id="parceiros">
-    <div class="parceiros-header">
-      <span class="parceiros-divider"></span>
-      <span class="parceiros-title">Nossos Parceiros</span>
-      <span class="parceiros-divider"></span>
+    <div class="parceiros-bar">
+      <span class="bar-line"></span><span class="bar-title">Nossos Parceiros</span><span class="bar-line"></span>
     </div>
-    <div class="parceiros-logos animate-on-scroll">
+    <div class="parceiros-logos anim">
       <img src="assets/logo-pmi.png" alt="PMI-SP">
-      <img src="assets/logo-anima.png" alt="Ânima Educação">
-      <img src="assets/logo-one.png" alt="Oracle Next Education">
+      <img src="assets/logo-anima.png" alt="Ânima">
+      <img src="assets/logo-one.png" alt="ONE">
       <img src="assets/logo-nocountry.png" alt="NoCountry">
       <img src="assets/logo-alura.svg" alt="Alura">
     </div>
   </section>
 
-  <!-- ===== WONGOLA ===== -->
+  <!-- WONGOLA -->
   <section class="wongola" id="wongola">
-    <div class="wongola-inner">
-      <div class="wongola-logo animate-on-scroll">
-        <img src="assets/logo-wongola-white.png" alt="Wongola">
+    <div class="wongola-wrap">
+      <div class="wongola-logo anim"><img src="assets/logo-wongola-white.png" alt="Wongola"></div>
+      <div class="anim">
+        <h2 class="h2 white">Quem somos</h2>
+        <p class="body white">A Wongola EdTech é uma iniciativa privada comprometida em criar caminhos acessíveis para a comunidade negra alcançar instituições de ensino de excelência e oportunidades de emprego em empresas alinhadas com a responsabilidade social - ESG.</p>
       </div>
-      <div class="animate-on-scroll">
-        <h2 class="heading-2">Quem somos</h2>
-        <p class="body-text">A Wongola EdTech é uma iniciativa privada comprometida em criar caminhos acessíveis para a comunidade negra alcançar instituições de ensino de excelência e oportunidades de emprego em empresas alinhadas com a responsabilidade social - ESG.</p>
-      </div>
-      <div class="wongola-cta animate-on-scroll">
+      <div class="wongola-cta anim">
         <a href="#" class="btn btn-outline">
           <svg class="btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="white" stroke-opacity="0.3" stroke-width="2"/></svg>
           <span>Saiba Mais</span>
