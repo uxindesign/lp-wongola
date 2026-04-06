@@ -115,8 +115,9 @@ ul{list-style:none}
 .porque-bg{
   display:block;
   width:2011px;
+  max-width:none;
   height:auto;
-  margin-left:-439px;
+  margin:0 auto;
   pointer-events:none;
 }
 .porque-wrap{
