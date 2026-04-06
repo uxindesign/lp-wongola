@@ -249,22 +249,11 @@ ul{list-style:none}
 .wongola-cta{margin-top:48px}
 
 /* ================================================
-   RESPONSIVE
+   PAGE WRAPPER — all content at 1440px, zoom scales everything
    ================================================ */
-@media(max-width:1024px){
-  .hero-logo-img{width:380px}
-  .hero-stats{gap:32px}
-  .sobre-wrap{flex-direction:column;gap:40px}
-  .sobre-img{width:100%}
-  .porque-wrap{flex-direction:column;padding:10% 5% 20%}
-  .empreg{margin-top:-40vw;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
-  .empreg-yellow{position:relative;top:auto;left:auto;width:90%;margin-left:5%}
-  .empreg-photo{position:relative;top:auto;left:auto;width:70%;margin:-20% auto 20px}
-  .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto}
-  .tl-row{gap:24px}
-  .tl-date{font-size:24px}
-  .wongola-wrap{padding-left:40px}
-}
+.page{width:1440px;overflow:hidden}
+
+/* Mobile nav only */
 @media(max-width:768px){
   .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
   .nav-menu.open{display:flex}
@@ -272,32 +261,4 @@ ul{list-style:none}
   .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-hamburger.open span:nth-child(2){opacity:0}
   .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .hero{min-height:auto;padding:120px 0 60px}
-  .hero-bg{width:220%;left:40%}
-  .hero-logo-img{width:280px}
-  .hero-tagline{font-size:22px}
-  .hero-deadline{font-size:32px}
-  .hero-desc{font-size:18px}
-  .hero-stats{flex-wrap:wrap;gap:24px;justify-content:center}
-  .stat-val{font-size:22px}
-  .h2{font-size:36px}
-  .body{font-size:18px}
-  .sobre{padding:60px 0}
-  .sobre-wrap{padding:0 24px}
-  .porque-wrap{padding:8% 5% 18%}
-  .porque-list li{font-size:16px}
-  .porque-logos{grid-template-columns:repeat(2,1fr);gap:20px}
-  .empreg{margin-top:-30vw}
-  .empreg-photo{width:85%;margin:-15% auto 10px}
-  .crono{padding:80px 24px}
-  .timeline{padding:24px 16px 40px}
-  .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
-  .tl-chev{display:none}
-  .tl-date{font-size:28px}
-  .premiacoes-wrap{padding:10% 5%}
-  .acc-text{font-size:18px}
-  .parceiros-logos{gap:32px;padding:48px 24px}
-  .parceiros-logos img{height:45px}
-  .wongola{padding:100px 24px 140px}
-  .wongola-wrap{padding-left:0}
 }

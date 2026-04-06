@@ -1,9 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Scale .page to always fill viewport width
+  // At 1440px = 1:1 Figma sizes. Above/below = proportional scale.
+  const page = document.querySelector('.page');
+  function updateScale() {
+    page.style.zoom = window.innerWidth / 1440;
+  }
+  updateScale();
+  window.addEventListener('resize', updateScale);
+
+  // Nav scroll
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   });
 
+  // Hamburger
   const hamburger = document.querySelector('.nav-hamburger');
   const menu = document.querySelector('.nav-menu');
   hamburger.addEventListener('click', () => {
@@ -17,10 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Accordion
   document.querySelectorAll('.acc-item').forEach(item => {
     item.addEventListener('click', () => item.classList.toggle('open'));
   });
 
+  // Scroll animations
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
