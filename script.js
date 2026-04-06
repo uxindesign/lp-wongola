@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Scale .page to always fill viewport width
-  // At 1440px = 1:1 Figma sizes. Above/below = proportional scale.
+  // Scale .page proportionally
+  // Base reference = 1600px (slightly zoomed out at 1280-1440,
+  // 1:1 at 1600, scales up above that)
   const page = document.querySelector('.page');
   function updateScale() {
-    page.style.zoom = window.innerWidth / 1440;
+    page.style.zoom = window.innerWidth / 1600;
   }
   updateScale();
   window.addEventListener('resize', updateScale);
