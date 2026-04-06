@@ -80,10 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (dist < radius && dist > 1) {
         const proximity = 1 - dist / radius;
-        const force = proximity * velFactor * 3;
+        const force = proximity * velFactor * 3.6;
         const angle = Math.atan2(dy, dx);
-        el._vx += Math.cos(angle) * force * 0.012;
-        el._vy += Math.sin(angle) * force * 0.012;
+        el._vx += Math.cos(angle) * force * 0.0144;
+        el._vy += Math.sin(angle) * force * 0.0144;
       }
 
       // Very gentle spring back + heavy damping
