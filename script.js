@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateScale() {
     const vw = window.innerWidth;
     if (vw >= 1280) {
-      const scale = vw / 1440;
+      const scale = vw / 1920;
       page.style.transform = 'scale(' + scale + ')';
       page.style.transformOrigin = 'top center';
       page.style.width = (100 / scale) + '%';
