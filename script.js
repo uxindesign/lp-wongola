@@ -50,6 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
+  // Randomize decorative positions slightly on each page load
+  // Keeps them near the edges but with organic variation
+  document.querySelectorAll('.d:not(.d-arrow)').forEach(el => {
+    const offsetY = (Math.random() - 0.5) * 80;  // ±40px vertical
+    const offsetX = (Math.random() - 0.5) * 60;  // ±30px horizontal
+    const extraRot = (Math.random() - 0.5) * 10;  // ±5deg rotation
+    el.style.top = (parseFloat(getComputedStyle(el).top) || 0) + offsetY + 'px';
+    if (el.style.left && el.style.left !== '50%') {
+      el.style.left = (parseFloat(getComputedStyle(el).left) || 0) + offsetX + 'px';
+    } else if (getComputedStyle(el).right !== 'auto') {
+      el.style.right = (parseFloat(getComputedStyle(el).right) || 0) - offsetX + 'px';
+    }
+    const dur = 5 + Math.random() * 6; // 5-11s
+    const delay = Math.random() * -10;  // stagger start
+    el.style.animationDuration = dur + 's';
+    el.style.animationDelay = delay + 's';
+  });
+
   // Floating decorations — cursor as soft collider
   // Force depends on cursor VELOCITY, not just proximity
   const decos = document.querySelectorAll('.d');

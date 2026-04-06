@@ -26,16 +26,17 @@ ul{list-style:none}
 
 /* Positions from Figma LP frame (1440px). Right-side elements use
    right:0 or negative values to hug/bleed the viewport edge. */
-.d-hero-big{top:41px;right:-93px;width:533px;height:520px;--float-dur:8s;--float-delay:0s;--fx:8px;--fy:-12px;--fr:1.5deg}
-.d-hero-diamond{top:240px;left:94px;width:153px;height:152px;--float-dur:7s;--float-delay:.5s;--fx:5px;--fy:-8px;--fr:3deg}
-.d-blob-left{top:888px;left:-227px;width:617px;height:623px;--float-dur:10s;--float-delay:1s;--fx:10px;--fy:-6px;--fr:1deg}
-.d-diamond-mid{top:1872px;right:70px;width:153px;height:152px;--float-dur:7s;--float-delay:1.5s;--fx:-6px;--fy:-9px;--fr:3deg}
-.d-sq-1{top:926px;right:30px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6s;--float-delay:.3s;--fx:4px;--fy:-7px;--fr:2deg}
-.d-sq-2{top:1877px;left:81px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6.5s;--float-delay:.8s;--fx:-5px;--fy:-6px;--fr:2.5deg}
-.d-sq-3{top:1972px;right:-50px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:9s;--float-delay:.2s;--fx:7px;--fy:-8px;--fr:1.5deg}
-.d-arrow{top:1017px;left:50%;margin-left:-12px;width:24px;height:24px;--float-dur:4s;--float-delay:0s;--fx:0px;--fy:8px;--fr:0deg}
-.d-sq-4{top:4073px;right:-30px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:8.5s;--float-delay:.6s;--fx:6px;--fy:-10px;--fr:2deg}
-.d-sq-5{top:4230px;left:-20px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg);--float-dur:7.5s;--float-delay:1.2s;--fx:-4px;--fy:-5px;--fr:3deg}
+/* Bigger float radius: --fx/--fy doubled. Positions randomized on load via JS. */
+.d-hero-big{top:41px;right:-93px;width:533px;height:520px;--float-dur:8s;--float-delay:0s;--fx:16px;--fy:-20px;--fr:2.5deg}
+.d-hero-diamond{top:240px;left:40px;width:153px;height:152px;--float-dur:7s;--float-delay:.5s;--fx:12px;--fy:-16px;--fr:4deg}
+.d-blob-left{top:888px;left:-227px;width:617px;height:623px;--float-dur:10s;--float-delay:1s;--fx:18px;--fy:-12px;--fr:1.5deg}
+.d-diamond-mid{top:1872px;right:40px;width:153px;height:152px;--float-dur:7s;--float-delay:1.5s;--fx:-14px;--fy:-18px;--fr:4deg}
+.d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6s;--float-delay:.3s;--fx:10px;--fy:-14px;--fr:3deg}
+.d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg);--float-dur:6.5s;--float-delay:.8s;--fx:-12px;--fy:-10px;--fr:3.5deg}
+.d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:9s;--float-delay:.2s;--fx:14px;--fy:-16px;--fr:2.5deg}
+.d-arrow{top:1017px;left:50%;margin-left:-12px;width:24px;height:24px;--float-dur:4s;--float-delay:0s;--fx:0px;--fy:10px;--fr:0deg}
+.d-sq-4{top:4073px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg);--float-dur:8.5s;--float-delay:.6s;--fx:14px;--fy:-18px;--fr:3deg}
+.d-sq-5{top:4230px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg);--float-dur:7.5s;--float-delay:1.2s;--fx:-10px;--fy:-12px;--fr:4deg}
 
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}
