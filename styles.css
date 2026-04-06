@@ -254,11 +254,17 @@ ul{list-style:none}
 }
 .premiacoes-wrap{
   position:absolute;
-  top:329px;left:226px;
-  display:flex;flex-direction:column;
-  width:680px;
+  top:0;left:0;right:0;bottom:0;
+  display:flex;
+  gap:80px;
+  align-items:flex-end;
+  justify-content:center;
+  padding-top:329px;
+  padding-bottom:100px;
 }
-.accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px;width:680px}
+.premiacoes-left{width:680px;flex-shrink:0}
+.premiacoes-trophy{width:308px;height:327px;flex-shrink:0}
+.accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
 .acc-item:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
 .acc-text{font-family:var(--f-head);font-weight:500;font-size:24px;color:var(--blue);line-height:1.4;flex:1}
