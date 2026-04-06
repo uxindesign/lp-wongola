@@ -129,13 +129,17 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
 .porque-logos{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:32px 40px;
-  align-items:center;
-  padding-top:10px;
+  position:relative;
+  width:500px;
+  height:210px;
+  flex-shrink:0;
 }
-.porque-logos img{height:auto;width:100%;max-width:160px;object-fit:contain}
+.porque-logos img{position:absolute;object-fit:contain}
+.pl-one{left:43px;top:0;width:149px;height:80px}
+.pl-anima{left:272px;top:5px;width:164px;height:70px}
+.pl-pmi{left:0;top:130px;width:80px;height:80px}
+.pl-alura{left:140px;top:145px;width:108px;height:50px}
+.pl-nocountry{left:300px;top:153px;width:200px;height:34px}
 
 /* ================================================
    EMPREGABILIDADE
@@ -231,8 +235,13 @@ ul{list-style:none}
 .parceiros-bar{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;background:var(--yellow)}
 .bar-line{width:30px;height:2px;background:var(--navy)}
 .bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
-.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 80px;padding:80px}
-.parceiros-logos img{height:60px;width:auto;object-fit:contain}
+.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:48px 96px;padding:80px}
+.parceiros-logos img{object-fit:contain}
+.parc-pmi{width:92px;height:92px}
+.parc-anima{width:164px;height:70px}
+.parc-one{width:149px;height:80px}
+.parc-nocountry{width:200px;height:34px}
+.parc-alura{width:108px;height:50px}
 
 /* ================================================
    WONGOLA — plain navy, no blobs
@@ -281,7 +290,7 @@ ul{list-style:none}
   .sobre-wrap{padding:0 24px}
   .porque-wrap{padding:8% 5% 18%}
   .porque-list li{font-size:16px}
-  .porque-logos{grid-template-columns:repeat(2,1fr);gap:20px}
+  .porque-logos{width:300px;height:130px;transform:scale(.6);transform-origin:top left}
   .empreg{margin-top:-30vw}
   .empreg-photo{width:85%;margin:-15% auto 10px}
   .crono{padding:80px 24px}
