@@ -68,8 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Each element gets unique random wave parameters
   decos.forEach(el => {
     const isArrow = el.classList.contains('d-arrow');
-    const range = isArrow ? 6 : 25; // px drift radius
-    const rotRange = isArrow ? 0 : 4; // deg
+    const isPillar = el.classList.contains('trophy-pillar-l') || el.classList.contains('trophy-pillar-c') || el.classList.contains('trophy-pillar-r');
+    const range = isArrow ? 6 : isPillar ? 4 : 25;
+    const rotRange = isArrow ? 0 : isPillar ? 0.5 : 4;
 
     // 3 layered sine waves per axis for complex paths
     el._waves = {
