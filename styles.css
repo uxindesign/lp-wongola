@@ -327,31 +327,33 @@ ul{list-style:none}
 .btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text)}
 
 /* Africa illustration */
+/* Africa illustration — positions from Figma (relative to section) */
 .wongola-africa{
   position:absolute;
-  top:50%;left:858px;
-  transform:translateY(-50%);
-  width:589px;height:557px;
+  top:0;left:0;right:0;bottom:0;
   pointer-events:none;
 }
 .wongola-africa-bg{
   position:absolute;
-  inset:0;width:100%;height:100%;
+  top:205px;left:858px;
+  width:481px;height:431px;
   transform:rotate(-17.7deg);
   opacity:.3;
 }
 .wongola-africa-border{
   position:absolute;
-  top:49px;left:351px;
+  top:254px;left:1209px;
   width:110px;height:107px;
+  opacity:.3;
 }
 .wongola-africa-map{
   position:absolute;
-  top:118px;left:23px;
+  top:323px;left:881px;
   width:297px;height:297px;
+  overflow:hidden;
 }
-.wongola-map-main{position:absolute;inset:7% 14% 2% 5%;width:81%;height:91%}
-.wongola-map-dot{position:absolute;bottom:10%;left:78%;width:16%;height:24%}
+.wongola-map-main{position:absolute;top:7%;left:5%;width:81%;height:91%}
+.wongola-map-dot{position:absolute;top:66%;left:78%;width:16%;height:24%}
 
 /* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
