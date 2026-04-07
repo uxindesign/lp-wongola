@@ -263,7 +263,7 @@ ul{list-style:none}
   padding-bottom:200px;
 }
 .premiacoes-left{width:680px;flex-shrink:0}
-.premiacoes-trophy{width:308px;height:327px;flex-shrink:0}
+.premiacoes-trophy{width:308px;height:327px;flex-shrink:0;will-change:transform;pointer-events:auto}
 .accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
 .acc-item:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
@@ -296,14 +296,15 @@ ul{list-style:none}
   position:relative;
   background:#f8f5ee;
   overflow:hidden;
-  height:830px;
+  min-height:830px;
 }
 .wongola-wrap{
-  position:absolute;z-index:1;
-  top:96px;left:207px;
+  position:relative;z-index:1;
+  padding:96px 80px 120px;
   display:flex;flex-direction:column;
   gap:48px;align-items:flex-start;
-  width:571px;
+  max-width:1280px;
+  margin:0 auto;
 }
 .wongola-logo{display:flex;align-items:center;gap:8px}
 .wongola-logo img{width:106px;height:106px;object-fit:contain}
@@ -335,7 +336,7 @@ ul{list-style:none}
 }
 .wongola-africa-bg{
   position:absolute;
-  top:205px;left:858px;
+  top:205px;right:80px;
   width:481px;height:431px;
   --base-rot:rotate(-17.7deg);
   opacity:.3;
@@ -344,7 +345,7 @@ ul{list-style:none}
 }
 .wongola-africa-border{
   position:absolute;
-  top:254px;left:1209px;
+  top:254px;right:20px;
   width:110px;height:107px;
   opacity:.3;
   will-change:transform;
@@ -352,7 +353,7 @@ ul{list-style:none}
 }
 .wongola-africa-map{
   position:absolute;
-  top:323px;left:881px;
+  top:323px;right:200px;
   width:297px;height:297px;
   overflow:hidden;
   will-change:transform;
