@@ -378,6 +378,8 @@ ul{list-style:none}
 .footer-links{display:flex;gap:19px;margin-bottom:8px}
 .footer-links a{color:var(--white);font-family:var(--f-body);font-size:14px;transition:opacity .2s}
 .footer-links a:hover{opacity:.7}
+.footer-col a{color:var(--white);transition:opacity .2s}
+.footer-col a:hover{opacity:.7}
 
 /* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
