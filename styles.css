@@ -337,20 +337,26 @@ ul{list-style:none}
   position:absolute;
   top:205px;left:858px;
   width:481px;height:431px;
-  transform:rotate(-17.7deg);
+  --base-rot:rotate(-17.7deg);
   opacity:.3;
+  will-change:transform;
+  pointer-events:auto;
 }
 .wongola-africa-border{
   position:absolute;
   top:254px;left:1209px;
   width:110px;height:107px;
   opacity:.3;
+  will-change:transform;
+  pointer-events:auto;
 }
 .wongola-africa-map{
   position:absolute;
   top:323px;left:881px;
   width:297px;height:297px;
   overflow:hidden;
+  will-change:transform;
+  pointer-events:auto;
 }
 .wongola-map-main{position:absolute;top:7%;left:5%;width:81%;height:91%}
 .wongola-map-dot{position:absolute;top:66%;left:78%;width:16%;height:24%}
