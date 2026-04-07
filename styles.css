@@ -287,13 +287,71 @@ ul{list-style:none}
 .parc-alura{width:108px;height:50px}
 
 /* ================================================
-   WONGOLA — plain navy, no blobs
+   WONGOLA — cream bg, Africa illustration
+   Figma: 1440x830, bg #f8f5ee
+   Content at x=207, y=96, w=571
+   Africa group at x=858, y=205
    ================================================ */
-.wongola{background:var(--navy);padding:200px 80px 180px}
-.wongola-wrap{max-width:600px;margin:0;padding-left:80px}
-.wongola-logo{width:160px;height:160px;margin-bottom:48px}
-.wongola-logo img{width:100%;height:100%;object-fit:contain}
-.wongola-cta{margin-top:48px}
+.wongola{
+  position:relative;
+  background:#f8f5ee;
+  padding:96px 0 120px;
+  overflow:hidden;
+  min-height:830px;
+}
+.wongola-wrap{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;
+  gap:48px;align-items:flex-start;
+  width:571px;
+  margin-left:207px;
+}
+.wongola-logo{display:flex;align-items:center;gap:8px}
+.wongola-logo img{width:106px;height:108px;border-radius:50%;object-fit:cover}
+.wongola-logo-text{font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;color:var(--brown);letter-spacing:1.2px}
+.wongola-content{display:flex;flex-direction:column;gap:32px}
+.wongola-content .h2{color:var(--text)}
+.wongola-content .body{color:var(--text);padding-top:0}
+.wongola-quote{
+  font-family:var(--f-body);font-weight:600;font-style:italic;
+  font-size:32px;line-height:1.4;color:var(--text);
+}
+.wongola-blockquote{
+  border-left:3px solid #3c3c3c;
+  padding-left:20px;
+}
+.wongola-blockquote p{
+  font-family:var(--f-body);font-style:italic;
+  font-size:20px;line-height:1.4;color:#3c3c3c;
+  max-width:472px;
+}
+.btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text)}
+
+/* Africa illustration */
+.wongola-africa{
+  position:absolute;
+  top:205px;left:858px;
+  width:589px;height:557px;
+  pointer-events:none;
+}
+.wongola-africa-bg{
+  position:absolute;
+  inset:0;width:100%;height:100%;
+  transform:rotate(-17.7deg);
+  opacity:.3;
+}
+.wongola-africa-border{
+  position:absolute;
+  top:49px;left:351px;
+  width:110px;height:107px;
+}
+.wongola-africa-map{
+  position:absolute;
+  top:118px;left:23px;
+  width:297px;height:297px;
+}
+.wongola-map-main{position:absolute;inset:7% 14% 2% 5%;width:81%;height:91%}
+.wongola-map-dot{position:absolute;bottom:10%;left:78%;width:16%;height:24%}
 
 /* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
