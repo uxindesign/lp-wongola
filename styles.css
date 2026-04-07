@@ -1,6 +1,7 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#181057;--blue:#155cf4;--yellow:#ffbb00;--text:#2a273b;--brown:#311d16;--white:#fff;--f-head:'Outfit',sans-serif;--f-body:'Lato',sans-serif;--f-mono:'Space Mono',monospace;--f-pixel:'Press Start 2P',cursive}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+[id]{scroll-margin-top:100px}
 body{font-family:var(--f-body);color:var(--text);background:var(--white);overflow-x:hidden}
 img{display:block}
 a{text-decoration:none;color:inherit}
@@ -263,7 +264,12 @@ ul{list-style:none}
   padding-bottom:200px;
 }
 .premiacoes-left{width:680px;flex-shrink:0}
-.premiacoes-trophy{width:308px;height:327px;flex-shrink:0;will-change:transform;pointer-events:auto}
+.premiacoes-trophy{position:relative;width:308px;height:327px;flex-shrink:0}
+.premiacoes-trophy svg{position:absolute;will-change:transform;pointer-events:auto}
+.trophy-cup{top:0;left:99px;width:109px;height:108px}
+.trophy-pillar-l{top:189px;left:0;width:96px;height:138px}
+.trophy-pillar-c{top:118px;left:106px;width:96px;height:209px}
+.trophy-pillar-r{top:249px;left:212px;width:96px;height:78px}
 .accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
 .acc-item:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
