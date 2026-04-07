@@ -2,7 +2,7 @@
 :root{--navy:#181057;--blue:#155cf4;--yellow:#ffbb00;--text:#2a273b;--brown:#311d16;--white:#fff;--f-head:'Outfit',sans-serif;--f-body:'Lato',sans-serif;--f-mono:'Space Mono',monospace;--f-pixel:'Press Start 2P',cursive}
 html{scroll-behavior:smooth;scroll-padding-top:60px}
 [id]{scroll-margin-top:60px}
-#porque{scroll-margin-top:-40px}
+#porque{scroll-margin-top:-20px}
 #premiacoes{scroll-margin-top:-100px}
 body{font-family:var(--f-body);color:var(--text);background:var(--white);overflow-x:hidden}
 img{display:block}
