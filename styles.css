@@ -803,7 +803,7 @@ ul{list-style:none}
    FOOTER — bg #222, 3 columns
    ================================================ */
 .footer{background:#222;padding:48px 40px}
-.footer-wrap{display:flex;align-items:flex-end;justify-content:space-between;max-width:1200px;margin:0 auto;gap:40px}
+.footer-wrap{display:flex;align-items:flex-start;justify-content:space-between;max-width:1200px;margin:0 auto;gap:40px}
 .footer-col{flex:1;font-family:var(--f-body);font-size:14px;color:var(--white);line-height:22.75px}
 .footer-heading{margin-bottom:7px}
 .footer-links{display:flex;gap:19px;margin-bottom:8px}
