@@ -18,10 +18,7 @@ ul{list-style:none}
 .deco{position:absolute;top:0;left:0;right:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden}
 .d{position:absolute;pointer-events:auto;cursor:default;will-change:transform}
 
-/* Float is handled entirely by JS for true random trajectories */
-
-/* Positions from Figma LP frame (1440px). Right-side elements use
-   right:0 or negative values to hug/bleed the viewport edge. */
+/* Positions from Figma LP frame (1440px). */
 .d-hero-big{top:41px;right:-93px;width:533px;height:520px}
 .d-hero-diamond{top:240px;left:40px;width:153px;height:152px}
 .d-blob-left{top:888px;left:-227px;width:617px;height:623px}
@@ -29,8 +26,10 @@ ul{list-style:none}
 .d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg)}
-.d-sq-4{top:4073px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
-.d-sq-5{top:4230px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
+.d-sq-4{top:5200px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
+.d-sq-5{top:5400px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
+.d-sq-6{top:7200px;right:40px;width:150px;height:150px;background:var(--blue);border-radius:30px;opacity:.15;--base-rot:rotate(-25deg)}
+.d-sq-7{top:8400px;left:-20px;width:200px;height:200px;background:var(--yellow);border-radius:40px;opacity:.15;--base-rot:rotate(15deg)}
 
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}
@@ -47,6 +46,7 @@ ul{list-style:none}
 .btn .btn-bg{position:absolute;inset:0;z-index:0}
 .btn span{position:relative;z-index:1}
 .btn-primary{width:254px;height:56px;font-size:16px;color:var(--navy)}
+.btn-primary-v2{width:276px;height:56px;font-size:16px;color:var(--navy)}
 .btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
@@ -56,8 +56,8 @@ ul{list-style:none}
 .nav-logo{display:flex;align-items:center;gap:8px}
 .nav-logo img{width:64px;height:64px;border-radius:50%;object-fit:cover}
 .nav-logo-text{font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;color:var(--brown);letter-spacing:1.2px}
-.nav-menu{display:flex;align-items:center;gap:32px}
-.nav-link{font-family:var(--f-mono);font-weight:700;font-size:14px;color:var(--navy);letter-spacing:1px;text-transform:uppercase;transition:color .2s}
+.nav-menu{display:flex;align-items:center;gap:24px}
+.nav-link{font-family:var(--f-mono);font-weight:700;font-size:13px;color:var(--navy);letter-spacing:1px;text-transform:uppercase;transition:color .2s}
 .nav-link:hover{color:var(--blue)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .nav-hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:transform .3s,opacity .3s}
@@ -128,19 +128,85 @@ ul{list-style:none}
 .stat-lbl{font-family:var(--f-head);font-size:14px;color:var(--white);text-transform:uppercase;letter-spacing:1px}
 
 /* ================================================
-   SOBRE — organic photo left, text right
+   O QUE E O HACKATHON APP BIT — photo left, text right
    ================================================ */
 .sobre{position:relative;padding:100px 0;overflow:hidden}
 .sobre-wrap{display:flex;align-items:center;gap:60px;max-width:1280px;margin:0 auto;padding:0 32px}
-.sobre-img{flex-shrink:0;width:50%}
+.sobre-img{flex-shrink:0;width:620px}
 .sobre-img img{width:100%;height:auto}
-.sobre-content{max-width:486px}
+.sobre-content{max-width:564px}
+.h2-sobre{font-family:var(--f-head);font-weight:900;font-size:48px;color:var(--navy);line-height:1.1;margin-bottom:24px}
+.body-sobre{font-family:var(--f-body);font-size:22px;color:var(--text);line-height:1.5;margin-bottom:16px}
+.body-sobre strong{font-weight:700}
+
+/* ================================================
+   CONTENT ACCORDION
+   ================================================ */
+.content-accordion{
+  padding:40px 0 80px;
+}
+.content-accordion-wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 32px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.cacc-item{
+  background:#f5f5f5;
+  border-radius:32px;
+  overflow:hidden;
+  transition:box-shadow .3s;
+}
+.cacc-item:hover{
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+.cacc-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  padding:32px;
+  border:none;
+  background:none;
+  cursor:pointer;
+  gap:16px;
+  font-family:inherit;
+}
+.cacc-title{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:28px;
+  color:var(--navy);
+  text-align:left;
+}
+.cacc-icon{
+  width:32px;
+  height:32px;
+  flex-shrink:0;
+  transition:transform .3s;
+}
+.cacc-open .cacc-icon{
+  transform:rotate(0deg);
+}
+.cacc-body{
+  padding:0 32px 32px;
+}
+.cacc-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+}
+.cacc-cols p{
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--text);
+  line-height:1.5;
+}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
-   SVG 2010x1437. Figma: x=-439, y=2068 in 1440 viewport.
-   Content at x=157, y=2250 (182px from section top)
-   Logos at x=796, y=2350 (282px from section top)
    ================================================ */
 .porque{
   position:relative;
@@ -164,10 +230,56 @@ ul{list-style:none}
   max-width:1280px;margin:0 auto;
   padding:200px 80px 200px;
 }
-.porque-text{max-width:555px}
+.porque-text{max-width:600px}
+.porque-intro{
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--white);
+  line-height:1.5;
+  margin-bottom:24px;
+  opacity:.9;
+}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0;width:500px}
 .porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
-/* Porque logos: 500x210 in Figma, percentage-based so it scales with parent */
+
+/* Porque CTA box */
+.porque-cta-box{
+  position:relative;
+  margin-top:32px;
+  padding:32px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.porque-cta-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  opacity:.3;
+}
+.porque-cta-content{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.porque-cta-text{
+  font-family:var(--f-body);
+  font-size:18px;
+  color:var(--white);
+  line-height:1.4;
+}
+.porque-cta-vagas{
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--yellow);
+  line-height:1.4;
+}
+
+/* Porque logos */
 .porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1;margin-top:60px}
 .porque-logos img{position:absolute;object-fit:contain}
 .pl-one{left:8.6%;top:0;width:29.8%;height:38.1%}
@@ -177,55 +289,19 @@ ul{list-style:none}
 .pl-nocountry{left:60%;top:72.9%;width:40%;height:16.2%}
 
 /* ================================================
-   EMPREGABILIDADE
-   Figma LP frame (1440 wide):
-   - Section frame at x=30, y=2691, w=1365, h=810
-   - Yellow container at x=30+344=374, w=1021
-   - Photo at x=30, y=2691+70=2761, w=605, h=599
-   - Text at x=30+344+380=754, y=2691+203=2894, w=465
-
-   As percentages of 1440:
-   - Section: left=2.1%, width=94.8%
-   - Yellow: left=26%, width=70.9%
-   - Photo: left=2.1%, width=42%
-   - Text: left=52.4%, width=32.3%
-   ================================================ */
-.empreg{
-  position:relative;
-  margin-top:-813px;
-  z-index:2;
-  height:810px;
-  width:1365px;
-  max-width:100%;
-  margin-left:auto;
-  margin-right:auto;
-}
-.empreg-yellow{
-  position:absolute;
-  top:0;left:344px;
-  width:1021px;
-  height:auto;
-  z-index:0;
-}
-.empreg-photo{
-  position:absolute;
-  top:70px;left:0;
-  width:605px;
-  height:auto;
-  z-index:1;
-}
-.empreg-card{
-  position:absolute;
-  top:203px;left:724px;
-  width:465px;
-  z-index:2;
-}
-
-/* ================================================
    CRONOGRAMA — clean white
    ================================================ */
 .crono{padding:120px 80px;text-align:center}
 .crono-wrap{max-width:960px;margin:0 auto}
+.crono-subtitle{
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--text);
+  text-align:center;
+  margin-top:8px;
+  margin-bottom:16px;
+  opacity:.7;
+}
 .timeline{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;background:var(--white);border:1px solid rgba(0,0,0,.2);border-radius:16px;padding:32px 40px 48px}
 .tl-row{display:flex;align-items:center;gap:48px}
 .tl-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -238,9 +314,7 @@ ul{list-style:none}
 .crono-cta{margin-top:48px;padding-top:16px;display:flex;justify-content:center}
 
 /* ================================================
-   PREMIACOES — organic light shape background
-   SVG is 1649x939. In Figma at x=-84 in 1440 viewport.
-   left offset = -84/1440 = -5.8%, width = 1649/1440 = 114.5%
+   PREMIACOES E CATEGORIAS
    ================================================ */
 .premiacoes{
   position:relative;
@@ -249,56 +323,403 @@ ul{list-style:none}
 }
 .premiacoes-bg{
   display:block;
-  width:1649px;
+  width:2059px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
+  position:relative;
+  left:-300px;
 }
 .premiacoes-wrap{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;
-  gap:80px;
-  align-items:flex-end;
-  justify-content:center;
-  padding-top:329px;
-  padding-bottom:200px;
+  flex-direction:column;
+  align-items:center;
+  padding:180px 80px 200px;
+  max-width:1280px;
+  margin:0 auto;
 }
-.premiacoes-left{width:680px;flex-shrink:0}
-.premiacoes-trophy{position:relative;width:308px;height:327px;flex-shrink:0}
-.premiacoes-trophy svg{position:absolute;will-change:transform;pointer-events:auto}
-.trophy-cup{top:0;left:99px;width:109px;height:108px}
-.trophy-pillar-l{top:189px;left:0;width:96px;height:138px}
-.trophy-pillar-c{top:118px;left:106px;width:96px;height:209px}
-.trophy-pillar-r{top:249px;left:212px;width:96px;height:78px}
-.accordion{display:flex;flex-direction:column;gap:8px;margin-top:48px}
-.acc-item{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--white);border-radius:12px;padding:16px 24px;cursor:pointer;transition:box-shadow .2s}
-.acc-item:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.acc-text{font-family:var(--f-head);font-weight:500;font-size:24px;color:var(--blue);line-height:1.4;flex:1}
-.acc-icon{width:32px;height:32px;flex-shrink:0;transition:transform .3s}
-.acc-item.open .acc-icon{transform:rotate(45deg)}
+.premiacoes-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+/* Category cards */
+.premiacoes-categories{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  width:100%;
+  margin-bottom:32px;
+}
+.cat-card{
+  background:var(--white);
+  border-radius:24px;
+  padding:24px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.cat-number{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  border-radius:50%;
+  background:var(--yellow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--f-head);
+  font-weight:900;
+  font-size:20px;
+  color:var(--navy);
+}
+.cat-content{display:flex;flex-direction:column;gap:8px}
+.cat-title{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:20px;
+  color:var(--navy);
+  line-height:1.3;
+}
+.cat-desc{
+  font-family:var(--f-body);
+  font-size:16px;
+  color:var(--text);
+  line-height:1.5;
+  opacity:.8;
+}
+
+/* Prize and Benefits cards */
+.premiacoes-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  width:100%;
+  margin-bottom:32px;
+}
+.prize-card{
+  border-radius:32px;
+  padding:32px;
+  background:transparent;
+}
+.prize-card-yellow{
+  border:2px solid var(--yellow);
+}
+.prize-card-blue{
+  border:2px solid var(--blue);
+}
+.prize-card-title{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:24px;
+  color:var(--navy);
+  margin-bottom:16px;
+}
+.prize-list{
+  list-style:disc;
+  padding-left:20px;
+}
+.prize-list li{
+  font-family:var(--f-body);
+  font-size:18px;
+  color:var(--text);
+  line-height:1.5;
+  margin-bottom:8px;
+}
+
+/* Trophy illustration */
+.premiacoes-trophy{
+  position:absolute;
+  bottom:160px;
+  left:40px;
+  width:300px;
+  height:300px;
+}
+.trophy-bg-shape{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:auto;
+  opacity:.6;
+}
+.trophy-cup-v2{
+  position:absolute;
+  top:60px;
+  left:100px;
+  width:107px;
+  height:auto;
+}
+.trophy-pillars-v2{
+  position:absolute;
+  bottom:30px;
+  left:50px;
+  width:200px;
+  height:auto;
+}
+
+/* Deco */
+.premiacoes-deco{
+  position:absolute;
+  bottom:180px;
+  right:60px;
+  width:200px;
+  height:auto;
+  border-radius:50%;
+}
+
+/* ================================================
+   COMO PARTICIPAR
+   ================================================ */
+.como{
+  position:relative;
+  padding:0;
+  overflow:hidden;
+}
+.como-bg{
+  display:block;
+  width:1920px;
+  max-width:none;
+  height:auto;
+  margin:0 auto;
+  pointer-events:none;
+  position:relative;
+  left:-240px;
+}
+.como-wrap{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  display:flex;
+  gap:48px;
+  align-items:flex-start;
+  max-width:1280px;
+  margin:0 auto;
+  padding:160px 80px 200px;
+}
+.como-left{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.como-cards{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.como-card{
+  background:rgba(255,255,255,.4);
+  border-radius:40px;
+  padding:28px 32px;
+  backdrop-filter:blur(4px);
+}
+.como-card-title{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:22px;
+  color:var(--white);
+  margin-bottom:8px;
+}
+.como-card-desc{
+  font-family:var(--f-body);
+  font-size:18px;
+  color:var(--white);
+  line-height:1.5;
+  opacity:.9;
+}
+
+/* Areas tags */
+.como-areas{
+  margin-top:16px;
+}
+.como-areas-title{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:22px;
+  color:var(--white);
+  margin-bottom:16px;
+}
+.como-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.como-tag{
+  background:var(--blue);
+  color:var(--white);
+  font-family:var(--f-body);
+  font-weight:700;
+  font-size:20px;
+  padding:16px;
+  border-radius:12px;
+  white-space:nowrap;
+}
+
+/* Como right — inscription sub-section */
+.como-right{
+  width:400px;
+  flex-shrink:0;
+  position:relative;
+}
+.como-inscr-bg{
+  position:absolute;
+  top:-40px;
+  left:-40px;
+  width:480px;
+  height:auto;
+  z-index:0;
+  opacity:.3;
+}
+.como-inscr-content{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  padding:40px 0;
+}
+.como-inscr-title{
+  font-family:var(--f-head);
+  font-weight:900;
+  font-size:32px;
+  color:var(--white);
+}
+.como-steps-list{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.como-step{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+}
+.como-step-num{
+  width:36px;
+  height:36px;
+  min-width:36px;
+  border-radius:50%;
+  background:var(--yellow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--f-head);
+  font-weight:900;
+  font-size:18px;
+  color:var(--navy);
+}
+.como-step p{
+  font-family:var(--f-body);
+  font-size:18px;
+  color:var(--white);
+  line-height:1.5;
+  padding-top:6px;
+}
+.como-arrow{
+  position:absolute;
+  bottom:20px;
+  right:-60px;
+  width:40px;
+  height:auto;
+}
 
 /* ================================================
    PARCEIROS
    ================================================ */
-.parceiros{display:flex;flex-direction:column;gap:96px;padding-bottom:96px;background:var(--white)}
-.parceiros-bar{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;background:var(--yellow)}
-.bar-line{width:30px;height:2px;background:var(--navy)}
-.bar-title{font-family:var(--f-pixel);font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:1px}
-.parceiros-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:64px 96px}
-.parceiros-logos img{object-fit:contain}
-.parc-pmi{width:92px;height:92px}
-.parc-anima{width:164px;height:70px}
-.parc-one{width:149px;height:80px}
-.parc-nocountry{width:200px;height:34px}
-.parc-alura{width:108px;height:50px}
+.parceiros{
+  padding:80px 32px 96px;
+  background:var(--white);
+}
+.parceiros-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+.parceiros-subtitle{
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--text);
+  text-align:center;
+  margin-top:8px;
+  line-height:1.4;
+}
+.parceiros-subtitle2{
+  font-family:var(--f-body);
+  font-size:18px;
+  color:var(--text);
+  text-align:center;
+  opacity:.6;
+  margin-top:4px;
+}
+.parceiros-grid{
+  display:flex;
+  flex-direction:column;
+  gap:48px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.parceiros-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:48px 64px;
+}
+.parc-logo{
+  height:60px;
+  width:auto;
+  object-fit:contain;
+}
+
+/* ================================================
+   CTA FINAL
+   ================================================ */
+.cta-final{
+  padding:100px 32px;
+  background:var(--navy);
+  text-align:center;
+}
+.cta-final-wrap{
+  max-width:680px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+}
+.cta-final-logo{
+  margin-bottom:16px;
+}
+.cta-final-logo-img{
+  position:relative;
+  height:120px;
+  aspect-ratio:507/200;
+}
+.cta-final-logo-img img{position:absolute;height:auto}
+.cta-final-logo-img .arrow-r{right:0;top:0;width:14.2%;z-index:0}
+.cta-final-logo-img .arrow-l{left:0;top:21%;width:14.2%;transform:rotate(180deg);z-index:0}
+.cta-final-logo-img .hack-text{left:9.1%;top:9.5%;width:83.4%;z-index:1}
+.cta-final-logo-img .bit-text{left:28.9%;top:68%;width:43.4%;z-index:1}
+.cta-final-title{
+  font-family:var(--f-head);
+  font-weight:900;
+  font-size:40px;
+  color:var(--yellow);
+  line-height:1.2;
+}
+.cta-final-desc{
+  font-family:var(--f-body);
+  font-size:22px;
+  color:var(--white);
+  line-height:1.5;
+  max-width:560px;
+  opacity:.9;
+}
 
 /* ================================================
    WONGOLA — cream bg, Africa illustration
-   Figma: 1440x830, bg #f8f5ee
-   Content at x=207, y=96, w=571
-   Africa group at x=858, y=205
    ================================================ */
 .wongola{
   position:relative;
@@ -336,7 +757,6 @@ ul{list-style:none}
 .btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text)}
 
 /* Africa illustration */
-/* Africa illustration — positions from Figma (relative to section) */
 .wongola-africa{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
@@ -393,13 +813,16 @@ ul{list-style:none}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
   .porque-wrap{flex-direction:column;padding:10% 5% 20%}
-  .empreg{margin-top:-500px;aspect-ratio:auto;width:100%;margin-left:0;padding-bottom:60px}
-  .empreg-yellow{position:relative;top:auto;left:auto;width:90%;margin-left:5%}
-  .empreg-photo{position:relative;top:auto;left:auto;width:70%;margin:-20% auto 20px}
-  .empreg-card{position:relative;top:auto;left:auto;width:90%;max-width:100%;margin:0 auto}
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
   .wongola-wrap{padding-left:40px}
+  .premiacoes-categories{grid-template-columns:1fr}
+  .premiacoes-cards{grid-template-columns:1fr}
+  .premiacoes-trophy{display:none}
+  .premiacoes-deco{display:none}
+  .como-wrap{flex-direction:column;padding:10% 5% 20%}
+  .como-right{width:100%}
+  .cacc-cols{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
@@ -417,23 +840,37 @@ ul{list-style:none}
   .hero-stats{flex-wrap:wrap;gap:24px;justify-content:center}
   .stat-val{font-size:22px}
   .h2{font-size:36px}
+  .h2-sobre{font-size:32px}
   .body{font-size:18px}
+  .body-sobre{font-size:18px}
   .sobre{padding:60px 0}
   .sobre-wrap{padding:0 24px}
+  .sobre-img{width:100%}
   .porque-wrap{padding:8% 5% 18%}
   .porque-list li{font-size:16px}
   .porque-logos{transform:scale(.7);transform-origin:top left}
-  .empreg{margin-top:-300px}
-  .empreg-photo{width:85%;margin:-15% auto 10px}
   .crono{padding:80px 24px}
   .timeline{padding:24px 16px 40px}
   .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
   .tl-chev{display:none}
   .tl-date{font-size:28px}
   .premiacoes-wrap{padding:10% 5%}
-  .acc-text{font-size:18px}
-  .parceiros-logos{gap:32px;padding:48px 24px}
-  .parceiros-logos img{height:45px}
+  .parceiros-row{gap:24px 32px}
+  .parc-logo{height:45px}
+  .parceiros{padding:60px 24px}
   .wongola{padding:100px 24px 140px}
   .wongola-wrap{padding-left:0}
+  .cacc-title{font-size:22px}
+  .cacc-header{padding:24px}
+  .cacc-body{padding:0 24px 24px}
+  .cacc-cols{grid-template-columns:1fr;gap:16px}
+  .cacc-cols p{font-size:16px}
+  .como-tag{font-size:16px;padding:12px}
+  .cta-final{padding:60px 24px}
+  .cta-final-title{font-size:28px}
+  .cta-final-desc{font-size:18px}
+  .cta-final-logo-img{height:80px}
+  .como-card{padding:20px 24px;border-radius:24px}
+  .como-card-title{font-size:18px}
+  .como-card-desc{font-size:16px}
 }

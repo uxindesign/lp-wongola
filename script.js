@@ -33,9 +33,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Accordion
-  document.querySelectorAll('.acc-item').forEach(item => {
-    item.addEventListener('click', () => item.classList.toggle('open'));
+  // Content Accordion (new collapsible sections)
+  document.querySelectorAll('[data-cacc]').forEach(item => {
+    const header = item.querySelector('.cacc-header');
+    const body = item.querySelector('.cacc-body');
+    const icon = item.querySelector('.cacc-icon');
+
+    header.addEventListener('click', () => {
+      const isOpen = item.classList.contains('cacc-open');
+
+      if (isOpen) {
+        // Close this item
+        item.classList.remove('cacc-open');
+        body.hidden = true;
+        header.setAttribute('aria-expanded', 'false');
+        icon.src = 'assets/icon-chevron-right.svg';
+      } else {
+        // Close all other items first
+        document.querySelectorAll('[data-cacc]').forEach(other => {
+          other.classList.remove('cacc-open');
+          const otherBody = other.querySelector('.cacc-body');
+          const otherIcon = other.querySelector('.cacc-icon');
+          const otherHeader = other.querySelector('.cacc-header');
+          if (otherBody) otherBody.hidden = true;
+          if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+          if (otherIcon) otherIcon.src = 'assets/icon-chevron-right.svg';
+        });
+
+        // Open this item
+        item.classList.add('cacc-open');
+        body.hidden = false;
+        header.setAttribute('aria-expanded', 'true');
+        icon.src = 'assets/icon-chevron-down.svg';
+      }
+    });
   });
 
   // Scroll animations
@@ -56,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // to create organic, never-repeating trajectories.
   // Cursor acts as soft collider on top of the drift.
   // ============================================
-  const decos = document.querySelectorAll('.d, .wongola-africa-bg, .wongola-africa-border, .wongola-africa-map, .trophy-cup, .trophy-pillar-l, .trophy-pillar-c, .trophy-pillar-r');
+  const decos = document.querySelectorAll('.d, .wongola-africa-bg, .wongola-africa-border, .wongola-africa-map, .trophy-cup-v2, .trophy-pillars-v2, .trophy-bg-shape, .como-arrow');
   let mx = -9999, my = -9999, pmx = -9999, pmy = -9999, mVel = 0;
 
   document.addEventListener('mousemove', (e) => {
@@ -67,10 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Each element gets unique random wave parameters
   decos.forEach(el => {
-    const isArrow = el.classList.contains('d-arrow');
-    const isPillar = el.classList.contains('trophy-pillar-l') || el.classList.contains('trophy-pillar-c') || el.classList.contains('trophy-pillar-r');
-    const range = isArrow ? 6 : isPillar ? 4 : 25;
-    const rotRange = isArrow ? 0 : isPillar ? 0.5 : 4;
+    const isArrow = el.classList.contains('como-arrow');
+    const isPillar = el.classList.contains('trophy-pillars-v2');
+    const isTrophy = el.classList.contains('trophy-cup-v2') || el.classList.contains('trophy-bg-shape');
+    const range = isArrow ? 6 : (isPillar || isTrophy) ? 4 : 25;
+    const rotRange = isArrow ? 0 : (isPillar || isTrophy) ? 0.5 : 4;
 
     // 3 layered sine waves per axis for complex paths
     el._waves = {

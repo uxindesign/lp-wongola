@@ -21,9 +21,10 @@
     <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-menu">
       <a href="#sobre" class="nav-link">Sobre</a>
-      <a href="#porque" class="nav-link">Benefícios</a>
+      <a href="#porque" class="nav-link">Beneficios</a>
       <a href="#cronograma" class="nav-link">Cronograma</a>
-      <a href="#premiacoes" class="nav-link">Premiações</a>
+      <a href="#premiacoes" class="nav-link">Premiacoes</a>
+      <a href="#como-participar" class="nav-link">Como Participar</a>
       <a href="#parceiros" class="nav-link">Parceiros</a>
       <a href="#wongola" class="nav-link">Idealizadora</a>
       <a href="#hero" class="btn btn-nav">
@@ -51,10 +52,13 @@
     <div class="d d-sq-2"></div>
     <!-- Medium rotated square: x=1134 y=1972 259x259 -->
     <div class="d d-sq-3"></div>
-    <!-- Background near premiacoes: x=1127 y=4073 250x241 -->
+    <!-- Background near premiacoes -->
     <div class="d d-sq-4"></div>
-    <!-- Border near premiacoes: x=170 y=4230 110x107 -->
+    <!-- Border near premiacoes -->
     <div class="d d-sq-5"></div>
+    <!-- Extra decorations for new sections -->
+    <div class="d d-sq-6"></div>
+    <div class="d d-sq-7"></div>
   </div>
 
   <!-- HERO — organic navy shape with photo background -->
@@ -72,8 +76,8 @@
           <p class="hero-tagline">Inove, Impacte, Transforme!</p>
         </div>
         <div class="hero-text">
-          <h1 class="hero-deadline">Inscreva-se até 28/05</h1>
-          <p class="hero-desc">Transforme ideias em impacto positivo com uma experiência internacional de inclusão e inovação tecnológica.</p>
+          <h1 class="hero-deadline">Inscreva-se ate 28/05</h1>
+          <p class="hero-desc">Transforme ideias em impacto positivo com uma experiencia internacional de inclusao e inovacao tecnologica.</p>
         </div>
         <div class="hero-buttons">
         <a href="#" class="btn btn-primary">
@@ -88,7 +92,7 @@
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-val">100%</span><span class="stat-lbl">ON-LINE</span></div>
-        <div class="stat"><span class="stat-val">08/06</span><span class="stat-lbl">INÍCIO</span></div>
+        <div class="stat"><span class="stat-val">08/06</span><span class="stat-lbl">INICIO</span></div>
         <div class="stat"><span class="stat-val">32</span><span class="stat-lbl">DIAS</span></div>
         <div class="stat"><span class="stat-val">1000</span><span class="stat-lbl">VAGAS</span></div>
       </div>
@@ -96,14 +100,84 @@
     </div>
   </section>
 
-  <!-- SOBRE — organic shaped photo + text -->
+  <!-- O QUE E O HACKATHON APP BIT? — organic shaped photo left + text right -->
   <section class="sobre" id="sobre">
     <div class="sobre-wrap">
-      <div class="sobre-img anim"><img src="assets/about-photo.png" alt="Participantes"></div>
+      <div class="sobre-img anim"><img src="assets/sobre-photo-v2.png" alt="Participantes"></div>
       <div class="sobre-content anim">
-        <p class="label">Sobre a Iniciativa</p>
-        <h2 class="h2">Crie soluções que <span class="hl">transformam vidas</span></h2>
-        <p class="body">O Hackathon App BiT — Black in Tech é uma iniciativa pioneira e de alcance internacional que reúne pessoas diversas — de diferentes gêneros, raças, origens e experiências — para utilizar a tecnologia como ferramenta transformadora no enfrentamento de desafios sociais.</p>
+        <h2 class="h2-sobre">O que e o Hackathon App BiT?</h2>
+        <p class="body-sobre">O <strong>Hackathon App BiT — Black in Tech</strong> e uma iniciativa pioneira e de alcance internacional que reune pessoas diversas — de diferentes generos, racas, origens e experiencias — para utilizar a tecnologia como ferramenta transformadora no enfrentamento de desafios sociais.</p>
+        <p class="body-sobre">O evento e uma realizacao da <strong>Black in Tech (BiT)</strong>, com o apoio da <strong>Oracle</strong> e do <strong>PMI-SP</strong>, e tem como objetivo desenvolver solucoes inovadoras para o aplicativo BiT.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT ACCORDION — collapsible items -->
+  <section class="content-accordion" id="content-accordion">
+    <div class="content-accordion-wrap">
+      <div class="cacc-item cacc-open" data-cacc>
+        <button class="cacc-header" aria-expanded="true">
+          <span class="cacc-title">O que buscamos?</span>
+          <img class="cacc-icon" src="assets/icon-chevron-down.svg" alt="" aria-hidden="true">
+        </button>
+        <div class="cacc-body">
+          <div class="cacc-cols">
+            <div class="cacc-col">
+              <p>Buscamos equipes multidisciplinares que proponham solucoes criativas, funcionais e inclusivas para o App BiT — um aplicativo voltado a promover oportunidades educacionais e profissionais para a comunidade negra.</p>
+            </div>
+            <div class="cacc-col">
+              <p>As solucoes devem considerar acessibilidade, usabilidade e impacto social real, conectando tecnologia e proposito para gerar transformacao.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cacc-item" data-cacc>
+        <button class="cacc-header" aria-expanded="false">
+          <span class="cacc-title">Dores que queremos superar</span>
+          <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
+        </button>
+        <div class="cacc-body" hidden>
+          <div class="cacc-cols">
+            <div class="cacc-col">
+              <p>A comunidade negra enfrenta barreiras sistemicas no acesso a educacao de qualidade e oportunidades de emprego em tecnologia. Falta representatividade, mentoria e redes de apoio.</p>
+            </div>
+            <div class="cacc-col">
+              <p>O App BiT busca superar essas dores criando um ecossistema digital que conecta talentos negros a instituicoes de ensino, empresas e mentores comprometidos com a inclusao.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cacc-item" data-cacc>
+        <button class="cacc-header" aria-expanded="false">
+          <span class="cacc-title">Proposito do APP BiT</span>
+          <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
+        </button>
+        <div class="cacc-body" hidden>
+          <div class="cacc-cols">
+            <div class="cacc-col">
+              <p>O App BiT tem como proposito ser a principal plataforma de conexao entre a comunidade negra e oportunidades de educacao, emprego e desenvolvimento profissional no setor de tecnologia.</p>
+            </div>
+            <div class="cacc-col">
+              <p>Queremos democratizar o acesso a informacao, criar caminhos reais de insercao no mercado e fortalecer a rede de apoio entre profissionais, estudantes e organizacoes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cacc-item" data-cacc>
+        <button class="cacc-header" aria-expanded="false">
+          <span class="cacc-title">Temas e tecnologias prioritarias</span>
+          <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
+        </button>
+        <div class="cacc-body" hidden>
+          <div class="cacc-cols">
+            <div class="cacc-col">
+              <p>Inteligencia Artificial, Machine Learning, UX/UI Design, acessibilidade digital, desenvolvimento mobile, cloud computing e ciencia de dados estao entre as tecnologias prioritarias.</p>
+            </div>
+            <div class="cacc-col">
+              <p>Os temas abrangem educacao inclusiva, empregabilidade, saude mental, empreendedorismo negro e conectividade em regioes de baixa infraestrutura.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -114,35 +188,32 @@
     <div class="porque-wrap">
       <div class="porque-text anim">
         <h2 class="h2 white">Por que participar?</h2>
+        <p class="porque-intro">O Hackathon App BiT e mais do que uma competicao. E uma experiencia transformadora que conecta voce a uma comunidade global de inovadores comprometidos com a inclusao.</p>
         <ul class="porque-list">
-          <li>Desenvolver novas habilidades práticas.</li>
+          <li>Desenvolver novas habilidades praticas.</li>
           <li>Participar de mentorias exclusivas com especialistas renomados.</li>
-          <li>Expandir suas conexões e redes de colaboração ao nível global.</li>
-          <li>Promover a transformação social por meio da inovação tecnológica.</li>
+          <li>Expandir suas conexoes e redes de colaboracao ao nivel global.</li>
+          <li>Promover a transformacao social por meio da inovacao tecnologica.</li>
         </ul>
-        <a href="#" class="btn btn-primary" style="margin-top:16px">
-          <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
-          <span>Inscreva-se Agora</span>
-        </a>
+        <div class="porque-cta-box">
+          <img class="porque-cta-bg" src="assets/como-inscr-bg.svg" alt="" aria-hidden="true">
+          <div class="porque-cta-content">
+            <p class="porque-cta-text">Faca parte dessa revolucao tecnologica e ajude a construir um futuro mais justo e conectado!</p>
+            <p class="porque-cta-vagas"><strong>Garanta sua vaga!</strong> Vagas limitadas a 1.000 participantes</p>
+            <a href="#" class="btn btn-primary-v2">
+              <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+              <span>Inscreva-se Agora</span>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="porque-logos anim">
         <img class="pl-one" src="assets/logo-one-v2.png" alt="ONE">
-        <img class="pl-anima" src="assets/logo-anima-v2.png" alt="Ânima">
+        <img class="pl-anima" src="assets/logo-anima-v2.png" alt="Anima">
         <img class="pl-pmi" src="assets/logo-pmi-v2.png" alt="PMI-SP">
         <img class="pl-alura" src="assets/logo-alura-v2.png" alt="Alura">
         <img class="pl-nocountry" src="assets/logo-nocountry-v2.png" alt="NoCountry">
       </div>
-    </div>
-  </section>
-
-  <!-- EMPREGABILIDADE — yellow shape behind, photo in front, overlaps blue blob above -->
-  <section class="empreg">
-    <img class="empreg-yellow" src="assets/empreg-bg.svg" alt="" aria-hidden="true">
-    <img class="empreg-photo" src="assets/empreg-blue.png" alt="Participantes do hackathon">
-    <div class="empreg-card anim">
-      <p class="label">Hackathon + Empregabilidade:</p>
-      <h2 class="h2">Transforme ideias em oportunidades!</h2>
-      <p class="body">Além dos prêmios, todos os participantes terão acesso a encaminhamento para entrevistas de emprego, certificados oficiais, mentorias exclusivas, networking global e maior visibilidade profissional no mercado tecnológico.</p>
     </div>
   </section>
 
@@ -151,16 +222,17 @@
     <div class="crono-wrap">
       <p class="label center">Cronograma — APP BIT</p>
       <h2 class="h2 center">Sua jornada no Hackathon</h2>
+      <p class="crono-subtitle">Fique atento as principais datas:</p>
       <div class="timeline anim">
         <div class="tl-row">
           <div class="tl-item">
-            <span class="tl-lbl">Inscrições</span>
+            <span class="tl-lbl">Inscricoes</span>
             <div class="tl-dates"><span class="tl-date">20/04</span><span class="tl-dash"></span><span class="tl-date">28/05</span></div>
           </div>
           <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="tl-item"><span class="tl-lbl">Onboarding</span><span class="tl-date">01/06</span></div>
           <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
-          <div class="tl-item"><span class="tl-lbl">Início</span><span class="tl-date">08/06</span></div>
+          <div class="tl-item"><span class="tl-lbl">Inicio</span><span class="tl-date">08/06</span></div>
           <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="tl-item"><span class="tl-lbl">Demo Day</span><span class="tl-date">10/07</span></div>
         </div>
@@ -175,64 +247,183 @@
     </div>
   </section>
 
-  <!-- PREMIACOES — organic light shape IS the section -->
+  <!-- PREMIACOES E CATEGORIAS -->
   <section class="premiacoes" id="premiacoes">
-    <img class="premiacoes-bg" src="assets/premiacoes-bg.svg" alt="" aria-hidden="true">
+    <img class="premiacoes-bg" src="assets/premiacoes-bg-v2.svg" alt="" aria-hidden="true">
     <div class="premiacoes-wrap">
-      <div class="premiacoes-left anim">
-        <p class="label">Premiações e reconhecimento</p>
-        <h2 class="h2">Categorias e prêmios</h2>
-        <div class="accordion">
-          <div class="acc-item">
-            <span class="acc-text">Inovação em IA e Ciência de Dados</span>
-            <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+      <div class="premiacoes-header anim">
+        <p class="label">Premiacoes e reconhecimento</p>
+        <h2 class="h2">Premiacoes e categorias</h2>
+      </div>
+
+      <!-- 3 Category cards -->
+      <div class="premiacoes-categories anim">
+        <div class="cat-card">
+          <div class="cat-number">1</div>
+          <div class="cat-content">
+            <h3 class="cat-title">Inovacao em IA e Ciencia de Dados</h3>
+            <p class="cat-desc">Solucoes que utilizam inteligencia artificial e ciencia de dados para resolver problemas sociais e promover inclusao.</p>
           </div>
-          <div class="acc-item">
-            <span class="acc-text">Melhor Experiência e Usabilidade do Usuário</span>
-            <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+        </div>
+        <div class="cat-card">
+          <div class="cat-number">2</div>
+          <div class="cat-content">
+            <h3 class="cat-title">Melhor Experiencia e Usabilidade (UX)</h3>
+            <p class="cat-desc">Interfaces intuitivas e acessiveis que proporcionam a melhor experiencia de uso para todos os publicos.</p>
           </div>
-          <div class="acc-item">
-            <span class="acc-text">Acessibilidade em Baixa Conectividade</span>
-            <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
-          </div>
-          <div class="acc-item">
-            <span class="acc-text">Visitas técnicas à Oracle com experiências imersivas</span>
-            <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
-          </div>
-          <div class="acc-item">
-            <span class="acc-text">Reconhecimento profissional e oportunidades de carreira</span>
-            <svg class="acc-icon" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="#FFBB00"/><path d="M11 15H13L15 15V11L17 11V15H19L21 15V17H19H17V21L15 21V17H13H11L11 15Z" fill="#181057"/></svg>
+        </div>
+        <div class="cat-card">
+          <div class="cat-number">3</div>
+          <div class="cat-content">
+            <h3 class="cat-title">Acessibilidade em Baixa Conectividade</h3>
+            <p class="cat-desc">Solucoes que funcionam em cenarios de baixa conectividade, garantindo acesso para comunidades em regioes remotas.</p>
           </div>
         </div>
       </div>
+
+      <!-- Prize and benefits cards -->
+      <div class="premiacoes-cards anim">
+        <div class="prize-card prize-card-yellow">
+          <h3 class="prize-card-title">Os premios incluem:</h3>
+          <ul class="prize-list">
+            <li>Visitas tecnicas a Oracle com experiencias imersivas</li>
+            <li>Certificados oficiais de participacao e destaque</li>
+            <li>Mentorias exclusivas com especialistas do mercado</li>
+            <li>Premios em dinheiro e vouchers de cursos</li>
+          </ul>
+        </div>
+        <div class="prize-card prize-card-blue">
+          <h3 class="prize-card-title">Beneficios para os participantes</h3>
+          <ul class="prize-list">
+            <li>Encaminhamento para entrevistas de emprego</li>
+            <li>Networking global com profissionais de tecnologia</li>
+            <li>Maior visibilidade profissional no mercado</li>
+            <li>Acesso a comunidade exclusiva pos-hackathon</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trophy illustration -->
       <div class="premiacoes-trophy" aria-hidden="true">
-        <svg class="trophy-cup" viewBox="99 0 109 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M201.188 10.125H189.266V6.75C189.266 3.01894 186.219 0 182.453 0H124.547C120.781 0 117.734 3.01894 117.734 6.75V10.125H105.812C102.047 10.125 99 13.1439 99 16.875V30.375C99 40.6266 107.388 48.9375 117.734 48.9375H117.898C119.455 65.2388 132.172 78.2932 148.391 80.5984V94.5H136.469C132.703 94.5 129.656 97.5189 129.656 101.25V106.312C129.656 107.246 130.418 108 131.359 108H175.641C176.582 108 177.344 107.246 177.344 106.312V101.25C177.344 97.5189 174.297 94.5 170.531 94.5H158.609V80.5984C174.828 78.2932 187.545 65.2388 189.102 48.9375H189.266C199.612 48.9375 208 40.6266 208 30.375V16.875C208 13.1439 204.953 10.125 201.188 10.125ZM109.219 30.375V20.25H117.734V38.8125C113.03 38.8125 109.219 35.0359 109.219 30.375ZM166.635 35.5185L161.276 40.9641L162.545 48.6658C162.651 49.3037 162.377 49.9449 161.845 50.3179C161.552 50.5204 161.207 50.625 160.863 50.625C160.58 50.625 160.295 50.5558 160.038 50.4141L153.497 46.8315L146.955 50.4141C146.383 50.7279 145.681 50.6891 145.148 50.3162C144.615 49.9432 144.342 49.302 144.448 48.6641L145.717 40.9624L140.359 35.5168C139.912 35.0629 139.759 34.4031 139.964 33.8023C140.168 33.2016 140.691 32.7662 141.321 32.67L148.66 31.5596L151.957 24.6021C152.238 24.0081 152.839 23.6318 153.498 23.6318C154.157 23.6318 154.759 24.0098 155.04 24.6021L158.337 31.5596L165.676 32.67C166.306 32.7662 166.83 33.2016 167.033 33.8023C167.236 34.4031 167.081 35.0646 166.635 35.5185ZM197.781 30.375C197.781 35.0359 193.97 38.8125 189.266 38.8125V20.25H197.781V30.375Z" fill="#FFBB00"/>
-        </svg>
-        <svg class="trophy-pillar-l" viewBox="0 189 96 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 219.455C0 208.795 0 203.465 2.06684 199.393C3.88488 195.811 6.78585 192.9 10.354 191.075C14.4104 189 19.7205 189 30.3407 189H65.6593C76.2795 189 81.5896 189 85.646 191.075C89.2142 192.9 92.1151 195.811 93.9332 199.393C96 203.465 96 208.795 96 219.455V296.545C96 307.205 96 312.535 93.9332 316.607C92.1151 320.189 89.2142 323.1 85.646 324.925C81.5896 327 76.2795 327 65.6593 327H30.3407C19.7205 327 14.4104 327 10.354 324.925C6.78585 323.1 3.88488 320.189 2.06684 316.607C0 312.535 0 307.205 0 296.545V219.455Z" fill="#155CF4"/>
-        </svg>
-        <svg class="trophy-pillar-c" viewBox="106 118 96 209" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M106 148.574C106 137.872 106 132.521 108.067 128.433C109.885 124.838 112.786 121.915 116.354 120.083C120.41 118 125.72 118 136.341 118H171.659C182.28 118 187.59 118 191.646 120.083C195.214 121.915 198.115 124.838 199.933 128.433C202 132.521 202 137.872 202 148.574V296.426C202 307.128 202 312.479 199.933 316.567C198.115 320.162 195.214 323.085 191.646 324.917C187.59 327 182.28 327 171.659 327H136.341C125.72 327 120.41 327 116.354 324.917C112.786 323.085 109.885 320.162 108.067 316.567C106 312.479 106 307.128 106 296.426V148.574Z" fill="#155CF4"/>
-        </svg>
-        <svg class="trophy-pillar-r" viewBox="212 249 96 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M212 279.255C212 268.664 212 263.369 214.067 259.325C215.885 255.767 218.786 252.874 222.354 251.061C226.41 249 231.72 249 242.341 249H277.659C288.28 249 293.59 249 297.646 251.061C301.214 252.874 304.115 255.767 305.933 259.325C308 263.369 308 268.664 308 279.255V296.745C308 307.336 308 312.631 305.933 316.675C304.115 320.233 301.214 323.126 297.646 324.939C293.59 327 288.28 327 277.659 327H242.341C231.72 327 226.41 327 222.354 324.939C218.786 323.126 215.885 320.233 214.067 316.675C212 312.631 212 307.336 212 296.745V279.255Z" fill="#155CF4"/>
-        </svg>
+        <img class="trophy-bg-shape d" src="assets/trophy-bg.svg" alt="">
+        <img class="trophy-cup-v2 d" src="assets/trophy-cup-v2.svg" alt="">
+        <img class="trophy-pillars-v2 d" src="assets/trophy-pillars-v2.svg" alt="">
+      </div>
+
+      <!-- Decorative element -->
+      <img class="premiacoes-deco anim" src="assets/premiacoes-deco.png" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <!-- COMO PARTICIPAR -->
+  <section class="como" id="como-participar">
+    <img class="como-bg" src="assets/como-bg.svg" alt="" aria-hidden="true">
+    <div class="como-wrap">
+      <div class="como-left anim">
+        <h2 class="h2 white">Como Participar?</h2>
+
+        <!-- 3 info cards -->
+        <div class="como-cards">
+          <div class="como-card">
+            <h3 class="como-card-title">Inscricao 100% GRATUITA!</h3>
+            <p class="como-card-desc">Nao ha nenhum custo para participar. Basta preencher o formulario de inscricao e aguardar a confirmacao.</p>
+          </div>
+          <div class="como-card">
+            <h3 class="como-card-title">Quem pode participar?</h3>
+            <p class="como-card-desc">Pessoas de qualquer idade, genero, raca, formacao ou experiencia. O hackathon e aberto a todos que querem fazer a diferenca.</p>
+          </div>
+          <div class="como-card">
+            <h3 class="como-card-title">Preciso ter experiencia tecnica?</h3>
+            <p class="como-card-desc">Nao! Precisamos de designers, comunicadores, gestores de projetos, pesquisadores e muito mais. A diversidade de habilidades e o que torna as equipes mais fortes.</p>
+          </div>
+        </div>
+
+        <!-- Areas tags -->
+        <div class="como-areas">
+          <h3 class="como-areas-title">Areas que podem contribuir</h3>
+          <div class="como-tags">
+            <span class="como-tag">Desenvolvimento</span>
+            <span class="como-tag">UX/UI Design</span>
+            <span class="como-tag">Ciencia de Dados</span>
+            <span class="como-tag">Gestao de Projetos</span>
+            <span class="como-tag">Marketing</span>
+            <span class="como-tag">Comunicacao</span>
+            <span class="como-tag">Pesquisa</span>
+            <span class="como-tag">Acessibilidade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="como-right anim">
+        <img class="como-inscr-bg" src="assets/como-inscr-bg.svg" alt="" aria-hidden="true">
+        <div class="como-inscr-content">
+          <h3 class="como-inscr-title">Como se inscrever</h3>
+          <div class="como-steps-list">
+            <div class="como-step">
+              <span class="como-step-num">1</span>
+              <p>Acesse o formulario de inscricao clicando no botao abaixo</p>
+            </div>
+            <div class="como-step">
+              <span class="como-step-num">2</span>
+              <p>Preencha seus dados e escolha suas areas de interesse</p>
+            </div>
+            <div class="como-step">
+              <span class="como-step-num">3</span>
+              <p>Aguarde o e-mail de confirmacao e prepare-se para inovar!</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary-v2">
+            <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+            <span>Inscreva-se Agora</span>
+          </a>
+          <img class="como-arrow d" src="assets/como-arrow.svg" alt="" aria-hidden="true">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PARCEIROS -->
-  <section class="parceiros">
-    <div class="parceiros-bar" id="parceiros">
-      <span class="bar-line"></span><span class="bar-title">Nossos Parceiros</span><span class="bar-line"></span>
+  <section class="parceiros" id="parceiros">
+    <div class="parceiros-header anim">
+      <h2 class="h2 center">Nossos Parceiros</h2>
+      <p class="parceiros-subtitle">O Hackathon App BiT conta com o apoio de grandes parceiros:</p>
+      <p class="parceiros-subtitle2">Empresas e organizacoes comprometidas com a inovacao e a inclusao.</p>
     </div>
-    <div class="parceiros-logos anim">
-      <img class="parc-pmi" src="assets/logo-pmi.png" alt="PMI-SP">
-      <img class="parc-anima" src="assets/logo-anima.png" alt="Ânima">
-      <img class="parc-one" src="assets/logo-one.png" alt="ONE">
-      <img class="parc-nocountry" src="assets/logo-nocountry.png" alt="NoCountry">
-      <img class="parc-alura" src="assets/logo-alura.svg" alt="Alura">
+    <div class="parceiros-grid anim">
+      <div class="parceiros-row">
+        <img src="assets/logo-pmi.png" alt="PMI-SP" class="parc-logo">
+        <img src="assets/logo-anima.png" alt="Anima" class="parc-logo">
+        <img src="assets/logo-one.png" alt="ONE" class="parc-logo">
+        <img src="assets/logo-nocountry.png" alt="NoCountry" class="parc-logo">
+        <img src="assets/logo-alura.svg" alt="Alura" class="parc-logo">
+      </div>
+      <div class="parceiros-row">
+        <img src="assets/logo-pmi-v2.png" alt="PMI" class="parc-logo">
+        <img src="assets/logo-anima-v2.png" alt="Anima" class="parc-logo">
+        <img src="assets/logo-one-v2.png" alt="ONE" class="parc-logo">
+        <img src="assets/logo-nocountry-v2.png" alt="NoCountry" class="parc-logo">
+        <img src="assets/logo-alura-v2.png" alt="Alura" class="parc-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + LOGO FINAL -->
+  <section class="cta-final">
+    <div class="cta-final-wrap anim">
+      <div class="cta-final-logo">
+        <div class="cta-final-logo-img">
+          <img class="arrow-l" src="assets/arrow-left-v2.svg" alt="">
+          <img class="hack-text" src="assets/hackathon-v2.svg" alt="Hackathon">
+          <img class="bit-text" src="assets/appbit-v2.svg" alt="App BiT">
+          <img class="arrow-r" src="assets/arrow-right-v2.svg" alt="">
+        </div>
+      </div>
+      <h2 class="cta-final-title">Transforme o Futuro da Tecnologia</h2>
+      <p class="cta-final-desc">Participe do Hackathon App BiT e ajude a construir um futuro mais justo, inclusivo e conectado!</p>
+      <a href="#" class="btn btn-primary-v2">
+        <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+        <span>Inscreva-se Agora</span>
+      </a>
     </div>
   </section>
 
@@ -255,10 +446,10 @@
       </div>
       <div class="wongola-content">
         <h2 class="h2">Quem somos</h2>
-        <p class="body">A Wongola EdTech é uma organização não governamental comprometida em criar caminhos acessíveis para a comunidade negra alcançar instituições de ensino de excelência e oportunidades de emprego em empresas alinhadas com a responsabilidade social</p>
+        <p class="body">A Wongola EdTech e uma organizacao nao governamental comprometida em criar caminhos acessiveis para a comunidade negra alcancar instituicoes de ensino de excelencia e oportunidades de emprego em empresas alinhadas com a responsabilidade social</p>
         <p class="wongola-quote">Wongola significa uma pessoa persistente que supera todos os desafios.</p>
         <div class="wongola-blockquote">
-          <p>A palavra vem do dialeto Congo e homenageia os ancestrais africanos que deixaram a mãe África</p>
+          <p>A palavra vem do dialeto Congo e homenageia os ancestrais africanos que deixaram a mae Africa</p>
         </div>
       </div>
       <a href="https://www.wongola.com.br/" target="_blank" rel="noopener" class="btn btn-outline-dark">
@@ -274,12 +465,12 @@
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
-        <p class="footer-heading">Endereço da Wongola (Brasil)</p>
-        <p><a href="https://maps.google.com/?q=Av.+Paulista+2202+Bela+Vista+São+Paulo+SP+Brasil" target="_blank" rel="noopener">Av. Paulista, 2202<br>Bela Vista - São Paulo / SP - Brasil</a></p>
+        <p class="footer-heading">Endereco da Wongola (Brasil)</p>
+        <p><a href="https://maps.google.com/?q=Av.+Paulista+2202+Bela+Vista+São+Paulo+SP+Brasil" target="_blank" rel="noopener">Av. Paulista, 2202<br>Bela Vista - Sao Paulo / SP - Brasil</a></p>
       </div>
       <div class="footer-col">
-        <p class="footer-heading">Endereço da Wongola (Angola)</p>
-        <p><a href="https://maps.google.com/?q=Belas+Business+Park+Talatona+Luanda+Angola" target="_blank" rel="noopener">Condomínio Belas Business Park<br>Edifício Cunene, 3º Andar, n. 311<br>Talatona - Luanda / Angola</a></p>
+        <p class="footer-heading">Endereco da Wongola (Angola)</p>
+        <p><a href="https://maps.google.com/?q=Belas+Business+Park+Talatona+Luanda+Angola" target="_blank" rel="noopener">Condominio Belas Business Park<br>Edificio Cunene, 3o Andar, n. 311<br>Talatona - Luanda / Angola</a></p>
       </div>
       <div class="footer-col">
         <div class="footer-links">
@@ -287,7 +478,7 @@
           <a href="https://www.wongola.com.br/bit.html" target="_blank" rel="noopener">Black in Tech</a>
           <a href="https://www.wongola.com.br/contato.html" target="_blank" rel="noopener">Contato</a>
         </div>
-        <p>© Wongola - Todos os direitos reservados</p>
+        <p>&copy; Wongola - Todos os direitos reservados</p>
         <p>CNPJ: 43.178.278/0001-66</p>
       </div>
     </div>
