@@ -357,12 +357,13 @@ ul{list-style:none}
 /* Photo: absolute in .premiacoes */
 .premiacoes-photo{
   position:absolute;
-  left:777px;
-  top:300px;
-  width:561px;
+  right:96px;
+  top:80px;
+  width:500px;
   height:auto;
   border-radius:24px;
   display:block;
+  z-index:2;
 }
 
 /* Content overlay: absolute fills section, centered, padded */
