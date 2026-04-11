@@ -446,6 +446,7 @@ ul{list-style:none}
   grid-template-columns:1fr 1fr;
   gap:48px;
   position:relative;
+  align-items:start;
 }
 .prize-card{
   border-radius:32px;
@@ -457,6 +458,7 @@ ul{list-style:none}
 .prize-card-yellow{
   border:2px solid var(--yellow);
   background:linear-gradient(rgba(255,187,0,.1),rgba(255,187,0,.1)),#fff;
+  position:relative;
 }
 .prize-card-blue{
   border:2px solid var(--blue);
@@ -490,14 +492,15 @@ ul{list-style:none}
   margin-bottom:8px;
 }
 
-/* Trophy group: Figma x=27 y=307 w=517 h=431 within .premiacoes-bottom */
+/* Trophy: positioned below the yellow card, overlapping slightly */
 .premiacoes-trophy{
   position:absolute;
-  left:27px;
-  top:307px;
+  left:0;
+  top:260px;
   width:517px;
   height:431px;
   pointer-events:none;
+  z-index:1;
 }
 /* Background blob: Figma 29×357 within group, rotated -3.29deg, w=515 h=410 */
 .trophy-bg-shape{
