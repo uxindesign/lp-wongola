@@ -207,6 +207,7 @@ ul{list-style:none}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
+   Positions from Figma 1920×1437px reference frame
    ================================================ */
 .porque{
   position:relative;
@@ -215,94 +216,89 @@ ul{list-style:none}
 }
 .porque-bg{
   display:block;
-  width:2011px;
+  width:100%;
   max-width:none;
   height:auto;
-  margin:0 auto;
   pointer-events:none;
-  position:relative;
-  left:-150px;
 }
-.porque-wrap{
+
+/* Text: Figma left=535, top=247, w=555 → /1920 */
+.porque-text{
   position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  display:flex;
-  flex-direction:column;
-  gap:48px;
-  max-width:1280px;margin:0 auto;
-  padding:180px 80px 140px;
+  left:27.86vw;
+  top:12.86vw;
+  width:28.9vw;
 }
-.porque-top{
-  display:flex;
-  gap:60px;
-  align-items:flex-start;
-  flex:1;
-}
-.porque-text{flex:0 0 48%}
+
+/* Photo: Figma left=1174, top=90, w=663 → /1920 */
 .porque-photo{
-  flex:1;
-  min-width:0;
-  align-self:stretch;
-  display:flex;
-  align-items:flex-start;
+  position:absolute;
+  left:61.15vw;
+  top:4.69vw;
+  width:34.53vw;
 }
 .porque-photo img{
   width:100%;
-  height:100%;
-  max-height:440px;
-  object-fit:cover;
+  height:auto;
   border-radius:24px;
 }
+
 .porque-intro{
   font-family:var(--f-body);
-  font-size:20px;
+  font-size:clamp(14px,1.25vw,24px);
   color:var(--white);
   line-height:1.5;
-  margin-bottom:24px;
-  opacity:.9;
+  margin-bottom:clamp(16px,1.67vw,32px);
 }
-.porque-list{list-style:disc;padding-left:20px;margin:24px 0}
-.porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
+.porque-list{list-style:disc;padding-left:20px;margin:clamp(16px,1.67vw,32px) 0}
+.porque-list li{font-size:clamp(14px,1.25vw,24px);color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* Porque CTA box */
+/* CTA box: Figma left=478, top=772, w=1032, h=443 → /1920 */
 .porque-cta-box{
-  position:relative;
-  padding:56px 80px 56px 160px;
-  flex-shrink:0;
+  position:absolute;
+  left:24.9vw;
+  top:40.21vw;
+  width:53.75vw;
+  height:23.07vw;
   overflow:visible;
 }
+
+/* Shape: Figma left=-18.51, top=-24.26, w=1154.49, h=510.50 within 1032×443 */
 .porque-cta-shape{
   position:absolute;
-  width:115%;
-  height:115%;
-  left:-1.6%;
-  top:-5%;
-  transform:none;
-  pointer-events:none;
+  left:-1.79%;
+  top:-5.48%;
+  width:111.82%;
+  height:115.12%;
   z-index:0;
   display:block;
+  pointer-events:none;
 }
+
+/* Content: Figma left=150, top=81, w=902 within 1032×443 */
 .porque-cta-content{
-  position:relative;
+  position:absolute;
+  left:14.53%;
+  top:18.31%;
+  width:87.4%;
   z-index:1;
   display:flex;
   flex-direction:column;
-  gap:16px;
-  max-width:860px;
+  gap:clamp(16px,1.67vw,32px);
 }
 .porque-cta-text{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:clamp(14px,1.25vw,24px);
   color:var(--white);
-  line-height:1.4;
+  line-height:1.3;
 }
 .porque-cta-vagas{
   font-family:var(--f-body);
-  font-size:24px;
+  font-size:clamp(16px,1.46vw,28px);
   font-style:italic;
-  font-weight:700;
+  font-weight:900;
   color:var(--white);
-  line-height:1.4;
+  line-height:1.3;
 }
 
 /* Porque logos */
@@ -852,8 +848,9 @@ ul{list-style:none}
   .hero-stats{gap:32px}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
-  .porque-wrap{padding:10% 5% 15%}
-  .porque-top{flex-direction:column;gap:32px}
+  .porque-text{left:26vw;top:13vw;width:30vw}
+  .porque-photo{left:59vw;top:5vw;width:36vw}
+  .porque-cta-box{left:23vw;top:40vw;width:55vw;height:24vw}
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
   .wongola-wrap{padding-left:40px}
@@ -886,12 +883,13 @@ ul{list-style:none}
   .sobre{padding:60px 0}
   .sobre-wrap{padding:0 24px}
   .sobre-img{width:100%}
-  .porque-wrap{padding:8% 5% 14%}
-  .porque-top{flex-direction:column;gap:24px}
-  .porque-photo img{max-height:320px}
-  .porque-list li{font-size:16px}
-  .porque-cta-box{padding:40px 24px 40px 48px}
+  /* porque — column layout on mobile */
+  .porque{display:flex;flex-direction:column;align-items:center;padding:15vw 5% 50vw;gap:32px}
+  .porque-bg{position:absolute;top:0;left:-20%;width:140%;z-index:0}
+  .porque-text,.porque-photo,.porque-cta-box{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:90%;height:auto;z-index:1}
+  .porque-cta-box{padding:40px 24px 40px 32px}
   .porque-cta-shape{width:130%;height:130%;left:-10%;top:-15%}
+  .porque-cta-content{position:relative;left:auto;top:auto;width:100%;gap:20px}
   .porque-cta-text{font-size:18px}
   .porque-cta-vagas{font-size:20px}
   .crono{padding:80px 24px}
