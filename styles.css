@@ -690,7 +690,6 @@ ul{list-style:none}
 }
 .como-cta-row{
   display:flex;
-  align-items:center;
   gap:16px;
   margin-top:8px;
 }
@@ -698,7 +697,8 @@ ul{list-style:none}
   width:40px;
   height:auto;
   transform:rotate(-20deg);
-  margin-bottom:32px;
+  position:relative;
+  top:-32px;
 }
 .como-inscr-content p{
   font-family:var(--f-body);
