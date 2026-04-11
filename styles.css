@@ -554,13 +554,14 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:2200px;
+  width:1800px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:-140px;
+  left:-120px;
+  top:-40px;
 }
 .como-wrap{
   position:absolute;
