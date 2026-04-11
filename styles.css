@@ -251,9 +251,9 @@ ul{list-style:none}
 /* Photo: absolute right side */
 .porque-photo{
   position:absolute;
-  top:90px;
+  top:60px;
   right:32px;
-  width:500px;
+  width:660px;
   height:auto;
 }
 
