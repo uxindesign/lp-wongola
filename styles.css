@@ -761,20 +761,20 @@ ul{list-style:none}
    CTA FINAL
    ================================================ */
 .cta-final{
-  padding:60px 32px 80px;
+  padding:80px 96px;
   background:var(--white);
   text-align:center;
 }
 .cta-final-wrap{
-  max-width:680px;
+  max-width:1249px;
   margin:0 auto;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:72px;
+  gap:0;
 }
 .cta-final-logo{
-  /* no extra margin — gap handles spacing */
+  margin-bottom:72px;
 }
 .cta-final-logo-img{
   position:relative;
@@ -790,19 +790,20 @@ ul{list-style:none}
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:16px;
+  gap:20px;
+  margin-bottom:32px;
 }
 .cta-final-title{
   font-family:var(--f-head);
   font-weight:900;
   font-size:28px;
   color:var(--navy);
-  line-height:1.2;
+  line-height:1.1;
   text-align:center;
 }
 .cta-final-desc{
   font-family:var(--f-body);
-  font-size:24px;
+  font-size:22px;
   color:var(--text);
   line-height:1.5;
   width:560px;
