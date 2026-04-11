@@ -563,7 +563,7 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:1440px;
+  width:1248px;
   max-width:none;
   height:auto;
   margin:0 auto;
@@ -773,7 +773,7 @@ ul{list-style:none}
    CTA FINAL
    ================================================ */
 .cta-final{
-  padding:100px 32px;
+  padding:60px 32px 80px;
   background:var(--white);
   text-align:center;
 }
@@ -790,7 +790,7 @@ ul{list-style:none}
 }
 .cta-final-logo-img{
   position:relative;
-  height:120px;
+  height:160px;
   aspect-ratio:507/200;
 }
 .cta-final-logo-img img{position:absolute;height:auto}
@@ -859,8 +859,8 @@ ul{list-style:none}
 }
 .wongola-africa-bg{
   position:absolute;
-  top:205px;right:120px;
-  width:420px;height:376px;
+  top:162px;right:200px;
+  width:480px;height:430px;
   --base-rot:rotate(-17.7deg);
   opacity:.3;
   will-change:transform;
@@ -868,16 +868,16 @@ ul{list-style:none}
 }
 .wongola-africa-border{
   position:absolute;
-  top:254px;right:60px;
-  width:100px;height:97px;
+  top:218px;right:100px;
+  width:126px;height:123px;
   opacity:.3;
   will-change:transform;
   pointer-events:auto;
 }
 .wongola-africa-map{
   position:absolute;
-  top:323px;right:240px;
-  width:260px;height:260px;
+  top:297px;right:280px;
+  width:340px;height:340px;
   overflow:hidden;
   will-change:transform;
   pointer-events:auto;
