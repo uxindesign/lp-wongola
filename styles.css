@@ -642,25 +642,25 @@ ul{list-style:none}
 .como-right{
   position:absolute;
   left:514px;
-  top:440px;
-  width:662px;
-  height:597px;
+  top:312px;
+  width:752px;
+  height:768px;
   flex-shrink:0;
 }
 .como-inscr-bg{
   position:absolute;
   left:-40px;
-  top:-67px;
-  width:677px;
-  height:632px;
+  top:152px;
+  width:756px;
+  height:auto;
   transform:rotate(-7.76deg);
   transform-origin:center;
   z-index:0;
 }
 .como-steps-img{
   position:absolute;
-  left:24px;
-  top:96px;
+  left:84px;
+  top:278px;
   width:76px;
   height:173px;
   z-index:1;
@@ -668,7 +668,7 @@ ul{list-style:none}
 .como-inscr-content{
   position:absolute;
   left:184px;
-  top:96px;
+  top:224px;
   width:423px;
   z-index:2;
   display:flex;
