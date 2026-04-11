@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // to create organic, never-repeating trajectories.
   // Cursor acts as soft collider on top of the drift.
   // ============================================
-  const decos = document.querySelectorAll('.d, .wongola-africa-bg, .wongola-africa-border, .wongola-africa-map, .trophy-cup-v2, .trophy-pillars-v2, .trophy-bg-shape, .como-arrow');
+  const decos = document.querySelectorAll('.d, .wongola-africa-bg, .wongola-africa-border, .wongola-africa-map, .trophy-cup-v2, .trophy-pillars-v2, .trophy-bg-shape, .trophy-union, .como-arrow');
   let mx = -9999, my = -9999, pmx = -9999, pmy = -9999, mVel = 0;
 
   document.addEventListener('mousemove', (e) => {

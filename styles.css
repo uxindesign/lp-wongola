@@ -340,7 +340,7 @@ ul{list-style:none}
 .premiacoes{
   position:relative;
   padding:0;
-  overflow:hidden;
+  overflow:visible;
 }
 /* SVG bg: fixed width, centered with left offset */
 .premiacoes-bg{
@@ -519,7 +519,7 @@ ul{list-style:none}
 .trophy-cup-v2{
   position:absolute;
   top:0;
-  left:97px;
+  left:217px;
   width:107px;
   height:auto;
 }
@@ -529,6 +529,8 @@ ul{list-style:none}
   left:0;
   width:87px;
   height:auto;
+  will-change:transform;
+  pointer-events:auto;
 }
 
 /* Legacy — hidden */
