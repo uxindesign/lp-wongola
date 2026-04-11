@@ -644,19 +644,17 @@ ul{list-style:none}
 .como-right{
   position:absolute;
   left:514px;
-  top:312px;
-  width:560px;
-  height:500px;
+  top:560px;
+  width:682px;
+  height:620px;
   flex-shrink:0;
 }
 .como-inscr-bg{
   position:absolute;
-  left:-20px;
+  left:0;
   top:0;
-  width:540px;
-  height:auto;
-  transform:rotate(-7.76deg);
-  transform-origin:center;
+  width:682px;
+  height:620px;
   z-index:0;
 }
 .como-steps-img{
