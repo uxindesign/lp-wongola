@@ -216,20 +216,17 @@ ul{list-style:none}
 }
 .porque-bg{
   display:block;
-  width:2011px;
+  width:100%;
   max-width:none;
   height:auto;
-  margin:0 auto;
   pointer-events:none;
 }
 
-/* Content positioned via a centered reference (1440px) */
+/* Text block: absolute over the blob */
 .porque-text{
   position:absolute;
+  left:96px;
   top:247px;
-  left:50%;
-  transform:translateX(-720px); /* -half of 1440 */
-  margin-left:96px;
   width:555px;
 }
 .porque-intro{
@@ -242,23 +239,20 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:22px;color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* Photo: positioned from center */
+/* Photo: absolute right side */
 .porque-photo{
   position:absolute;
   top:90px;
-  left:50%;
-  margin-left:220px; /* 720 - 500 = 220 from center to right */
+  right:96px;
   width:500px;
   height:auto;
 }
 
-/* CTA box: positioned from center */
+/* CTA box: navy blob at bottom-left area */
 .porque-cta-box{
   position:absolute;
+  left:39px;
   top:772px;
-  left:50%;
-  transform:translateX(-720px);
-  margin-left:39px;
   width:1032px;
   height:443px;
   overflow:visible;
@@ -349,8 +343,7 @@ ul{list-style:none}
 /* Photo: absolute in .premiacoes */
 .premiacoes-photo{
   position:absolute;
-  left:50%;
-  margin-left:57px; /* 777 - 720 = 57 from center */
+  left:777px;
   top:186px;
   width:561px;
   height:auto;
@@ -538,7 +531,7 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:1711px;
+  width:1248px;
   max-width:none;
   height:auto;
   margin:0 auto;
@@ -807,13 +800,11 @@ ul{list-style:none}
   min-height:978px;
 }
 .wongola-wrap{
-  position:relative;
-  z-index:1;
-  max-width:1248px;
-  margin:0 auto;
-  padding:96px 96px 120px;
+  position:absolute;
+  left:96px;
+  top:96px;
   width:580px;
-  margin-left:96px;
+  z-index:1;
   display:flex;
   flex-direction:column;
   gap:48px;
