@@ -46,7 +46,7 @@ ul{list-style:none}
 .btn .btn-bg{position:absolute;inset:0;z-index:0}
 .btn span{position:relative;z-index:1}
 .btn-primary{width:254px;height:56px;font-size:16px;color:var(--navy)}
-.btn-primary-v2{width:276px;height:56px;font-size:16px;color:var(--navy)}
+.btn-primary-v2{width:276px;height:56px;font-size:18px;color:var(--navy)}
 .btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
