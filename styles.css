@@ -637,7 +637,7 @@ ul{list-style:none}
   color:var(--white);
   font-family:var(--f-body);
   font-size:20px;
-  padding:8px 16px;
+  padding:8px 16px 10px;
   border-radius:12px;
 }
 
@@ -694,11 +694,12 @@ ul{list-style:none}
   margin-top:8px;
 }
 .como-arrow{
-  width:40px;
-  height:auto;
-  transform:rotate(-20deg);
-  position:relative;
-  top:-32px;
+  position:absolute;
+  left:480px;
+  top:380px;
+  width:30px;
+  height:56px;
+  z-index:3;
 }
 .como-inscr-content p{
   font-family:var(--f-body);
