@@ -638,20 +638,20 @@ ul{list-style:none}
   border-radius:12px;
 }
 
-/* Inscription — positioned in como-wrap, not como-bottom */
+/* Inscription — positioned in como-wrap */
 .como-right{
   position:absolute;
   left:514px;
   top:312px;
-  width:752px;
-  height:768px;
+  width:560px;
+  height:500px;
   flex-shrink:0;
 }
 .como-inscr-bg{
   position:absolute;
-  left:-40px;
-  top:152px;
-  width:756px;
+  left:-20px;
+  top:0;
+  width:540px;
   height:auto;
   transform:rotate(-7.76deg);
   transform-origin:center;
@@ -659,27 +659,38 @@ ul{list-style:none}
 }
 .como-steps-img{
   position:absolute;
-  left:84px;
-  top:278px;
+  left:40px;
+  top:120px;
   width:76px;
   height:173px;
   z-index:1;
 }
 .como-inscr-content{
   position:absolute;
-  left:184px;
-  top:224px;
-  width:423px;
+  left:140px;
+  top:60px;
+  width:380px;
   z-index:2;
   display:flex;
   flex-direction:column;
-  gap:24px;
+  gap:16px;
 }
 .como-inscr-title{
   font-family:var(--f-head);
   font-weight:900;
   font-size:28px;
   color:var(--white);
+}
+.como-cta-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:8px;
+}
+.como-arrow{
+  width:40px;
+  height:auto;
+  transform:rotate(-20deg);
 }
 .como-inscr-content p{
   font-family:var(--f-body);
