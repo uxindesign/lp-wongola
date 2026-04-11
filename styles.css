@@ -553,13 +553,13 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:1846px;
+  width:1440px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:-200px;
+  left:0;
 }
 .como-wrap{
   position:absolute;
