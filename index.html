@@ -187,30 +187,28 @@
   <!-- POR QUE PARTICIPAR — blue organic blob IS the section shape -->
   <section class="porque" id="porque">
     <img class="porque-bg" src="assets/porque-bg.svg" alt="" aria-hidden="true">
-    <div class="porque-wrap">
-      <div class="porque-text anim">
-        <h2 class="h2 white">Por que participar?</h2>
-        <p class="porque-intro">O evento vai muito além de uma competição. É uma <strong>experiência internacional e colaborativa</strong>, onde você terá a chance de:</p>
-        <ul class="porque-list">
-          <li>Desenvolver novas habilidades práticas.</li>
-          <li>Participar de mentorias exclusivas com especialistas renomados.</li>
-          <li>Expandir suas conexões e redes de colaboração ao nível global.</li>
-          <li>Promover a transformação social por meio da inovação tecnológica.</li>
-        </ul>
-        <div class="porque-cta-box">
-          <img class="porque-cta-bg" src="assets/como-inscr-bg.svg" alt="" aria-hidden="true">
-          <div class="porque-cta-content">
-            <p class="porque-cta-text"><strong>Além disso:</strong> quem participa sai na frente no mercado de trabalho, amplia sua visibilidade profissional e se torna parte de um movimento global que conecta impacto social aos avanços tecnológicos.</p>
-            <p class="porque-cta-vagas"><em>Garanta sua vaga!</em><br><em>Vagas limitadas a 1.000 participantes — inscrição gratuita!</em></p>
-            <a href="#" class="btn btn-primary-v2">
-              <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
-              <span>Inscreva-se Agora</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="porque-photo anim">
-        <img src="assets/empreg-blue.png" alt="Hackathon participantes" style="width:100%;height:auto;border-radius:24px;">
+    <div class="porque-text anim">
+      <h2 class="h2 white">Por que participar?</h2>
+      <p class="porque-intro">O evento vai muito além de uma competição. É uma <strong>experiência internacional e colaborativa</strong>, onde você terá a chance de:</p>
+      <ul class="porque-list">
+        <li>Desenvolver novas habilidades práticas;</li>
+        <li>Participar de mentorias exclusivas com especialistas renomados;</li>
+        <li>Expandir suas conexões e redes de colaboração ao nível global;</li>
+        <li>Promover a transformação social por meio da inovação tecnológica.</li>
+      </ul>
+    </div>
+    <div class="porque-photo anim">
+      <img src="assets/empreg-blue.png" alt="Hackathon participantes">
+    </div>
+    <div class="porque-cta-box anim">
+      <img class="porque-cta-shape" src="assets/porque-cta-bg.svg" alt="" aria-hidden="true">
+      <div class="porque-cta-content">
+        <p class="porque-cta-text"><strong>Além disso:</strong> quem participa sai na frente no mercado de trabalho, amplia sua visibilidade profissional e se torna parte de um movimento global que conecta impacto social aos avanços tecnológicos.</p>
+        <p class="porque-cta-vagas"><em>Garanta sua vaga!</em><br><em>Vagas limitadas a 1.000 participantes — inscrição gratuita!</em></p>
+        <a href="#" class="btn btn-primary-v2">
+          <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+          <span>Inscreva-se Agora</span>
+        </a>
       </div>
     </div>
   </section>
@@ -248,39 +246,45 @@
   <!-- PREMIAÇÕES E CATEGORIAS -->
   <section class="premiacoes" id="premiacoes">
     <img class="premiacoes-bg" src="assets/premiacoes-bg-v2.svg" alt="" aria-hidden="true">
+
+    <!-- Photo: absolute in section, matches Figma x=777 y=185 w=561 (1440px ref) -->
+    <img class="premiacoes-photo" src="assets/premiacoes-photo.png" alt="Participantes do Hackathon" aria-hidden="false">
+
     <div class="premiacoes-wrap">
-      <div class="premiacoes-header anim">
-        <h2 class="h2">Premiações e categorias</h2>
-        <p class="body">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
+
+      <!-- Title: full container width, Figma y=138 -->
+      <h2 class="h2 anim">Premiações e categorias</h2>
+
+      <!-- Left column: intro + categories, Figma w=601 pt-16 -->
+      <div class="premiacoes-top anim">
+        <p class="premiacoes-intro">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
+        <div class="premiacoes-categories">
+          <div class="cat-card">
+            <div class="cat-number">1</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
+              <p class="cat-desc">Soluções criativas com impacto real</p>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-number">2</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
+              <p class="cat-desc">Projetos com design funcional e acessível</p>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-number">3</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
+              <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- 3 Category cards -->
-      <div class="premiacoes-categories anim">
-        <div class="cat-card">
-          <div class="cat-number">1</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
-            <p class="cat-desc">Soluções criativas com impacto real</p>
-          </div>
-        </div>
-        <div class="cat-card">
-          <div class="cat-number">2</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
-            <p class="cat-desc">Projetos com design funcional e acessível</p>
-          </div>
-        </div>
-        <div class="cat-card">
-          <div class="cat-number">3</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
-            <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prize and benefits cards -->
-      <div class="premiacoes-cards anim">
+      <!-- Bottom row: two prize cards + trophy, Figma y=762 gap=48 -->
+      <div class="premiacoes-bottom anim">
         <div class="prize-card prize-card-yellow">
           <h3 class="prize-card-title">Os prêmios incluem:</h3>
           <ul class="prize-list">
@@ -290,7 +294,7 @@
         </div>
         <div class="prize-card prize-card-blue">
           <h3 class="prize-card-title">Benefícios para os participantes</h3>
-          <p>Além dos prêmios, todos os participantes terão acesso a:</p>
+          <p class="prize-card-subtitle">Além dos prêmios, todos os participantes terão acesso a:</p>
           <ul class="prize-list">
             <li>Encaminhamento para entrevistas de emprego (nacionais e internacionais);</li>
             <li>Certificados oficiais com validade acadêmica;</li>
@@ -299,17 +303,15 @@
             <li>Maior visibilidade profissional, com destaque no mercado tecnológico.</li>
           </ul>
         </div>
+        <!-- Trophy: absolute within bottom row, Figma x=27 y=307 -->
+        <div class="premiacoes-trophy" aria-hidden="true">
+          <img class="trophy-bg-shape" src="assets/trophy-bg.svg" alt="">
+          <img class="trophy-union" src="assets/trophy-union.svg" alt="">
+          <img class="trophy-cup-v2" src="assets/trophy-cup-v2.svg" alt="">
+          <img class="trophy-pillars-v2" src="assets/trophy-pillars-v2.svg" alt="">
+        </div>
       </div>
 
-      <!-- Trophy illustration -->
-      <div class="premiacoes-trophy" aria-hidden="true">
-        <img class="trophy-bg-shape d" src="assets/trophy-bg.svg" alt="">
-        <img class="trophy-cup-v2 d" src="assets/trophy-cup-v2.svg" alt="">
-        <img class="trophy-pillars-v2 d" src="assets/trophy-pillars-v2.svg" alt="">
-      </div>
-
-      <!-- Decorative element -->
-      <img class="premiacoes-deco anim" src="assets/premiacoes-deco.png" alt="" aria-hidden="true">
     </div>
   </section>
 

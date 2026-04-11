@@ -207,6 +207,7 @@ ul{list-style:none}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
+   Positions from Figma 1920×1437px reference frame
    ================================================ */
 .porque{
   position:relative;
@@ -215,62 +216,89 @@ ul{list-style:none}
 }
 .porque-bg{
   display:block;
-  width:2011px;
+  width:100%;
   max-width:none;
   height:auto;
-  margin:0 auto;
   pointer-events:none;
-  position:relative;
-  left:-150px;
 }
-.porque-wrap{
+
+/* Text: Figma left=535, top=247, w=555 → /1920 */
+.porque-text{
   position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  display:flex;gap:60px;align-items:flex-start;
-  padding:200px 96px 200px 96px;
+  left:27.86vw;
+  top:12.86vw;
+  width:28.9vw;
 }
-.porque-text{max-width:600px}
+
+/* Photo: Figma left=1174, top=90, w=663 → /1920 */
+.porque-photo{
+  position:absolute;
+  left:61.15vw;
+  top:4.69vw;
+  width:34.53vw;
+}
+.porque-photo img{
+  width:100%;
+  height:auto;
+  border-radius:24px;
+}
+
 .porque-intro{
   font-family:var(--f-body);
-  font-size:20px;
+  font-size:clamp(14px,1.25vw,24px);
   color:var(--white);
   line-height:1.5;
-  margin-bottom:24px;
-  opacity:.9;
+  margin-bottom:clamp(16px,1.67vw,32px);
 }
-.porque-list{list-style:disc;padding-left:20px;margin:24px 0;width:500px}
-.porque-list li{font-size:20px;color:var(--white);line-height:1.4;margin-bottom:8px}
+.porque-list{list-style:disc;padding-left:20px;margin:clamp(16px,1.67vw,32px) 0}
+.porque-list li{font-size:clamp(14px,1.25vw,24px);color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* Porque CTA box */
+/* CTA box: Figma left=478, top=772, w=1032, h=443 → /1920 */
 .porque-cta-box{
-  position:relative;
-  margin-top:32px;
-  padding:48px;
-  border-radius:40px;
-  background:var(--navy);
-  overflow:hidden;
+  position:absolute;
+  left:24.9vw;
+  top:40.21vw;
+  width:53.75vw;
+  height:23.07vw;
+  overflow:visible;
 }
-.porque-cta-bg{
-  display:none;
+
+/* Shape: Figma left=-18.51, top=-24.26, w=1154.49, h=510.50 within 1032×443 */
+.porque-cta-shape{
+  position:absolute;
+  left:-1.79%;
+  top:-5.48%;
+  width:111.82%;
+  height:115.12%;
+  z-index:0;
+  display:block;
+  pointer-events:none;
 }
+
+/* Content: Figma left=150, top=81, w=902 within 1032×443 */
 .porque-cta-content{
-  position:relative;
+  position:absolute;
+  left:14.53%;
+  top:18.31%;
+  width:87.4%;
   z-index:1;
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:clamp(16px,1.67vw,32px);
 }
 .porque-cta-text{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:clamp(14px,1.25vw,24px);
   color:var(--white);
-  line-height:1.4;
+  line-height:1.3;
 }
 .porque-cta-vagas{
   font-family:var(--f-body);
-  font-size:24px;
-  color:var(--yellow);
-  line-height:1.4;
+  font-size:clamp(16px,1.46vw,28px);
+  font-style:italic;
+  font-weight:900;
+  color:var(--white);
+  line-height:1.3;
 }
 
 /* Porque logos */
@@ -315,6 +343,7 @@ ul{list-style:none}
   padding:0;
   overflow:hidden;
 }
+/* SVG bg: keeps original fixed-width to maintain section height (~1605px) */
 .premiacoes-bg{
   display:block;
   width:2059px;
@@ -325,37 +354,60 @@ ul{list-style:none}
   position:relative;
   left:-300px;
 }
+
+/* Photo: absolute in .premiacoes — Figma x=777 y=185 w=561 in 1440px frame */
+.premiacoes-photo{
+  position:absolute;
+  left:53.96vw;   /* 777/1440 */
+  top:12.67%;     /* 185/1460 of section height */
+  width:38.96vw;  /* 561/1440 */
+  height:auto;
+  border-radius:24px;
+  display:block;
+}
+
+/* Wrap: matches Figma container x=96 y=138 w=1243 */
 .premiacoes-wrap{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
-  padding:180px 80px 200px;
-  max-width:1280px;
+  max-width:1440px;
   margin:0 auto;
+  padding:138px 96px 200px;
 }
-.premiacoes-header{
-  text-align:left;
-  margin-bottom:48px;
+
+/* Title sits at y=138, h=58 — gap below handled by h2 margin-bottom:16px */
+
+/* Left column: w=601 y=228 (16px padding-top within sub-container at y=212) */
+.premiacoes-top{
+  margin-top:16px;
+  width:601px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  padding-top:16px;
+}
+.premiacoes-intro{
+  font-family:var(--f-body);
+  font-size:24px;
+  color:var(--text);
+  line-height:1.4;
 }
 
 /* Category cards */
 .premiacoes-categories{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:24px;
-  max-width:601px;
-  margin-bottom:32px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
 .cat-card{
   background:var(--white);
   border-radius:24px;
   padding:24px;
   display:flex;
-  gap:16px;
+  gap:20px;
   align-items:flex-start;
-  box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
 .cat-number{
   width:40px;
@@ -370,93 +422,127 @@ ul{list-style:none}
   font-weight:900;
   font-size:20px;
   color:var(--navy);
+  letter-spacing:1px;
 }
-.cat-content{display:flex;flex-direction:column;gap:8px}
+.cat-content{display:flex;flex-direction:column;gap:4px;justify-content:center}
 .cat-title{
   font-family:var(--f-head);
   font-weight:700;
-  font-size:20px;
-  color:var(--navy);
-  line-height:1.3;
+  font-size:24px;
+  color:var(--blue);
+  line-height:1.4;
 }
 .cat-desc{
   font-family:var(--f-body);
-  font-size:16px;
+  font-size:20px;
   color:var(--text);
-  line-height:1.5;
-  opacity:.8;
+  line-height:1.4;
 }
 
-/* Prize and Benefits cards */
-.premiacoes-cards{
+/* Bottom row: Figma y=762, gap=48px between cards (x=645.5 - x=597.5) */
+/* margin-top: 762 - (228+494) = 40px gap after top */
+.premiacoes-bottom{
+  margin-top:40px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:24px;
-  width:100%;
-  margin-bottom:32px;
+  gap:48px;
+  position:relative;
 }
 .prize-card{
   border-radius:32px;
   padding:32px;
-  background:transparent;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
 }
 .prize-card-yellow{
   border:2px solid var(--yellow);
+  background:linear-gradient(rgba(255,187,0,.1),rgba(255,187,0,.1)),#fff;
 }
 .prize-card-blue{
   border:2px solid var(--blue);
+  background:linear-gradient(rgba(21,92,244,.1),rgba(21,92,244,.1)),#fff;
 }
 .prize-card-title{
   font-family:var(--f-head);
-  font-weight:700;
-  font-size:24px;
+  font-weight:900;
+  font-size:28px;
   color:var(--navy);
-  margin-bottom:16px;
+  line-height:1.1;
+  padding-left:8px;
+}
+.prize-card-subtitle{
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:22px;
+  color:var(--blue);
+  line-height:1.4;
+  padding-left:8px;
 }
 .prize-list{
   list-style:disc;
-  padding-left:20px;
+  padding-left:30px;
 }
 .prize-list li{
   font-family:var(--f-body);
-  font-size:18px;
+  font-size:20px;
   color:var(--text);
-  line-height:1.5;
+  line-height:1.4;
   margin-bottom:8px;
 }
 
-/* Trophy illustration */
+/* Trophy group: Figma x=27 y=307 w=517 h=431 within .premiacoes-bottom */
 .premiacoes-trophy{
   position:absolute;
-  bottom:80px;
-  left:80px;
-  width:300px;
-  height:300px;
+  left:27px;
+  top:307px;
+  width:517px;
+  height:431px;
+  pointer-events:none;
 }
+/* Background blob: Figma 29×357 within group, rotated -3.29deg, w=515 h=410 */
 .trophy-bg-shape{
   position:absolute;
-  top:0;left:0;
-  width:100%;
+  left:2px;
+  top:50px;
+  width:515px;
   height:auto;
-  opacity:.6;
+  transform:rotate(-3.29deg);
+  transform-origin:center;
 }
+/* Podium bars: Winner group at x=216 y=307→within group y=0, w=301 h=205 */
+.trophy-pillars-v2{
+  position:absolute;
+  top:115px;
+  left:120px;
+  width:301px;
+  height:auto;
+}
+/* Trophy cup: x=312→within group x=96, y=307→within group y=0, w=107 */
 .trophy-cup-v2{
   position:absolute;
-  top:60px;
-  left:100px;
+  top:0;
+  left:97px;
   width:107px;
   height:auto;
 }
-.trophy-pillars-v2{
+/* Running person: Union x=27 y=545 → within group: x=0, y=238, w=87 */
+.trophy-union{
   position:absolute;
-  bottom:30px;
-  left:50px;
-  width:200px;
+  top:238px;
+  left:0;
+  width:87px;
   height:auto;
 }
 
-/* Deco — photo on the right side */
+/* Old deco — kept for any remaining references */
 .premiacoes-deco{
+  display:none;
+}
+.premiacoes-cards{display:none}
+
+/* Legacy rule kept below — replaced by premiacoes-bottom */
+.old-premiacoes-deco{
   position:absolute;
   top:100px;
   right:80px;
@@ -820,13 +906,16 @@ ul{list-style:none}
   .hero-stats{gap:32px}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
-  .porque-wrap{flex-direction:column;padding:10% 5% 20%}
+  .porque-text{left:26vw;top:13vw;width:30vw}
+  .porque-photo{left:59vw;top:5vw;width:36vw}
+  .porque-cta-box{left:23vw;top:40vw;width:55vw;height:24vw}
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
   .wongola-wrap{padding-left:40px}
-  .premiacoes-cards{grid-template-columns:1fr}
+  .premiacoes-top{width:100%}
+  .premiacoes-bottom{grid-template-columns:1fr}
   .premiacoes-trophy{display:none}
-  .premiacoes-deco{display:none}
+  .premiacoes-photo{left:55vw;width:42vw}
   .como-wrap{flex-direction:column;padding:10% 5% 20%}
   .como-right{width:100%}
   .cacc-cols{grid-template-columns:1fr}
@@ -853,15 +942,28 @@ ul{list-style:none}
   .sobre{padding:60px 0}
   .sobre-wrap{padding:0 24px}
   .sobre-img{width:100%}
-  .porque-wrap{padding:8% 5% 18%}
-  .porque-list li{font-size:16px}
-  .porque-logos{transform:scale(.7);transform-origin:top left}
+  /* porque — column layout on mobile */
+  .porque{display:flex;flex-direction:column;align-items:center;padding:15vw 5% 50vw;gap:32px}
+  .porque-bg{position:absolute;top:0;left:-20%;width:140%;z-index:0}
+  .porque-text,.porque-photo,.porque-cta-box{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:90%;height:auto;z-index:1}
+  .porque-cta-box{padding:40px 24px 40px 32px}
+  .porque-cta-shape{width:130%;height:130%;left:-10%;top:-15%}
+  .porque-cta-content{position:relative;left:auto;top:auto;width:100%;gap:20px}
+  .porque-cta-text{font-size:18px}
+  .porque-cta-vagas{font-size:20px}
   .crono{padding:80px 24px}
   .timeline{padding:24px 16px 40px}
   .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
   .tl-chev{display:none}
   .tl-date{font-size:28px}
-  .premiacoes-wrap{padding:10% 5%}
+  .premiacoes-wrap{padding:8% 5%}
+  .premiacoes-photo{position:relative;left:auto;top:auto;width:100%;margin-bottom:24px}
+  .premiacoes-top{width:100%}
+  .premiacoes-bottom{grid-template-columns:1fr;gap:24px}
+  .cat-title{font-size:20px}
+  .cat-desc{font-size:16px}
+  .prize-card-title{font-size:22px}
+  .premiacoes-trophy{display:none}
   .parceiros-row{gap:24px 32px}
   .parc-logo{height:45px}
   .parceiros{padding:60px 24px}
