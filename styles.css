@@ -207,7 +207,7 @@ ul{list-style:none}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
-   Positions from Figma 1920×1437px reference frame
+   All px values from Figma (1920px canvas). JS zoom handles scaling.
    ================================================ */
 .porque{
   position:relative;
@@ -222,28 +222,13 @@ ul{list-style:none}
   pointer-events:none;
 }
 
-/* Content wrapper positioned over the blob */
+/* Text block: absolute over the blob */
 .porque-text{
   position:absolute;
-  top:200px;left:0;right:0;
-  max-width:1248px;
-  margin:0 auto;
-  padding:0 96px;
+  left:96px;
+  top:247px;
   width:555px;
-  margin-left:96px;
 }
-
-/* Photo positioned top-right */
-.porque-photo{
-  position:absolute;
-  top:90px;right:96px;
-  width:450px;
-}
-.porque-photo img{
-  width:100%;
-  height:auto;
-}
-
 .porque-intro{
   font-family:var(--f-body);
   font-size:22px;
@@ -254,32 +239,41 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:22px;color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* CTA box: navy blob positioned at bottom of section */
+/* Photo: absolute right side */
+.porque-photo{
+  position:absolute;
+  top:90px;
+  right:96px;
+  width:500px;
+  height:auto;
+}
+
+/* CTA box: navy blob at bottom-left area */
 .porque-cta-box{
   position:absolute;
-  left:96px;right:96px;
-  bottom:60px;
+  left:39px;
+  top:772px;
+  width:1032px;
   height:443px;
   overflow:visible;
 }
-
-/* Navy shape fills the CTA box */
+/* Navy shape behind CTA content */
 .porque-cta-shape{
   position:absolute;
-  inset:-5% -2%;
-  width:104%;
-  height:115%;
+  left:-18px;
+  top:-24px;
+  width:1154px;
+  height:510px;
   z-index:0;
   display:block;
   pointer-events:none;
 }
-
 /* Content inside CTA box */
 .porque-cta-content{
   position:absolute;
   left:150px;
   top:81px;
-  width:750px;
+  width:902px;
   z-index:1;
   display:flex;
   flex-direction:column;
@@ -287,27 +281,18 @@ ul{list-style:none}
 }
 .porque-cta-text{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:24px;
   color:var(--white);
   line-height:1.4;
 }
 .porque-cta-vagas{
   font-family:var(--f-body);
-  font-size:26px;
+  font-size:28px;
   font-style:italic;
   font-weight:900;
   color:var(--white);
   line-height:1.3;
 }
-
-/* Porque logos */
-.porque-logos{position:relative;width:100%;max-width:500px;aspect-ratio:500/210;flex-shrink:1;margin-top:60px}
-.porque-logos img{position:absolute;object-fit:contain}
-.pl-one{left:8.6%;top:0;width:29.8%;height:38.1%}
-.pl-anima{left:54.4%;top:2.4%;width:32.8%;height:33.3%}
-.pl-pmi{left:0;top:61.9%;width:16%;height:38.1%}
-.pl-alura{left:28%;top:69%;width:21.6%;height:23.8%}
-.pl-nocountry{left:60%;top:72.9%;width:40%;height:16.2%}
 
 /* ================================================
    CRONOGRAMA — clean white
@@ -336,13 +321,14 @@ ul{list-style:none}
 
 /* ================================================
    PREMIACOES E CATEGORIAS
+   All px from Figma. No vw, no percentages for positions.
    ================================================ */
 .premiacoes{
   position:relative;
   padding:0;
   overflow:hidden;
 }
-/* SVG bg: keeps original fixed-width to maintain section height (~1605px) */
+/* SVG bg: fixed width, centered with left offset */
 .premiacoes-bg{
   display:block;
   width:2059px;
@@ -354,18 +340,18 @@ ul{list-style:none}
   left:-300px;
 }
 
-/* Photo: absolute in .premiacoes — Figma x=777 y=185 w=561 in 1440px frame */
+/* Photo: absolute in .premiacoes */
 .premiacoes-photo{
   position:absolute;
-  left:53.96vw;   /* 777/1440 */
-  top:12.67%;     /* 185/1460 of section height */
-  width:38.96vw;  /* 561/1440 */
+  left:777px;
+  top:186px;
+  width:561px;
   height:auto;
   border-radius:24px;
   display:block;
 }
 
-/* Wrap: matches Figma container x=96 y=138 w=1243 */
+/* Content overlay: absolute fills section, centered, padded */
 .premiacoes-wrap{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
@@ -376,9 +362,7 @@ ul{list-style:none}
   padding:138px 96px 200px;
 }
 
-/* Title sits at y=138, h=58 — gap below handled by h2 margin-bottom:16px */
-
-/* Left column: w=601 y=228 (16px padding-top within sub-container at y=212) */
+/* Left column: categories */
 .premiacoes-top{
   margin-top:16px;
   width:601px;
@@ -438,8 +422,7 @@ ul{list-style:none}
   line-height:1.4;
 }
 
-/* Bottom row: Figma y=762, gap=48px between cards (x=645.5 - x=597.5) */
-/* margin-top: 762 - (228+494) = 40px gap after top */
+/* Bottom row: two prize cards + trophy */
 .premiacoes-bottom{
   margin-top:40px;
   display:grid;
@@ -492,17 +475,16 @@ ul{list-style:none}
   margin-bottom:8px;
 }
 
-/* Trophy: positioned below the yellow card, overlapping slightly */
+/* Trophy: absolute within bottom row */
 .premiacoes-trophy{
   position:absolute;
-  left:0;
-  top:260px;
+  left:27px;
+  top:307px;
   width:517px;
   height:431px;
   pointer-events:none;
   z-index:1;
 }
-/* Background blob: Figma 29×357 within group, rotated -3.29deg, w=515 h=410 */
 .trophy-bg-shape{
   position:absolute;
   left:2px;
@@ -512,7 +494,6 @@ ul{list-style:none}
   transform:rotate(-3.29deg);
   transform-origin:center;
 }
-/* Podium bars: Winner group at x=216 y=307→within group y=0, w=301 h=205 */
 .trophy-pillars-v2{
   position:absolute;
   top:115px;
@@ -520,7 +501,6 @@ ul{list-style:none}
   width:301px;
   height:auto;
 }
-/* Trophy cup: x=312→within group x=96, y=307→within group y=0, w=107 */
 .trophy-cup-v2{
   position:absolute;
   top:0;
@@ -528,7 +508,6 @@ ul{list-style:none}
   width:107px;
   height:auto;
 }
-/* Running person: Union x=27 y=545 → within group: x=0, y=238, w=87 */
 .trophy-union{
   position:absolute;
   top:238px;
@@ -537,24 +516,13 @@ ul{list-style:none}
   height:auto;
 }
 
-/* Old deco — kept for any remaining references */
-.premiacoes-deco{
-  display:none;
-}
+/* Legacy — hidden */
+.premiacoes-deco{display:none}
 .premiacoes-cards{display:none}
-
-/* Legacy rule kept below — replaced by premiacoes-bottom */
-.old-premiacoes-deco{
-  position:absolute;
-  top:100px;
-  right:80px;
-  width:300px;
-  height:auto;
-  border-radius:24px;
-}
 
 /* ================================================
    COMO PARTICIPAR
+   All px from Figma.
    ================================================ */
 .como{
   position:relative;
@@ -573,27 +541,25 @@ ul{list-style:none}
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;
-  gap:48px;
-  align-items:flex-start;
+  flex-direction:column;
+  align-items:center;
   max-width:1248px;
   margin:0 auto;
   padding:120px 0 100px;
 }
-.como-left{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  gap:32px;
-}
+
+/* 3 info cards in a row */
 .como-cards{
   display:flex;
-  flex-direction:column;
-  gap:16px;
+  flex-direction:row;
+  gap:32px;
+  margin-top:32px;
 }
 .como-card{
+  width:380px;
   background:rgba(255,255,255,.4);
   border-radius:40px;
-  padding:28px 32px;
+  padding:32px 40px;
   backdrop-filter:blur(4px);
 }
 .como-card-title{
@@ -611,9 +577,20 @@ ul{list-style:none}
   line-height:1.3;
 }
 
-/* Areas tags */
+/* Bottom area: areas left + inscription right */
+.como-bottom{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  width:100%;
+  margin-top:48px;
+  position:relative;
+}
+
+/* Areas tags — left side */
 .como-areas{
-  margin-top:16px;
+  width:454px;
+  flex-shrink:0;
 }
 .como-areas-title{
   font-family:var(--f-head);
@@ -625,7 +602,7 @@ ul{list-style:none}
 .como-tags{
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
+  gap:8px;
 }
 .como-tag{
   background:var(--blue);
@@ -638,30 +615,42 @@ ul{list-style:none}
   white-space:nowrap;
 }
 
-/* Como right — inscription sub-section */
+/* Inscription — right side, absolute */
 .como-right{
-  width:500px;
+  position:absolute;
+  left:514px;
+  top:312px;
+  width:752px;
+  height:768px;
   flex-shrink:0;
-  position:relative;
-  min-height:500px;
 }
 .como-inscr-bg{
   position:absolute;
-  top:0;
-  left:-20px;
-  width:520px;
-  height:auto;
+  left:-40px;
+  top:152px;
+  width:756px;
+  height:717px;
+  transform:rotate(-7.76deg);
+  transform-origin:center;
   z-index:0;
 }
-.como-inscr-content{
-  position:relative;
+.como-steps-img{
+  position:absolute;
+  left:84px;
+  top:278px;
+  width:auto;
+  height:auto;
   z-index:1;
+}
+.como-inscr-content{
+  position:absolute;
+  left:184px;
+  top:224px;
+  width:423px;
+  z-index:2;
   display:flex;
   flex-direction:column;
   gap:20px;
-  padding:80px 60px 60px;
-  max-width:423px;
-  margin-left:60px;
 }
 .como-inscr-title{
   font-family:var(--f-head);
@@ -669,103 +658,83 @@ ul{list-style:none}
   font-size:32px;
   color:var(--white);
 }
-.como-steps-list{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-.como-step{
-  display:flex;
-  align-items:flex-start;
-  gap:16px;
-}
-.como-step-num{
-  width:36px;
-  height:36px;
-  min-width:36px;
-  border-radius:50%;
-  background:var(--yellow);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:var(--f-head);
-  font-weight:900;
-  font-size:18px;
-  color:var(--navy);
-}
-.como-step p{
+.como-inscr-content p{
   font-family:var(--f-body);
-  font-size:18px;
+  font-size:22px;
   color:var(--white);
   line-height:1.5;
-  padding-top:6px;
 }
-.como-arrow{
-  position:absolute;
-  bottom:20px;
-  right:-60px;
-  width:40px;
-  height:auto;
+.como-inscr-cta-text{
+  font-family:var(--f-head);
+  font-weight:800;
+  font-size:26px;
+  color:var(--white);
 }
 
 /* ================================================
    PARCEIROS
    ================================================ */
 .parceiros{
-  padding:80px 32px 96px;
-  background:#f8f8f8;
+  padding:80px 96px;
+  background:var(--white);
 }
-.parceiros-header{
+.parceiros-box{
+  border:1px solid rgba(0,0,0,.2);
+  border-radius:20px;
+  padding:88px 48px 64px;
+  position:relative;
+  max-width:1248px;
+  margin:0 auto;
+}
+/* Blue pill label */
+.parceiros-pill{
+  position:absolute;
+  top:-29px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--blue);
+  color:var(--white);
+  font-family:var(--f-pixel);
+  font-size:16px;
+  text-transform:uppercase;
+  padding:20px 48px;
+  border-radius:999px;
+  white-space:nowrap;
+  letter-spacing:1px;
+}
+.parceiros-text{
   text-align:center;
+  padding:0 96px;
   margin-bottom:48px;
 }
-.parceiros-header .label{
-  display:inline-block;
-  background:var(--yellow);
+.parceiros-title{
+  font-family:var(--f-head);
+  font-weight:900;
+  font-size:32px;
   color:var(--navy);
-  padding:6px 20px;
-  border-radius:999px;
-  font-size:12px;
-  letter-spacing:1.5px;
+  line-height:1.3;
+  margin-bottom:12px;
 }
 .parceiros-subtitle{
   font-family:var(--f-body);
-  font-size:20px;
+  font-size:24px;
   color:var(--text);
-  text-align:center;
-  margin-top:8px;
   line-height:1.4;
 }
-.parceiros-subtitle2{
-  font-family:var(--f-body);
-  font-size:18px;
-  color:var(--text);
-  text-align:center;
-  opacity:.6;
-  margin-top:4px;
-}
 .parceiros-grid{
-  background:var(--white);
-  border-radius:32px;
-  box-shadow:0 4px 24px rgba(0,0,0,.06);
-  padding:64px 48px;
-  max-width:1100px;
-  margin:0 auto;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:48px;
+  gap:56px;
 }
 .parceiros-row{
   display:flex;
   align-items:center;
   justify-content:center;
   flex-wrap:wrap;
-  gap:48px 64px;
+  gap:56px 96px;
 }
 .parc-logo{
-  height:56px;
-  width:auto;
   object-fit:contain;
 }
 
@@ -783,34 +752,42 @@ ul{list-style:none}
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:32px;
+  gap:72px;
 }
 .cta-final-logo{
-  margin-bottom:16px;
+  /* no extra margin — gap handles spacing */
 }
 .cta-final-logo-img{
   position:relative;
   height:160px;
-  aspect-ratio:507/200;
+  aspect-ratio:411/160;
 }
 .cta-final-logo-img img{position:absolute;height:auto}
 .cta-final-logo-img .arrow-r{right:0;top:0;width:14.2%;z-index:0}
 .cta-final-logo-img .arrow-l{left:0;top:21%;width:14.2%;transform:rotate(180deg);z-index:0}
 .cta-final-logo-img .hack-text{left:9.1%;top:9.5%;width:83.4%;z-index:1}
 .cta-final-logo-img .bit-text{left:28.9%;top:68%;width:43.4%;z-index:1}
+.cta-final-text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
 .cta-final-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:40px;
+  font-size:28px;
   color:var(--navy);
   line-height:1.2;
+  text-align:center;
 }
 .cta-final-desc{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:24px;
   color:var(--text);
   line-height:1.5;
-  max-width:560px;
+  width:560px;
+  text-align:center;
 }
 
 /* ================================================
@@ -820,15 +797,18 @@ ul{list-style:none}
   position:relative;
   background:#f8f5ee;
   overflow:hidden;
-  min-height:830px;
+  min-height:978px;
 }
 .wongola-wrap{
-  position:relative;z-index:1;
-  padding:96px 80px 120px;
-  display:flex;flex-direction:column;
-  gap:48px;align-items:flex-start;
-  max-width:1280px;
-  margin:0 auto;
+  position:absolute;
+  left:96px;
+  top:96px;
+  width:580px;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:48px;
+  align-items:flex-start;
 }
 .wongola-logo{display:flex;align-items:center;gap:8px}
 .wongola-logo img{width:106px;height:106px;object-fit:contain}
@@ -859,8 +839,10 @@ ul{list-style:none}
 }
 .wongola-africa-bg{
   position:absolute;
-  top:162px;right:200px;
-  width:480px;height:430px;
+  left:720px;
+  top:162px;
+  width:675px;
+  height:639px;
   --base-rot:rotate(-17.7deg);
   opacity:.3;
   will-change:transform;
@@ -868,16 +850,20 @@ ul{list-style:none}
 }
 .wongola-africa-border{
   position:absolute;
-  top:218px;right:100px;
-  width:126px;height:123px;
+  left:1122px;
+  top:218px;
+  width:126px;
+  height:123px;
   opacity:.3;
   will-change:transform;
   pointer-events:auto;
 }
 .wongola-africa-map{
   position:absolute;
-  top:297px;right:280px;
-  width:340px;height:340px;
+  left:746px;
+  top:297px;
+  width:340px;
+  height:340px;
   overflow:hidden;
   will-change:transform;
   pointer-events:auto;
@@ -900,27 +886,56 @@ ul{list-style:none}
 
 /* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
-   (above 1280px JS handles zoom scaling)
+   (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
 @media(max-width:1279px){
   .hero-logo-img{width:380px}
   .hero-stats{gap:32px}
   .sobre-wrap{flex-direction:column;gap:40px}
   .sobre-img{width:100%}
-  .porque-text{left:26vw;top:13vw;width:30vw}
-  .porque-photo{left:59vw;top:5vw;width:36vw}
-  .porque-cta-box{left:23vw;top:40vw;width:55vw;height:24vw}
+
+  /* Porque — reflow to column */
+  .porque-text{left:40px;top:180px;width:50%}
+  .porque-photo{right:40px;top:60px;width:40%}
+  .porque-cta-box{left:20px;top:auto;bottom:40px;width:80%;height:auto;min-height:360px}
+  .porque-cta-shape{left:-18px;top:-24px;width:110%;height:120%}
+  .porque-cta-content{left:80px;top:60px;width:80%}
+
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
-  .wongola-wrap{padding-left:40px}
+
+  /* Premiacoes — stack */
   .premiacoes-top{width:100%}
   .premiacoes-bottom{grid-template-columns:1fr}
   .premiacoes-trophy{display:none}
-  .premiacoes-photo{left:55vw;width:42vw}
-  .como-wrap{flex-direction:column;padding:10% 5% 20%}
-  .como-right{width:100%}
+  .premiacoes-photo{left:auto;right:40px;width:45%}
+
+  /* Como — stack */
+  .como-wrap{flex-direction:column;align-items:flex-start;padding:80px 40px}
+  .como-cards{flex-direction:column;width:100%}
+  .como-card{width:100%}
+  .como-bottom{flex-direction:column}
+  .como-areas{width:100%}
+  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:600px;margin-top:40px}
+  .como-inscr-bg{left:-20px;top:60px;width:100%;height:auto;transform:rotate(-5deg)}
+  .como-inscr-content{left:60px;top:120px;width:70%}
+  .como-steps-img{left:20px;top:160px}
+
+  /* Parceiros */
+  .parceiros{padding:60px 32px}
+  .parceiros-box{padding:64px 32px 48px}
+  .parceiros-text{padding:0 32px}
+  .parceiros-row{gap:32px 48px}
+
+  /* Wongola — overlay content */
+  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;padding:80px 40px}
+  .wongola-africa-bg{left:auto;right:40px;width:400px;height:auto}
+  .wongola-africa-border{left:auto;right:20px}
+  .wongola-africa-map{left:auto;right:100px;width:260px;height:260px}
+
   .cacc-cols{grid-template-columns:1fr}
 }
+
 @media(max-width:768px){
   .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
   .nav-menu.open{display:flex}
@@ -943,45 +958,75 @@ ul{list-style:none}
   .sobre{padding:60px 0}
   .sobre-wrap{padding:0 24px}
   .sobre-img{width:100%}
-  /* porque — column layout on mobile */
-  .porque{display:flex;flex-direction:column;align-items:center;padding:15vw 5% 50vw;gap:32px}
+
+  /* Porque — full column layout on mobile */
+  .porque{display:flex;flex-direction:column;align-items:center;padding:60px 20px 80px;gap:32px}
   .porque-bg{position:absolute;top:0;left:-20%;width:140%;z-index:0}
-  .porque-text,.porque-photo,.porque-cta-box{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:90%;height:auto;z-index:1}
-  .porque-cta-box{padding:40px 24px 40px 32px}
-  .porque-cta-shape{width:130%;height:130%;left:-10%;top:-15%}
+  .porque-text,.porque-photo,.porque-cta-box{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:100%;height:auto;z-index:1}
+  .porque-photo{max-width:400px;margin:0 auto}
+  .porque-cta-box{min-height:auto;padding:40px 24px 40px 32px}
+  .porque-cta-shape{left:-10%;top:-15%;width:130%;height:130%}
   .porque-cta-content{position:relative;left:auto;top:auto;width:100%;gap:20px}
   .porque-cta-text{font-size:18px}
   .porque-cta-vagas{font-size:20px}
+
   .crono{padding:80px 24px}
   .timeline{padding:24px 16px 40px}
   .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
   .tl-chev{display:none}
   .tl-date{font-size:28px}
-  .premiacoes-wrap{padding:8% 5%}
-  .premiacoes-photo{position:relative;left:auto;top:auto;width:100%;margin-bottom:24px}
+
+  /* Premiacoes mobile */
+  .premiacoes-wrap{padding:40px 20px}
+  .premiacoes-photo{position:relative;left:auto;right:auto;top:auto;width:100%;margin-bottom:24px;border-radius:16px}
   .premiacoes-top{width:100%}
   .premiacoes-bottom{grid-template-columns:1fr;gap:24px}
   .cat-title{font-size:20px}
   .cat-desc{font-size:16px}
   .prize-card-title{font-size:22px}
   .premiacoes-trophy{display:none}
+
+  /* Como mobile */
+  .como-wrap{padding:60px 20px}
+  .como-cards{flex-direction:column;width:100%}
+  .como-card{width:100%;padding:20px 24px;border-radius:24px}
+  .como-card-title{font-size:18px}
+  .como-card-desc{font-size:16px}
+  .como-bottom{flex-direction:column}
+  .como-areas{width:100%}
+  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:500px;margin-top:32px}
+  .como-inscr-bg{left:-10px;top:40px;width:110%;transform:rotate(-5deg)}
+  .como-inscr-content{left:30px;top:80px;width:85%}
+  .como-steps-img{left:10px;top:120px;width:40px}
+  .como-tag{font-size:16px;padding:12px}
+
+  /* Parceiros mobile */
+  .parceiros{padding:60px 20px}
+  .parceiros-box{padding:60px 20px 40px}
+  .parceiros-pill{font-size:12px;padding:14px 24px;top:-22px}
+  .parceiros-text{padding:0 16px}
+  .parceiros-title{font-size:24px}
+  .parceiros-subtitle{font-size:18px}
   .parceiros-row{gap:24px 32px}
-  .parc-logo{height:45px}
-  .parceiros{padding:60px 24px}
-  .parceiros-grid{padding:40px 24px}
-  .wongola{padding:100px 24px 140px}
-  .wongola-wrap{padding-left:0}
+
+  /* CTA Final mobile */
+  .cta-final{padding:60px 24px}
+  .cta-final-wrap{gap:40px}
+  .cta-final-title{font-size:24px}
+  .cta-final-desc{font-size:18px;width:auto}
+  .cta-final-logo-img{height:80px}
+
+  /* Wongola mobile */
+  .wongola{min-height:auto;padding:0 0 80px}
+  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;padding:60px 24px}
+  .wongola-africa-bg{display:none}
+  .wongola-africa-border{display:none}
+  .wongola-africa-map{display:none}
+
+  /* Accordion mobile */
   .cacc-title{font-size:22px}
   .cacc-header{padding:24px}
   .cacc-body{padding:0 24px 24px}
   .cacc-cols{grid-template-columns:1fr;gap:16px}
   .cacc-cols p{font-size:16px}
-  .como-tag{font-size:16px;padding:12px}
-  .cta-final{padding:60px 24px}
-  .cta-final-title{font-size:28px}
-  .cta-final-desc{font-size:18px}
-  .cta-final-logo-img{height:80px}
-  .como-card{padding:20px 24px;border-radius:24px}
-  .como-card-title{font-size:18px}
-  .como-card-desc{font-size:16px}
 }
