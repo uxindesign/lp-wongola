@@ -218,7 +218,7 @@ ul{list-style:none}
 .porque-bg{
   position:absolute;
   top:46px;
-  left:138px;
+  left:-102px;
   width:1517px;
   height:auto;
   pointer-events:none;
@@ -238,9 +238,9 @@ ul{list-style:none}
 /* Text block: inside the centered overlay */
 .porque-text{
   position:absolute;
-  left:32px;
+  left:16px;
   top:247px;
-  width:520px;
+  width:555px;
 }
 .porque-intro{
   font-family:var(--f-body);
@@ -255,18 +255,18 @@ ul{list-style:none}
 /* Photo: absolute right side */
 .porque-photo{
   position:absolute;
-  top:60px;
-  right:-16px;
-  width:660px;
+  top:91px;
+  right:-38px;
+  width:663px;
   height:auto;
 }
 
 /* CTA box: navy blob at bottom-left area */
 .porque-cta-box{
   position:absolute;
-  left:0;
+  left:-41px;
   top:772px;
-  width:100%;
+  width:1032px;
   height:443px;
   overflow:visible;
 }
@@ -312,7 +312,7 @@ ul{list-style:none}
    CRONOGRAMA — clean white
    ================================================ */
 .crono{padding:120px 80px;text-align:center}
-.crono-wrap{max-width:960px;margin:0 auto}
+.crono-wrap{max-width:957px;margin:0 auto}
 .crono-subtitle{
   font-family:var(--f-body);
   font-size:20px;
@@ -322,7 +322,7 @@ ul{list-style:none}
   margin-bottom:16px;
   opacity:.7;
 }
-.timeline{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;background:var(--white);border:1px solid rgba(0,0,0,.2);border-radius:16px;padding:32px 40px 48px}
+.timeline{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;background:var(--white);border:1px solid rgba(0,0,0,.2);border-radius:16px;padding:32px 53px 48px}
 .tl-row{display:flex;align-items:center;gap:48px}
 .tl-item{display:flex;flex-direction:column;align-items:center;gap:8px}
 .tl-lbl{font-family:var(--f-body);font-weight:700;font-size:16px;color:var(--text);text-transform:uppercase;letter-spacing:1.2px}
@@ -331,7 +331,7 @@ ul{list-style:none}
 .tl-dash{width:10px;height:4px;background:var(--blue);border-radius:2px}
 .tl-chev{width:15px;height:21px;flex-shrink:0}
 .tl-pill{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;background:var(--blue);color:var(--white);font-family:var(--f-head);font-weight:700;font-size:20px;padding:8px 20px;border-radius:999px;white-space:nowrap}
-.crono-cta{margin-top:48px;padding-top:16px;display:flex;justify-content:center}
+.crono-cta{margin-top:48px;display:flex;justify-content:center}
 
 /* ================================================
    PREMIACOES E CATEGORIAS
@@ -341,6 +341,7 @@ ul{list-style:none}
   position:relative;
   padding:0;
   overflow:visible;
+  height:1460px;
 }
 /* SVG bg: fixed width, centered with left offset */
 .premiacoes-bg{
@@ -374,7 +375,8 @@ ul{list-style:none}
   flex-direction:column;
   max-width:1440px;
   margin:0 auto;
-  padding:220px 96px 200px;
+  padding:138px 101px 200px 96px;
+  z-index:1;
 }
 
 /* Left column: categories */
@@ -512,14 +514,14 @@ ul{list-style:none}
 .trophy-pillars-v2{
   position:absolute;
   top:115px;
-  left:120px;
+  left:189px;
   width:301px;
   height:auto;
 }
 .trophy-cup-v2{
   position:absolute;
   top:0;
-  left:217px;
+  left:285px;
   width:107px;
   height:auto;
 }
