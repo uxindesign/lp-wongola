@@ -831,7 +831,7 @@ ul{list-style:none}
   align-items:flex-start;
 }
 .wongola-logo{display:flex;align-items:center;gap:8px}
-.wongola-logo img{width:106px;height:106px;object-fit:contain}
+.wongola-logo img{width:106px;height:108px;object-fit:contain}
 .wongola-logo-text{font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;color:var(--brown);letter-spacing:1.2px}
 .wongola-content{display:flex;flex-direction:column;gap:32px;max-width:580px}
 .wongola-content .h2{color:var(--text)}
@@ -854,7 +854,9 @@ ul{list-style:none}
 /* Africa illustration */
 .wongola-africa{
   position:absolute;
-  top:0;left:0;right:0;bottom:0;
+  top:0;left:0;
+  width:1440px;
+  height:978px;
   pointer-events:none;
 }
 .wongola-africa-bg{
@@ -884,7 +886,6 @@ ul{list-style:none}
   top:297px;
   width:340px;
   height:340px;
-  overflow:hidden;
   will-change:transform;
   pointer-events:auto;
 }
