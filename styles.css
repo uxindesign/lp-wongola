@@ -351,7 +351,7 @@ ul{list-style:none}
   margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:-300px;
+  left:-100px;
 }
 
 /* Photo: absolute in .premiacoes */
@@ -373,7 +373,7 @@ ul{list-style:none}
   flex-direction:column;
   max-width:1440px;
   margin:0 auto;
-  padding:138px 96px 200px;
+  padding:220px 96px 200px;
 }
 
 /* Left column: categories */
