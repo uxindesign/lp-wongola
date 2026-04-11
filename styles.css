@@ -565,7 +565,7 @@ ul{list-style:none}
   align-items:flex-start;
   max-width:1248px;
   margin:0 auto;
-  padding:120px 0 100px;
+  padding:138px 0 100px;
 }
 
 /* 3 info cards in a row */
@@ -573,7 +573,7 @@ ul{list-style:none}
   display:flex;
   flex-direction:row;
   gap:32px;
-  margin-top:32px;
+  margin-top:40px;
 }
 .como-card{
   width:380px;
@@ -587,7 +587,7 @@ ul{list-style:none}
   font-weight:900;
   font-size:28px;
   color:var(--navy);
-  margin-bottom:8px;
+  margin-bottom:16px;
   line-height:1.1;
 }
 .como-card-desc{
@@ -603,7 +603,7 @@ ul{list-style:none}
   flex-direction:row;
   align-items:flex-start;
   width:100%;
-  margin-top:48px;
+  margin-top:60px;
   position:static;
 }
 
@@ -615,9 +615,9 @@ ul{list-style:none}
 .como-areas-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:30px;
+  font-size:28px;
   color:var(--navy);
-  margin-bottom:16px;
+  margin-bottom:32px;
 }
 .como-tags{
   display:flex;
@@ -629,25 +629,24 @@ ul{list-style:none}
   color:var(--white);
   font-family:var(--f-body);
   font-weight:700;
-  font-size:20px;
+  font-size:14px;
   padding:16px;
   border-radius:12px;
-  white-space:nowrap;
 }
 
 /* Inscription — positioned in como-wrap, not como-bottom */
 .como-right{
   position:absolute;
   left:514px;
-  top:430px;
-  width:752px;
-  height:600px;
+  top:440px;
+  width:662px;
+  height:597px;
   flex-shrink:0;
 }
 .como-inscr-bg{
   position:absolute;
   left:-40px;
-  top:152px;
+  top:24px;
   width:756px;
   height:717px;
   transform:rotate(-7.76deg);
@@ -657,7 +656,7 @@ ul{list-style:none}
 .como-steps-img{
   position:absolute;
   left:84px;
-  top:278px;
+  top:150px;
   width:auto;
   height:auto;
   z-index:1;
@@ -665,29 +664,29 @@ ul{list-style:none}
 .como-inscr-content{
   position:absolute;
   left:184px;
-  top:224px;
+  top:96px;
   width:423px;
   z-index:2;
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:24px;
 }
 .como-inscr-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:32px;
+  font-size:28px;
   color:var(--white);
 }
 .como-inscr-content p{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:20px;
   color:var(--white);
-  line-height:1.5;
+  line-height:1.45;
 }
 .como-inscr-cta-text{
   font-family:var(--f-head);
   font-weight:800;
-  font-size:26px;
+  font-size:24px;
   color:var(--white);
 }
 
