@@ -544,22 +544,25 @@ ul{list-style:none}
 .como{
   position:relative;
   padding:0;
-  overflow:hidden;
+  overflow:visible;
+  margin-top:96px;
 }
 .como-bg{
   display:block;
-  width:1248px;
+  width:1846px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
+  position:relative;
+  left:-200px;
 }
 .como-wrap{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:flex-start;
   max-width:1248px;
   margin:0 auto;
   padding:120px 0 100px;
@@ -601,7 +604,7 @@ ul{list-style:none}
   align-items:flex-start;
   width:100%;
   margin-top:48px;
-  position:relative;
+  position:static;
 }
 
 /* Areas tags — left side */
@@ -632,13 +635,13 @@ ul{list-style:none}
   white-space:nowrap;
 }
 
-/* Inscription — right side, absolute */
+/* Inscription — positioned in como-wrap, not como-bottom */
 .como-right{
   position:absolute;
   left:514px;
-  top:312px;
+  top:430px;
   width:752px;
-  height:768px;
+  height:600px;
   flex-shrink:0;
 }
 .como-inscr-bg{
