@@ -222,20 +222,22 @@ ul{list-style:none}
   pointer-events:none;
 }
 
-/* Text: Figma x=535 in section, section at x=-439, so viewport x=96. w=555 */
+/* Content wrapper positioned over the blob */
 .porque-text{
   position:absolute;
-  left:96px;
-  top:247px;
+  top:200px;left:0;right:0;
+  max-width:1248px;
+  margin:0 auto;
+  padding:0 96px;
   width:555px;
+  margin-left:96px;
 }
 
-/* Photo: Figma x=1174 in section → viewport x=1174-439=735. w=663 */
+/* Photo positioned top-right */
 .porque-photo{
   position:absolute;
-  right:40px;
-  top:90px;
-  width:500px;
+  top:90px;right:96px;
+  width:450px;
 }
 .porque-photo img{
   width:100%;
@@ -252,12 +254,11 @@ ul{list-style:none}
 .porque-list{list-style:disc;padding-left:20px;margin:24px 0}
 .porque-list li{font-size:22px;color:var(--white);line-height:1.4;margin-bottom:8px}
 
-/* CTA box: Figma x=478 in section → viewport x=478-439=39. y=772, w=1032, h=443 */
+/* CTA box: navy blob positioned at bottom of section */
 .porque-cta-box{
   position:absolute;
-  left:39px;
-  bottom:80px;
-  width:1032px;
+  left:96px;right:96px;
+  bottom:60px;
   height:443px;
   overflow:visible;
 }
@@ -266,7 +267,7 @@ ul{list-style:none}
 .porque-cta-shape{
   position:absolute;
   inset:-5% -2%;
-  width:112%;
+  width:104%;
   height:115%;
   z-index:0;
   display:block;
