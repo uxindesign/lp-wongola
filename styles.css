@@ -563,10 +563,10 @@ ul{list-style:none}
   width:1440px;
   max-width:none;
   height:auto;
-  margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:0;
+  left:50%;
+  transform:translateX(-50%);
 }
 .como-wrap{
   position:absolute;
