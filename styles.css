@@ -26,10 +26,21 @@ ul{list-style:none}
 .d-sq-1{top:926px;right:10px;width:90px;height:90px;background:var(--yellow);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-2{top:1877px;left:40px;width:90px;height:90px;background:var(--blue);border-radius:20px;opacity:.2;--base-rot:rotate(-18deg)}
 .d-sq-3{top:1972px;right:-80px;width:259px;height:259px;background:var(--yellow);border-radius:60px;opacity:.2;--base-rot:rotate(-43deg)}
-.d-sq-4{top:5200px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
-.d-sq-5{top:5400px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
+.d-sq-4{top:5800px;right:-60px;width:250px;height:241px;background:var(--yellow);border-radius:50px;opacity:.2;--base-rot:rotate(-43deg)}
+.d-sq-5{top:6000px;left:-40px;width:110px;height:107px;border:3px solid var(--blue);border-radius:16px;opacity:.25;--base-rot:rotate(24deg)}
 .d-sq-6{top:7200px;right:40px;width:150px;height:150px;background:var(--blue);border-radius:30px;opacity:.15;--base-rot:rotate(-25deg)}
 .d-sq-7{top:8400px;left:-20px;width:200px;height:200px;background:var(--yellow);border-radius:40px;opacity:.15;--base-rot:rotate(15deg)}
+
+/* Section-specific floating decos */
+.porque-deco-1{position:absolute;left:40px;top:80px;z-index:2}
+.porque-deco-2{position:absolute;right:40px;bottom:80px;z-index:2}
+.porque-deco-3{position:absolute;right:60px;top:500px;z-index:2}
+.crono-deco-1{position:absolute;right:-40px;top:40px}
+.crono-deco-2{position:absolute;left:40px;top:20px}
+.cta-deco-1{position:absolute;right:40px;top:40px}
+.cta-deco-2{position:absolute;left:40px;bottom:40px}
+.parc-deco-1{position:absolute;left:-40px;top:-20px}
+.parc-deco-2{position:absolute;right:40px;top:-20px}
 
 .label{font-family:var(--f-pixel);font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 .label.center{text-align:center}
@@ -163,7 +174,7 @@ ul{list-style:none}
   transition:box-shadow .3s;
 }
 .cacc-item:hover{
-  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  background:#E2E9FA;
 }
 .cacc-header{
   display:flex;
