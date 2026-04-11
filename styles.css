@@ -648,19 +648,19 @@ ul{list-style:none}
 .como-inscr-bg{
   position:absolute;
   left:-40px;
-  top:24px;
-  width:756px;
-  height:717px;
+  top:-67px;
+  width:677px;
+  height:632px;
   transform:rotate(-7.76deg);
   transform-origin:center;
   z-index:0;
 }
 .como-steps-img{
   position:absolute;
-  left:84px;
-  top:150px;
-  width:auto;
-  height:auto;
+  left:24px;
+  top:96px;
+  width:76px;
+  height:173px;
   z-index:1;
 }
 .como-inscr-content{
