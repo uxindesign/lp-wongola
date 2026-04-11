@@ -630,12 +630,12 @@ ul{list-style:none}
   display:flex;
   flex-wrap:wrap;
   gap:8px;
+  width:420px;
 }
 .como-tag{
   background:var(--blue);
   color:var(--white);
   font-family:var(--f-body);
-  font-weight:700;
   font-size:20px;
   padding:8px 16px;
   border-radius:12px;
