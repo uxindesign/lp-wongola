@@ -567,7 +567,7 @@ ul{list-style:none}
   align-items:flex-start;
   max-width:1248px;
   margin:0 auto;
-  padding:120px 0 100px;
+  padding:138px 0 100px;
 }
 
 /* 3 info cards in a row */
@@ -575,7 +575,7 @@ ul{list-style:none}
   display:flex;
   flex-direction:row;
   gap:32px;
-  margin-top:32px;
+  margin-top:40px;
 }
 .como-card{
   width:380px;
@@ -589,7 +589,7 @@ ul{list-style:none}
   font-weight:900;
   font-size:28px;
   color:var(--navy);
-  margin-bottom:8px;
+  margin-bottom:16px;
   line-height:1.1;
 }
 .como-card-desc{
@@ -605,7 +605,7 @@ ul{list-style:none}
   flex-direction:row;
   align-items:flex-start;
   width:100%;
-  margin-top:48px;
+  margin-top:60px;
   position:static;
 }
 
@@ -617,9 +617,9 @@ ul{list-style:none}
 .como-areas-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:30px;
+  font-size:28px;
   color:var(--navy);
-  margin-bottom:16px;
+  margin-bottom:32px;
 }
 .como-tags{
   display:flex;
@@ -631,25 +631,24 @@ ul{list-style:none}
   color:var(--white);
   font-family:var(--f-body);
   font-weight:700;
-  font-size:20px;
+  font-size:14px;
   padding:16px;
   border-radius:12px;
-  white-space:nowrap;
 }
 
 /* Inscription — positioned in como-wrap, not como-bottom */
 .como-right{
   position:absolute;
   left:514px;
-  top:430px;
-  width:752px;
-  height:600px;
+  top:440px;
+  width:662px;
+  height:597px;
   flex-shrink:0;
 }
 .como-inscr-bg{
   position:absolute;
   left:-40px;
-  top:152px;
+  top:24px;
   width:756px;
   height:717px;
   transform:rotate(-7.76deg);
@@ -659,7 +658,7 @@ ul{list-style:none}
 .como-steps-img{
   position:absolute;
   left:84px;
-  top:278px;
+  top:150px;
   width:auto;
   height:auto;
   z-index:1;
@@ -667,29 +666,29 @@ ul{list-style:none}
 .como-inscr-content{
   position:absolute;
   left:184px;
-  top:224px;
+  top:96px;
   width:423px;
   z-index:2;
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:24px;
 }
 .como-inscr-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:32px;
+  font-size:28px;
   color:var(--white);
 }
 .como-inscr-content p{
   font-family:var(--f-body);
-  font-size:22px;
+  font-size:20px;
   color:var(--white);
-  line-height:1.5;
+  line-height:1.45;
 }
 .como-inscr-cta-text{
   font-family:var(--f-head);
   font-weight:800;
-  font-size:26px;
+  font-size:24px;
   color:var(--white);
 }
 
@@ -727,19 +726,19 @@ ul{list-style:none}
 .parceiros-text{
   text-align:center;
   padding:0 96px;
-  margin-bottom:48px;
+  margin-bottom:80px;
 }
 .parceiros-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:32px;
+  font-size:28px;
   color:var(--navy);
   line-height:1.3;
-  margin-bottom:12px;
+  margin-bottom:24px;
 }
 .parceiros-subtitle{
   font-family:var(--f-body);
-  font-size:24px;
+  font-size:22px;
   color:var(--text);
   line-height:1.4;
 }
@@ -764,20 +763,20 @@ ul{list-style:none}
    CTA FINAL
    ================================================ */
 .cta-final{
-  padding:60px 32px 80px;
+  padding:80px 96px;
   background:var(--white);
   text-align:center;
 }
 .cta-final-wrap{
-  max-width:680px;
+  max-width:1249px;
   margin:0 auto;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:72px;
+  gap:0;
 }
 .cta-final-logo{
-  /* no extra margin — gap handles spacing */
+  margin-bottom:72px;
 }
 .cta-final-logo-img{
   position:relative;
@@ -793,19 +792,20 @@ ul{list-style:none}
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:16px;
+  gap:20px;
+  margin-bottom:32px;
 }
 .cta-final-title{
   font-family:var(--f-head);
   font-weight:900;
   font-size:28px;
   color:var(--navy);
-  line-height:1.2;
+  line-height:1.1;
   text-align:center;
 }
 .cta-final-desc{
   font-family:var(--f-body);
-  font-size:24px;
+  font-size:22px;
   color:var(--text);
   line-height:1.5;
   width:560px;
@@ -833,7 +833,7 @@ ul{list-style:none}
   align-items:flex-start;
 }
 .wongola-logo{display:flex;align-items:center;gap:8px}
-.wongola-logo img{width:106px;height:106px;object-fit:contain}
+.wongola-logo img{width:106px;height:108px;object-fit:contain}
 .wongola-logo-text{font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;color:var(--brown);letter-spacing:1.2px}
 .wongola-content{display:flex;flex-direction:column;gap:32px;max-width:580px}
 .wongola-content .h2{color:var(--text)}
@@ -856,7 +856,9 @@ ul{list-style:none}
 /* Africa illustration */
 .wongola-africa{
   position:absolute;
-  top:0;left:0;right:0;bottom:0;
+  top:0;left:0;
+  width:1440px;
+  height:978px;
   pointer-events:none;
 }
 .wongola-africa-bg{
@@ -886,7 +888,6 @@ ul{list-style:none}
   top:297px;
   width:340px;
   height:340px;
-  overflow:hidden;
   will-change:transform;
   pointer-events:auto;
 }
