@@ -549,11 +549,12 @@ ul{list-style:none}
   position:relative;
   padding:0;
   overflow:visible;
-  margin-top:96px;
+  margin-top:120px;
+  margin-bottom:80px;
 }
 .como-bg{
   display:block;
-  width:1717px;
+  width:2200px;
   max-width:none;
   height:auto;
   margin:0 auto;
