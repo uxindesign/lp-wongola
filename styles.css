@@ -724,19 +724,19 @@ ul{list-style:none}
 .parceiros-text{
   text-align:center;
   padding:0 96px;
-  margin-bottom:48px;
+  margin-bottom:80px;
 }
 .parceiros-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:32px;
+  font-size:28px;
   color:var(--navy);
   line-height:1.3;
-  margin-bottom:12px;
+  margin-bottom:24px;
 }
 .parceiros-subtitle{
   font-family:var(--f-body);
-  font-size:24px;
+  font-size:22px;
   color:var(--text);
   line-height:1.4;
 }
