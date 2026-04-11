@@ -681,6 +681,12 @@ ul{list-style:none}
   font-size:28px;
   color:var(--white);
 }
+.como-inscr-cta-group{
+  margin-top:40px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
 .como-cta-row{
   display:flex;
   align-items:center;
