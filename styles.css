@@ -353,6 +353,8 @@ ul{list-style:none}
   pointer-events:none;
   position:relative;
   left:-100px;
+  top:-96px;
+  margin-bottom:-96px;
 }
 
 /* Photo: absolute in .premiacoes */
