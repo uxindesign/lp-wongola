@@ -274,10 +274,10 @@ ul{list-style:none}
 .porque-cta-shape{
   position:absolute;
   width:115%;
-  height:120%;
-  left:-2%;
-  top:-10%;
-  transform:scaleY(-1) rotate(172deg);
+  height:115%;
+  left:-1.6%;
+  top:-5%;
+  transform:none;
   pointer-events:none;
   z-index:0;
   display:block;
