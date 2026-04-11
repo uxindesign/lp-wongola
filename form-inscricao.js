@@ -32,14 +32,11 @@
 
   // All "Inscreva-se" buttons open the modal
   function bindTriggers() {
-    document.querySelectorAll('a[href="#"], .btn-nav').forEach(function (el) {
-      const text = el.textContent.trim().toLowerCase();
-      if (text.includes('inscreva-se')) {
-        el.addEventListener('click', function (e) {
-          e.preventDefault();
-          openModal();
-        });
-      }
+    document.querySelectorAll('a[href="#inscricao"]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
     });
   }
 
