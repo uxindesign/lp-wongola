@@ -222,10 +222,19 @@ ul{list-style:none}
   pointer-events:none;
 }
 
-/* Text block: absolute over the blob */
+/* Centered overlay — same alignment as content-accordion-wrap */
+.porque-overlay{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+/* Text block: inside the centered overlay */
 .porque-text{
   position:absolute;
-  left:96px;
+  left:32px;
   top:247px;
   width:555px;
 }
@@ -243,7 +252,7 @@ ul{list-style:none}
 .porque-photo{
   position:absolute;
   top:90px;
-  right:96px;
+  right:32px;
   width:500px;
   height:auto;
 }
@@ -251,9 +260,9 @@ ul{list-style:none}
 /* CTA box: navy blob at bottom-left area */
 .porque-cta-box{
   position:absolute;
-  left:39px;
+  left:0;
   top:772px;
-  width:1032px;
+  width:100%;
   height:443px;
   overflow:visible;
 }
