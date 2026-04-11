@@ -563,13 +563,11 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:1920px;
+  width:1440px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
-  position:relative;
-  left:-240px;
 }
 .como-wrap{
   position:absolute;
@@ -577,9 +575,9 @@ ul{list-style:none}
   display:flex;
   gap:48px;
   align-items:flex-start;
-  max-width:1280px;
+  max-width:1248px;
   margin:0 auto;
-  padding:160px 80px 200px;
+  padding:120px 0 100px;
 }
 .como-left{
   flex:1;
@@ -642,27 +640,28 @@ ul{list-style:none}
 
 /* Como right — inscription sub-section */
 .como-right{
-  width:400px;
+  width:500px;
   flex-shrink:0;
   position:relative;
+  min-height:500px;
 }
 .como-inscr-bg{
   position:absolute;
-  top:-40px;
-  left:-40px;
-  width:480px;
+  top:0;
+  left:-20px;
+  width:520px;
   height:auto;
   z-index:0;
-  opacity:1;
-  filter:none;
 }
 .como-inscr-content{
   position:relative;
   z-index:1;
   display:flex;
   flex-direction:column;
-  gap:24px;
-  padding:40px 0;
+  gap:20px;
+  padding:80px 60px 60px;
+  max-width:423px;
+  margin-left:60px;
 }
 .como-inscr-title{
   font-family:var(--f-head);
