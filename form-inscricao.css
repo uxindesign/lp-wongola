@@ -1,0 +1,695 @@
+/* ============================================================
+   MODAL DE INSCRIÇÃO — Hackathon App BiT
+   Adicione este CSS ao final do styles.css ou importe separado
+   Utiliza as variáveis já definidas no projeto:
+   --navy: #181057; --blue: #155cf4; --yellow: #ffbb00;
+   --text: #2a273b; --white: #fff;
+   Fonts: Outfit (headings), Lato (body), Space Mono (buttons)
+   ============================================================ */
+
+/* ---- Overlay ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+.modal-overlay[hidden] {
+  display: none !important;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---- Modal container ---- */
+.modal {
+  background: var(--white, #fff);
+  width: 100%;
+  max-width: 740px;
+  max-height: 90vh;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  animation: modalSlideUp 0.35s ease forwards;
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Close button ---- */
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  color: var(--text, #2a273b);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: #f0f0f0;
+  color: var(--navy, #181057);
+}
+
+/* ---- Header ---- */
+.modal-header {
+  padding: 32px 40px 0;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--navy, #181057);
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+/* ---- Stepper ---- */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 8px;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.step-indicator span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #999;
+  font-family: var(--f-mono, 'Space Mono', monospace);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.step-indicator small {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 11px;
+  color: #999;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.step-indicator.active span {
+  background: var(--blue, #155cf4);
+  color: var(--white, #fff);
+}
+
+.step-indicator.active small {
+  color: var(--blue, #155cf4);
+  font-weight: 700;
+}
+
+.step-indicator.completed span {
+  background: var(--navy, #181057);
+  color: var(--white, #fff);
+}
+
+.step-indicator.completed small {
+  color: var(--navy, #181057);
+}
+
+.step-connector {
+  flex: 1;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 0 4px;
+  margin-bottom: 18px;
+  transition: background 0.3s;
+}
+
+.step-connector.completed {
+  background: var(--navy, #181057);
+}
+
+/* ---- Form container ---- */
+.modal-form {
+  padding: 24px 40px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ---- Form step (wizard pages) ---- */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: stepFadeIn 0.3s ease;
+}
+
+@keyframes stepFadeIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.form-step-title {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy, #181057);
+  margin: 0 0 8px;
+}
+
+.form-step-desc {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+/* ---- Form groups ---- */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text, #2a273b);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.form-label small {
+  font-weight: 400;
+  color: #888;
+}
+
+.req {
+  color: #e53e3e;
+}
+
+/* ---- Inputs & Selects ---- */
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 15px;
+  color: var(--text, #2a273b);
+  background: var(--white, #fff);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--blue, #155cf4);
+  box-shadow: 0 0 0 3px rgba(21, 92, 244, 0.12);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+/* ---- Hint text ---- */
+.form-hint {
+  display: block;
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ---- Error text ---- */
+.form-error {
+  display: block;
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 13px;
+  color: #e53e3e;
+  margin-top: 6px;
+}
+
+.form-error[hidden] {
+  display: none;
+}
+
+/* ---- Radio groups ---- */
+.form-radio-group,
+.form-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-radio-label,
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 15px;
+  color: var(--text, #2a273b);
+  transition: background 0.15s;
+  line-height: 1.4;
+}
+
+.form-radio-label:hover,
+.form-checkbox-label:hover {
+  background: #f5f5f5;
+}
+
+.form-radio-label input[type="radio"],
+.form-checkbox-label input[type="checkbox"] {
+  accent-color: var(--blue, #155cf4);
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ---- Conditional "Outro" input ---- */
+.form-other-input {
+  margin-top: 8px;
+}
+
+.form-other-input[hidden] {
+  display: none;
+}
+
+/* ---- Conditional field (LinkedIn) ---- */
+.form-conditional[hidden] {
+  display: none;
+}
+
+/* ---- LGPD box ---- */
+.form-lgpd-box {
+  background: #f8f8fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-lgpd-box h4 {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy, #181057);
+  margin: 0 0 12px;
+}
+
+.form-lgpd-box p {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.form-lgpd-box ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0 0 10px;
+}
+
+.form-lgpd-box li {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.form-lgpd-check {
+  padding: 14px 16px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  transition: border-color 0.2s;
+}
+
+.form-lgpd-check:hover {
+  border-color: var(--blue, #155cf4);
+}
+
+.form-lgpd-check.error {
+  border-color: #e53e3e;
+}
+
+/* ---- Form navigation buttons ---- */
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+  gap: 12px;
+}
+
+.form-btn {
+  font-family: var(--f-mono, 'Space Mono', monospace);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s, box-shadow 0.2s;
+}
+
+.form-btn:hover {
+  transform: translateY(-2px);
+}
+
+.form-btn:active {
+  transform: translateY(0);
+}
+
+.form-btn[hidden] {
+  display: none;
+}
+
+/* Previous button */
+.form-btn-prev {
+  background: transparent;
+  color: var(--text, #2a273b);
+  border: 2px solid #ddd;
+}
+
+.form-btn-prev:hover {
+  border-color: var(--navy, #181057);
+  color: var(--navy, #181057);
+}
+
+/* Next button */
+.form-btn-next {
+  background: var(--yellow, #ffbb00);
+  color: var(--navy, #181057);
+  margin-left: auto;
+  box-shadow: 0 4px 16px rgba(255, 187, 0, 0.3);
+}
+
+.form-btn-next:hover {
+  background: #ffc61a;
+  box-shadow: 0 6px 24px rgba(255, 187, 0, 0.4);
+}
+
+/* Submit button */
+.form-btn-submit {
+  background: var(--blue, #155cf4);
+  color: var(--white, #fff);
+  margin-left: auto;
+  box-shadow: 0 4px 16px rgba(21, 92, 244, 0.3);
+}
+
+.form-btn-submit:hover {
+  background: #1a6dff;
+  box-shadow: 0 6px 24px rgba(21, 92, 244, 0.4);
+}
+
+/* ---- Success state ---- */
+.modal-success {
+  padding: 60px 40px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-success[hidden] {
+  display: none;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+}
+
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+}
+
+.success-checkmark circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: checkCircle 0.6s 0.1s ease forwards;
+}
+
+.success-checkmark path {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: checkPath 0.4s 0.5s ease forwards;
+}
+
+@keyframes checkCircle {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes checkPath {
+  to { stroke-dashoffset: 0; }
+}
+
+.success-title {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--navy, #181057);
+  margin: 0 0 16px;
+}
+
+.success-text {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  max-width: 440px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-width: 100%;
+    max-height: 95vh;
+    border-radius: 24px 24px 0 0;
+    animation: modalSlideUpMobile 0.35s ease forwards;
+  }
+
+  @keyframes modalSlideUpMobile {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .modal-header {
+    padding: 24px 20px 0;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    padding-right: 36px;
+  }
+
+  .modal-form {
+    padding: 20px 20px 28px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  /* Stepper compact on mobile */
+  .step-indicator small {
+    display: none;
+  }
+
+  .step-indicator span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .step-connector {
+    margin-bottom: 0;
+  }
+
+  .stepper {
+    margin-bottom: 4px;
+  }
+
+  /* Form row stacks */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 16px; /* prevent iOS zoom */
+    padding: 12px 14px;
+  }
+
+  .form-radio-label,
+  .form-checkbox-label {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .form-btn {
+    font-size: 13px;
+    padding: 12px 24px;
+  }
+
+  .form-nav {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  /* LGPD box */
+  .form-lgpd-box {
+    padding: 16px;
+  }
+
+  .form-lgpd-box h4 {
+    font-size: 15px;
+  }
+
+  .form-lgpd-box p,
+  .form-lgpd-box li {
+    font-size: 13px;
+  }
+
+  /* Success */
+  .modal-success {
+    padding: 40px 20px;
+  }
+
+  .success-title {
+    font-size: 20px;
+  }
+
+  .success-text {
+    font-size: 15px;
+  }
+}
+
+/* Tablet tweaks */
+@media (min-width: 769px) and (max-width: 1279px) {
+  .modal {
+    max-width: 680px;
+  }
+
+  .modal-header {
+    padding: 28px 32px 0;
+  }
+
+  .modal-form {
+    padding: 20px 32px 28px;
+  }
+}
+
+/* ---- Scrollbar styling inside modal ---- */
+.modal-form::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-form::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 3px;
+}
+
+.modal-form::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* ---- Body scroll lock ---- */
+body.modal-open {
+  overflow: hidden;
+}

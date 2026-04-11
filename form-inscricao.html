@@ -1,0 +1,381 @@
+<!-- ============================================================
+     MODAL DE INSCRIÇÃO — Hackathon App BiT
+     Copie este bloco para dentro do index.html (antes de </div><!-- .page -->)
+     ============================================================ -->
+<div class="modal-overlay" id="modal-inscricao" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+
+    <!-- Header + Stepper -->
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title">Inscrição — Hackathon App BiT</h2>
+      <div class="stepper" id="stepper">
+        <div class="step-indicator active" data-step="0"><span>1</span><small>Dados</small></div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" data-step="1"><span>2</span><small>Perfil</small></div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" data-step="2"><span>3</span><small>Diversidade</small></div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" data-step="3"><span>4</span><small>Técnico</small></div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" data-step="4"><span>5</span><small>Profissional</small></div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" data-step="5"><span>6</span><small>LGPD</small></div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form class="modal-form" id="form-inscricao" novalidate>
+
+      <!-- ==================== STEP 1: Dados Pessoais ==================== -->
+      <div class="form-step active" data-form-step="0">
+        <h3 class="form-step-title">Dados Pessoais</h3>
+
+        <div class="form-group">
+          <label class="form-label" for="nome">Nome completo <span class="req">*</span></label>
+          <input class="form-input" type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+          <span class="form-error" hidden>Por favor, informe seu nome completo.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span class="req">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" required placeholder="seu@email.com">
+          <span class="form-error" hidden>Por favor, informe um email válido.</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nacionalidade">Nacionalidade <span class="req">*</span></label>
+            <select class="form-select" id="nacionalidade" name="nacionalidade" required>
+              <option value="">Selecione...</option>
+              <option value="Angola">Angola</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Guiné-Bissau">Guiné-Bissau</option>
+              <option value="Guiné Equatorial">Guiné Equatorial</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Portugal">Portugal</option>
+              <option value="São Tomé e Príncipe">São Tomé e Príncipe</option>
+              <option value="Timor-Leste">Timor-Leste</option>
+              <option value="Outro">Outro país</option>
+            </select>
+            <span class="form-error" hidden>Por favor, selecione sua nacionalidade.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pais-residencia">País de residência <span class="req">*</span></label>
+            <select class="form-select" id="pais-residencia" name="pais_residencia" required>
+              <option value="">Selecione...</option>
+              <option value="Angola">Angola</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Guiné-Bissau">Guiné-Bissau</option>
+              <option value="Guiné Equatorial">Guiné Equatorial</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Portugal">Portugal</option>
+              <option value="São Tomé e Príncipe">São Tomé e Príncipe</option>
+              <option value="Timor-Leste">Timor-Leste</option>
+              <option value="Outro">Outro país</option>
+            </select>
+            <span class="form-error" hidden>Por favor, selecione o país de residência.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="whatsapp">WhatsApp com código do país <span class="req">*</span></label>
+          <input class="form-input" type="tel" id="whatsapp" name="whatsapp" required placeholder="+55 11 99999-9999">
+          <small class="form-hint">Número válido de WhatsApp para adicioná-lo(a) ao grupo oficial.</small>
+          <span class="form-error" hidden>Informe um número de WhatsApp válido (ex: +55 11 99999-9999).</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Possui perfil no LinkedIn? <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="linkedin">
+            <label class="form-radio-label">
+              <input type="radio" name="linkedin" value="Sim" required> Sim
+            </label>
+            <label class="form-radio-label">
+              <input type="radio" name="linkedin" value="Não"> Não
+            </label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <div class="form-group form-conditional" id="linkedin-url-group" hidden>
+          <label class="form-label" for="linkedin-url">Link do seu LinkedIn</label>
+          <input class="form-input" type="url" id="linkedin-url" name="linkedin_url" placeholder="https://linkedin.com/in/seu-perfil">
+          <span class="form-error" hidden>Informe uma URL válida do LinkedIn.</span>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 2: Motivação e Perfil ==================== -->
+      <div class="form-step" data-form-step="1">
+        <h3 class="form-step-title">Motivação e Perfil</h3>
+
+        <!-- P1: Motivação -->
+        <div class="form-group">
+          <label class="form-label">Principal motivação para participar <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="motivacao">
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Aprender algo novo" required> Aprender algo novo</label>
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Desenvolver um projeto"> Desenvolver um projeto</label>
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Trabalhar em equipe"> Trabalhar em equipe</label>
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Conhecer pessoas e empresas"> Conhecer pessoas e empresas</label>
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Buscar oportunidades profissionais"> Buscar oportunidades profissionais</label>
+            <label class="form-radio-label"><input type="radio" name="motivacao" value="Resolver desafios reais"> Resolver desafios reais</label>
+            <label class="form-radio-label">
+              <input type="radio" name="motivacao" value="Outro"> Outro
+            </label>
+          </div>
+          <input class="form-input form-other-input" type="text" name="motivacao_outro" placeholder="Especifique..." hidden>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P2: Horas -->
+        <div class="form-group">
+          <label class="form-label">Horas semanais disponíveis <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="horas">
+            <label class="form-radio-label"><input type="radio" name="horas" value="Até 5 horas" required> Até 5 horas</label>
+            <label class="form-radio-label"><input type="radio" name="horas" value="6 a 10 horas"> 6 a 10 horas</label>
+            <label class="form-radio-label"><input type="radio" name="horas" value="11 a 15 horas"> 11 a 15 horas</label>
+            <label class="form-radio-label"><input type="radio" name="horas" value="16 a 20 horas"> 16 a 20 horas</label>
+            <label class="form-radio-label"><input type="radio" name="horas" value="Mais de 20 horas"> Mais de 20 horas</label>
+            <label class="form-radio-label"><input type="radio" name="horas" value="Disponibilidade varia"> Disponibilidade varia conforme a semana</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P3: Contato empresas -->
+        <div class="form-group">
+          <label class="form-label">Autorização para contato de empresas parceiras <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="contato_empresas">
+            <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Sim, autorizo" required> Sim, autorizo</label>
+            <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Não autorizo"> Não autorizo</label>
+            <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Autorizo somente após o Hackathon"> Autorizo somente após o Hackathon</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P4: Nível experiência -->
+        <div class="form-group">
+          <label class="form-label">Nível de experiência com tecnologia <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="nivel_exp">
+            <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Iniciante" required> Iniciante</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Intermediário"> Intermediário</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Avançado"> Avançado</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Especialista"> Especialista</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P5: Área de atuação -->
+        <div class="form-group">
+          <label class="form-label">Área de atuação preferida <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="area_atuacao">
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Programação/Desenvolvimento" required> Programação/Desenvolvimento</label>
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Design/UX"> Design/UX</label>
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Gestão de Projetos"> Gestão de Projetos</label>
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Dados/BI/IA"> Dados/BI/IA</label>
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Produto/Ideação"> Produto/Ideação</label>
+            <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Não sei ainda"> Não sei ainda</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P6: Internet/energia -->
+        <div class="form-group">
+          <label class="form-label">Acesso a internet e energia <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="internet">
+            <label class="form-radio-label"><input type="radio" name="internet" value="Sim, sem limitações" required> Sim, sem limitações</label>
+            <label class="form-radio-label"><input type="radio" name="internet" value="Sim, mas pode oscilar"> Sim, mas pode oscilar</label>
+            <label class="form-radio-label"><input type="radio" name="internet" value="Não tenho certeza"> Não tenho certeza</label>
+            <label class="form-radio-label"><input type="radio" name="internet" value="Enfrento dificuldades frequentes"> Enfrento dificuldades frequentes</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P7: Formato -->
+        <div class="form-group">
+          <label class="form-label">Formato de participação <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="formato">
+            <label class="form-radio-label"><input type="radio" name="formato" value="Como parte de uma equipe" required> Como parte de uma equipe</label>
+            <label class="form-radio-label"><input type="radio" name="formato" value="Como líder de equipe"> Como líder de equipe</label>
+            <label class="form-radio-label"><input type="radio" name="formato" value="Individualmente"> Individualmente</label>
+            <label class="form-radio-label"><input type="radio" name="formato" value="Aberto a qualquer formato"> Aberto a qualquer formato</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P8: Ferramentas -->
+        <div class="form-group">
+          <label class="form-label">Experiência com ferramentas de colaboração <small>(Miro, Notion, Figma, GitHub)</small> <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="ferramentas">
+            <label class="form-radio-label"><input type="radio" name="ferramentas" value="Sim, uso com frequência" required> Sim, uso com frequência</label>
+            <label class="form-radio-label"><input type="radio" name="ferramentas" value="Já usei algumas vezes"> Já usei algumas vezes</label>
+            <label class="form-radio-label"><input type="radio" name="ferramentas" value="Conheço, mas nunca usei"> Conheço, mas nunca usei</label>
+            <label class="form-radio-label"><input type="radio" name="ferramentas" value="Não conheço nenhuma"> Não conheço nenhuma</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+
+        <!-- P9: Acessibilidade -->
+        <div class="form-group">
+          <label class="form-label">Necessidades de acessibilidade <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="acessibilidade">
+            <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Não" required> Não</label>
+            <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Acessibilidade digital"> Acessibilidade digital (leitor de tela, contraste, navegação adaptada)</label>
+            <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Acessibilidade física"> Acessibilidade física (mobilidade, espaço adequado)</label>
+            <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Acessibilidade comunicacional"> Acessibilidade comunicacional (legendas, interpretação)</label>
+            <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Outra"> Outra necessidade</label>
+          </div>
+          <input class="form-input form-other-input" type="text" name="acessibilidade_outra" placeholder="Especifique sua necessidade..." hidden>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 3: Diversidade e Inclusão ==================== -->
+      <div class="form-step" data-form-step="2">
+        <h3 class="form-step-title">Diversidade e Inclusão</h3>
+        <p class="form-step-desc">O Hackathon App BiT é <strong>aberto a todas as pessoas</strong> com interesse e capacidade técnica para desenvolver um aplicativo, independentemente de raça, cor ou origem. As perguntas abaixo <strong>não são critério de exclusão ou seleção</strong>.</p>
+
+        <div class="form-group">
+          <label class="form-label">Autodeclaração racial</label>
+          <div class="form-radio-group" data-name="autodeclaracao">
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Preta"> Preta</label>
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Parda"> Parda</label>
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Branca"> Branca</label>
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Amarela"> Amarela</label>
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Indígena"> Indígena</label>
+            <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Prefiro não declarar"> Prefiro não declarar</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Autoriza o uso da autodeclaração para convites futuros relacionados a bolsas, mentorias ou ações afirmativas?</label>
+          <div class="form-radio-group" data-name="autoriza_autodeclaracao">
+            <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Sim"> Sim</label>
+            <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Não"> Não</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 4: Questões Técnicas ==================== -->
+      <div class="form-step" data-form-step="3">
+        <h3 class="form-step-title">Questões Técnicas</h3>
+
+        <!-- Linguagens -->
+        <div class="form-group">
+          <label class="form-label">Linguagens de programação <small>(selecione todas que se aplicam)</small> <span class="req">*</span></label>
+          <div class="form-checkbox-group" data-name="linguagens">
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="JavaScript"> JavaScript</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Python"> Python</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Java"> Java</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="TypeScript"> TypeScript</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Kotlin"> Kotlin</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Swift"> Swift</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="PHP"> PHP</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="C#"> C#</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Go"> Go</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Ruby"> Ruby</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Outra"> Outra(s)</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Iniciante"> Ainda estou em formação/iniciante</label>
+          </div>
+          <input class="form-input form-other-input" type="text" name="linguagens_outra" placeholder="Quais linguagens?" hidden>
+          <span class="form-error" hidden>Por favor, selecione pelo menos uma opção.</span>
+        </div>
+
+        <!-- Áreas de desenvolvimento -->
+        <div class="form-group">
+          <label class="form-label">Áreas de desenvolvimento <small>(selecione todas que se aplicam)</small> <span class="req">*</span></label>
+          <div class="form-checkbox-group" data-name="areas_dev">
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Front-end (Web)"> Front-end (Web)</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Back-end"> Back-end</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Mobile (Android/iOS)"> Mobile (Android/iOS)</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Full Stack"> Full Stack</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="UX/UI Design"> UX/UI Design</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Data/BI/Analytics"> Data/BI/Analytics</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Cloud/DevOps"> Cloud/DevOps</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Produto/Gestão"> Produto/Gestão</label>
+            <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Quero aprender"> Nunca desenvolvi um app, mas quero aprender</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione pelo menos uma opção.</span>
+        </div>
+
+        <!-- Nível dev -->
+        <div class="form-group">
+          <label class="form-label">Nível de experiência em desenvolvimento <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="nivel_dev">
+            <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Iniciante" required> Iniciante (aprendendo agora)</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Júnior"> Júnior (projetos simples ou acadêmicos)</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Pleno"> Pleno (projetos reais)</label>
+            <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Sênior"> Sênior (ampla experiência profissional)</label>
+          </div>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 5: Situação Profissional ==================== -->
+      <div class="form-step" data-form-step="4">
+        <h3 class="form-step-title">Situação Profissional</h3>
+
+        <div class="form-group">
+          <label class="form-label">Qual é sua situação profissional atual? <span class="req">*</span></label>
+          <div class="form-radio-group" data-name="situacao">
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Empregado(a) na área de tecnologia" required> Empregado(a) na área de tecnologia</label>
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Empregado(a) fora da área de tecnologia"> Empregado(a) fora da área de tecnologia</label>
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Desempregado(a)"> Desempregado(a)</label>
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Estudante sem vínculo profissional"> Estudante sem vínculo profissional</label>
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Freelancer/Autônomo(a)"> Freelancer/Autônomo(a)</label>
+            <label class="form-radio-label"><input type="radio" name="situacao" value="Outro"> Outro</label>
+          </div>
+          <input class="form-input form-other-input" type="text" name="situacao_outro" placeholder="Especifique..." hidden>
+          <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+        </div>
+      </div>
+
+      <!-- ==================== STEP 6: LGPD ==================== -->
+      <div class="form-step" data-form-step="5">
+        <h3 class="form-step-title">Termos e Consentimento</h3>
+
+        <div class="form-lgpd-box">
+          <h4>Lei Geral de Proteção de Dados Pessoais — LGPD</h4>
+          <p>Em conformidade com a <strong>Lei nº 13.709/2018 (LGPD)</strong>, informamos que os dados pessoais coletados neste formulário serão utilizados exclusivamente para:</p>
+          <ul>
+            <li>Organização e execução do Hackathon App Black in Tech;</li>
+            <li>Análises de perfil e diversidade;</li>
+            <li>Melhoria contínua do programa;</li>
+            <li>Convites futuros para bolsas, mentorias e ações afirmativas.</li>
+          </ul>
+          <p>Informações sensíveis (como autodeclaração racial) serão utilizadas apenas para <strong>fins estatísticos</strong>, tratadas com segurança e confidencialidade, e <strong>não compartilhadas com terceiros</strong>, exceto quando estritamente necessário para a execução do programa.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-checkbox-label form-lgpd-check">
+            <input type="checkbox" id="lgpd-consent" name="lgpd_consent" required>
+            <span>Declaro que li e concordo com o tratamento dos meus dados pessoais conforme descrito acima. <span class="req">*</span></span>
+          </label>
+          <span class="form-error" hidden>Você precisa aceitar os termos para enviar sua inscrição.</span>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="form-nav">
+        <button type="button" class="form-btn form-btn-prev" id="btn-prev" hidden>Anterior</button>
+        <button type="button" class="form-btn form-btn-next" id="btn-next">Próximo</button>
+        <button type="submit" class="form-btn form-btn-submit" id="btn-submit" hidden>Enviar Inscrição</button>
+      </div>
+    </form>
+
+    <!-- Success message -->
+    <div class="modal-success" id="modal-success" hidden>
+      <div class="success-icon">
+        <svg viewBox="0 0 52 52" class="success-checkmark">
+          <circle cx="26" cy="26" r="25" fill="none" stroke="#155cf4" stroke-width="2"/>
+          <path fill="none" stroke="#155cf4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 16-16"/>
+        </svg>
+      </div>
+      <h3 class="success-title">Inscrição realizada com sucesso!</h3>
+      <p class="success-text">Sua inscrição no <strong>Hackathon App BiT</strong> foi recebida. Em breve você receberá mais informações no seu email e será adicionado(a) ao grupo oficial no WhatsApp.</p>
+      <p class="success-text"><strong>Fique atento(a) às próximas etapas!</strong></p>
+      <button type="button" class="form-btn form-btn-next" id="btn-success-close">Fechar</button>
+    </div>
+  </div>
+</div>
