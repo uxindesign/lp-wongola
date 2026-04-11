@@ -246,43 +246,44 @@
   <!-- PREMIAÇÕES E CATEGORIAS -->
   <section class="premiacoes" id="premiacoes">
     <img class="premiacoes-bg" src="assets/premiacoes-bg-v2.svg" alt="" aria-hidden="true">
+
+    <!-- Photo: absolute in section, matches Figma x=777 y=185 w=561 (1440px ref) -->
+    <img class="premiacoes-photo" src="assets/premiacoes-photo.png" alt="Participantes do Hackathon" aria-hidden="false">
+
     <div class="premiacoes-wrap">
 
-      <!-- Top: categories left + photo right -->
+      <!-- Title: full container width, Figma y=138 -->
+      <h2 class="h2 anim">Premiações e categorias</h2>
+
+      <!-- Left column: intro + categories, Figma w=601 pt-16 -->
       <div class="premiacoes-top anim">
-        <div class="premiacoes-left">
-          <h2 class="h2">Premiações e categorias</h2>
-          <p class="premiacoes-intro">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
-          <div class="premiacoes-categories">
-            <div class="cat-card">
-              <div class="cat-number">1</div>
-              <div class="cat-content">
-                <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
-                <p class="cat-desc">Soluções criativas com impacto real</p>
-              </div>
+        <p class="premiacoes-intro">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
+        <div class="premiacoes-categories">
+          <div class="cat-card">
+            <div class="cat-number">1</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
+              <p class="cat-desc">Soluções criativas com impacto real</p>
             </div>
-            <div class="cat-card">
-              <div class="cat-number">2</div>
-              <div class="cat-content">
-                <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
-                <p class="cat-desc">Projetos com design funcional e acessível</p>
-              </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-number">2</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
+              <p class="cat-desc">Projetos com design funcional e acessível</p>
             </div>
-            <div class="cat-card">
-              <div class="cat-number">3</div>
-              <div class="cat-content">
-                <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
-                <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
-              </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-number">3</div>
+            <div class="cat-content">
+              <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
+              <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
             </div>
           </div>
         </div>
-        <div class="premiacoes-right">
-          <img class="premiacoes-photo" src="assets/premiacoes-photo.png" alt="Participantes do Hackathon">
-        </div>
       </div>
 
-      <!-- Bottom: prize cards + trophy -->
+      <!-- Bottom row: two prize cards + trophy, Figma y=762 gap=48 -->
       <div class="premiacoes-bottom anim">
         <div class="prize-card prize-card-yellow">
           <h3 class="prize-card-title">Os prêmios incluem:</h3>
@@ -302,7 +303,7 @@
             <li>Maior visibilidade profissional, com destaque no mercado tecnológico.</li>
           </ul>
         </div>
-        <!-- Trophy illustration -->
+        <!-- Trophy: absolute within bottom row, Figma x=27 y=307 -->
         <div class="premiacoes-trophy" aria-hidden="true">
           <img class="trophy-bg-shape" src="assets/trophy-bg.svg" alt="">
           <img class="trophy-union" src="assets/trophy-union.svg" alt="">

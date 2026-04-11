@@ -343,50 +343,56 @@ ul{list-style:none}
   padding:0;
   overflow:hidden;
 }
+/* SVG bg: keeps original fixed-width to maintain section height (~1605px) */
 .premiacoes-bg{
   display:block;
-  width:100%;
+  width:2059px;
   max-width:none;
   height:auto;
+  margin:0 auto;
   pointer-events:none;
+  position:relative;
+  left:-300px;
 }
+
+/* Photo: absolute in .premiacoes — Figma x=777 y=185 w=561 in 1440px frame */
+.premiacoes-photo{
+  position:absolute;
+  left:53.96vw;   /* 777/1440 */
+  top:12.67%;     /* 185/1460 of section height */
+  width:38.96vw;  /* 561/1440 */
+  height:auto;
+  border-radius:24px;
+  display:block;
+}
+
+/* Wrap: matches Figma container x=96 y=138 w=1243 */
 .premiacoes-wrap{
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   display:flex;
   flex-direction:column;
-  gap:40px;
-  max-width:1280px;
+  max-width:1440px;
   margin:0 auto;
-  padding:138px 80px 200px;
+  padding:138px 96px 200px;
 }
 
-/* Top row: left (title+intro+cats) | right (photo) */
+/* Title sits at y=138, h=58 — gap below handled by h2 margin-bottom:16px */
+
+/* Left column: w=601 y=228 (16px padding-top within sub-container at y=212) */
 .premiacoes-top{
-  display:flex;
-  gap:48px;
-  align-items:flex-start;
-}
-.premiacoes-left{
-  flex:0 0 601px;
+  margin-top:16px;
+  width:601px;
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:24px;
+  padding-top:16px;
 }
 .premiacoes-intro{
   font-family:var(--f-body);
   font-size:24px;
   color:var(--text);
   line-height:1.4;
-}
-.premiacoes-right{
-  flex:1;
-  min-width:0;
-}
-.premiacoes-photo{
-  width:100%;
-  height:auto;
-  border-radius:24px;
 }
 
 /* Category cards */
@@ -433,8 +439,10 @@ ul{list-style:none}
   line-height:1.4;
 }
 
-/* Bottom row: prize cards + trophy */
+/* Bottom row: Figma y=762, gap=48px between cards (x=645.5 - x=597.5) */
+/* margin-top: 762 - (228+494) = 40px gap after top */
 .premiacoes-bottom{
+  margin-top:40px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:48px;
@@ -483,23 +491,34 @@ ul{list-style:none}
   margin-bottom:8px;
 }
 
-/* Trophy illustration — absolute within .premiacoes-bottom */
+/* Trophy group: Figma x=27 y=307 w=517 h=431 within .premiacoes-bottom */
 .premiacoes-trophy{
   position:absolute;
-  left:29px;
+  left:27px;
   top:307px;
-  width:500px;
-  height:400px;
+  width:517px;
+  height:431px;
   pointer-events:none;
 }
+/* Background blob: Figma 29×357 within group, rotated -3.29deg, w=515 h=410 */
 .trophy-bg-shape{
   position:absolute;
-  left:29px;
-  top:21px;
-  width:494px;
+  left:2px;
+  top:50px;
+  width:515px;
   height:auto;
   transform:rotate(-3.29deg);
+  transform-origin:center;
 }
+/* Podium bars: Winner group at x=216 y=307→within group y=0, w=301 h=205 */
+.trophy-pillars-v2{
+  position:absolute;
+  top:115px;
+  left:120px;
+  width:301px;
+  height:auto;
+}
+/* Trophy cup: x=312→within group x=96, y=307→within group y=0, w=107 */
 .trophy-cup-v2{
   position:absolute;
   top:0;
@@ -507,18 +526,12 @@ ul{list-style:none}
   width:107px;
   height:auto;
 }
-.trophy-pillars-v2{
-  position:absolute;
-  top:115px;
-  left:0;
-  width:301px;
-  height:auto;
-}
+/* Running person: Union x=27 y=545 → within group: x=0, y=238, w=87 */
 .trophy-union{
   position:absolute;
-  bottom:0;
+  top:238px;
   left:0;
-  width:90px;
+  width:87px;
   height:auto;
 }
 
@@ -899,10 +912,10 @@ ul{list-style:none}
   .tl-row{gap:24px}
   .tl-date{font-size:24px}
   .wongola-wrap{padding-left:40px}
-  .premiacoes-top{flex-direction:column}
-  .premiacoes-left{flex:none;width:100%}
+  .premiacoes-top{width:100%}
   .premiacoes-bottom{grid-template-columns:1fr}
   .premiacoes-trophy{display:none}
+  .premiacoes-photo{left:55vw;width:42vw}
   .como-wrap{flex-direction:column;padding:10% 5% 20%}
   .como-right{width:100%}
   .cacc-cols{grid-template-columns:1fr}
@@ -944,8 +957,8 @@ ul{list-style:none}
   .tl-chev{display:none}
   .tl-date{font-size:28px}
   .premiacoes-wrap{padding:8% 5%}
-  .premiacoes-top{flex-direction:column;gap:24px}
-  .premiacoes-left{flex:none;width:100%}
+  .premiacoes-photo{position:relative;left:auto;top:auto;width:100%;margin-bottom:24px}
+  .premiacoes-top{width:100%}
   .premiacoes-bottom{grid-template-columns:1fr;gap:24px}
   .cat-title{font-size:20px}
   .cat-desc{font-size:16px}
