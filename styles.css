@@ -48,7 +48,8 @@ ul{list-style:none}
 .btn-primary{width:254px;height:56px;font-size:16px;color:var(--navy)}
 .btn-primary-v2{width:276px;height:56px;font-size:18px;color:var(--navy)}
 .btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
-.btn-outline:hover{color:#fff;opacity:1}
+.btn-outline:hover{color:#fff;opacity:1;filter:none}
+.btn-outline:hover .btn-bg path{stroke-opacity:1}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
 /* NAV */
@@ -873,7 +874,8 @@ ul{list-style:none}
   max-width:472px;
 }
 .btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text)}
-.btn-outline-dark:hover{color:#2A273B;opacity:1}
+.btn-outline-dark:hover{color:#2A273B;opacity:1;filter:none}
+.btn-outline-dark:hover .btn-bg path{stroke-opacity:1}
 
 /* Africa illustration */
 .wongola-africa{
