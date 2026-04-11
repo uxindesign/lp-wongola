@@ -341,7 +341,7 @@ ul{list-style:none}
   position:relative;
   padding:0;
   overflow:visible;
-  height:946px;
+  height:1460px;
 }
 .premiacoes-bg{
   position:absolute;
@@ -373,7 +373,7 @@ ul{list-style:none}
   flex-direction:column;
   max-width:1440px;
   margin:0 auto;
-  padding:138px 96px 200px;
+  padding:138px 101px 200px 96px;
   z-index:1;
 }
 
@@ -512,14 +512,14 @@ ul{list-style:none}
 .trophy-pillars-v2{
   position:absolute;
   top:115px;
-  left:120px;
+  left:189px;
   width:301px;
   height:auto;
 }
 .trophy-cup-v2{
   position:absolute;
   top:0;
-  left:217px;
+  left:285px;
   width:107px;
   height:auto;
 }
