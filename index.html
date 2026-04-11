@@ -247,38 +247,43 @@
   <section class="premiacoes" id="premiacoes">
     <img class="premiacoes-bg" src="assets/premiacoes-bg-v2.svg" alt="" aria-hidden="true">
     <div class="premiacoes-wrap">
-      <div class="premiacoes-header anim">
-        <h2 class="h2">Premiações e categorias</h2>
-        <p class="body">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
+
+      <!-- Top: categories left + photo right -->
+      <div class="premiacoes-top anim">
+        <div class="premiacoes-left">
+          <h2 class="h2">Premiações e categorias</h2>
+          <p class="premiacoes-intro">As <em>9 melhores equipes</em> serão premiadas em três categorias principais:</p>
+          <div class="premiacoes-categories">
+            <div class="cat-card">
+              <div class="cat-number">1</div>
+              <div class="cat-content">
+                <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
+                <p class="cat-desc">Soluções criativas com impacto real</p>
+              </div>
+            </div>
+            <div class="cat-card">
+              <div class="cat-number">2</div>
+              <div class="cat-content">
+                <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
+                <p class="cat-desc">Projetos com design funcional e acessível</p>
+              </div>
+            </div>
+            <div class="cat-card">
+              <div class="cat-number">3</div>
+              <div class="cat-content">
+                <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
+                <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="premiacoes-right">
+          <img class="premiacoes-photo" src="assets/premiacoes-photo.png" alt="Participantes do Hackathon">
+        </div>
       </div>
 
-      <!-- 3 Category cards -->
-      <div class="premiacoes-categories anim">
-        <div class="cat-card">
-          <div class="cat-number">1</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Inovação em IA e Ciência de Dados:</h3>
-            <p class="cat-desc">Soluções criativas com impacto real</p>
-          </div>
-        </div>
-        <div class="cat-card">
-          <div class="cat-number">2</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Melhor Experiência e Usabilidade do Usuário:</h3>
-            <p class="cat-desc">Projetos com design funcional e acessível</p>
-          </div>
-        </div>
-        <div class="cat-card">
-          <div class="cat-number">3</div>
-          <div class="cat-content">
-            <h3 class="cat-title">Acessibilidade em Baixa Conectividade:</h3>
-            <p class="cat-desc">Ideias que garantam funcionalidade em qualquer ambiente</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prize and benefits cards -->
-      <div class="premiacoes-cards anim">
+      <!-- Bottom: prize cards + trophy -->
+      <div class="premiacoes-bottom anim">
         <div class="prize-card prize-card-yellow">
           <h3 class="prize-card-title">Os prêmios incluem:</h3>
           <ul class="prize-list">
@@ -288,7 +293,7 @@
         </div>
         <div class="prize-card prize-card-blue">
           <h3 class="prize-card-title">Benefícios para os participantes</h3>
-          <p>Além dos prêmios, todos os participantes terão acesso a:</p>
+          <p class="prize-card-subtitle">Além dos prêmios, todos os participantes terão acesso a:</p>
           <ul class="prize-list">
             <li>Encaminhamento para entrevistas de emprego (nacionais e internacionais);</li>
             <li>Certificados oficiais com validade acadêmica;</li>
@@ -297,17 +302,15 @@
             <li>Maior visibilidade profissional, com destaque no mercado tecnológico.</li>
           </ul>
         </div>
+        <!-- Trophy illustration -->
+        <div class="premiacoes-trophy" aria-hidden="true">
+          <img class="trophy-bg-shape" src="assets/trophy-bg.svg" alt="">
+          <img class="trophy-union" src="assets/trophy-union.svg" alt="">
+          <img class="trophy-cup-v2" src="assets/trophy-cup-v2.svg" alt="">
+          <img class="trophy-pillars-v2" src="assets/trophy-pillars-v2.svg" alt="">
+        </div>
       </div>
 
-      <!-- Trophy illustration -->
-      <div class="premiacoes-trophy" aria-hidden="true">
-        <img class="trophy-bg-shape d" src="assets/trophy-bg.svg" alt="">
-        <img class="trophy-cup-v2 d" src="assets/trophy-cup-v2.svg" alt="">
-        <img class="trophy-pillars-v2 d" src="assets/trophy-pillars-v2.svg" alt="">
-      </div>
-
-      <!-- Decorative element -->
-      <img class="premiacoes-deco anim" src="assets/premiacoes-deco.png" alt="" aria-hidden="true">
     </div>
   </section>
 
