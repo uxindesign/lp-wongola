@@ -494,8 +494,7 @@ ul{list-style:none}
   margin-bottom:8px;
 }
 
-/* Trophy group: Figma x=27 y=307 w=517 h=431 within .premiacoes-bottom
-   All children positions relative to this group (group origin x=27 y=307 in bottom row) */
+/* Trophy: absolute within bottom row */
 .premiacoes-trophy{
   position:absolute;
   left:27px;
@@ -504,40 +503,34 @@ ul{list-style:none}
   height:431px;
   pointer-events:none;
   z-index:1;
-  overflow:visible;
 }
-/* BG blob: Figma abs x=29 y=357 → group x=2 y=50, w=515 h=410, rotate(-3.29deg)
-   SVG viewBox 493×382 — explicit size to avoid preserveAspectRatio distortion */
 .trophy-bg-shape{
   position:absolute;
   left:2px;
   top:50px;
   width:515px;
-  height:410px;
+  height:auto;
   transform:rotate(-3.29deg);
   transform-origin:center;
 }
-/* Podium bars: Figma abs x=215 y=422 → group x=188 y=115, w=301 */
 .trophy-pillars-v2{
   position:absolute;
-  left:188px;
   top:115px;
+  left:189px;
   width:301px;
   height:auto;
 }
-/* Trophy cup: Figma abs x=312 y=307 → group x=285 y=0, w=107 */
 .trophy-cup-v2{
   position:absolute;
-  left:285px;
   top:0;
+  left:285px;
   width:107px;
   height:auto;
 }
-/* Running person: Figma abs x=27 y=545 → group x=0 y=238, w=87 */
 .trophy-union{
   position:absolute;
-  left:0;
   top:238px;
+  left:0;
   width:87px;
   height:auto;
   will-change:transform;
@@ -560,13 +553,13 @@ ul{list-style:none}
 }
 .como-bg{
   display:block;
-  width:1440px;
+  width:1717px;
   max-width:none;
   height:auto;
+  margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:50%;
-  transform:translateX(-50%);
+  left:-140px;
 }
 .como-wrap{
   position:absolute;
@@ -871,10 +864,10 @@ ul{list-style:none}
 }
 .wongola-africa-bg{
   position:absolute;
-  left:720px;
-  top:162px;
-  width:675px;
-  height:639px;
+  left:847px;
+  top:226px;
+  width:519px;
+  height:508px;
   --base-rot:rotate(-17.7deg);
   opacity:.3;
   will-change:transform;
@@ -882,7 +875,7 @@ ul{list-style:none}
 }
 .wongola-africa-border{
   position:absolute;
-  left:1122px;
+  left:1172px;
   top:218px;
   width:126px;
   height:123px;
@@ -892,10 +885,10 @@ ul{list-style:none}
 }
 .wongola-africa-map{
   position:absolute;
-  left:746px;
+  left:796px;
   top:297px;
-  width:340px;
-  height:340px;
+  width:341px;
+  height:341px;
   will-change:transform;
   pointer-events:auto;
 }
