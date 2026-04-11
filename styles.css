@@ -346,14 +346,14 @@ ul{list-style:none}
 /* SVG bg: fixed width, centered with left offset */
 .premiacoes-bg{
   display:block;
-  width:2059px;
+  width:2120px;
   max-width:none;
   height:auto;
   margin:0 auto;
   pointer-events:none;
   position:relative;
-  left:-100px;
-  top:-96px;
+  left:-90px;
+  top:-108px;
   margin-bottom:-96px;
 }
 
