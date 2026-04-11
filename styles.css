@@ -311,7 +311,7 @@ ul{list-style:none}
 /* ================================================
    CRONOGRAMA — clean white
    ================================================ */
-.crono{padding:120px 80px 220px;text-align:center}
+.crono{padding:96px 80px 220px;text-align:center}
 .crono-wrap{max-width:957px;margin:0 auto}
 .crono-subtitle{
   font-family:var(--f-body);
