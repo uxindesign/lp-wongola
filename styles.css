@@ -358,8 +358,8 @@ ul{list-style:none}
 /* Photo: absolute in .premiacoes */
 .premiacoes-photo{
   position:absolute;
-  right:-200px;
-  top:0;
+  right:-96px;
+  top:48px;
   width:561px;
   height:auto;
   border-radius:24px;
