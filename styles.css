@@ -635,8 +635,8 @@ ul{list-style:none}
   color:var(--white);
   font-family:var(--f-body);
   font-weight:700;
-  font-size:14px;
-  padding:16px;
+  font-size:20px;
+  padding:8px 16px;
   border-radius:12px;
 }
 
@@ -682,7 +682,7 @@ ul{list-style:none}
   color:var(--white);
 }
 .como-inscr-cta-group{
-  margin-top:40px;
+  margin-top:16px;
   display:flex;
   flex-direction:column;
   gap:16px;
@@ -697,6 +697,7 @@ ul{list-style:none}
   width:40px;
   height:auto;
   transform:rotate(-20deg);
+  margin-bottom:32px;
 }
 .como-inscr-content p{
   font-family:var(--f-body);
@@ -707,7 +708,7 @@ ul{list-style:none}
 .como-inscr-cta-text{
   font-family:var(--f-head);
   font-weight:800;
-  font-size:24px;
+  font-size:26px !important;
   color:var(--white);
 }
 
@@ -750,7 +751,7 @@ ul{list-style:none}
 .parceiros-title{
   font-family:var(--f-head);
   font-weight:900;
-  font-size:28px;
+  font-size:32px;
   color:var(--navy);
   line-height:1.3;
   margin-bottom:24px;
