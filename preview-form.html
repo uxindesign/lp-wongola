@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview — Formulário de Inscrição</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Outfit:wght@400;500;700;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Variáveis do projeto (subset necessário) -->
+  <style>
+    :root {
+      --navy: #181057;
+      --blue: #155cf4;
+      --yellow: #ffbb00;
+      --text: #2a273b;
+      --white: #fff;
+      --f-head: 'Outfit', sans-serif;
+      --f-body: 'Lato', sans-serif;
+      --f-mono: 'Space Mono', monospace;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--f-body);
+      color: var(--text);
+      background: #f0f0f4;
+      min-height: 100vh;
+    }
+  </style>
+
+  <!-- CSS do formulário -->
+  <link rel="stylesheet" href="form-inscricao.css">
+
+  <!-- Override: modal aberto direto, sem overlay escuro (preview mode) -->
+  <style>
+    /* Força o modal visível sem overlay escuro */
+    .modal-overlay {
+      position: relative;
+      background: transparent;
+      backdrop-filter: none;
+      min-height: 100vh;
+      padding: 40px 24px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .modal {
+      max-height: none;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+    /* Esconde botão fechar no preview */
+    .modal-close { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Inclui o HTML do formulário -->
+  <div id="form-container"></div>
+
+  <script>
+    // Carrega o HTML do formulário e injeta na página
+    fetch('form-inscricao.html')
+      .then(function(r) { return r.text(); })
+      .then(function(html) {
+        var container = document.getElementById('form-container');
+        container.innerHTML = html;
+
+        // Remove o hidden do overlay para mostrar direto
+        var overlay = document.getElementById('modal-inscricao');
+        if (overlay) overlay.hidden = false;
+
+        // Carrega o JS do formulário depois do HTML
+        var script = document.createElement('script');
+        script.src = 'form-inscricao.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>
