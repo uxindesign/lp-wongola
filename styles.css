@@ -953,6 +953,17 @@ ul{list-style:none}
 .footer-col a:hover{opacity:.7;text-decoration:underline}
 
 /* ================================================
+   1281–1919px — lock page at 1920px width, centered.
+   Blobs stay at their Figma positions; overflow clips equally.
+   ================================================ */
+@media(min-width:1281px) and (max-width:1919px){
+  .page{
+    width:1920px;
+    margin-left:calc((100vw - 1920px) / 2);
+  }
+}
+
+/* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
    (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
@@ -1263,102 +1274,126 @@ ul{list-style:none}
 }
 
 /* ==========================================================
-   MOBILE ≤720px — tighter paddings, smaller fonts
+   MOBILE ≤720px — Figma 360px frame
    ========================================================== */
 @media(max-width:720px){
 
   /* General */
-  .h2{font-size:32px}
-  .body{font-size:18px}
+  .h2{font-size:28px}
+  .body{font-size:16px}
+  .label{font-size:12px}
+
+  /* Nav */
+  .nav{padding:8px 20px 10px}
+  .nav-logo img{width:56px;height:56px}
 
   /* Hero */
   .hero{min-height:auto}
-  .hero-content{padding:140px 24px 60px}
-  .hero-logo-img{height:130px}
+  .hero-content{padding:48px 24px;gap:48px}
+  .hero-inner{gap:32px}
+  .hero-logo-img{height:80px}
   .hero-tagline{font-size:20px}
-  .hero-deadline{font-size:28px}
+  .hero-deadline{font-size:24px}
   .hero-desc{font-size:18px}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;justify-items:center}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;justify-items:center;padding-top:16px}
   .stat-val{font-size:20px}
-  .hero-buttons{flex-direction:column;align-items:center}
+  .hero-buttons{flex-direction:column;align-items:center;gap:16px;padding-top:8px}
 
-  /* Sobre */
+  /* Sobre + Accordion section */
   .sobre{padding:48px 24px}
+  .h2-sobre{font-size:28px}
+  .body-sobre{font-size:16px}
 
   /* Accordion */
+  .content-accordion{padding:0 0 48px}
   .content-accordion-wrap{padding:0 24px}
+  .cacc-item{border-radius:24px}
+  .cacc-header{padding:20px}
   .cacc-title{font-size:22px}
-  .cacc-header{padding:20px 24px}
-  .cacc-body{padding:0 24px}
-  .cacc-open .cacc-body{padding-bottom:24px}
-  .cacc-content p{font-size:18px}
-  .cacc-content ul,.cacc-content ol{font-size:18px}
+  .cacc-body{padding:0 20px}
+  .cacc-open .cacc-body{padding-bottom:20px}
+  .cacc-content{gap:16px;padding:8px}
+  .cacc-content p{font-size:16px}
+  .cacc-content ul,.cacc-content ol{font-size:16px}
 
   /* Por que participar */
   .porque{padding:48px 24px}
-  .porque-overlay{gap:24px}
-  .porque-text .h2{font-size:32px}
-  .porque-intro{font-size:18px}
-  .porque-list li{font-size:18px}
-  .porque-cta-content{padding:32px}
-  .porque-cta-text{font-size:18px}
-  .porque-cta-vagas{font-size:20px}
+  .porque-overlay{gap:40px}
+  .porque-text .h2{font-size:28px}
+  .porque-intro{font-size:16px}
+  .porque-list li{font-size:16px}
+  .porque-cta-box{border-radius:24px}
+  .porque-cta-content{padding:24px}
+  .porque-cta-text{font-size:16px}
+  .porque-cta-vagas{font-size:18px}
 
   /* Cronograma */
   .crono{padding:48px 24px}
-  .timeline{padding:24px 16px 40px}
-  .tl-row{flex-wrap:wrap;justify-content:center;gap:16px}
+  .crono-wrap{max-width:100%}
+  .timeline{padding:24px;border-radius:20px;gap:24px;margin-top:32px}
+  .tl-row{flex-direction:column;gap:16px;align-items:center}
   .tl-chev{display:none}
-  .tl-date{font-size:20px}
-  .tl-pill{font-size:14px;padding:6px 16px}
+  .tl-item{gap:4px}
+  .tl-date{font-size:24px}
+  .tl-lbl{font-size:14px}
+  .tl-pill{font-size:16px;padding:12px 20px;bottom:-24px}
+  .crono-cta{margin-top:32px}
 
   /* Premiacoes */
   .premiacoes{padding:48px 24px}
+  .premiacoes-wrap{gap:16px 24px}
   .premiacoes-intro{font-size:18px}
-  .cat-title{font-size:20px}
+  .premiacoes-categories{gap:8px}
+  .cat-card{padding:20px;border-radius:24px;gap:16px}
+  .cat-title{font-size:18px}
   .cat-desc{font-size:16px}
-  .prize-card{padding:24px}
-  .prize-card-title{font-size:22px}
+  .premiacoes-bottom{gap:16px}
+  .prize-card{padding:24px;border-radius:24px;gap:16px}
+  .prize-card-title{font-size:20px}
   .prize-card-subtitle{font-size:18px}
   .prize-list li{font-size:16px}
 
   /* Como participar */
-  .como-wrap{padding:48px 24px;gap:32px}
+  .como-wrap{padding:48px 24px;gap:40px}
+  .como-cards{gap:8px}
   .como-card{padding:24px;border-radius:24px}
   .como-card-title{font-size:20px}
-  .como-card-desc{font-size:18px}
-  .como-areas-title{font-size:24px}
-  .como-tag{font-size:16px;padding:12px}
-  .como-right{padding:32px;border-radius:20px}
-  .como-inscr-title{font-size:24px}
-  .como-inscr-content p{font-size:18px}
-  .como-inscr-cta-text{font-size:20px !important}
+  .como-card-desc{font-size:16px}
+  .como-areas-title{font-size:22px;margin-bottom:16px}
+  .como-tag{font-size:16px;padding:12px;border-radius:12px}
+  .como-right{padding:24px;border-radius:24px}
+  .como-inscr-title{font-size:22px}
+  .como-inscr-content p{font-size:16px}
+  .como-inscr-cta-text{font-size:18px !important}
 
   /* Parceiros */
-  .parceiros{padding:60px 24px 24px}
-  .parceiros-box{padding:48px 24px 40px}
-  .parceiros-pill{font-size:12px;padding:14px 24px;top:-22px}
-  .parceiros-title{font-size:24px}
-  .parceiros-subtitle{font-size:18px}
-  .parceiros-grid{grid-template-columns:repeat(2,1fr);gap:24px 32px}
+  .parceiros{padding:24px}
+  .parceiros-box{padding:48px 24px 32px;border-radius:28px;gap:48px}
+  .parceiros-pill{font-size:12px;padding:12px 24px;top:-22px}
+  .parceiros-text{margin-bottom:0}
+  .parceiros-title{font-size:22px}
+  .parceiros-subtitle{font-size:16px}
+  .parceiros-grid{grid-template-columns:1fr;gap:32px;justify-items:center}
 
   /* CTA Final */
-  .cta-final{padding:48px 24px 60px}
+  .cta-final{padding:24px 24px 48px}
   .cta-final-wrap{gap:40px}
   .cta-final-logo-img{height:80px}
   .cta-final-title{font-size:24px}
-  .cta-final-desc{font-size:18px;width:auto}
+  .cta-final-desc{font-size:16px;width:auto}
 
   /* Wongola */
   .wongola{padding:48px 0}
-  .wongola-wrap{padding:0 24px}
-  .wongola-content .h2{font-size:32px}
-  .wongola-content .body{font-size:20px}
-  .wongola-quote{font-size:22px}
-  .wongola-blockquote p{font-size:18px}
+  .wongola-wrap{padding:0 24px;gap:40px}
+  .wongola-logo img{width:80px;height:82px}
+  .wongola-content{gap:24px}
+  .wongola-content .h2{font-size:28px}
+  .wongola-content .body{font-size:18px}
+  .wongola-quote{font-size:18px}
+  .wongola-blockquote p{font-size:16px;max-width:100%}
 
   /* Footer */
-  .footer{padding:40px 24px}
+  .footer{padding:48px 24px}
   .footer-wrap{flex-direction:column;gap:24px}
   .footer-col{min-width:auto;flex:none;width:100%}
 }
