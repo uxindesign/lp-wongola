@@ -953,6 +953,17 @@ ul{list-style:none}
 .footer-col a:hover{opacity:.7;text-decoration:underline}
 
 /* ================================================
+   1281–1919px — lock page at 1920px width, centered.
+   Blobs stay at their Figma positions; overflow clips equally.
+   ================================================ */
+@media(min-width:1281px) and (max-width:1919px){
+  .page{
+    width:1920px;
+    margin-left:calc((100vw - 1920px) / 2);
+  }
+}
+
+/* ================================================
    RESPONSIVE — below 1280px, normal fluid layout
    (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
