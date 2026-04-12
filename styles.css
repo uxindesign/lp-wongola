@@ -1035,8 +1035,8 @@ ul{list-style:none}
 
   /* Como participar */
   .como{overflow:hidden;margin-top:80px}
-  .como-bg{width:120%;left:-10%;position:relative}
-  .como-wrap{padding:80px 48px;top:0;max-width:none}
+  .como-bg{position:absolute;top:0;left:-10%;width:120%;height:100%;z-index:0}
+  .como-wrap{position:relative;top:auto;left:auto;right:auto;bottom:auto;padding:80px 48px;max-width:none;z-index:1}
   .como-cards{flex-direction:column;width:100%}
   .como-card{width:100%}
   .como-bottom{flex-direction:column}
