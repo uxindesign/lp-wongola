@@ -35,36 +35,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Content Accordion (new collapsible sections)
+  // Content Accordion (smooth animated)
+  // Remove hidden attribute on load — CSS handles visibility via max-height
+  document.querySelectorAll('[data-cacc] .cacc-body').forEach(body => {
+    body.removeAttribute('hidden');
+  });
+
   document.querySelectorAll('[data-cacc]').forEach(item => {
     const header = item.querySelector('.cacc-header');
-    const body = item.querySelector('.cacc-body');
     const icon = item.querySelector('.cacc-icon');
 
     header.addEventListener('click', () => {
       const isOpen = item.classList.contains('cacc-open');
 
       if (isOpen) {
-        // Close this item
         item.classList.remove('cacc-open');
-        body.hidden = true;
         header.setAttribute('aria-expanded', 'false');
         icon.src = 'assets/icon-chevron-right.svg';
       } else {
-        // Close all other items first
+        // Close all others
         document.querySelectorAll('[data-cacc]').forEach(other => {
           other.classList.remove('cacc-open');
-          const otherBody = other.querySelector('.cacc-body');
-          const otherIcon = other.querySelector('.cacc-icon');
           const otherHeader = other.querySelector('.cacc-header');
-          if (otherBody) otherBody.hidden = true;
+          const otherIcon = other.querySelector('.cacc-icon');
           if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
           if (otherIcon) otherIcon.src = 'assets/icon-chevron-right.svg';
         });
 
-        // Open this item
+        // Open this
         item.classList.add('cacc-open');
-        body.hidden = false;
         header.setAttribute('aria-expanded', 'true');
         icon.src = 'assets/icon-chevron-down.svg';
       }

@@ -204,7 +204,7 @@
   font-weight: 700;
   font-size: 20px;
   color: var(--navy, #181057);
-  margin: 0 0 8px;
+  margin: 0 0 16px;
 }
 
 .form-step-desc {

@@ -196,6 +196,19 @@ ul{list-style:none}
 }
 .cacc-body{
   padding:0 32px 32px;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease,padding .4s ease;
+}
+.cacc-body[hidden]{
+  display:block !important;
+  max-height:0;
+  padding-top:0;
+  padding-bottom:0;
+}
+.cacc-open .cacc-body{
+  max-height:2000px;
+  padding-bottom:32px;
 }
 .cacc-content{
   display:flex;
