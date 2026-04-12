@@ -1015,7 +1015,8 @@ ul{list-style:none}
   .content-accordion{padding:0}
   .content-accordion-wrap{padding:0 48px}
   .cacc-title{font-size:24px}
-  .cacc-body{padding:0 24px 24px}
+  .cacc-body{padding:0 24px}
+  .cacc-open .cacc-body{padding-bottom:24px}
 
   /* Por que participar — blob as background, content in flow */
   .porque{height:auto;overflow:hidden}
