@@ -64,15 +64,15 @@
     closeBtn.addEventListener('click', closeModal);
   }
 
-  // Click on overlay background
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) closeModal();
-  });
+  // Click on overlay background — disabled, only close button closes
+  // overlay.addEventListener('click', function (e) {
+  //   if (e.target === overlay) closeModal();
+  // });
 
-  // Escape key
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !overlay.hidden) closeModal();
-  });
+  // Escape key — disabled
+  // document.addEventListener('keydown', function (e) {
+  //   if (e.key === 'Escape' && !overlay.hidden) closeModal();
+  // });
 
   // Success close
   if (btnSuccClose) {
