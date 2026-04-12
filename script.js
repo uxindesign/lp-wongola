@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('.page');
   function updateScale() {
     const vw = window.innerWidth;
-    if (vw >= 1920) {
+    if (vw >= 1600) {
       page.style.zoom = vw / 1920;
     } else {
       page.style.zoom = '';
