@@ -991,80 +991,120 @@ ul{list-style:none}
   .deco{display:none}
 
   /* General */
-  .h2{font-size:40px}
-  .body{font-size:20px}
+  .h2{font-size:36px}
+  .body{font-size:18px}
 
-  /* Hero */
-  .hero-bg{width:2111px}
-  .hero-content{max-width:680px;margin:0 auto;text-align:center}
-  .hero-logo-img{width:400px}
-  .hero-stats{gap:32px}
+  /* Hero — bg covers, content centered */
+  .hero{overflow:hidden}
+  .hero-bg{width:180%;left:-40%}
+  .hero-content{max-width:100%;padding:0 48px;margin:0 auto;top:120px}
+  .hero-inner{max-width:100%}
+  .hero-logo-img{width:340px;height:auto}
+  .hero-stats{gap:24px;flex-wrap:wrap;justify-content:center}
+  .hero-desc{max-width:100%}
 
-  /* Sobre */
-  .sobre{padding:48px}
-  .sobre-wrap{flex-direction:column;padding:0;max-width:none}
+  /* Sobre — single column, no photo */
+  .sobre{padding:60px 48px}
+  .sobre-wrap{flex-direction:column;padding:0;max-width:none;gap:32px}
   .sobre-content{max-width:100%}
   .sobre-img{display:none}
+  .h2-sobre{font-size:36px}
+  .body-sobre{font-size:18px}
 
-  /* Accordion */
+  /* Accordion — full width with padding */
+  .content-accordion{padding:0}
   .content-accordion-wrap{padding:0 48px}
+  .cacc-title{font-size:24px}
+  .cacc-body{padding:0 24px 24px}
 
-  /* Por que participar */
+  /* Por que participar — blob as background, content in flow */
   .porque{height:auto;overflow:hidden}
-  .porque-bg{position:absolute;width:120%;left:-10%;top:0;height:auto}
-  .porque-overlay{position:relative;padding:80px 48px}
-  .porque-text{position:relative;left:auto;top:auto;width:100%}
+  .porque-bg{position:absolute;width:150%;left:-25%;top:-5%;height:110%}
+  .porque-overlay{position:relative;padding:80px 48px;max-width:none}
+  .porque-text{position:relative;left:auto;top:auto;width:100%;max-width:100%}
+  .porque-intro{font-size:18px}
+  .porque-list li{font-size:18px}
   .porque-photo{display:none}
-  .porque-cta-box{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px}
-  .porque-cta-shape{position:absolute;left:-5%;top:-5%;width:110%;height:110%}
-  .porque-cta-content{position:relative;left:auto;top:auto;width:100%;padding:40px}
+  .porque-cta-box{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px;overflow:hidden;border-radius:24px}
+  .porque-cta-shape{position:absolute;left:-10%;top:-10%;width:120%;height:120%}
+  .porque-cta-content{position:relative;left:auto;top:auto;width:100%;padding:48px}
+  .porque-cta-text{font-size:18px}
+  .porque-cta-vagas{font-size:22px}
 
   /* Cronograma */
-  .crono{padding:48px}
-  .tl-row{gap:24px}
-  .tl-date{font-size:24px}
+  .crono{padding:60px 48px 160px}
+  .tl-row{gap:16px}
+  .tl-date{font-size:22px}
+  .tl-lbl{font-size:13px}
+  .timeline{padding:24px 20px 40px}
+  .tl-pill{font-size:16px;padding:6px 16px}
 
-  /* Premiacoes */
+  /* Premiacoes — single column, no photo/trophy */
   .premiacoes{overflow:hidden}
-  .premiacoes-bg{left:-50%;width:200%}
+  .premiacoes-bg{left:-30%;width:160%;top:-60px}
   .premiacoes-photo{display:none}
-  .premiacoes-wrap{padding:128px 48px;max-width:none}
+  .premiacoes-wrap{padding:80px 48px;max-width:none}
   .premiacoes-top{width:100%}
+  .premiacoes-intro{font-size:18px}
+  .cat-title{font-size:20px}
+  .cat-desc{font-size:16px}
   .premiacoes-bottom{grid-template-columns:1fr;gap:24px}
   .premiacoes-trophy{display:none}
+  .prize-card{padding:24px}
+  .prize-card-title{font-size:22px}
+  .prize-list li{font-size:16px}
 
-  /* Como participar */
-  .como{overflow:hidden;margin-top:80px}
-  .como-bg{position:absolute;top:0;left:-10%;width:120%;height:100%;z-index:0}
-  .como-wrap{position:relative;top:auto;left:auto;right:auto;bottom:auto;padding:80px 48px;max-width:none;z-index:1}
+  /* Como participar — stacked, blob as bg */
+  .como{overflow:hidden;margin-top:80px;margin-bottom:40px}
+  .como-bg{position:absolute;top:-5%;left:-15%;width:130%;height:110%;z-index:0}
+  .como-wrap{position:relative;top:auto;left:auto;right:auto;bottom:auto;padding:80px 48px;max-width:none;z-index:1;flex-direction:column;align-items:flex-start}
+  .h2.como-title{font-size:36px}
   .como-cards{flex-direction:column;width:100%}
-  .como-card{width:100%}
+  .como-card{width:100%;padding:24px 32px}
+  .como-card-title{font-size:22px}
+  .como-card-desc{font-size:16px}
   .como-bottom{flex-direction:column}
   .como-areas{width:100%}
+  .como-areas-title{font-size:24px}
   .como-tags{width:100%}
+  .como-tag{font-size:16px;padding:8px 14px}
   .como-right{position:relative;left:auto;top:auto;width:100%;max-width:608px;height:509px;margin:48px auto 0;overflow:hidden}
   .como-inscr-bg{position:absolute;left:0;top:0;width:100%;height:100%;transform:none}
-  .como-steps-img{left:40px;top:140px;width:48px;height:110px}
-  .como-arrow{left:80px;top:340px;width:30px}
-  .como-inscr-content{position:absolute;left:163px;top:73px;width:380px}
-  .como-inscr-cta-group{margin-top:24px}
+  .como-steps-img{left:32px;top:130px;width:48px;height:110px}
+  .como-arrow{left:70px;top:330px;width:24px}
+  .como-inscr-content{position:absolute;left:120px;top:60px;width:calc(100% - 140px);max-width:400px}
+  .como-inscr-title{font-size:24px}
+  .como-inscr-content p{font-size:16px}
+  .como-inscr-cta-text{font-size:20px !important}
+  .como-inscr-cta-group{margin-top:16px}
 
-  /* Parceiros */
-  .parceiros{padding:48px}
-  .parceiros-box{padding:64px 40px;overflow:hidden}
-  .parceiros-row{gap:32px 48px}
+  /* Parceiros — padding, pill visible */
+  .parceiros{padding:48px;overflow:visible}
+  .parceiros-box{padding:80px 40px 48px;overflow:visible;position:relative}
+  .parceiros-pill{white-space:nowrap}
+  .parceiros-title{font-size:24px}
+  .parceiros-subtitle{font-size:16px}
+  .parceiros-row{gap:32px 40px}
   .parc-logo{max-width:120px;height:auto !important}
 
   /* CTA Final */
-  .cta-final{padding:48px}
-  .cta-final-logo-img{height:132px}
+  .cta-final{padding:60px 48px}
+  .cta-final-logo-img{height:120px}
+  .cta-final-title{font-size:24px}
+  .cta-final-desc{font-size:18px;width:auto;max-width:100%}
   .cta-final-text{max-width:100%}
-  .cta-final-desc{width:auto;max-width:100%}
 
-  /* Wongola */
-  .wongola{padding:48px 0;min-height:auto}
-  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;max-width:none;padding:0 48px}
+  /* Wongola — single column, no Africa */
+  .wongola{padding:60px 0;min-height:auto}
+  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;max-width:none;padding:0 48px;margin:0}
   .wongola-content{max-width:100%}
+  .wongola-quote{font-size:26px}
+  .wongola-africa-bg,.wongola-africa-border,.wongola-africa-map{display:none}
+
+  /* Footer */
+  .footer{padding:40px 48px}
+  .footer-wrap{flex-wrap:wrap;gap:32px}
+  .footer-col{min-width:200px;flex:1 1 40%}
   .wongola-africa-bg{display:none}
   .wongola-africa-border{display:none}
   .wongola-africa-map{display:none}
