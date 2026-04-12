@@ -101,7 +101,7 @@
   // Close button — confirm if form has data
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {
-      if (currentStep > 0 || hasFormData()) {
+      if (currentStep > 0) {
         showConfirmDialog('Você tem dados preenchidos que serão perdidos ao sair. Deseja realmente sair?', closeModal);
       } else {
         closeModal();

@@ -956,6 +956,15 @@ ul{list-style:none}
    RESPONSIVE — below 1280px, normal fluid layout
    (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
+@media(max-width:1366px){
+  .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
+  .nav-menu.open{display:flex}
+  .nav-hamburger{display:flex}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-hamburger.open span:nth-child(2){opacity:0}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
 @media(max-width:1023px){
   .hero-logo-img{width:380px}
   .hero-stats{gap:32px}
@@ -1005,12 +1014,6 @@ ul{list-style:none}
 }
 
 @media(max-width:768px){
-  .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
-  .nav-menu.open{display:flex}
-  .nav-hamburger{display:flex}
-  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-hamburger.open span:nth-child(2){opacity:0}
-  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   .hero{min-height:auto;padding:120px 0 60px}
   .hero-bg{width:220%;left:40%}
   .hero-logo-img{width:280px}
