@@ -957,9 +957,22 @@ ul{list-style:none}
    (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
 @media(max-width:1366px){
-  .nav-menu{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
+  .nav-menu{
+    display:none;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    background:var(--white);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    z-index:9999;
+  }
   .nav-menu.open{display:flex}
-  .nav-hamburger{display:flex}
+  .nav-menu .nav-link{font-size:20px}
+  .nav-menu .btn-nav{width:200px;height:52px;font-size:16px}
+  .nav-hamburger{display:flex;z-index:10000}
+  .nav-hamburger.open{position:fixed;top:24px;right:32px}
   .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-hamburger.open span:nth-child(2){opacity:0}
   .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
