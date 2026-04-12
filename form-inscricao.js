@@ -78,25 +78,22 @@
     backdrop.className = 'confirm-overlay';
     backdrop.innerHTML =
       '<div class="confirm-box">' +
+        '<button class="confirm-close" type="button">&times;</button>' +
+        '<h3 class="confirm-title">Deseja realmente sair?</h3>' +
         '<p class="confirm-message">' + message + '</p>' +
         '<div class="confirm-actions">' +
-          '<button class="confirm-btn confirm-btn-cancel" type="button">' +
-            '<svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>' +
-            '<span>Continuar editando</span>' +
-          '</button>' +
-          '<button class="confirm-btn confirm-btn-ok" type="button">' +
-            '<svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M0 0H186V46.1754L176.008 56H0V0Z" fill="#FFBB00"/></svg>' +
-            '<span>Sair e perder dados</span>' +
-          '</button>' +
+          '<button class="confirm-btn confirm-btn-cancel" type="button">Não, continuar</button>' +
+          '<button class="confirm-btn confirm-btn-ok" type="button">Sim, sair</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(backdrop);
 
-    backdrop.querySelector('.confirm-btn-cancel').addEventListener('click', function () {
-      document.body.removeChild(backdrop);
-    });
+    function dismiss() { document.body.removeChild(backdrop); }
+
+    backdrop.querySelector('.confirm-close').addEventListener('click', dismiss);
+    backdrop.querySelector('.confirm-btn-cancel').addEventListener('click', dismiss);
     backdrop.querySelector('.confirm-btn-ok').addEventListener('click', function () {
-      document.body.removeChild(backdrop);
+      dismiss();
       onConfirm();
     });
   }
