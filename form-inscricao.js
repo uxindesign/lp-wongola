@@ -54,14 +54,35 @@
     }, 350);
   }
 
+  function hasFormData() {
+    var inputs = form.querySelectorAll('input, select, textarea');
+    for (var i = 0; i < inputs.length; i++) {
+      var el = inputs[i];
+      if (el.type === 'radio' || el.type === 'checkbox') {
+        if (el.checked) return true;
+      } else if (el.value.trim() !== '' && el.value !== el.querySelector('option:first-child')?.value) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   function closeModal() {
     overlay.hidden = true;
     document.body.classList.remove('modal-open');
   }
 
-  // Close button
+  // Close button — confirm if form has data
   if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', function () {
+      if (currentStep > 0 || hasFormData()) {
+        if (confirm('Você tem dados preenchidos que serão perdidos. Deseja realmente sair?')) {
+          closeModal();
+        }
+      } else {
+        closeModal();
+      }
+    });
   }
 
   // Click on overlay background — disabled, only close button closes
