@@ -949,7 +949,7 @@ ul{list-style:none}
    RESPONSIVE — below 1280px, normal fluid layout
    (above 1280px JS handles zoom scaling via vw/1920)
    ================================================ */
-@media(max-width:1279px){
+@media(max-width:1023px){
   .hero-logo-img{width:380px}
   .hero-stats{gap:32px}
   .sobre-wrap{flex-direction:column;gap:40px}
