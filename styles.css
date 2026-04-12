@@ -3,7 +3,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:60px}
 [id]{scroll-margin-top:60px}
 #porque{scroll-margin-top:-20px}
-#premiacoes{scroll-margin-top:-100px}
+#premiacoes{scroll-margin-top:-148px}
 body{font-family:var(--f-body);color:var(--text);background:var(--white);overflow-x:hidden}
 img{display:block}
 a{text-decoration:none;color:inherit}
@@ -48,10 +48,10 @@ ul{list-style:none}
 .btn span{position:relative;z-index:1}
 .btn-primary{width:254px;height:56px;font-size:16px;color:var(--navy)}
 .btn-primary-v2{width:276px;height:56px;font-size:18px;color:var(--navy)}
-.btn-outline{width:186px;height:56px;font-size:16px;color:var(--white)}
+.btn-outline{width:186px;height:56px;font-size:16px;color:var(--white);transition:color .3s ease,transform .2s}
 .btn-outline:hover{color:#2A273B}
 .btn-outline:hover .btn-bg path{fill:#fff;stroke:#fff;stroke-opacity:1}
-.btn-outline .btn-bg path{transition:fill .2s,stroke .2s}
+.btn-outline .btn-bg path{transition:fill .3s ease,stroke .3s ease}
 .btn-nav{width:142px;height:40px;font-size:14px;color:var(--navy)}
 
 /* NAV */
@@ -886,10 +886,10 @@ ul{list-style:none}
   font-size:20px;line-height:1.4;color:#3c3c3c;
   max-width:472px;
 }
-.btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text)}
+.btn-outline-dark{width:186px;height:56px;font-size:16px;color:var(--text);transition:color .3s ease,transform .2s}
 .btn-outline-dark:hover{color:#fff}
 .btn-outline-dark:hover .btn-bg path{fill:#2A273B;stroke:#2A273B;stroke-opacity:1}
-.btn-outline-dark .btn-bg path{transition:fill .2s,stroke .2s}
+.btn-outline-dark .btn-bg path{transition:fill .3s ease,stroke .3s ease}
 
 /* Africa illustration */
 .wongola-africa{
