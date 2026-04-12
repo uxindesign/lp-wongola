@@ -959,6 +959,7 @@ ul{list-style:none}
 @media(min-width:1281px) and (max-width:1919px){
   .page{
     width:1920px;
+    margin-left:calc((100vw - 1920px) / 2);
   }
 }
 
