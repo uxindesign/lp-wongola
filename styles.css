@@ -1042,11 +1042,11 @@ ul{list-style:none}
   .como-bottom{flex-direction:column}
   .como-areas{width:100%}
   .como-tags{width:100%}
-  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:500px;margin-top:48px}
-  .como-inscr-bg{position:absolute;left:-5%;top:-5%;width:110%;height:110%;transform:none}
-  .como-steps-img{left:40px;top:120px;width:48px;height:auto}
-  .como-arrow{left:100px;top:320px}
-  .como-inscr-content{position:absolute;left:140px;top:80px;width:70%}
+  .como-right{position:relative;left:auto;top:auto;width:100%;max-width:608px;height:509px;margin:48px auto 0;overflow:hidden}
+  .como-inscr-bg{position:absolute;left:0;top:0;width:100%;height:100%;transform:none}
+  .como-steps-img{left:40px;top:140px;width:48px;height:110px}
+  .como-arrow{left:80px;top:340px;width:30px}
+  .como-inscr-content{position:absolute;left:163px;top:73px;width:380px}
   .como-inscr-cta-group{margin-top:24px}
 
   /* Parceiros */
