@@ -221,7 +221,7 @@
 
 /* ---- Form groups ---- */
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .form-row {
@@ -234,7 +234,7 @@
   display: block;
   font-family: var(--f-body, 'Lato', sans-serif);
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   color: var(--text, #2a273b);
   margin-bottom: 8px;
   line-height: 1.4;
@@ -328,7 +328,7 @@
   padding: 10px 14px;
   border-radius: 10px;
   font-family: var(--f-body, 'Lato', sans-serif);
-  font-size: 17px;
+  font-size: 16px;
   color: var(--text, #2a273b);
   transition: background 0.15s;
   line-height: 1.4;
