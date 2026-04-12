@@ -195,16 +195,10 @@ ul{list-style:none}
   transform:rotate(0deg);
 }
 .cacc-body{
-  padding:0 32px 32px;
+  padding:0 32px;
   max-height:0;
   overflow:hidden;
-  transition:max-height .4s ease,padding .4s ease;
-}
-.cacc-body[hidden]{
-  display:block !important;
-  max-height:0;
-  padding-top:0;
-  padding-bottom:0;
+  transition:max-height .5s ease, padding-bottom .5s ease;
 }
 .cacc-open .cacc-body{
   max-height:2000px;
