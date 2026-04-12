@@ -601,7 +601,8 @@
   background: var(--white, #fff);
   border-radius: 24px;
   padding: 48px;
-  max-width: 480px;
+  max-width: 580px;
+  position: relative;
   width: 90%;
   text-align: center;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
@@ -650,7 +651,7 @@
 .confirm-btn {
   font-family: var(--f-body, 'Lato', sans-serif);
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   border: none;
   border-radius: 12px;
   padding: 12px 24px;
