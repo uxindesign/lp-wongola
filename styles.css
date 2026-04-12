@@ -987,6 +987,9 @@ ul{list-style:none}
 /* ===== TABLET — max-width: 1023px ===== */
 @media(max-width:1023px){
 
+  /* Hide all floating decorations */
+  .deco{display:none}
+
   /* General */
   .h2{font-size:40px}
   .body{font-size:20px}
@@ -999,22 +1002,22 @@ ul{list-style:none}
 
   /* Sobre */
   .sobre{padding:48px}
-  .sobre-wrap{flex-direction:column;padding:48px;max-width:none}
+  .sobre-wrap{flex-direction:column;padding:0;max-width:none}
   .sobre-content{max-width:100%}
   .sobre-img{display:none}
 
   /* Accordion */
-  .cacc-cols{grid-template-columns:1fr}
+  .content-accordion-wrap{padding:0 48px}
 
   /* Por que participar */
-  .porque{height:auto;padding:0 48px}
-  .porque-bg{width:950px;left:50%;transform:translateX(-50%)}
-  .porque-text{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:100%;padding:48px 0}
+  .porque{height:auto;overflow:hidden}
+  .porque-bg{position:absolute;width:120%;left:-10%;top:0;height:auto}
+  .porque-overlay{position:relative;padding:80px 48px}
+  .porque-text{position:relative;left:auto;top:auto;width:100%}
   .porque-photo{display:none}
-  .porque-cta-box{position:relative;left:auto;top:auto;right:auto;bottom:auto;width:100%;height:auto}
-  .porque-overlay{position:relative;padding:48px}
-  .porque-cta-shape{left:-10%;top:-10%;width:120%;height:120%}
-  .porque-cta-content{position:relative;left:auto;top:auto;width:100%}
+  .porque-cta-box{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px}
+  .porque-cta-shape{position:absolute;left:-5%;top:-5%;width:110%;height:110%}
+  .porque-cta-content{position:relative;left:auto;top:auto;width:100%;padding:40px}
 
   /* Cronograma */
   .crono{padding:48px}
@@ -1022,43 +1025,54 @@ ul{list-style:none}
   .tl-date{font-size:24px}
 
   /* Premiacoes */
+  .premiacoes{overflow:hidden}
+  .premiacoes-bg{left:-50%;width:200%}
   .premiacoes-photo{display:none}
-  .premiacoes-wrap{padding:128px 48px}
+  .premiacoes-wrap{padding:128px 48px;max-width:none}
   .premiacoes-top{width:100%}
-  .premiacoes-bottom{grid-template-columns:1fr}
+  .premiacoes-bottom{grid-template-columns:1fr;gap:24px}
   .premiacoes-trophy{display:none}
 
   /* Como participar */
-  .como-bg{width:1445px}
-  .como-wrap{padding:48px;flex-direction:column;align-items:flex-start}
+  .como{overflow:hidden;margin-top:80px}
+  .como-bg{width:120%;left:-10%;position:relative}
+  .como-wrap{padding:80px 48px;top:0;max-width:none}
   .como-cards{flex-direction:column;width:100%}
   .como-card{width:100%}
   .como-bottom{flex-direction:column}
   .como-areas{width:100%}
-  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:600px;margin-top:40px}
-  .como-inscr-bg{left:50%;top:60px;width:100%;height:auto;transform:translateX(-50%) rotate(-5deg)}
-  .como-inscr-content{position:relative;left:auto;top:auto;width:100%}
+  .como-tags{width:100%}
+  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px}
+  .como-inscr-bg{position:absolute;left:-5%;top:-5%;width:110%;height:110%;transform:none}
+  .como-steps-img{display:none}
+  .como-arrow{display:none}
+  .como-inscr-content{position:relative;left:auto;top:auto;width:100%;padding:48px}
+  .como-inscr-cta-group{margin-top:24px}
 
   /* Parceiros */
   .parceiros{padding:48px}
-  .parceiros-box{padding:64px 40px}
+  .parceiros-box{padding:64px 40px;overflow:hidden}
   .parceiros-row{gap:32px 48px}
+  .parc-logo{max-width:120px;height:auto !important}
 
   /* CTA Final */
   .cta-final{padding:48px}
   .cta-final-logo-img{height:132px}
+  .cta-final-text{max-width:100%}
+  .cta-final-desc{width:auto;max-width:100%}
 
   /* Wongola */
-  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;padding:48px}
-  .wongola-content{max-width:580px}
+  .wongola{padding:48px 0;min-height:auto}
+  .wongola-wrap{position:relative;left:auto;top:auto;width:auto;max-width:none;padding:0 48px}
+  .wongola-content{max-width:100%}
   .wongola-africa-bg{display:none}
   .wongola-africa-border{display:none}
   .wongola-africa-map{display:none}
 
   /* Footer */
   .footer{padding:40px 48px}
-  .footer-top{display:grid;grid-template-columns:1fr 1fr}
-  .footer-links{width:100%}
+  .footer-wrap{flex-wrap:wrap}
+  .footer-col{min-width:250px}
 }
 
 /* ===== MOBILE — max-width: 768px ===== */
