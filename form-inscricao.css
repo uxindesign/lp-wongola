@@ -661,18 +661,18 @@
 .confirm-btn:hover {
   transform: translateY(-1px);
 }
-.confirm-btn-cancel {
+.confirm-btn-ok {
   background: #f0f0f0;
   color: var(--text, #2a273b);
 }
-.confirm-btn-cancel:hover {
+.confirm-btn-ok:hover {
   background: #e4e4e4;
 }
-.confirm-btn-ok {
+.confirm-btn-cancel {
   background: var(--yellow, #ffbb00);
   color: var(--navy, #181057);
 }
-.confirm-btn-ok:hover {
+.confirm-btn-cancel:hover {
   background: #ffc61a;
 }
 
