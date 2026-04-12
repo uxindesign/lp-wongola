@@ -68,10 +68,14 @@
   color: var(--navy, #181057);
 }
 
-/* ---- Header (stepper only) ---- */
+/* ---- Header (stepper — fixed left sidebar) ---- */
 .modal-header {
-  padding: 0 40px;
-  flex-shrink: 0;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 24px 20px;
+  z-index: 3;
 }
 
 .modal-title {
@@ -91,24 +95,28 @@
   margin: 0 0 16px;
 }
 
-/* ---- Stepper (horizontal) ---- */
+/* ---- Stepper (vertical, floating left) ---- */
 .stepper {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 40px 0 8px;
-  padding: 32px 40px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  margin: 0;
+  padding: 20px 16px;
   background: #f5f5f5;
   border-radius: 16px;
 }
 
 .step-indicator {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 4px;
+  gap: 10px;
   flex-shrink: 0;
   position: relative;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background .2s;
 }
 
 .step-indicator span {
@@ -128,19 +136,23 @@
 
 .step-indicator small {
   font-family: var(--f-body, 'Lato', sans-serif);
-  font-size: 14px;
+  font-size: 13px;
   color: #999;
   white-space: nowrap;
   transition: color 0.3s;
+  text-align: left;
 }
 
+.step-indicator.active {
+  background: var(--white, #fff);
+}
 .step-indicator.active span {
   background: var(--blue, #155cf4);
   color: var(--white, #fff);
 }
 
 .step-indicator.active small {
-  color: var(--blue, #155cf4);
+  color: var(--navy, #181057);
   font-weight: 700;
 }
 
@@ -154,10 +166,7 @@
 }
 
 .step-connector {
-  flex: 1;
-  height: 2px;
-  background: #e0e0e0;
-  margin-bottom: 18px;
+  display: none;
   transition: background 0.3s;
 }
 
