@@ -110,9 +110,12 @@
     btnNext.hidden = (n === totalSteps - 1);
     btnSubmit.hidden = (n !== totalSteps - 1);
 
-    // Scroll modal form to top
+    // Scroll to top of form
     var formEl = document.querySelector('.modal-form');
-    if (formEl) formEl.scrollTop = 0;
+    if (formEl) {
+      formEl.scrollTop = 0;
+      formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   // Next
