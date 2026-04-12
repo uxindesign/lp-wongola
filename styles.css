@@ -197,17 +197,28 @@ ul{list-style:none}
 .cacc-body{
   padding:0 32px 32px;
 }
-.cacc-cols{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:32px;
+.cacc-content{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  padding:8px;
 }
-.cacc-cols p{
+.cacc-content p{
   font-family:var(--f-body);
   font-size:20px;
   color:var(--text);
-  line-height:1.5;
+  line-height:1.4;
 }
+.cacc-content ul,.cacc-content ol{
+  list-style:disc;
+  padding-left:30px;
+  font-family:var(--f-body);
+  font-size:20px;
+  color:var(--text);
+  line-height:1.4;
+}
+.cacc-content ol{list-style:decimal}
+.cacc-content li{margin-bottom:8px}
 
 /* ================================================
    POR QUE PARTICIPAR — blue organic blob background
