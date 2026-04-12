@@ -631,16 +631,16 @@
 .confirm-title {
   font-family: var(--f-head, 'Outfit', sans-serif);
   font-weight: 900;
-  font-size: 22px;
+  font-size: 28px;
   color: var(--navy, #181057);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 .confirm-message {
   font-family: var(--f-body, 'Lato', sans-serif);
-  font-size: 16px;
-  color: #666;
+  font-size: 20px;
+  color: #555;
   line-height: 1.5;
-  margin: 0 0 32px;
+  margin: 0 0 40px;
 }
 .confirm-actions {
   display: flex;
@@ -650,7 +650,7 @@
 .confirm-btn {
   font-family: var(--f-body, 'Lato', sans-serif);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   border-radius: 12px;
   padding: 12px 24px;

@@ -80,10 +80,10 @@
       '<div class="confirm-box">' +
         '<button class="confirm-close" type="button">&times;</button>' +
         '<h3 class="confirm-title">Deseja realmente sair?</h3>' +
-        '<p class="confirm-message">' + message + '</p>' +
+        '<p class="confirm-message">Os dados preenchidos até o momento serão perdidos e você precisará recomeçar a inscrição.</p>' +
         '<div class="confirm-actions">' +
-          '<button class="confirm-btn confirm-btn-cancel" type="button">Não, continuar</button>' +
-          '<button class="confirm-btn confirm-btn-ok" type="button">Sim, sair</button>' +
+          '<button class="confirm-btn confirm-btn-cancel" type="button">Voltar</button>' +
+          '<button class="confirm-btn confirm-btn-ok" type="button">Sair da inscrição</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(backdrop);
