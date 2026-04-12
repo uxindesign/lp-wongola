@@ -165,7 +165,7 @@
 }
 
 .step-indicator.completed span {
-  background: var(--navy, #181057);
+  background: #16a34a;
   color: var(--white, #fff);
 }
 
