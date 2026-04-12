@@ -68,18 +68,26 @@
   color: var(--navy, #181057);
 }
 
-/* ---- Header (stepper — fixed left sidebar) ---- */
+/* ---- Header (stepper — floating left of form) ---- */
 .modal-header {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 24px 20px;
+  position: absolute;
+  left: -240px;
+  top: 120px;
+  padding: 0;
   z-index: 3;
 }
 
 .modal-title {
-  display: none; /* title moves into form area */
+  display: none;
+}
+.stepper-label {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .form-divider {
@@ -179,6 +187,7 @@
   padding: 0 40px 40px;
   overflow-y: visible;
   flex: 1;
+  position: relative;
 }
 .modal-form::before {
   content: 'Inscrição — Hackathon App BiT';
