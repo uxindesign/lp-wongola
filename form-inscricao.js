@@ -70,6 +70,8 @@
   function closeModal() {
     overlay.hidden = true;
     document.body.classList.remove('modal-open');
+    resetForm();
+    showStep(0);
   }
 
   // Custom confirm dialog
