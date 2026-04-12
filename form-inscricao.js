@@ -72,13 +72,40 @@
     document.body.classList.remove('modal-open');
   }
 
+  // Custom confirm dialog
+  function showConfirmDialog(message, onConfirm) {
+    var backdrop = document.createElement('div');
+    backdrop.className = 'confirm-overlay';
+    backdrop.innerHTML =
+      '<div class="confirm-box">' +
+        '<p class="confirm-message">' + message + '</p>' +
+        '<div class="confirm-actions">' +
+          '<button class="confirm-btn confirm-btn-cancel" type="button">' +
+            '<svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>' +
+            '<span>Continuar editando</span>' +
+          '</button>' +
+          '<button class="confirm-btn confirm-btn-ok" type="button">' +
+            '<svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M0 0H186V46.1754L176.008 56H0V0Z" fill="#FFBB00"/></svg>' +
+            '<span>Sair e perder dados</span>' +
+          '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(backdrop);
+
+    backdrop.querySelector('.confirm-btn-cancel').addEventListener('click', function () {
+      document.body.removeChild(backdrop);
+    });
+    backdrop.querySelector('.confirm-btn-ok').addEventListener('click', function () {
+      document.body.removeChild(backdrop);
+      onConfirm();
+    });
+  }
+
   // Close button — confirm if form has data
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {
       if (currentStep > 0 || hasFormData()) {
-        if (confirm('Você tem dados preenchidos que serão perdidos. Deseja realmente sair?')) {
-          closeModal();
-        }
+        showConfirmDialog('Você tem dados preenchidos que serão perdidos ao sair. Deseja realmente sair?', closeModal);
       } else {
         closeModal();
       }
