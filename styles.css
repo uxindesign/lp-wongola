@@ -991,30 +991,35 @@ ul{list-style:none}
   .deco{display:none}
 
   /* General */
-  .h2{font-size:36px}
-  .body{font-size:18px}
+  .h2{font-size:40px}
+  .body{font-size:20px}
 
-  /* Hero — bg covers, content centered */
+  /* Hero — Figma: logo 400px, deadline 32px, desc 22px, stats 24px gap 48px */
   .hero{overflow:hidden}
   .hero-bg{width:180%;left:-40%}
-  .hero-content{max-width:100%;padding:0 48px;margin:0 auto;top:120px}
-  .hero-inner{max-width:100%}
-  .hero-logo-img{width:340px;height:auto}
-  .hero-stats{gap:24px;flex-wrap:wrap;justify-content:center}
-  .hero-desc{max-width:100%}
+  .hero-content{max-width:100%;padding:0 48px;margin:0 auto;top:120px;gap:64px}
+  .hero-inner{max-width:100%;gap:40px}
+  .hero-logo-img{width:400px;height:auto}
+  .hero-tagline{font-size:24px}
+  .hero-deadline{font-size:32px}
+  .hero-desc{max-width:100%;font-size:22px}
+  .hero-stats{gap:48px;padding-top:16px}
+  .stat-val{font-size:24px}
 
-  /* Sobre — single column, no photo */
+  /* Sobre — Figma: h2 40px, body 20px, padding 48px sides */
   .sobre{padding:60px 48px}
-  .sobre-wrap{flex-direction:column;padding:0;max-width:none;gap:32px}
+  .sobre-wrap{flex-direction:column;padding:0;max-width:none;gap:16px}
   .sobre-content{max-width:100%}
   .sobre-img{display:none}
-  .h2-sobre{font-size:36px}
-  .body-sobre{font-size:18px}
+  .h2-sobre{font-size:40px}
+  .body-sobre{font-size:20px}
 
-  /* Accordion — full width with padding */
+  /* Accordion — Figma: title 28px, padding 28px, body text 20px */
   .content-accordion{padding:0}
   .content-accordion-wrap{padding:0 48px}
-  .cacc-title{font-size:24px}
+  .cacc-item{border-radius:32px}
+  .cacc-header{padding:28px}
+  .cacc-title{font-size:28px}
   .cacc-body{padding:0 24px}
   .cacc-open .cacc-body{padding-bottom:24px}
 
