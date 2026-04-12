@@ -88,8 +88,21 @@
   font-weight: 900;
   font-size: 24px;
   color: var(--navy, #181057);
-  margin: 0 0 24px;
+  margin: 0 0 32px;
   line-height: 1.2;
+}
+
+.form-divider {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,.1);
+  margin: 32px 0 24px;
+}
+.form-section-subtitle {
+  font-family: var(--f-head, 'Outfit', sans-serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy, #181057);
+  margin: 0 0 16px;
 }
 
 /* ---- Stepper ---- */
