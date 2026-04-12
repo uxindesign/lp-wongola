@@ -1042,11 +1042,11 @@ ul{list-style:none}
   .como-bottom{flex-direction:column}
   .como-areas{width:100%}
   .como-tags{width:100%}
-  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px}
-  .como-inscr-bg{position:absolute;left:-5%;top:-5%;width:110%;height:110%;transform:none}
+  .como-right{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:48px;background:var(--navy);border-radius:32px;padding:48px;overflow:hidden}
+  .como-inscr-bg{display:none}
   .como-steps-img{display:none}
   .como-arrow{display:none}
-  .como-inscr-content{position:relative;left:auto;top:auto;width:100%;padding:48px}
+  .como-inscr-content{position:relative;left:auto;top:auto;width:100%;padding:0}
   .como-inscr-cta-group{margin-top:24px}
 
   /* Parceiros */
