@@ -71,7 +71,7 @@
 /* ---- Header (stepper — floating left of form) ---- */
 .modal-header {
   position: absolute;
-  left: -240px;
+  left: -220px;
   top: 120px;
   padding: 0;
   z-index: 3;
@@ -87,7 +87,7 @@
   color: #999;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 12px;
+  margin: 0 0 8px 12px;
 }
 
 .form-divider {
