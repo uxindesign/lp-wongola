@@ -229,6 +229,13 @@
   line-height: 1.2;
 }
 
+.form-required-note {
+  font-family: var(--f-body, 'Lato', sans-serif);
+  font-size: 14px;
+  color: #636363;
+  margin-bottom: 24px;
+}
+
 /* ---- Form step (wizard pages) ---- */
 .form-step {
   display: none;

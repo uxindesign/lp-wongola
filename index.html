@@ -515,6 +515,7 @@
             <div class="step-indicator" data-step="3"><span>4</span><small>LGPD</small></div>
           </div>
         </div>
+        <p class="form-required-note">Campos marcados com <span class="req">*</span> são obrigatórios.</p>
         <!-- STEP 1: Dados Pessoais -->
         <div class="form-step active" data-form-step="0">
           <h3 class="form-step-title">Dados Pessoais</h3>
@@ -692,22 +693,24 @@
           <h4 class="form-section-subtitle">Diversidade e Inclusão</h4>
           <p class="form-step-desc">O Hackathon App BiT é <strong>aberto a todas as pessoas</strong> com interesse e capacidade técnica para desenvolver um aplicativo, independentemente de raça, cor ou origem. As perguntas abaixo <strong>não são critério de exclusão ou seleção</strong>.</p>
           <fieldset class="form-group">
-            <legend class="form-label">Autodeclaração racial</legend>
+            <legend class="form-label">Autodeclaração racial <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="autodeclaracao">
-              <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Preta"> Preta</label>
+              <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Preta" required> Preta</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Parda"> Parda</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Branca"> Branca</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Amarela"> Amarela</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Indígena"> Indígena</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Prefiro não declarar"> Prefiro não declarar</label>
             </div>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </fieldset>
           <fieldset class="form-group">
-            <legend class="form-label">Autoriza o uso da autodeclaração para convites futuros relacionados a bolsas, mentorias ou ações afirmativas?</legend>
+            <legend class="form-label">Autoriza o uso da autodeclaração para convites futuros relacionados a bolsas, mentorias ou ações afirmativas? <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="autoriza_autodeclaracao">
-              <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Sim"> Sim</label>
+              <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Sim" required> Sim</label>
               <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Não"> Não</label>
             </div>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </fieldset>
         </div>
         <!-- STEP 3: Questões Técnicas + Profissional -->
