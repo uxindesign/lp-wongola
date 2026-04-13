@@ -1111,10 +1111,12 @@ ul{list-style:none}
   .crono{padding:64px 48px;text-align:center}
   .crono-wrap{max-width:960px}
   .crono-subtitle{font-size:20px}
-  .timeline{padding:32px 32px 48px;border-radius:20px;max-width:960px;margin:40px auto 0;gap:16px}
-  .tl-row{justify-content:space-between}
+  .timeline{padding:32px 24px 48px;border-radius:20px;max-width:960px;margin:40px auto 0;gap:16px}
+  .tl-row{justify-content:space-between;gap:16px;flex-wrap:nowrap;width:100%}
+  .tl-item{min-width:0}
   .tl-date{font-size:24px}
   .tl-lbl{font-size:14px;line-height:20px}
+  .tl-chev{width:12px;height:16px}
   .tl-pill{font-size:18px;padding:8px 20px}
   .crono-cta{margin-top:40px}
 
