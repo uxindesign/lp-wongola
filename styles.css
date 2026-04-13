@@ -1108,13 +1108,15 @@ ul{list-style:none}
   .porque-cta-vagas{font-size:24px;line-height:1.3}
 
   /* ---- CRONOGRAMA ---- */
-  .crono{padding:64px 48px 64px;text-align:center}
+  .crono{padding:64px 48px;text-align:center}
   .crono-wrap{max-width:960px}
-  .timeline{padding:32px 32px 48px;border-radius:20px;max-width:960px;margin:48px auto 0}
+  .crono-subtitle{font-size:20px}
+  .timeline{padding:32px 32px 48px;border-radius:20px;max-width:960px;margin:40px auto 0;gap:16px}
   .tl-row{justify-content:space-between}
   .tl-date{font-size:24px}
-  .tl-lbl{font-size:14px}
-  .tl-pill{font-size:18px}
+  .tl-lbl{font-size:14px;line-height:20px}
+  .tl-pill{font-size:18px;padding:8px 20px}
+  .crono-cta{margin-top:40px}
 
   /* ---- PREMIACOES — solid gray bg, 2 cols via grid ---- */
   .premiacoes{
@@ -1142,7 +1144,7 @@ ul{list-style:none}
   .cat-number{width:32px;height:32px;min-width:32px;font-size:18px}
   .cat-title{font-size:22px}
   .cat-desc{font-size:18px}
-  .premiacoes-categories{gap:16px}
+  .premiacoes-categories{gap:16px;padding:8px 0}
   /* Prize cards in right column spanning both rows */
   .premiacoes-bottom{
     grid-column:2;grid-row:1 / 3;
@@ -1152,6 +1154,7 @@ ul{list-style:none}
   .prize-card{padding:28px;border-radius:32px;gap:16px}
   .prize-card-title{font-size:24px;padding-left:0}
   .prize-card-subtitle{font-size:20px;padding-left:0}
+  .prize-list{padding-left:27px}
   .prize-list li{font-size:18px}
 
   /* ---- COMO PARTICIPAR — solid yellow bg ---- */
@@ -1206,11 +1209,11 @@ ul{list-style:none}
   .parceiros-title{font-size:28px}
   .parceiros-subtitle{font-size:20px}
   .parceiros-grid{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
     gap:32px 40px;
+    align-items:center;
+    justify-items:center;
   }
   .parceiros-row{display:contents}
   .parc-logo{max-width:160px;height:auto !important}
@@ -1247,26 +1250,31 @@ ul{list-style:none}
 @media(max-width:1023px){
 
   /* Por que participar — stack to single col */
-  .porque-overlay{flex-direction:column;gap:32px}
+  .porque-overlay{flex-direction:column;gap:48px}
   .porque-text,.porque-cta-box{flex:none;width:100%}
 
   /* Premiacoes — single col */
   .premiacoes-wrap{
     grid-template-columns:1fr;
+    gap:24px;
   }
   .premiacoes-wrap > .h2{grid-column:1;grid-row:1}
   .premiacoes-top{grid-column:1;grid-row:2}
   .premiacoes-bottom{grid-column:1;grid-row:3}
+  .premiacoes-categories{gap:8px}
+  .prize-card{padding:28px;border-radius:32px}
 
   /* Como participar bottom — stack */
   .como-bottom{flex-direction:column;gap:32px}
   .como-areas,.como-right{flex:none;width:100%}
 
-  /* Cronograma */
+  /* Cronograma — same sizes as 1280 */
   .crono{padding:64px 48px}
-  .tl-row{gap:16px}
-  .tl-date{font-size:22px}
-  .tl-lbl{font-size:13px}
+  .tl-date{font-size:24px}
+  .tl-lbl{font-size:14px}
+
+  /* Parceiros — 3 cols at this width */
+  .parceiros-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
 
   /* Footer */
   .footer-col{min-width:200px;flex:1 1 40%}
@@ -1294,18 +1302,20 @@ ul{list-style:none}
   .hero-tagline{font-size:20px}
   .hero-deadline{font-size:24px}
   .hero-desc{font-size:18px}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;justify-items:center;padding-top:16px}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:40px;justify-items:center;padding-top:16px}
   .stat-val{font-size:20px}
   .hero-buttons{flex-direction:column;align-items:center;gap:16px;padding-top:8px}
+  .btn-primary,.btn-primary-v2,.btn-outline,.btn-outline-dark{font-size:16px}
 
   /* Sobre + Accordion section */
   .sobre{padding:48px 24px}
+  .sobre-wrap{gap:24px}
   .h2-sobre{font-size:28px}
   .body-sobre{font-size:16px}
 
   /* Accordion */
   .content-accordion{padding:0 0 48px}
-  .content-accordion-wrap{padding:0 24px}
+  .content-accordion-wrap{padding:0 24px;gap:8px}
   .cacc-item{border-radius:24px}
   .cacc-header{padding:20px}
   .cacc-title{font-size:22px}
@@ -1313,7 +1323,7 @@ ul{list-style:none}
   .cacc-open .cacc-body{padding-bottom:20px}
   .cacc-content{gap:16px;padding:8px}
   .cacc-content p{font-size:16px}
-  .cacc-content ul,.cacc-content ol{font-size:16px}
+  .cacc-content ul,.cacc-content ol{font-size:16px;padding-left:24px}
 
   /* Por que participar */
   .porque{padding:48px 24px}
@@ -1340,54 +1350,60 @@ ul{list-style:none}
 
   /* Premiacoes */
   .premiacoes{padding:48px 24px}
-  .premiacoes-wrap{gap:16px 24px}
-  .premiacoes-intro{font-size:18px}
+  .premiacoes-wrap{gap:24px}
+  .premiacoes-intro{font-size:16px}
   .premiacoes-categories{gap:8px}
   .cat-card{padding:20px;border-radius:24px;gap:16px}
-  .cat-title{font-size:18px}
+  .cat-title{font-size:20px}
   .cat-desc{font-size:16px}
+  .cat-content{gap:8px}
   .premiacoes-bottom{gap:16px}
   .prize-card{padding:24px;border-radius:24px;gap:16px}
-  .prize-card-title{font-size:20px}
-  .prize-card-subtitle{font-size:18px}
+  .prize-card-title{font-size:24px}
+  .prize-card-subtitle{font-size:20px}
+  .prize-list{padding-left:24px}
   .prize-list li{font-size:16px}
 
   /* Como participar */
   .como-wrap{padding:48px 24px;gap:40px}
   .como-cards{gap:8px}
-  .como-card{padding:24px;border-radius:24px}
-  .como-card-title{font-size:20px}
-  .como-card-desc{font-size:16px}
-  .como-areas-title{font-size:22px;margin-bottom:16px}
+  .como-card{padding:24px;border-radius:24px;gap:16px}
+  .como-card-title{font-size:22px}
+  .como-card-desc{font-size:18px}
+  .como-areas-title{font-size:24px;margin-bottom:16px}
   .como-tag{font-size:16px;padding:12px;border-radius:12px}
   .como-right{padding:24px;border-radius:24px}
   .como-inscr-title{font-size:22px}
   .como-inscr-content p{font-size:16px}
-  .como-inscr-cta-text{font-size:18px !important}
+  .como-inscr-cta-text{font-size:20px !important}
+  .como-inscr-cta-group{gap:24px}
+  .como-cta-row{margin-top:0}
 
   /* Parceiros */
-  .parceiros{padding:24px}
+  .parceiros{padding:64px 24px 48px}
   .parceiros-box{padding:48px 24px 32px;border-radius:28px;gap:48px}
-  .parceiros-pill{font-size:12px;padding:12px 24px;top:-22px}
-  .parceiros-text{margin-bottom:0}
-  .parceiros-title{font-size:22px}
+  .parceiros-pill{font-size:12px;padding:12px 24px;top:-19px}
+  .parceiros-text{margin-bottom:0;gap:24px}
+  .parceiros-title{font-size:24px}
   .parceiros-subtitle{font-size:16px}
-  .parceiros-grid{grid-template-columns:1fr;gap:32px;justify-items:center}
+  .parceiros-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:32px}
 
   /* CTA Final */
   .cta-final{padding:24px 24px 48px}
   .cta-final-wrap{gap:40px}
   .cta-final-logo-img{height:80px}
-  .cta-final-title{font-size:24px}
+  .cta-final-title{font-size:22px}
   .cta-final-desc{font-size:16px;width:auto}
+  .cta-final-text{gap:20px}
 
   /* Wongola */
   .wongola{padding:48px 0}
   .wongola-wrap{padding:0 24px;gap:40px}
+  .wongola-logo{gap:16px}
   .wongola-logo img{width:80px;height:82px}
   .wongola-content{gap:24px}
   .wongola-content .h2{font-size:28px}
-  .wongola-content .body{font-size:18px}
+  .wongola-content .body{font-size:16px}
   .wongola-quote{font-size:18px}
   .wongola-blockquote p{font-size:16px;max-width:100%}
 
