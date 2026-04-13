@@ -827,6 +827,35 @@
     gap: 4px;
     padding: 8px 12px;
   }
+
+  /* Form buttons: full width, rectangular, stacked */
+  .form-nav {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+  .form-btn {
+    width: 100%;
+    height: 56px;
+  }
+  .form-btn-prev,
+  .form-btn-next,
+  .form-btn-submit {
+    width: 100%;
+    margin-left: 0;
+  }
+  .form-btn .form-btn-bg {
+    display: none;
+  }
+  .form-btn-next,
+  .form-btn-submit {
+    background: var(--yellow, #ffbb00);
+    color: var(--navy, #181057);
+  }
+  .form-btn-prev {
+    background: transparent;
+    border: 2px solid var(--text, #2a273b);
+    color: var(--text, #2a273b);
+  }
 }
 
 /* ---- Scrollbar styling inside modal ---- */
