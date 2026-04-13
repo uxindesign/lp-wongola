@@ -699,6 +699,9 @@
   .modal {
     max-width: 100%;
   }
+  .modal-overlay {
+    justify-content: center;
+  }
 
   .form-stepper-wrap {
     position: relative;
@@ -731,6 +734,34 @@
 
   .form-step.active {
     padding: 32px;
+  }
+}
+
+/* ---- ≤720px: stepper compact, only active label visible ---- */
+@media (max-width: 720px) {
+  .step-indicator small {
+    display: none;
+  }
+  .step-indicator.active small {
+    display: block;
+  }
+  .step-indicator {
+    flex: 0;
+    padding: 8px;
+    gap: 0;
+  }
+  .step-indicator.active {
+    flex: 1;
+    gap: 8px;
+  }
+  .step-indicator span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .stepper {
+    gap: 4px;
+    padding: 8px 12px;
   }
 }
 
@@ -824,28 +855,8 @@
   }
 }
 
-/* ---- ≤600px: hide step labels, numbers only ---- */
+/* ---- ≤600px: form buttons stacked ---- */
 @media (max-width: 600px) {
-  .step-indicator small {
-    display: none;
-  }
-
-  .step-indicator {
-    padding: 8px;
-    gap: 0;
-  }
-
-  .step-indicator span {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
-
-  .stepper {
-    gap: 4px;
-    padding: 8px 12px;
-  }
-
   /* Form buttons: full width, rectangular, stacked */
   .form-nav {
     flex-direction: column-reverse;
