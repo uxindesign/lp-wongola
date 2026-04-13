@@ -137,11 +137,11 @@
         </div>
       </div>
       <div class="cacc-item" data-cacc>
-        <button class="cacc-header" aria-expanded="false">
+        <button class="cacc-header" aria-expanded="false" aria-controls="cacc-panel-2">
           <span class="cacc-title">Dores que queremos superar</span>
           <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
         </button>
-        <div class="cacc-body">
+        <div class="cacc-body" id="cacc-panel-2" role="region">
           <div class="cacc-content">
             <p>O Hackathon App BiT foi idealizado para enfrentar problemas históricos que limitam a inclusão de comunidades sub-representadas, especialmente da população negra, no mercado de tecnologia.</p>
             <p><strong>Os desafios incluem:</strong></p>
@@ -156,11 +156,11 @@
         </div>
       </div>
       <div class="cacc-item" data-cacc>
-        <button class="cacc-header" aria-expanded="false">
+        <button class="cacc-header" aria-expanded="false" aria-controls="cacc-panel-3">
           <span class="cacc-title">Propósito do APP BiT</span>
           <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
         </button>
-        <div class="cacc-body">
+        <div class="cacc-body" id="cacc-panel-3" role="region">
           <div class="cacc-content">
             <p>Desenvolvido com o suporte tecnológico da <strong>Oracle, o BiT App</strong> será muito mais do que uma ferramenta digital: será um <strong>motor de transformação social</strong>, com metas claras e impacto real nas seguintes áreas:</p>
             <ul>
@@ -176,11 +176,11 @@
         </div>
       </div>
       <div class="cacc-item" data-cacc>
-        <button class="cacc-header" aria-expanded="false">
+        <button class="cacc-header" aria-expanded="false" aria-controls="cacc-panel-4">
           <span class="cacc-title">Temas e tecnologias prioritárias</span>
           <img class="cacc-icon" src="assets/icon-chevron-right.svg" alt="" aria-hidden="true">
         </button>
-        <div class="cacc-body">
+        <div class="cacc-body" id="cacc-panel-4" role="region">
           <div class="cacc-content">
             <p>Durante o Hackathon, os participantes desenvolverão soluções voltadas para os seguintes desafios:</p>
             <ol>
@@ -570,14 +570,14 @@
             <small class="form-hint">Número válido de WhatsApp para adicioná-lo(a) ao grupo oficial.</small>
             <span class="form-error" role="alert" hidden>Informe um número de WhatsApp válido (ex: +55 11 99999-9999).</span>
           </div>
-          <div class="form-group">
-            <label class="form-label">Possui perfil no LinkedIn? <span class="req">*</span></label>
+          <fieldset class="form-group">
+            <legend class="form-label">Possui perfil no LinkedIn? <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="linkedin">
               <label class="form-radio-label"><input type="radio" name="linkedin" value="Não" required> Não</label>
               <label class="form-radio-label"><input type="radio" name="linkedin" value="Sim"> Sim</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
+          </fieldset>
           <div class="form-group form-conditional" id="linkedin-url-group" hidden>
             <label class="form-label" for="linkedin-url">Link do seu LinkedIn</label>
             <input class="form-input" type="url" id="linkedin-url" name="linkedin_url" placeholder="https://linkedin.com/in/seu-perfil">
@@ -587,8 +587,8 @@
         <!-- STEP 2: Motivação e Perfil -->
         <div class="form-step" data-form-step="1">
           <h3 class="form-step-title">Motivação e Perfil</h3>
-          <div class="form-group">
-            <label class="form-label">Principal motivação para participar <span class="req">*</span></label>
+          <fieldset class="form-group">
+            <legend class="form-label">Principal motivação para participar <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="motivacao">
               <label class="form-radio-label"><input type="radio" name="motivacao" value="Aprender algo novo" required> Aprender algo novo</label>
               <label class="form-radio-label"><input type="radio" name="motivacao" value="Desenvolver um projeto"> Desenvolver um projeto</label>
@@ -600,9 +600,9 @@
             </div>
             <input class="form-input form-other-input" type="text" name="motivacao_outro" placeholder="Especifique..." hidden>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Horas semanais disponíveis <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Horas semanais disponíveis <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="horas">
               <label class="form-radio-label"><input type="radio" name="horas" value="Até 5 horas" required> Até 5 horas</label>
               <label class="form-radio-label"><input type="radio" name="horas" value="6 a 10 horas"> 6 a 10 horas</label>
@@ -612,18 +612,18 @@
               <label class="form-radio-label"><input type="radio" name="horas" value="Disponibilidade varia"> Disponibilidade varia conforme a semana</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Autorização para contato de empresas parceiras <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Autorização para contato de empresas parceiras <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="contato_empresas">
               <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Sim, autorizo" required> Sim, autorizo</label>
               <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Não autorizo"> Não autorizo</label>
               <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Autorizo somente após o Hackathon"> Autorizo somente após o Hackathon</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nível de experiência com tecnologia <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Nível de experiência com tecnologia <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="nivel_exp">
               <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Iniciante" required> Iniciante</label>
               <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Intermediário"> Intermediário</label>
@@ -631,9 +631,9 @@
               <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Especialista"> Especialista</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Área de atuação preferida <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Área de atuação preferida <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="area_atuacao">
               <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Programação/Desenvolvimento" required> Programação/Desenvolvimento</label>
               <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Design/UX"> Design/UX</label>
@@ -643,9 +643,9 @@
               <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Não sei ainda"> Não sei ainda</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Acesso a internet e energia <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Acesso a internet e energia <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="internet">
               <label class="form-radio-label"><input type="radio" name="internet" value="Sim, sem limitações" required> Sim, sem limitações</label>
               <label class="form-radio-label"><input type="radio" name="internet" value="Sim, mas pode oscilar"> Sim, mas pode oscilar</label>
@@ -653,9 +653,9 @@
               <label class="form-radio-label"><input type="radio" name="internet" value="Enfrento dificuldades frequentes"> Enfrento dificuldades frequentes</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Formato de participação <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Formato de participação <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="formato">
               <label class="form-radio-label"><input type="radio" name="formato" value="Como parte de uma equipe" required> Como parte de uma equipe</label>
               <label class="form-radio-label"><input type="radio" name="formato" value="Como líder de equipe"> Como líder de equipe</label>
@@ -663,9 +663,9 @@
               <label class="form-radio-label"><input type="radio" name="formato" value="Aberto a qualquer formato"> Aberto a qualquer formato</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Experiência com ferramentas de colaboração <small>(Miro, Notion, Figma, GitHub)</small> <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Experiência com ferramentas de colaboração <small>(Miro, Notion, Figma, GitHub)</small> <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="ferramentas">
               <label class="form-radio-label"><input type="radio" name="ferramentas" value="Sim, uso com frequência" required> Sim, uso com frequência</label>
               <label class="form-radio-label"><input type="radio" name="ferramentas" value="Já usei algumas vezes"> Já usei algumas vezes</label>
@@ -673,9 +673,9 @@
               <label class="form-radio-label"><input type="radio" name="ferramentas" value="Não conheço nenhuma"> Não conheço nenhuma</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Necessidades de acessibilidade <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Necessidades de acessibilidade <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="acessibilidade">
               <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Não" required> Não</label>
               <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Acessibilidade digital"> Acessibilidade digital (leitor de tela, contraste, navegação adaptada)</label>
@@ -685,14 +685,14 @@
             </div>
             <input class="form-input form-other-input" type="text" name="acessibilidade_outra" placeholder="Especifique sua necessidade..." hidden>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
+          </fieldset>
 
           <!-- Diversidade e Inclusão (merged) -->
           <hr class="form-divider">
           <h4 class="form-section-subtitle">Diversidade e Inclusão</h4>
           <p class="form-step-desc">O Hackathon App BiT é <strong>aberto a todas as pessoas</strong> com interesse e capacidade técnica para desenvolver um aplicativo, independentemente de raça, cor ou origem. As perguntas abaixo <strong>não são critério de exclusão ou seleção</strong>.</p>
-          <div class="form-group">
-            <label class="form-label">Autodeclaração racial</label>
+          <fieldset class="form-group">
+            <legend class="form-label">Autodeclaração racial</legend>
             <div class="form-radio-group" data-name="autodeclaracao">
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Preta"> Preta</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Parda"> Parda</label>
@@ -701,20 +701,20 @@
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Indígena"> Indígena</label>
               <label class="form-radio-label"><input type="radio" name="autodeclaracao" value="Prefiro não declarar"> Prefiro não declarar</label>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Autoriza o uso da autodeclaração para convites futuros relacionados a bolsas, mentorias ou ações afirmativas?</label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Autoriza o uso da autodeclaração para convites futuros relacionados a bolsas, mentorias ou ações afirmativas?</legend>
             <div class="form-radio-group" data-name="autoriza_autodeclaracao">
               <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Sim"> Sim</label>
               <label class="form-radio-label"><input type="radio" name="autoriza_autodeclaracao" value="Não"> Não</label>
             </div>
-          </div>
+          </fieldset>
         </div>
         <!-- STEP 3: Questões Técnicas + Profissional -->
         <div class="form-step" data-form-step="2">
           <h3 class="form-step-title">Questões Técnicas</h3>
-          <div class="form-group">
-            <label class="form-label">Linguagens de programação <small>(selecione todas que se aplicam)</small> <span class="req">*</span></label>
+          <fieldset class="form-group">
+            <legend class="form-label">Linguagens de programação <small>(selecione todas que se aplicam)</small> <span class="req">*</span></legend>
             <div class="form-checkbox-group" data-name="linguagens">
               <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="JavaScript"> JavaScript</label>
               <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Python"> Python</label>
@@ -731,9 +731,9 @@
             </div>
             <input class="form-input form-other-input" type="text" name="linguagens_outra" placeholder="Quais linguagens?" hidden>
             <span class="form-error" role="alert" hidden>Por favor, selecione pelo menos uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Áreas de desenvolvimento <small>(selecione todas que se aplicam)</small> <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Áreas de desenvolvimento <small>(selecione todas que se aplicam)</small> <span class="req">*</span></legend>
             <div class="form-checkbox-group" data-name="areas_dev">
               <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Front-end (Web)"> Front-end (Web)</label>
               <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Back-end"> Back-end</label>
@@ -746,9 +746,9 @@
               <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Quero aprender"> Nunca desenvolvi um app, mas quero aprender</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione pelo menos uma opção.</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nível de experiência em desenvolvimento <span class="req">*</span></label>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-label">Nível de experiência em desenvolvimento <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="nivel_dev">
               <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Iniciante" required> Iniciante (aprendendo agora)</label>
               <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Júnior"> Júnior (projetos simples ou acadêmicos)</label>
@@ -756,13 +756,13 @@
               <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Sênior"> Sênior (ampla experiência profissional)</label>
             </div>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
+          </fieldset>
 
           <!-- Situação Profissional (merged) -->
           <hr class="form-divider">
           <h4 class="form-section-subtitle">Situação Profissional</h4>
-          <div class="form-group">
-            <label class="form-label">Qual é sua situação profissional atual? <span class="req">*</span></label>
+          <fieldset class="form-group">
+            <legend class="form-label">Qual é sua situação profissional atual? <span class="req">*</span></legend>
             <div class="form-radio-group" data-name="situacao">
               <label class="form-radio-label"><input type="radio" name="situacao" value="Empregado(a) na área de tecnologia" required> Empregado(a) na área de tecnologia</label>
               <label class="form-radio-label"><input type="radio" name="situacao" value="Empregado(a) fora da área de tecnologia"> Empregado(a) fora da área de tecnologia</label>
@@ -773,7 +773,7 @@
             </div>
             <input class="form-input form-other-input" type="text" name="situacao_outro" placeholder="Especifique..." hidden>
             <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
-          </div>
+          </fieldset>
         </div>
         <!-- STEP 4: LGPD -->
         <div class="form-step" data-form-step="3">

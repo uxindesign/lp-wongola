@@ -26,6 +26,7 @@
   const connectors  = document.querySelectorAll('.step-connector');
   const totalSteps  = steps.length;
   let currentStep   = 0;
+  let maxVisited    = 0; // highest step reached
 
   // ============================================================
   // OPEN / CLOSE MODAL
@@ -169,6 +170,7 @@
     // Clamp
     if (n < 0 || n >= totalSteps) return;
     currentStep = n;
+    if (n > maxVisited) maxVisited = n;
 
     // Show/hide steps
     steps.forEach(function (step, i) {
@@ -177,9 +179,16 @@
 
     // Update indicators
     indicators.forEach(function (ind, i) {
-      ind.classList.remove('active', 'completed');
-      if (i < n) ind.classList.add('completed');
-      else if (i === n) ind.classList.add('active');
+      ind.classList.remove('active', 'completed', 'clickable', 'locked');
+      if (i < n) {
+        ind.classList.add('completed', 'clickable');
+      } else if (i === n) {
+        ind.classList.add('active');
+      } else if (i <= maxVisited) {
+        ind.classList.add('clickable');
+      } else {
+        ind.classList.add('locked');
+      }
     });
 
     // Update connectors
@@ -456,12 +465,22 @@
     });
 
     // Reset to step 0
+    maxVisited = 0;
     showStep(0);
   }
 
   // ============================================================
   // INIT
   // ============================================================
+
+  // Stepper click navigation
+  indicators.forEach(function (ind, i) {
+    ind.addEventListener('click', function () {
+      if (i <= maxVisited && i !== currentStep) {
+        showStep(i);
+      }
+    });
+  });
 
   showStep(0);
   bindTriggers();
