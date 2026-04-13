@@ -9,6 +9,12 @@ img{display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 
+/* Skip to content */
+.skip-link:focus{position:fixed;top:8px;left:8px;z-index:99999;padding:12px 24px;background:var(--yellow);color:var(--navy);font-family:var(--f-mono);font-weight:700;font-size:16px;border-radius:8px;clip:auto;width:auto;height:auto;outline:2px solid var(--navy)}
+
+/* Focus visible */
+.btn:focus-visible,.nav-link:focus-visible,.nav-hamburger:focus-visible,.cacc-header:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+
 .anim{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .anim.visible{opacity:1;transform:translateY(0)}
 

@@ -13,8 +13,11 @@
 </head>
 <body>
 
+  <!-- Skip to content -->
+  <a href="#sobre" class="sr-only skip-link">Pular para o conteúdo</a>
+
   <!-- NAV -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Navegação principal">
     <a href="https://www.wongola.com.br/" target="_blank" rel="noopener" class="nav-logo">
       <img src="assets/logo-wongola.png" alt="Wongola">
       <span class="nav-logo-text">WONGOLA</span>
@@ -29,7 +32,7 @@
       <a href="#parceiros" class="nav-link">Parceiros</a>
       <a href="#wongola" class="nav-link">Idealizadora</a>
       <a href="#inscricao" class="btn btn-nav">
-        <svg class="btn-bg" viewBox="0 0 142 40" fill="none"><path d="M0 0H142V33.3333L135.994 40H0V0Z" fill="#FFBB00"/></svg>
+        <svg class="btn-bg" aria-hidden="true" viewBox="0 0 142 40" fill="none"><path d="M0 0H142V33.3333L135.994 40H0V0Z" fill="#FFBB00"/></svg>
         <span>Inscreva-se</span>
       </a>
     </div>
@@ -63,7 +66,7 @@
   </div>
 
   <!-- HERO — organic navy shape with photo background -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" aria-label="Hero">
     <img class="hero-bg" src="assets/hero-bg.png" alt="" aria-hidden="true">
     <div class="hero-content">
       <div class="hero-inner">
@@ -77,16 +80,17 @@
           <p class="hero-tagline">Inove, Impacte, Transforme!</p>
         </div>
         <div class="hero-text">
-          <h1 class="hero-deadline">Inscreva-se até 28/05</h1>
+          <h1 class="sr-only">Hackathon App BiT — Wongola</h1>
+          <p class="hero-deadline">Inscreva-se até 28/05</p>
           <p class="hero-desc">Transforme ideias em impacto positivo com uma experiência internacional de inclusão e inovação tecnológica.</p>
         </div>
         <div class="hero-buttons">
         <a href="#inscricao" class="btn btn-primary">
-          <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
+          <svg class="btn-bg" aria-hidden="true" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
           <span>Inscreva-se Agora</span>
         </a>
         <a href="#sobre" class="btn btn-outline">
-          <svg class="btn-bg" viewBox="0 0 186 56" fill="none" preserveAspectRatio="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="white" stroke-opacity="0.3" stroke-width="2"/></svg>
+          <svg class="btn-bg" aria-hidden="true" viewBox="0 0 186 56" fill="none" preserveAspectRatio="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="white" stroke-opacity="0.3" stroke-width="2"/></svg>
           <span>Saiba Mais</span>
         </a>
         </div>
@@ -117,11 +121,11 @@
   <section class="content-accordion" id="content-accordion">
     <div class="content-accordion-wrap">
       <div class="cacc-item cacc-open" data-cacc>
-        <button class="cacc-header" aria-expanded="true">
+        <button class="cacc-header" aria-expanded="true" aria-controls="cacc-panel-1">
           <span class="cacc-title">O que buscamos?</span>
           <img class="cacc-icon" src="assets/icon-chevron-down.svg" alt="" aria-hidden="true">
         </button>
-        <div class="cacc-body">
+        <div class="cacc-body" id="cacc-panel-1" role="region" aria-labelledby="cacc-title-1">
           <div class="cacc-content">
             <ul>
               <li>Estimular a criatividade e o trabalho em equipe;</li>
@@ -213,7 +217,7 @@
           <p class="porque-cta-text"><strong>Além disso:</strong> quem participa sai na frente no mercado de trabalho, amplia sua visibilidade profissional e se torna parte de um movimento global que conecta impacto social aos avanços tecnológicos.</p>
           <p class="porque-cta-vagas"><em>Garanta sua vaga!</em><br><em>Vagas limitadas a 1.000 participantes — inscrição gratuita!</em></p>
           <a href="#inscricao" class="btn btn-primary-v2">
-            <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+            <svg class="btn-bg" aria-hidden="true" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
             <span>Inscreva-se Agora</span>
           </a>
         </div>
@@ -233,18 +237,18 @@
             <span class="tl-lbl">Inscrições</span>
             <div class="tl-dates"><span class="tl-date">20/04</span><span class="tl-dash"></span><span class="tl-date">28/05</span></div>
           </div>
-          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <svg class="tl-chev" aria-hidden="true" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="tl-item"><span class="tl-lbl">Onboarding</span><span class="tl-date">01/06</span></div>
-          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <svg class="tl-chev" aria-hidden="true" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="tl-item"><span class="tl-lbl">Início</span><span class="tl-date">08/06</span></div>
-          <svg class="tl-chev" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
+          <svg class="tl-chev" aria-hidden="true" viewBox="0 0 15 21" fill="none"><path d="M0 21V18H3V15H6V12H9V9H6V6H3V3H0V0H6V3H9V6H12V9H15V12H12V15H9V18H6V21H0Z" fill="#FFBB00"/></svg>
           <div class="tl-item"><span class="tl-lbl">Demo Day</span><span class="tl-date">10/07</span></div>
         </div>
         <div class="tl-pill">Mentorias durante o evento (5 semanas)</div>
       </div>
       <div class="crono-cta">
         <a href="#inscricao" class="btn btn-primary">
-          <svg class="btn-bg" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
+          <svg class="btn-bg" aria-hidden="true" viewBox="0 0 254 56" fill="none"><path d="M0 0H254V46.1754L244.008 56H0V0Z" fill="#FFBB00"/></svg>
           <span>Inscreva-se Agora</span>
         </a>
       </div>
@@ -374,7 +378,7 @@
               <p class="como-inscr-cta-text"><strong>Garanta já a sua vaga!</strong></p>
               <div class="como-cta-row">
               <a href="#inscricao" class="btn btn-primary-v2">
-                <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+                <svg class="btn-bg" aria-hidden="true" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
                 <span>Inscreva-se Agora</span>
               </a>
               </div>
@@ -429,7 +433,7 @@
         <p class="cta-final-desc">Participe do Hackathon App BiT e ajude a construir um futuro mais justo, inclusivo e conectado!</p>
       </div>
       <a href="#inscricao" class="btn btn-primary-v2">
-        <svg class="btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+        <svg class="btn-bg" aria-hidden="true" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
         <span>Inscreva-se Agora</span>
       </a>
     </div>
@@ -461,7 +465,7 @@
         </div>
       </div>
       <a href="https://www.wongola.com.br/" target="_blank" rel="noopener" class="btn btn-outline-dark">
-        <svg class="btn-bg" viewBox="0 0 186 56" fill="none" preserveAspectRatio="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
+        <svg class="btn-bg" aria-hidden="true" viewBox="0 0 186 56" fill="none" preserveAspectRatio="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
         <span>Saiba Mais</span>
       </a>
     </div>
@@ -480,9 +484,11 @@
       </div>
       <div class="footer-col">
         <div class="footer-links">
+          <nav aria-label="Links do rodapé">
           <a href="https://www.wongola.com.br/quemsomos.html" target="_blank" rel="noopener">Quem Somos</a>
           <a href="https://www.wongola.com.br/bit.html" target="_blank" rel="noopener">Black in Tech</a>
           <a href="https://www.wongola.com.br/contato.html" target="_blank" rel="noopener">Contato</a>
+          </nav>
         </div>
         <p>&copy; Wongola - Todos os direitos reservados</p>
         <p>CNPJ: 43.178.278/0001-66</p>
@@ -794,19 +800,19 @@
         <!-- Navigation -->
         <div class="form-nav">
           <button type="button" class="form-btn form-btn-prev" id="btn-cancel">
-            <svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
+            <svg class="form-btn-bg" aria-hidden="true" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
             <span>Cancelar</span>
           </button>
           <button type="button" class="form-btn form-btn-prev" id="btn-prev" hidden>
-            <svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
+            <svg class="form-btn-bg" aria-hidden="true" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
             <span>Voltar</span>
           </button>
           <button type="button" class="form-btn form-btn-next" id="btn-next">
-            <svg class="form-btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+            <svg class="form-btn-bg" aria-hidden="true" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
             <span>Próximo</span>
           </button>
           <button type="submit" class="form-btn form-btn-submit" id="btn-submit" hidden>
-            <svg class="form-btn-bg" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
+            <svg class="form-btn-bg" aria-hidden="true" viewBox="0 0 276 56" fill="none"><path d="M0 0H276V46.1754L266.008 56H0V0Z" fill="#FFBB00"/></svg>
             <span>Enviar Inscrição</span>
           </button>
         </div>
@@ -823,7 +829,7 @@
         <p class="success-text">Sua inscrição no <strong>Hackathon App BiT</strong> foi recebida.<br>Em breve você receberá mais informações no seu email e será adicionado(a) ao grupo oficial no WhatsApp.</p>
         <p class="success-text"><strong>Fique atento(a) às próximas etapas!</strong></p>
         <button type="button" class="form-btn form-btn-prev" id="btn-success-close" style="margin:0 auto">
-          <svg class="form-btn-bg" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
+          <svg class="form-btn-bg" aria-hidden="true" viewBox="0 0 186 56" fill="none"><path d="M185 1V45.7559L175.615 55H1V1H185Z" stroke="#2a273b" stroke-width="2"/></svg>
           <span>Fechar</span>
         </button>
       </div>

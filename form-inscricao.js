@@ -128,10 +128,33 @@
   //   if (e.target === overlay) closeModal();
   // });
 
-  // Escape key — disabled
-  // document.addEventListener('keydown', function (e) {
-  //   if (e.key === 'Escape' && !overlay.hidden) closeModal();
-  // });
+  // Escape key — close with confirm if data
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.hidden) {
+      if (hasFormData()) {
+        showConfirmDialog('Você tem dados preenchidos que serão perdidos ao sair. Deseja realmente sair?', closeModal);
+      } else {
+        closeModal();
+      }
+    }
+  });
+
+  // Focus trap inside modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab' || overlay.hidden) return;
+    var focusable = overlay.querySelectorAll('button:not([hidden]):not([disabled]), input:not([hidden]):not([disabled]), select:not([hidden]):not([disabled]), textarea:not([hidden]):not([disabled]), a[href]');
+    var list = Array.prototype.filter.call(focusable, function(el) { return el.offsetParent !== null; });
+    if (list.length === 0) return;
+    var first = list[0];
+    var last = list[list.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 
   // Success close
   if (btnSuccClose) {
