@@ -13,6 +13,7 @@
   const closeBtn    = document.getElementById('modal-close');
   const form        = document.getElementById('form-inscricao');
   const successBox  = document.getElementById('modal-success');
+  const btnCancel   = document.getElementById('btn-cancel');
   const btnPrev     = document.getElementById('btn-prev');
   const btnNext     = document.getElementById('btn-next');
   const btnSubmit   = document.getElementById('btn-submit');
@@ -103,7 +104,18 @@
   // Close button — confirm if form has data
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {
-      if (currentStep > 0) {
+      if (hasFormData()) {
+        showConfirmDialog('Você tem dados preenchidos que serão perdidos ao sair. Deseja realmente sair?', closeModal);
+      } else {
+        closeModal();
+      }
+    });
+  }
+
+  // Cancel button (step 0) — same behavior as close
+  if (btnCancel) {
+    btnCancel.addEventListener('click', function () {
+      if (hasFormData()) {
         showConfirmDialog('Você tem dados preenchidos que serão perdidos ao sair. Deseja realmente sair?', closeModal);
       } else {
         closeModal();
@@ -153,6 +165,7 @@
     });
 
     // Show/hide nav buttons
+    btnCancel.hidden = (n !== 0);
     btnPrev.hidden = (n === 0);
     btnNext.hidden = (n === totalSteps - 1);
     btnSubmit.hidden = (n !== totalSteps - 1);
