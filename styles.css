@@ -953,14 +953,13 @@ ul{list-style:none}
 .footer-col a:hover{opacity:.7;text-decoration:underline}
 
 /* ================================================
-   1281–1599px — no zoom range: lock page at 1920px, centered.
-   Blobs stay at their Figma positions; overflow clips equally.
-   (≥1600 zoom handles this automatically)
+   1281–1599px — no zoom range: lock page at 1600px, centered.
+   Matches the zoom threshold so transition is seamless.
    ================================================ */
 @media(min-width:1281px) and (max-width:1599px){
   .page{
-    width:1920px;
-    margin-left:calc((100vw - 1920px) / 2);
+    width:1600px;
+    margin-left:calc((100vw - 1600px) / 2);
   }
 }
 
@@ -1036,18 +1035,14 @@ ul{list-style:none}
   .btn-primary,.btn-primary-v2,.btn-outline,.btn-outline-dark{font-size:18px}
 
   /* ---- HERO ---- */
-  .hero{height:auto;min-height:878px;overflow:hidden}
-  .hero::before{
-    content:'';position:absolute;inset:0;
-    background:#0c055d;z-index:0;
-  }
+  .hero{height:auto;overflow:hidden}
   .hero-bg{
-    position:absolute;top:0;left:0;
-    width:100%;height:100%;
-    object-fit:cover;
-    opacity:.08;
-    margin:0;max-width:none;
-    z-index:1;
+    position:absolute;top:0;left:50%;
+    transform:translateX(-50%);
+    width:2260px;max-width:none;
+    height:auto;min-height:100%;
+    margin:0;
+    z-index:0;
   }
   .hero-content{
     position:relative;top:auto;
