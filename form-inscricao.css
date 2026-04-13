@@ -69,7 +69,7 @@
 }
 
 /* ---- Header (stepper — floating left of form) ---- */
-.modal-header {
+.form-stepper-wrap {
   position: absolute;
   left: -220px;
   top: 120px;
@@ -686,7 +686,7 @@
   .modal {
     max-width: 720px;
   }
-  .modal-header {
+  .form-stepper-wrap {
     left: -200px;
   }
 }
@@ -697,7 +697,7 @@
     max-width: 100%;
   }
 
-  .modal-header {
+  .form-stepper-wrap {
     position: relative;
     left: auto;
     top: auto;
@@ -733,10 +733,6 @@
 
 /* ---- ≤768px: tighter mobile layout ---- */
 @media (max-width: 768px) {
-  .modal-header {
-    padding: 0 20px;
-  }
-
   .modal-form {
     padding: 0 20px 28px;
   }
