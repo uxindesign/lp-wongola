@@ -1312,7 +1312,7 @@ ul{list-style:none}
   .hero-desc{font-size:18px}
   .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:40px;justify-items:center;padding-top:16px}
   .stat-val{font-size:20px}
-  .hero-buttons{flex-direction:column;align-items:stretch;gap:16px;padding-top:8px}
+  .hero-buttons{flex-direction:column;align-items:stretch;gap:16px;padding-top:8px;width:100%}
 
   /* CSS-only buttons: hide SVG, use clip-path for the cut corner shape */
   .btn .btn-bg{display:none}
