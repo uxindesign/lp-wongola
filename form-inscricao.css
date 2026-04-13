@@ -246,7 +246,7 @@
   animation: stepFadeIn 0.3s ease;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
-  padding: 40px;
+  padding: 40px 40px 8px;
 }
 
 @keyframes stepFadeIn {
@@ -284,7 +284,7 @@ fieldset.form-group legend.form-label {
 
 /* ---- Form groups ---- */
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .form-row {
