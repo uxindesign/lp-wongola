@@ -1266,7 +1266,7 @@ ul{list-style:none}
   .premiacoes-top{grid-column:1;grid-row:2}
   .premiacoes-bottom{grid-column:1;grid-row:3}
   .premiacoes-categories{gap:8px}
-  .prize-card{padding:28px;border-radius:32px}
+  .prize-card{padding:28px;border-radius:32px;width:100%}
 
   /* Como participar bottom — stack */
   .como-bottom{flex-direction:column;gap:32px}
