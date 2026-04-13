@@ -1411,7 +1411,7 @@ ul{list-style:none}
   .parceiros-text{margin-bottom:48px;gap:24px}
   .parceiros-title{font-size:24px}
   .parceiros-subtitle{font-size:16px}
-  .parceiros-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+  .parceiros-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:32px}
 
   /* CTA Final */
   .cta-final{padding:24px 24px 48px}
