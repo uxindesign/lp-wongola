@@ -770,7 +770,7 @@
 
   .modal-form::before {
     font-size: 26px;
-    padding: 32px 0 24px;
+    padding: 32px 60px 24px 0;
   }
 
   .modal-close {
