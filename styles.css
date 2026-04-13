@@ -1322,16 +1322,10 @@ ul{list-style:none}
     clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
   }
   .btn-primary,.btn-primary-v2{background:var(--yellow)}
-  .btn-outline,.btn-outline-dark{background:transparent;position:relative}
-  .btn-outline::before,.btn-outline-dark::before{
-    content:'';position:absolute;inset:0;
-    clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
-    pointer-events:none;
-  }
-  .btn-outline::before{border:2px solid rgba(255,255,255,.3)}
-  .btn-outline:hover::before{border-color:#fff;background:#fff}
-  .btn-outline-dark::before{border:2px solid var(--text)}
-  .btn-outline-dark:hover::before{border-color:var(--text);background:var(--text)}
+  .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.3)}
+  .btn-outline:hover{background:#fff;border-color:#fff}
+  .btn-outline-dark{background:transparent;border:2px solid var(--text)}
+  .btn-outline-dark:hover{background:var(--text);border-color:var(--text)}
   .como-cta-row{width:100%}
   .como-cta-row .btn{width:100%}
   .crono-cta .btn{width:100%}
