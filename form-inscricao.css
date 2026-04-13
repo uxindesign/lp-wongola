@@ -23,7 +23,12 @@
 /* ---- Overlay ---- */
 .modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  height: 100vh; /* fallback */
+  height: 100dvh;
   z-index: 10000;
   background: var(--white, #fff);
   display: flex;
@@ -32,6 +37,7 @@
   opacity: 0;
   animation: modalFadeIn 0.3s ease forwards;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-overlay[hidden] {
