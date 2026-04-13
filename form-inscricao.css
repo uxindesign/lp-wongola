@@ -742,17 +742,10 @@
   .step-indicator small {
     display: none;
   }
-  .step-indicator.active small {
-    display: block;
-  }
   .step-indicator {
     flex: 0;
     padding: 8px;
     gap: 0;
-  }
-  .step-indicator.active {
-    flex: 1;
-    gap: 8px;
   }
   .step-indicator span {
     width: 28px;
