@@ -953,10 +953,11 @@ ul{list-style:none}
 .footer-col a:hover{opacity:.7;text-decoration:underline}
 
 /* ================================================
-   1281–1919px — lock page at 1920px width, centered.
+   1281–1599px — no zoom range: lock page at 1920px, centered.
    Blobs stay at their Figma positions; overflow clips equally.
+   (≥1600 zoom handles this automatically)
    ================================================ */
-@media(min-width:1281px) and (max-width:1919px){
+@media(min-width:1281px) and (max-width:1599px){
   .page{
     width:1920px;
     margin-left:calc((100vw - 1920px) / 2);
