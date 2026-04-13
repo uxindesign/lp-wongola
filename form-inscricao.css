@@ -34,7 +34,7 @@
 .modal {
   background: var(--white, #fff);
   width: 100%;
-  max-width: 1100px;
+  max-width: 860px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,8 +68,11 @@
   color: var(--navy, #181057);
 }
 
-/* ---- Header (stepper — positioned in grid left column) ---- */
+/* ---- Header (stepper — floating left of form) ---- */
 .modal-header {
+  position: absolute;
+  left: -220px;
+  top: 120px;
   padding: 0;
   z-index: 3;
 }
@@ -181,15 +184,12 @@
   background: var(--navy, #181057);
 }
 
-/* ---- Form container — 2 columns: stepper left + content right ---- */
+/* ---- Form container ---- */
 .modal-form {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 0 24px;
   padding: 0 40px 40px;
   overflow-y: visible;
-  position: relative;
   flex: 1;
+  position: relative;
 }
 .modal-form::before {
   content: 'Inscrição — Hackathon App BiT';
@@ -200,16 +200,7 @@
   color: var(--navy, #181057);
   padding: 48px 0 32px;
   line-height: 1.2;
-  grid-column: 1 / -1;
 }
-/* Stepper in left column, spans all content rows */
-.modal-header {
-  grid-column: 1;
-  grid-row: 2 / 20;
-}
-/* Form steps + nav in right column */
-.form-step { grid-column: 2; }
-.form-nav { grid-column: 2; }
 
 /* ---- Form step (wizard pages) ---- */
 .form-step {
@@ -690,20 +681,27 @@
    RESPONSIVE
    ============================================================ */
 
-/* ---- ≤960px: single column, stepper horizontal below title ---- */
+/* ---- ≤1280px: pull stepper closer ---- */
+@media (max-width: 1280px) {
+  .modal {
+    max-width: 720px;
+  }
+  .modal-header {
+    left: -200px;
+  }
+}
+
+/* ---- ≤960px: stepper horizontal below title ---- */
 @media (max-width: 960px) {
   .modal {
     max-width: 100%;
   }
 
-  /* Collapse grid to single column */
-  .modal-form {
-    display: block;
-    padding: 0 40px 40px;
-  }
-
   .modal-header {
-    padding: 0;
+    position: relative;
+    left: auto;
+    top: auto;
+    padding: 0 40px;
     margin-bottom: 20px;
   }
 
