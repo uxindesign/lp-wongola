@@ -858,6 +858,16 @@
   }
 }
 
+/* ---- ≤480px: confirm dialog buttons stacked ---- */
+@media (max-width: 480px) {
+  .confirm-actions {
+    flex-direction: column;
+  }
+  .confirm-btn {
+    width: 100%;
+  }
+}
+
 /* ---- Scrollbar styling inside modal ---- */
 .modal-form::-webkit-scrollbar {
   width: 6px;
