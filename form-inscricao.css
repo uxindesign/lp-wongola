@@ -804,6 +804,21 @@
   .success-text {
     font-size: 15px;
   }
+
+  /* Confirm dialog */
+  .confirm-box {
+    padding: 32px 24px;
+  }
+  .confirm-title {
+    font-size: 22px;
+  }
+  .confirm-message {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .confirm-btn {
+    font-size: 16px;
+  }
 }
 
 /* ---- ≤600px: hide step labels, numbers only ---- */
