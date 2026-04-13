@@ -1169,7 +1169,7 @@ ul{list-style:none}
     display:flex;flex-direction:column;gap:32px;
     align-items:flex-start;
   }
-  .como-cards{flex-direction:column;width:100%;gap:8px}
+  .como-cards{flex-direction:column;width:100%;gap:8px;margin-top:0}
   .como-bottom{margin-top:16px}
   .como-card{width:100%;padding:32px;border-radius:32px}
   .como-card-title{font-size:24px}
