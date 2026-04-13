@@ -978,17 +978,18 @@ ul{list-style:none}
     display:flex !important;
     position:fixed !important;
     top:0 !important;left:0 !important;
-    width:100vw !important;height:100vh !important;
+    width:100vw !important;height:100dvh !important;
     background:#fff !important;
     flex-direction:column !important;
     align-items:center !important;
     justify-content:center !important;
-    gap:40px !important;
+    gap:24px !important;
     z-index:10001 !important;
-    padding:40px !important;
+    padding:24px !important;
+    overflow-y:auto !important;
   }
-  .nav-menu.open .nav-link{font-size:20px;letter-spacing:1.5px;color:var(--navy)}
-  .nav-menu.open .btn-nav{width:220px;height:56px;font-size:20px}
+  .nav-menu.open .nav-link{font-size:16px;letter-spacing:1px;color:var(--navy)}
+  .nav-menu.open .btn-nav{width:200px;height:48px;font-size:16px}
   .nav-hamburger{display:flex !important;z-index:10002}
   .nav-hamburger.open{position:fixed !important;top:24px;right:32px;z-index:10002}
   .nav-hamburger.open span{background:var(--navy)}
