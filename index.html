@@ -496,6 +496,7 @@
   <div class="modal-overlay" id="modal-inscricao" hidden>
     <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title" class="sr-only">Inscrição — Hackathon App BiT</h2>
       <form class="modal-form" id="form-inscricao" novalidate>
         <div class="form-stepper-wrap">
           <div class="stepper" id="stepper">
@@ -514,12 +515,12 @@
           <div class="form-group">
             <label class="form-label" for="nome">Nome completo <span class="req">*</span></label>
             <input class="form-input" type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-            <span class="form-error" hidden>Por favor, informe seu nome completo.</span>
+            <span class="form-error" role="alert" hidden>Por favor, informe seu nome completo.</span>
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Email <span class="req">*</span></label>
             <input class="form-input" type="email" id="email" name="email" required placeholder="seu@email.com">
-            <span class="form-error" hidden>Por favor, informe um email válido.</span>
+            <span class="form-error" role="alert" hidden>Por favor, informe um email válido.</span>
           </div>
           <div class="form-row">
             <div class="form-group">
@@ -537,7 +538,7 @@
                 <option value="Timor-Leste">Timor-Leste</option>
                 <option value="Outro">Outro país</option>
               </select>
-              <span class="form-error" hidden>Por favor, selecione sua nacionalidade.</span>
+              <span class="form-error" role="alert" hidden>Por favor, selecione sua nacionalidade.</span>
             </div>
             <div class="form-group">
               <label class="form-label" for="pais-residencia">País de residência <span class="req">*</span></label>
@@ -554,14 +555,14 @@
                 <option value="Timor-Leste">Timor-Leste</option>
                 <option value="Outro">Outro país</option>
               </select>
-              <span class="form-error" hidden>Por favor, selecione o país de residência.</span>
+              <span class="form-error" role="alert" hidden>Por favor, selecione o país de residência.</span>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="whatsapp">WhatsApp com código do país <span class="req">*</span></label>
             <input class="form-input" type="tel" id="whatsapp" name="whatsapp" required placeholder="+55 11 99999-9999">
             <small class="form-hint">Número válido de WhatsApp para adicioná-lo(a) ao grupo oficial.</small>
-            <span class="form-error" hidden>Informe um número de WhatsApp válido (ex: +55 11 99999-9999).</span>
+            <span class="form-error" role="alert" hidden>Informe um número de WhatsApp válido (ex: +55 11 99999-9999).</span>
           </div>
           <div class="form-group">
             <label class="form-label">Possui perfil no LinkedIn? <span class="req">*</span></label>
@@ -569,12 +570,12 @@
               <label class="form-radio-label"><input type="radio" name="linkedin" value="Não" required> Não</label>
               <label class="form-radio-label"><input type="radio" name="linkedin" value="Sim"> Sim</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group form-conditional" id="linkedin-url-group" hidden>
             <label class="form-label" for="linkedin-url">Link do seu LinkedIn</label>
             <input class="form-input" type="url" id="linkedin-url" name="linkedin_url" placeholder="https://linkedin.com/in/seu-perfil">
-            <span class="form-error" hidden>Informe uma URL válida do LinkedIn.</span>
+            <span class="form-error" role="alert" hidden>Informe uma URL válida do LinkedIn.</span>
           </div>
         </div>
         <!-- STEP 2: Motivação e Perfil -->
@@ -592,7 +593,7 @@
               <label class="form-radio-label"><input type="radio" name="motivacao" value="Outro"> Outro</label>
             </div>
             <input class="form-input form-other-input" type="text" name="motivacao_outro" placeholder="Especifique..." hidden>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Horas semanais disponíveis <span class="req">*</span></label>
@@ -604,7 +605,7 @@
               <label class="form-radio-label"><input type="radio" name="horas" value="Mais de 20 horas"> Mais de 20 horas</label>
               <label class="form-radio-label"><input type="radio" name="horas" value="Disponibilidade varia"> Disponibilidade varia conforme a semana</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Autorização para contato de empresas parceiras <span class="req">*</span></label>
@@ -613,7 +614,7 @@
               <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Não autorizo"> Não autorizo</label>
               <label class="form-radio-label"><input type="radio" name="contato_empresas" value="Autorizo somente após o Hackathon"> Autorizo somente após o Hackathon</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Nível de experiência com tecnologia <span class="req">*</span></label>
@@ -623,7 +624,7 @@
               <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Avançado"> Avançado</label>
               <label class="form-radio-label"><input type="radio" name="nivel_exp" value="Especialista"> Especialista</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Área de atuação preferida <span class="req">*</span></label>
@@ -635,7 +636,7 @@
               <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Produto/Ideação"> Produto/Ideação</label>
               <label class="form-radio-label"><input type="radio" name="area_atuacao" value="Não sei ainda"> Não sei ainda</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Acesso a internet e energia <span class="req">*</span></label>
@@ -645,7 +646,7 @@
               <label class="form-radio-label"><input type="radio" name="internet" value="Não tenho certeza"> Não tenho certeza</label>
               <label class="form-radio-label"><input type="radio" name="internet" value="Enfrento dificuldades frequentes"> Enfrento dificuldades frequentes</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Formato de participação <span class="req">*</span></label>
@@ -655,7 +656,7 @@
               <label class="form-radio-label"><input type="radio" name="formato" value="Individualmente"> Individualmente</label>
               <label class="form-radio-label"><input type="radio" name="formato" value="Aberto a qualquer formato"> Aberto a qualquer formato</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Experiência com ferramentas de colaboração <small>(Miro, Notion, Figma, GitHub)</small> <span class="req">*</span></label>
@@ -665,7 +666,7 @@
               <label class="form-radio-label"><input type="radio" name="ferramentas" value="Conheço, mas nunca usei"> Conheço, mas nunca usei</label>
               <label class="form-radio-label"><input type="radio" name="ferramentas" value="Não conheço nenhuma"> Não conheço nenhuma</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Necessidades de acessibilidade <span class="req">*</span></label>
@@ -677,7 +678,7 @@
               <label class="form-radio-label"><input type="radio" name="acessibilidade" value="Outra"> Outra necessidade</label>
             </div>
             <input class="form-input form-other-input" type="text" name="acessibilidade_outra" placeholder="Especifique sua necessidade..." hidden>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
 
           <!-- Diversidade e Inclusão (merged) -->
@@ -723,7 +724,7 @@
               <label class="form-checkbox-label"><input type="checkbox" name="linguagens" value="Iniciante"> Ainda estou em formação/iniciante</label>
             </div>
             <input class="form-input form-other-input" type="text" name="linguagens_outra" placeholder="Quais linguagens?" hidden>
-            <span class="form-error" hidden>Por favor, selecione pelo menos uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione pelo menos uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Áreas de desenvolvimento <small>(selecione todas que se aplicam)</small> <span class="req">*</span></label>
@@ -738,7 +739,7 @@
               <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Produto/Gestão"> Produto/Gestão</label>
               <label class="form-checkbox-label"><input type="checkbox" name="areas_dev" value="Quero aprender"> Nunca desenvolvi um app, mas quero aprender</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione pelo menos uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione pelo menos uma opção.</span>
           </div>
           <div class="form-group">
             <label class="form-label">Nível de experiência em desenvolvimento <span class="req">*</span></label>
@@ -748,7 +749,7 @@
               <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Pleno"> Pleno (projetos reais)</label>
               <label class="form-radio-label"><input type="radio" name="nivel_dev" value="Sênior"> Sênior (ampla experiência profissional)</label>
             </div>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
 
           <!-- Situação Profissional (merged) -->
@@ -765,7 +766,7 @@
               <label class="form-radio-label"><input type="radio" name="situacao" value="Outro"> Outro</label>
             </div>
             <input class="form-input form-other-input" type="text" name="situacao_outro" placeholder="Especifique..." hidden>
-            <span class="form-error" hidden>Por favor, selecione uma opção.</span>
+            <span class="form-error" role="alert" hidden>Por favor, selecione uma opção.</span>
           </div>
         </div>
         <!-- STEP 4: LGPD -->
@@ -787,7 +788,7 @@
               <input type="checkbox" id="lgpd-consent" name="lgpd_consent" required>
               <span>Declaro que li e concordo com o tratamento dos meus dados pessoais conforme descrito acima. <span class="req">*</span></span>
             </label>
-            <span class="form-error" hidden>Você precisa aceitar os termos para enviar sua inscrição.</span>
+            <span class="form-error" role="alert" hidden>Você precisa aceitar os termos para enviar sua inscrição.</span>
           </div>
         </div>
         <!-- Navigation -->
