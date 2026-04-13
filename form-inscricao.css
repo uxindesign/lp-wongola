@@ -30,14 +30,15 @@
   to   { opacity: 1; }
 }
 
-/* ---- Modal container — fullscreen, content centered ---- */
+/* ---- Modal container — 2 columns: stepper + form ---- */
 .modal {
   background: var(--white, #fff);
   width: 100%;
-  max-width: 860px;
+  max-width: 1100px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 1fr;
   position: relative;
   padding: 0;
 }
@@ -68,13 +69,15 @@
   color: var(--navy, #181057);
 }
 
-/* ---- Header (stepper — floating left of form) ---- */
+/* ---- Header (stepper — left column) ---- */
 .modal-header {
-  position: absolute;
-  left: -220px;
-  top: 120px;
-  padding: 0;
+  position: relative;
+  left: auto;
+  top: auto;
+  padding: 120px 0 0 40px;
   z-index: 3;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .modal-title {
@@ -103,7 +106,7 @@
   margin: 0 0 24px;
 }
 
-/* ---- Stepper (vertical, floating left) ---- */
+/* ---- Stepper (vertical, sticky in left column) ---- */
 .stepper {
   display: flex;
   flex-direction: column;
@@ -113,6 +116,8 @@
   padding: 16px;
   background: #f5f5f5;
   border-radius: 16px;
+  position: sticky;
+  top: 120px;
 }
 
 .step-indicator {
@@ -186,8 +191,9 @@
 .modal-form {
   padding: 0 40px 40px;
   overflow-y: visible;
-  flex: 1;
   position: relative;
+  grid-column: 2;
+  grid-row: 1;
 }
 .modal-form::before {
   content: 'Inscrição — Hackathon App BiT';
@@ -522,11 +528,11 @@
 .modal-success {
   padding: 60px 40px;
   text-align: center;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  grid-column: 1 / -1;
 }
 
 .modal-success[hidden] {
@@ -680,40 +686,33 @@
    RESPONSIVE
    ============================================================ */
 
-/* ---- ≤1280px: stepper still lateral but closer ---- */
-@media (max-width: 1280px) {
-  .modal {
-    max-width: 820px;
-  }
-  .modal-header {
-    left: -200px;
-  }
-}
-
-/* ---- ≤960px: stepper moves to horizontal below title ---- */
+/* ---- ≤960px: single column, stepper horizontal below title ---- */
 @media (max-width: 960px) {
   .modal {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-header {
     position: relative;
-    left: auto;
-    top: auto;
     padding: 0 40px;
+    grid-column: auto;
   }
 
   .stepper {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 16px;
+    gap: 0;
+    padding: 8px;
     border-radius: 12px;
     margin-bottom: 8px;
+    width: 100%;
   }
 
   .step-indicator {
+    flex: 1;
+    justify-content: center;
     padding: 8px 12px;
     gap: 8px;
   }
