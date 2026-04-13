@@ -1343,6 +1343,7 @@ ul{list-style:none}
   /* Cronograma */
   .crono{padding:48px 24px}
   .crono-wrap{max-width:100%}
+  .crono-subtitle{font-size:16px}
   .timeline{padding:24px;border-radius:20px;gap:24px;margin-top:32px;padding-bottom:24px}
   .tl-row{flex-direction:column;gap:16px;align-items:center}
   .tl-chev{display:block;width:16px;height:12px;transform:rotate(90deg)}
