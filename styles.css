@@ -1438,3 +1438,16 @@ ul{list-style:none}
   .footer-wrap{flex-direction:column;gap:24px}
   .footer-col{min-width:auto;flex:none;width:100%}
 }
+
+/* ==========================================================
+   SMALL MOBILE ≤520px
+   ========================================================== */
+@media(max-width:520px){
+  .hero-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    width:100%;
+    justify-items:center;
+  }
+}
