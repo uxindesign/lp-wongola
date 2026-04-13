@@ -1388,10 +1388,10 @@ ul{list-style:none}
   .parceiros{padding:64px 24px 48px}
   .parceiros-box{padding:48px 24px 32px;border-radius:28px;gap:48px}
   .parceiros-pill{font-size:12px;padding:12px 24px;top:-19px}
-  .parceiros-text{margin-bottom:0;gap:24px}
+  .parceiros-text{margin-bottom:48px;gap:24px}
   .parceiros-title{font-size:24px}
   .parceiros-subtitle{font-size:16px}
-  .parceiros-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:32px}
+  .parceiros-grid{grid-template-columns:repeat(2,1fr);gap:32px}
 
   /* CTA Final */
   .cta-final{padding:24px 24px 48px}
