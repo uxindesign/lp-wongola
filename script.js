@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const vw = window.innerWidth;
     if (vw >= 1600) {
       page.style.zoom = vw / 1920;
+    } else if (vw > 1280) {
+      page.style.zoom = 1600 / 1920;
     } else {
       page.style.zoom = '';
     }
