@@ -238,7 +238,7 @@
 
 /* ---- Form groups ---- */
 .form-group {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form-row {
@@ -253,7 +253,7 @@
   font-weight: 600;
   font-size: 18px;
   color: var(--text, #2a273b);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   line-height: 1.4;
 }
 
@@ -312,7 +312,7 @@
   font-family: var(--f-body, 'Lato', sans-serif);
   font-size: 14px;
   color: #888;
-  margin-top: 6px;
+  padding-bottom: 6px;
 }
 
 /* ---- Error text ---- */
