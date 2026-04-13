@@ -4,7 +4,8 @@ html{scroll-behavior:smooth;scroll-padding-top:60px}
 [id]{scroll-margin-top:60px}
 #porque{scroll-margin-top:-20px}
 #premiacoes{scroll-margin-top:8px}
-body{font-family:var(--f-body);color:var(--text);background:var(--white);overflow-x:hidden}
+html,body{height:auto}
+body{font-family:var(--f-body);color:var(--text);background:#222;overflow-x:hidden}
 img{display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
@@ -18,7 +19,7 @@ ul{list-style:none}
 .anim{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .anim.visible{opacity:1;transform:translateY(0)}
 
-.page{position:relative}
+.page{position:relative;overflow:hidden}
 
 /* Floating decorations — absolute within .page */
 .deco{position:absolute;top:0;left:0;right:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden}
