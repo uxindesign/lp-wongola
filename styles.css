@@ -1300,7 +1300,7 @@ ul{list-style:none}
 
   /* Hero */
   .hero{min-height:auto}
-  .hero-content{padding:48px 24px;gap:48px}
+  .hero-content{padding:100px 24px 48px;gap:48px}
   .hero-inner{gap:32px}
   .hero-logo-img{height:80px}
   .hero-tagline{font-size:20px}
