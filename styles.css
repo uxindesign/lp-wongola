@@ -1322,23 +1322,10 @@ ul{list-style:none}
     clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
   }
   .btn-primary,.btn-primary-v2,.btn-nav{background:var(--yellow)}
-  /* Outline buttons: hollow border via mask-composite on ::before */
-  .btn-outline,.btn-outline-dark{background:transparent}
-  .btn-outline::before,.btn-outline-dark::before{
-    content:'';position:absolute;inset:0;
-    padding:2px;
-    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-    -webkit-mask-composite:xor;
-    mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-    mask-composite:exclude;
-    pointer-events:none;z-index:0;
-  }
-  .btn-outline::before{background:rgba(255,255,255,.3)}
-  .btn-outline:hover::before{background:#fff;-webkit-mask:none;mask:none}
-  .btn-outline:hover{color:var(--text)}
-  .btn-outline-dark::before{background:var(--text)}
-  .btn-outline-dark:hover::before{background:var(--text);-webkit-mask:none;mask:none}
-  .btn-outline-dark:hover{color:#fff}
+  .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.3);clip-path:none}
+  .btn-outline:hover{background:#fff;border-color:#fff;color:var(--text)}
+  .btn-outline-dark{background:transparent;border:2px solid var(--text);clip-path:none}
+  .btn-outline-dark:hover{background:var(--text);border-color:var(--text);color:#fff}
   .como-cta-row{width:100%}
   .como-cta-row .btn{width:100%}
   .crono-cta .btn{width:100%}
