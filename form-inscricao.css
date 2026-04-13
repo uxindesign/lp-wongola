@@ -45,8 +45,8 @@
 /* ---- Close button ---- */
 .modal-close {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 24px;
+  right: 24px;
   width: 44px;
   height: 44px;
   border: none;
@@ -774,8 +774,8 @@
   }
 
   .modal-close {
-    top: 12px;
-    right: 12px;
+    top: 16px;
+    right: 16px;
   }
 
   .form-step.active {
