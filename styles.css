@@ -1206,10 +1206,11 @@ ul{list-style:none}
   .parceiros-title{font-size:28px}
   .parceiros-subtitle{font-size:20px}
   .parceiros-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
     gap:32px 40px;
-    align-items:center;justify-items:center;
   }
   .parceiros-row{display:contents}
   .parc-logo{max-width:160px;height:auto !important}
