@@ -848,6 +848,8 @@ ul{list-style:none}
   gap:56px 96px;
 }
 .parc-logo{
+  height:48px;
+  width:auto;
   object-fit:contain;
 }
 .parc-tooltip-wrap{
@@ -1311,7 +1313,7 @@ ul{list-style:none}
     justify-items:center;
   }
   .parceiros-row{display:contents}
-  .parc-logo{max-width:160px;height:auto !important}
+  .parc-logo{max-width:160px;height:40px}
 
   /* ---- CTA FINAL ---- */
   .cta-final{padding:48px 48px 80px}
