@@ -1209,6 +1209,8 @@ ul{list-style:none}
   .prize-card-subtitle{font-size:20px;padding-left:0}
   .prize-list{padding-left:27px}
   .prize-list li{font-size:18px}
+  .prize-feira-badge{font-size:18px}
+  .prize-feira-desc{font-size:18px}
 
   /* ---- COMO PARTICIPAR — solid yellow bg ---- */
   .como{
@@ -1438,6 +1440,8 @@ ul{list-style:none}
   .prize-card-subtitle{font-size:20px}
   .prize-list{padding-left:24px}
   .prize-list li{font-size:16px}
+  .prize-feira-badge{font-size:16px}
+  .prize-feira-desc{font-size:16px}
 
   /* Como participar */
   .como-wrap{padding:48px 24px;gap:8px}
