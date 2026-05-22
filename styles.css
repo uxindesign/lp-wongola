@@ -845,6 +845,28 @@ ul{list-style:none}
   color:var(--navy);
   text-align:center;
 }
+.parceiros-edu-parceira{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding-top:24px;
+  text-align:center;
+}
+.parceiros-edu-parceira-nome{
+  font-family:var(--f-body);
+  font-weight:900;
+  font-size:20px;
+  color:var(--navy);
+  line-height:1.4;
+}
+.parceiros-edu-parceira-desc{
+  font-family:var(--f-body);
+  font-weight:400;
+  font-size:18px;
+  color:var(--text);
+  line-height:1.2;
+}
 .parceiros-card--main{
   position:relative;
   gap:40px;
